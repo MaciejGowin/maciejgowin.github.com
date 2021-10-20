@@ -179,7 +179,7 @@ Metoda składa się z następujących części:
 Uogólniając:
 
 ```
-typWartościZwracanej nazwaMetory(parametry) {
+typWartościZwracanej nazwaMetody(parametry) {
     return wartośćZwracana
 }
 ```
@@ -686,4 +686,4 @@ import java.util.ArrayList;
 
 # **Programowanie: zadanie 09**
 
-Zmodyfikuj program z zadania 06, dzieląc go na osobne pliki, dla każdej z klas oraz wprowadzając pakiet `cars` dla klas `Car` oraz `CarCalculator`.
+Zmodyfikuj program z zadania 08, dzieląc go na osobne pliki, dla każdej z klas oraz wprowadzając pakiet `cars` dla klas `Car` oraz `CarCalculator`.

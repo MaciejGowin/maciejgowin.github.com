@@ -1,0 +1,1290 @@
+<!DOCTYPE html><html lang="en-IE"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template-areas:"current next" "current note" "info    note";grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp default theme.
+ *
+ * @theme default
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .octicon{fill:currentColor;display:inline-block;vertical-align:text-bottom}div#p>svg>foreignObject>section .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}div#p>svg>foreignObject>section .anchor:focus{outline:none}div#p>svg>foreignObject>section h1 .octicon-link,div#p>svg>foreignObject>section h2 .octicon-link,div#p>svg>foreignObject>section h3 .octicon-link,div#p>svg>foreignObject>section h4 .octicon-link,div#p>svg>foreignObject>section h5 .octicon-link,div#p>svg>foreignObject>section h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}div#p>svg>foreignObject>section h1:hover .anchor,div#p>svg>foreignObject>section h2:hover .anchor,div#p>svg>foreignObject>section h3:hover .anchor,div#p>svg>foreignObject>section h4:hover .anchor,div#p>svg>foreignObject>section h5:hover .anchor,div#p>svg>foreignObject>section h6:hover .anchor{text-decoration:none}div#p>svg>foreignObject>section h1:hover .anchor .octicon-link,div#p>svg>foreignObject>section h2:hover .anchor .octicon-link,div#p>svg>foreignObject>section h3:hover .anchor .octicon-link,div#p>svg>foreignObject>section h4:hover .anchor .octicon-link,div#p>svg>foreignObject>section h5:hover .anchor .octicon-link,div#p>svg>foreignObject>section h6:hover .anchor .octicon-link{visibility:visible}div#p>svg>foreignObject>section h1:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h2:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h3:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h4:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h5:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h6:hover .anchor .octicon-link:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E");content:" ";display:inline-block;height:16px;width:16px}div#p>svg>foreignObject>section{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5}div#p>svg>foreignObject>section{--marpit-root-font-size:16px}div#p>svg>foreignObject>section details{display:block}div#p>svg>foreignObject>section summary{display:list-item}div#p>svg>foreignObject>section a{background-color:initial}div#p>svg>foreignObject>section a:active,div#p>svg>foreignObject>section a:hover{outline-width:0}div#p>svg>foreignObject>section strong{font-weight:inherit;font-weight:bolder}div#p>svg>foreignObject>section h1{margin:.67em 0}div#p>svg>foreignObject>section img{border-style:none}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section kbd,div#p>svg>foreignObject>section pre{font-family:monospace,monospace;font-size:1em}div#p>svg>foreignObject>section hr{box-sizing:initial;overflow:visible}div#p>svg>foreignObject>section input{font:inherit;margin:0;overflow:visible}div#p>svg>foreignObject>section [type=checkbox]{padding:0}div#p>svg>foreignObject>section *,div#p>svg>foreignObject>section [type=checkbox]{box-sizing:border-box}div#p>svg>foreignObject>section input{font-family:inherit;font-size:inherit;line-height:inherit}div#p>svg>foreignObject>section a{color:#0366d6;text-decoration:none}div#p>svg>foreignObject>section a:hover{text-decoration:underline}div#p>svg>foreignObject>section strong{font-weight:600}div#p>svg>foreignObject>section hr{background:transparent;border-bottom:1px solid #dfe2e5;height:0;margin:15px 0;overflow:hidden}div#p>svg>foreignObject>section hr:after,div#p>svg>foreignObject>section hr:before{content:"";display:table}div#p>svg>foreignObject>section hr:after{clear:both}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0}div#p>svg>foreignObject>section td,div#p>svg>foreignObject>section th{padding:0}div#p>svg>foreignObject>section details summary{cursor:pointer}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section h1{font-size:32px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{font-weight:600}div#p>svg>foreignObject>section h2{font-size:24px}div#p>svg>foreignObject>section h3{font-size:20px}div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4{font-weight:600}div#p>svg>foreignObject>section h4{font-size:16px}div#p>svg>foreignObject>section h5{font-size:14px}div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600}div#p>svg>foreignObject>section h6{font-size:12px}div#p>svg>foreignObject>section p{margin-bottom:10px;margin-top:0}div#p>svg>foreignObject>section blockquote{margin:0}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{margin-bottom:0;margin-top:0;padding-left:0}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ul ol{list-style-type:lower-roman}div#p>svg>foreignObject>section ol ol ol,div#p>svg>foreignObject>section ol ul ol,div#p>svg>foreignObject>section ul ol ol,div#p>svg>foreignObject>section ul ul ol{list-style-type:lower-alpha}div#p>svg>foreignObject>section dd{margin-left:0}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}div#p>svg>foreignObject>section pre{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section input::-webkit-inner-spin-button,div#p>svg>foreignObject>section input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}div#p>svg>foreignObject>section :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}div#p>svg>foreignObject>section .border{border:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .border-0{border:0!important}div#p>svg>foreignObject>section .border-bottom{border-bottom:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .rounded-1{border-radius:3px!important}div#p>svg>foreignObject>section .bg-white{background-color:#fff!important}div#p>svg>foreignObject>section .bg-gray-light{background-color:#fafbfc!important}div#p>svg>foreignObject>section .text-gray-light{color:#6a737d!important}div#p>svg>foreignObject>section .pl-3,div#p>svg>foreignObject>section .px-3{padding-left:16px!important}div#p>svg>foreignObject>section .px-3{padding-right:16px!important}div#p>svg>foreignObject>section .f6{font-size:12px!important}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.f6{--marpit-root-font-size:12px!important}div#p>svg>foreignObject>section .lh-condensed{line-height:1.25!important}div#p>svg>foreignObject>section .text-bold{font-weight:600!important}div#p>svg>foreignObject>section .pl-c{color:#6a737d}div#p>svg>foreignObject>section .pl-c1,div#p>svg>foreignObject>section .pl-s .pl-v{color:#005cc5}div#p>svg>foreignObject>section .pl-e,div#p>svg>foreignObject>section .pl-en{color:#6f42c1}div#p>svg>foreignObject>section .pl-s .pl-s1,div#p>svg>foreignObject>section .pl-smi{color:#24292e}div#p>svg>foreignObject>section .pl-ent{color:#22863a}div#p>svg>foreignObject>section .pl-k{color:#d73a49}div#p>svg>foreignObject>section .pl-pds,div#p>svg>foreignObject>section .pl-s,div#p>svg>foreignObject>section .pl-s .pl-pse .pl-s1,div#p>svg>foreignObject>section .pl-sr,div#p>svg>foreignObject>section .pl-sr .pl-cce,div#p>svg>foreignObject>section .pl-sr .pl-sra,div#p>svg>foreignObject>section .pl-sr .pl-sre{color:#032f62}div#p>svg>foreignObject>section .pl-smw,div#p>svg>foreignObject>section .pl-v{color:#e36209}div#p>svg>foreignObject>section .pl-bu{color:#b31d28}div#p>svg>foreignObject>section .pl-ii{background-color:#b31d28;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2{background-color:#d73a49;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2:before{content:"^M"}div#p>svg>foreignObject>section .pl-sr .pl-cce{color:#22863a;font-weight:700}div#p>svg>foreignObject>section .pl-ml{color:#735c0f}div#p>svg>foreignObject>section .pl-mh,div#p>svg>foreignObject>section .pl-mh .pl-en,div#p>svg>foreignObject>section .pl-ms{color:#005cc5;font-weight:700}div#p>svg>foreignObject>section .pl-mi{color:#24292e;font-style:italic}div#p>svg>foreignObject>section .pl-mb{color:#24292e;font-weight:700}div#p>svg>foreignObject>section .pl-md{background-color:#ffeef0;color:#b31d28}div#p>svg>foreignObject>section .pl-mi1{background-color:#f0fff4;color:#22863a}div#p>svg>foreignObject>section .pl-mc{background-color:#ffebda;color:#e36209}div#p>svg>foreignObject>section .pl-mi2{background-color:#005cc5;color:#f6f8fa}div#p>svg>foreignObject>section .pl-mdr{color:#6f42c1;font-weight:700}div#p>svg>foreignObject>section .pl-ba{color:#586069}div#p>svg>foreignObject>section .pl-sg{color:#959da5}div#p>svg>foreignObject>section .pl-corl{color:#032f62;text-decoration:underline}div#p>svg>foreignObject>section .mb-0{margin-bottom:0!important}div#p>svg>foreignObject>section .my-2{margin-bottom:8px!important;margin-top:8px!important}div#p>svg>foreignObject>section .pl-0{padding-left:0!important}div#p>svg>foreignObject>section .py-0{padding-bottom:0!important;padding-top:0!important}div#p>svg>foreignObject>section .pl-1{padding-left:4px!important}div#p>svg>foreignObject>section .pl-2{padding-left:8px!important}div#p>svg>foreignObject>section .py-2{padding-bottom:8px!important;padding-top:8px!important}div#p>svg>foreignObject>section .pl-3{padding-left:16px!important}div#p>svg>foreignObject>section .pl-4{padding-left:24px!important}div#p>svg>foreignObject>section .pl-5{padding-left:32px!important}div#p>svg>foreignObject>section .pl-6{padding-left:40px!important}div#p>svg>foreignObject>section .pl-7{padding-left:48px!important}div#p>svg>foreignObject>section .pl-8{padding-left:64px!important}div#p>svg>foreignObject>section .pl-9{padding-left:80px!important}div#p>svg>foreignObject>section .pl-10{padding-left:96px!important}div#p>svg>foreignObject>section .pl-11{padding-left:112px!important}div#p>svg>foreignObject>section .pl-12{padding-left:128px!important}div#p>svg>foreignObject>section hr{border-bottom-color:#eee}div#p>svg>foreignObject>section kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section:before{
+  /* content:""; */display:table}div#p>svg>foreignObject>section:after{clear:both}div#p>svg>foreignObject>section>:first-child{margin-top:0!important}div#p>svg>foreignObject>section>:last-child{margin-bottom:0!important}div#p>svg>foreignObject>section a:not([href]){color:inherit;text-decoration:none}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section details,div#p>svg>foreignObject>section dl,div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section p,div#p>svg>foreignObject>section pre,div#p>svg>foreignObject>section table,div#p>svg>foreignObject>section ul{margin-bottom:16px;margin-top:0}div#p>svg>foreignObject>section hr{background-color:#e1e4e8;border:0;height:.25em;margin:24px 0;padding:0}div#p>svg>foreignObject>section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section blockquote>:last-child{margin-bottom:0}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}div#p>svg>foreignObject>section h1{font-size:2em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:1px solid #eaecef;padding-bottom:.3em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.25em}div#p>svg>foreignObject>section h4{font-size:1em}div#p>svg>foreignObject>section h5{font-size:.875em}div#p>svg>foreignObject>section h6{color:#6a737d;font-size:.85em}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{padding-left:2em}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ol ul,div#p>svg>foreignObject>section ul ol,div#p>svg>foreignObject>section ul ul{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section li{word-wrap:break-all}div#p>svg>foreignObject>section li>p{margin-top:16px}div#p>svg>foreignObject>section li+li{margin-top:.25em}div#p>svg>foreignObject>section dl{padding:0}div#p>svg>foreignObject>section dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}div#p>svg>foreignObject>section dl dd{margin-bottom:16px;padding:0 16px}div#p>svg>foreignObject>section table{display:block;overflow:auto;width:100%}div#p>svg>foreignObject>section table th{font-weight:600}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border:1px solid #dfe2e5;padding:6px 13px}div#p>svg>foreignObject>section table tr{background-color:#fff;border-top:1px solid #c6cbd1}div#p>svg>foreignObject>section table tr:nth-child(2n){background-color:#f6f8fa}div#p>svg>foreignObject>section img{background-color:#fff;box-sizing:initial;max-width:100%}div#p>svg>foreignObject>section img[align=right]{padding-left:20px}div#p>svg>foreignObject>section img[align=left]{padding-right:20px}div#p>svg>foreignObject>section code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}div#p>svg>foreignObject>section pre{word-wrap:normal}div#p>svg>foreignObject>section pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}div#p>svg>foreignObject>section .highlight{margin-bottom:16px}div#p>svg>foreignObject>section .highlight pre{margin-bottom:0;word-break:normal}div#p>svg>foreignObject>section pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}div#p>svg>foreignObject>section pre code{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}div#p>svg>foreignObject>section .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.commit-tease-sha{--marpit-root-font-size:90%}div#p>svg>foreignObject>section .full-commit .btn-outline:not(:disabled):hover{border-color:#005cc5;color:#005cc5}div#p>svg>foreignObject>section .blob-wrapper{overflow-x:auto;overflow-y:hidden}div#p>svg>foreignObject>section .blob-wrapper-embedded{max-height:240px;overflow-y:auto}div#p>svg>foreignObject>section .blob-num{color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;white-space:nowrap;width:1%}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.blob-num{--marpit-root-font-size:12px}div#p>svg>foreignObject>section .blob-num:hover{color:rgba(27,31,35,.6)}div#p>svg>foreignObject>section .blob-num:before{content:attr(data-line-number)}div#p>svg>foreignObject>section .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}div#p>svg>foreignObject>section .blob-code-inner{word-wrap:normal;color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;overflow:visible;white-space:pre}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.blob-code-inner{--marpit-root-font-size:12px}div#p>svg>foreignObject>section .pl-token.active,div#p>svg>foreignObject>section .pl-token:hover{background:#ffea7f;cursor:pointer}div#p>svg>foreignObject>section .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}div#p>svg>foreignObject>section .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}div#p>svg>foreignObject>section .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}div#p>svg>foreignObject>section .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}div#p>svg>foreignObject>section .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}div#p>svg>foreignObject>section .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}div#p>svg>foreignObject>section .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}div#p>svg>foreignObject>section .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}div#p>svg>foreignObject>section .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}div#p>svg>foreignObject>section .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}div#p>svg>foreignObject>section .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}div#p>svg>foreignObject>section .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}div#p>svg>foreignObject>section .task-list-item{list-style-type:none}div#p>svg>foreignObject>section .task-list-item+.task-list-item{margin-top:3px}div#p>svg>foreignObject>section .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}div#p>svg>foreignObject>section .hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-meta{color:#969896}div#p>svg>foreignObject>section .hljs-emphasis,div#p>svg>foreignObject>section .hljs-quote,div#p>svg>foreignObject>section .hljs-strong,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#df5000}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#d73a49}div#p>svg>foreignObject>section .hljs-attribute,div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-literal,div#p>svg>foreignObject>section .hljs-symbol{color:#0086b3}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section{color:#63a35c}div#p>svg>foreignObject>section .hljs-tag{color:#333}div#p>svg>foreignObject>section .hljs-attr,div#p>svg>foreignObject>section .hljs-selector-attr,div#p>svg>foreignObject>section .hljs-selector-class,div#p>svg>foreignObject>section .hljs-selector-id,div#p>svg>foreignObject>section .hljs-selector-pseudo,div#p>svg>foreignObject>section .hljs-title{color:#6f42c1}div#p>svg>foreignObject>section .hljs-addition{background-color:#eaffea;color:#55a532}div#p>svg>foreignObject>section .hljs-deletion{background-color:#ffecec;color:#bd2c00}div#p>svg>foreignObject>section .hljs-link{text-decoration:underline}div#p>svg>foreignObject>section .hljs-number{color:#005cc5}div#p>svg>foreignObject>section .hljs-string{color:#032f62}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:563px}div#p>svg>foreignObject>section h1{color:#246;font-size:1.6em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:none}div#p>svg>foreignObject>section h2{font-size:1.3em}div#p>svg>foreignObject>section h3{font-size:1.1em}div#p>svg>foreignObject>section h4{font-size:1.05em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#48c;font-weight:inherit}div#p>svg>foreignObject>section hr{height:0;padding-top:.25em}div#p>svg>foreignObject>section pre{border:1px solid #999;line-height:1.15;overflow:visible}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:529px}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{color:hsla(0,0%,40%,.75);font-size:18px;left:30px;margin:0;position:absolute}div#p>svg>foreignObject>section header{top:21px}div#p>svg>foreignObject>section footer{bottom:21px}div#p>svg>foreignObject>section{align-items:stretch;background:#fff;display:flex;flex-direction:column;flex-wrap:nowrap;font-size:29px;height:720px;justify-content:center;padding:78.5px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:29px}div#p>svg>foreignObject>section>:last-child,div#p>svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section:after{bottom:21px;color:#777;font-size:24px;padding:0;position:absolute;right:30px}div#p>svg>foreignObject>section:after{--marpit-root-font-size:24px}div#p>svg>foreignObject>section.invert{background-color:#222;color:#e6eaf0}div#p>svg>foreignObject>section.invert:after{color:#999}div#p>svg>foreignObject>section.invert img{background-color:transparent}div#p>svg>foreignObject>section.invert a{color:#50b3ff}div#p>svg>foreignObject>section.invert h1{color:#a3c5e7}div#p>svg>foreignObject>section.invert h2,div#p>svg>foreignObject>section.invert h3,div#p>svg>foreignObject>section.invert h4,div#p>svg>foreignObject>section.invert h5{color:#ebeff5}div#p>svg>foreignObject>section.invert blockquote,div#p>svg>foreignObject>section.invert h6{border-color:#3d3f43;color:#939699}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#7bf}div#p>svg>foreignObject>section.invert hr{background-color:#3d3f43}div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header{color:hsla(0,0%,60%,.75)}div#p>svg>foreignObject>section.invert code,div#p>svg>foreignObject>section.invert kbd{background-color:#111}div#p>svg>foreignObject>section.invert kbd{border-color:#666;box-shadow:inset 0 -1px 0 #555;color:#e6eaf0}div#p>svg>foreignObject>section.invert table tr{background-color:#12181d;border-color:#60657b}div#p>svg>foreignObject>section.invert table tr:nth-child(2n){background-color:#1b2024}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#5b5e61}div#p>svg>foreignObject>section.invert pre{background-color:#0a0e12;border-color:#777}div#p>svg>foreignObject>section.invert pre code{background-color:transparent}div#p>svg>foreignObject>section[data-color] h1,div#p>svg>foreignObject>section[data-color] h2,div#p>svg>foreignObject>section[data-color] h3,div#p>svg>foreignObject>section[data-color] h4,div#p>svg>foreignObject>section[data-color] h5,div#p>svg>foreignObject>section[data-color] h6{color:currentColor}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1">
+<p><img src="https://maciejgowin.github.io/assets/img/wsb-logo-wroclaw.png" alt="WSB" /></p>
+<h1>Programowanie aplikacji w Java</h1>
+<h2>Maciej Gowin</h2>
+<h3>Zjazd 3 - dzień 1</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
+<h1>Linki</h1>
+<h4>Opis</h4>
+<p><a href="https://maciejgowin.github.io/wsb-java/">https://maciejgowin.github.io/wsb-java/</a></p>
+<h4>Kod źródłowy przykładów oraz zadań</h4>
+<p><a href="https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java">https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
+<h1>Język Java: klasa Object</h1>
+<p>Dotychczas wartości (prymitywne i obiekty typu <code>String</code>) porównywaliśmy przy pomocy operatora <code>==</code>.</p>
+<p>W przypadku obiektów sprawa jest bardziej skomplikowana, gdyż w zmiennej przechowywana jest jedynie referencja do obiektu, a nie jego wartość. Użycie operatora <code>==</code> może przynieść nieoczekiwane efekty.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+<h1><strong>Programowanie: przykład 25</strong></h1>
+<p>Porównanie obiektów przy pomocy operatora <code>==</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span> </span>{
+    <span class="hljs-keyword">private</span> String value;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Container</span><span class="hljs-params">(String value)</span> </span>{
+        <span class="hljs-keyword">this</span>.value = value;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Container a1 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a2 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a3 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;another&quot;</span>);
+        Container a4 = a1;
+
+        System.out.printf(<span class="hljs-string">&quot;a1 == a2: %b%n&quot;</span>, a1 == a2);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a3);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a4);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+<h1>Język Java: klasa Object</h1>
+<p>Porównanie dwóch na pozór identycznych obiektów przy pomocy operatora <code>==</code> powoduje porównanie referencji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container a1 = new Container(&quot;test&quot;);
+Container a2 = new Container(&quot;test&quot;);
+boolean compare = a1 == a2;
+</span></span></foreignObject></svg></code></pre>
+<p>Hierarchia dziedziczenia wprowadza klasę <code>Object</code>, po której dziedziczą wszystkie inne klasy. Definiuje one metodę <code>boolean equals(Object)</code>, która powinna być używana do porównywania obiektów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+<h1><strong>Programowanie: przykład 26</strong></h1>
+<p>Porównanie obiektów przy pomocy metody <code>equals</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span> </span>{
+    <span class="hljs-keyword">private</span> String value;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Container</span><span class="hljs-params">(String value)</span> </span>{
+        <span class="hljs-keyword">this</span>.value = value;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Container a1 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a2 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a3 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;another&quot;</span>);
+        Container a4 = a1;
+
+        System.out.printf(<span class="hljs-string">&quot;a1 == a2: %b%n&quot;</span>, a1 == a2);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a3);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a4);
+
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a2: %b%n&quot;</span>, a1.equals(a2));
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a3: %b%n&quot;</span>, a1.equals(a3));
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a4: %b%n&quot;</span>, a1.equals(a4));
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+<h1>Język Java: metoda Object.equals()</h1>
+<p>Użycie metody <code>equals</code> nie przyniosło pożądanych efektów. Jest to spowodowane, domyślną implementacją metody w klasie <code>Object</code>. Aby porównanie zadziałało poprawnie, musi ono zostać zdefiniowane explicite, a metoda nadpisana.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container a1 = new Container(&quot;test&quot;);
+Container a2 = new Container(&quot;test&quot;);
+boolean compare = a1.equals(a2);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+<h1><strong>Programowanie: przykład 27</strong></h1>
+<p>Porównanie obiektów przy pomocy poprawnie nadpisanej metody <code>equals</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span> </span>{
+    <span class="hljs-keyword">private</span> String value;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Container</span><span class="hljs-params">(String value)</span> </span>{
+        <span class="hljs-keyword">this</span>.value = value;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Object o)</span> </span>{
+        <span class="hljs-keyword">if</span> (o == <span class="hljs-keyword">this</span>)  {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">if</span> (!(o <span class="hljs-keyword">instanceof</span> Container)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+
+        Container other = (Container) o;
+
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span>.value == <span class="hljs-keyword">null</span> &amp;&amp; other.value == <span class="hljs-keyword">null</span>)
+                || (<span class="hljs-keyword">this</span>.value != <span class="hljs-keyword">null</span> &amp;&amp; <span class="hljs-keyword">this</span>.value.equals(other.value));
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Container a1 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a2 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;test&quot;</span>);
+        Container a3 = <span class="hljs-keyword">new</span> Container(<span class="hljs-string">&quot;another&quot;</span>);
+        Container a4 = a1;
+
+        System.out.printf(<span class="hljs-string">&quot;a1 == a2: %b%n&quot;</span>, a1 == a2);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a3);
+        System.out.printf(<span class="hljs-string">&quot;a1 == a3: %b%n&quot;</span>, a1 == a4);
+        System.out.printf(<span class="hljs-string">&quot;a1 == null: %b%n&quot;</span>, a1 == <span class="hljs-keyword">null</span>);
+
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a2: %b%n&quot;</span>, a1.equals(a2));
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a3: %b%n&quot;</span>, a1.equals(a3));
+        System.out.printf(<span class="hljs-string">&quot;a1 equals a4: %b%n&quot;</span>, a1.equals(a4));
+        System.out.printf(<span class="hljs-string">&quot;a1 equals null: %b%n&quot;</span>, a1.equals(<span class="hljs-keyword">null</span>));
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+<h1>Język Java: klasa String i equals()</h1>
+<p>Do tej pory podczas porównywania obiektów typu <code>String</code> używaliśmy operatora <code>==</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>String s1 = &quot;test&quot;;
+String s2 = &quot;test&quot;;
+boolea isEqual = s1 == 2;
+</span></span></foreignObject></svg></code></pre>
+<p>Porównania te działały zgodnie z oczekiwaniami, ponieważ do zmiennych przypisywane były literały.</p>
+<p>Zmienne wskazywały zatem tę samą przestrzeń w pamięci. Jest to związane ze współdzieloną przestrzenią w pamięci zwaną <code>String pool</code>, w której tworzone są niektóre obiekty typu <code>String</code>.</p>
+<p>Do porównywania ciągów znaków podobnie jak innych obiektów będziemy używać metody <code>equals</code> gdyż nie zawsze są one inicjalizowane przy pomocy literałów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<h1><strong>Programowanie: przykład 28</strong></h1>
+<p>Porównanie ciągu znaków.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        String s1 = <span class="hljs-string">&quot;test&quot;</span>;
+        String s2 = <span class="hljs-string">&quot;test&quot;</span>;
+        String s3 = <span class="hljs-string">&quot;another&quot;</span>;
+        String s4 = <span class="hljs-keyword">new</span> String(<span class="hljs-string">&quot;test&quot;</span>);
+        String s5 = <span class="hljs-keyword">new</span> String(<span class="hljs-string">&quot;another&quot;</span>);
+        String s6 = s1;
+
+        System.out.printf(<span class="hljs-string">&quot;s1 == s2: %b%n&quot;</span>, s1 == s2);
+        System.out.printf(<span class="hljs-string">&quot;s1 == s3: %b%n&quot;</span>, s1 == s3);
+        System.out.printf(<span class="hljs-string">&quot;s1 == s4: %b%n&quot;</span>, s1 == s4);
+        System.out.printf(<span class="hljs-string">&quot;s1 == s5: %b%n&quot;</span>, s1 == s5);
+        System.out.printf(<span class="hljs-string">&quot;s1 == s6: %b%n&quot;</span>, s1 == s6);
+
+        System.out.printf(<span class="hljs-string">&quot;s1 equals s2: %b%n&quot;</span>, s1.equals(s2));
+        System.out.printf(<span class="hljs-string">&quot;s1 equals s3: %b%n&quot;</span>, s1.equals(s3));
+        System.out.printf(<span class="hljs-string">&quot;s1 equals s4: %b%n&quot;</span>, s1.equals(s4));
+        System.out.printf(<span class="hljs-string">&quot;s1 equals s5: %b%n&quot;</span>, s1.equals(s5));
+        System.out.printf(<span class="hljs-string">&quot;s1 equals s6: %b%n&quot;</span>, s1.equals(s6));
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+<h1>Język Java: kontrakt Object.equals()</h1>
+<p>Java definiuje kontrakt, który nasza implementacja metody <code>equals()</code> powinna spełniać. Większość z założeń to dobre praktyki i nie są one w żaden sposób wymagane przez język.</p>
+<p>Metoda <code>equals()</code> powinna być:</p>
+<ul>
+<li>zwrotna: obiekt musi być równy samemu sobie</li>
+<li>symetryczna: <code>x.equals(y)</code> powinno zwrócić tę samą wartość co <code>y.equals(x)</code></li>
+<li>przechodnia: jeżeli <code>x.equals(y)</code> oraz <code>y.equals(z)</code> to wtedy również <code>x.equals(z)</code></li>
+<li>spójna: wartość <code>equals()</code> powinna ulec zmianie, tylko jeżeli własność użyta w <code>equals()</code> uległa zmianie (brak losowości)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<h1>Język Java: metoda Object.hasCode()</h1>
+<p>Klasa obiekt wprowadza jeszcze drugą ważną metodę <code>hashCode()</code> powiązaną z metodą <code>equals()</code>.</p>
+<p><code>hashCode()</code> zwraca wartość całkowitą reprezentującą daną instancję klasy. Wartość ta powinna zostać obliczona na podstawie własności obiektu oraz być spójna z definicją metody <code>equals()</code>.</p>
+<blockquote>
+<p>Jeżeli nadpisujemy metodę <code>equals()</code>, nadpisana powinna też zostać metoda <code>hashCode()</code>.</p>
+</blockquote>
+<p>Metoda ta jest de facto funkcją skrótu. Przyporządkowuje ona obiektowi krótką wartość o stałym rozmiarze, która jest nieodwracalna.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+<h1>Język Java: kontrakt Object.hashCode()</h1>
+<p>Java definiuje kontrakt, który nasza implementacja metody <code>hashCode()</code> powinna spełniać. Większość z założeń to dobre praktyki, które powiązane są z metodą <code>equals()</code>.</p>
+<p>Z metodą <code>hashCode()</code> związane są kryteria:</p>
+<ul>
+<li>spójność wewnętrzna: wartość <code>hashCode()</code> może ulec zmianie jedynie, jeżeli zmianie ulegnie wartość użyta w metodzie <code>equals()</code></li>
+<li>spójność z <code>equals()</code>: obiekty równe sobie muszą zwrócić tę samą wartość dla <code>hashCode()</code></li>
+<li>kolizyjność: nierówne obiekty mogą zwrócić tę samą wartość dla <code>hashCode()</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+<h1><strong>Programowanie: przykład 29</strong></h1>
+<p>Implementacje metody <code>hashCode()</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;--- Standard&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> Standard(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> Standard(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, bar: &quot;</span> + <span class="hljs-keyword">new</span> Standard(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, foo: &quot;</span> + <span class="hljs-keyword">new</span> Standard(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, bar: &quot;</span> + <span class="hljs-keyword">new</span> Standard(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+
+        System.out.println(<span class="hljs-string">&quot;--- ObjectsBased&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> ObjectsBased(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> ObjectsBased(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, bar: &quot;</span> + <span class="hljs-keyword">new</span> ObjectsBased(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, foo: &quot;</span> + <span class="hljs-keyword">new</span> ObjectsBased(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, bar: &quot;</span> + <span class="hljs-keyword">new</span> ObjectsBased(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+
+        System.out.println(<span class="hljs-string">&quot;--- IntellijGenerated&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> IntellijGenerated(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, foo: &quot;</span> + <span class="hljs-keyword">new</span> IntellijGenerated(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;1, bar: &quot;</span> + <span class="hljs-keyword">new</span> IntellijGenerated(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, foo: &quot;</span> + <span class="hljs-keyword">new</span> IntellijGenerated(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;foo&quot;</span>).hashCode());
+        System.out.println(<span class="hljs-string">&quot;2, bar: &quot;</span> + <span class="hljs-keyword">new</span> IntellijGenerated(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;bar&quot;</span>).hashCode());
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Język Java: istota equals i hashCode</h1>
+<p>Metody <code>equals()</code> oraz <code>hashCode()</code> są wykorzystywane przez wiele bibliotek, które zależą od ich poprawnych implementacji.</p>
+<p>Przykładem mogą być wbudowane kolekcje Java:</p>
+<ul>
+<li>Set: metoda <code>equals()</code> jest używana do porównania czy dana wartość już istnieje w zbiorze.</li>
+<li>HashMap: metoda <code>hashCode()</code> jest używana do definicji kubełka, do którego dodawany jest obiekt.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Język Java: typy generyczne</h1>
+<p>Do tej pory tworzyliśmy struktury danych przechowujące obiekty danego typu. Dla przykładu:</p>
+<ul>
+<li><code>IntSet</code> - implementacja zbioru przechowująca typy prymitywne <code>int</code></li>
+<li><code>IntegerQueue</code> - implementacja kolejki przechowująca elementy typu <code>Integer</code></li>
+</ul>
+<p>Analogicznie dla implementacji kolejki przechowującej elementy innych typów moglibyśmy stworzyć: <code>StringQueue</code> dla typu <code>String</code>, <code>DoubleQueue</code> dla typu <code>Double</code>, <code>PersonQueue</code> dla typu <code>Person</code>, itd.</p>
+<p>Każda z implementacji różniłaby się tylko typem przechowywanych elementów. Operacje wykonywane na kolejce wyglądałyby analogicznie. Takie podejście kłóciłoby się z koncepcją ponownego użycia kodu.</p>
+<p>Język Java wprowadza typy generyczne pozwalające zapobiec takim sytuacjom oraz uogólnić operacje na nich wykonywane.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Język Java: typy generyczne</h1>
+<p>Typ generyczny pozwala na stworzenie pojedynczej klasy, interfejsu lub metody, która może zostać użyty w połączeniu z różnymi typami danych.</p>
+<blockquote>
+<p>Typy generyczne nie współpracują z typami prymitywnymi.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1>Język Java: typy generyczne</h1>
+<p>W definicji klasy <code>&lt;T&gt;</code> definiuje parametr typu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Container&lt;T&gt; {
+
+    private T data;
+
+    public Container(T data) {
+        this.data = data;
+    }
+
+    public T getData() {
+        return this.data;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h1>Język Java: typy generyczne</h1>
+<p>Definicję możemy uogólnić do:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class ClassName&lt;T1, T2, ..., Tn&gt; {
+    /* ... */
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Można zauważyć, że liczba parametrów typu jest nieskończona. Zwyczajowo używamy liter <code>T, V, U, E, K</code> dla nazw parametrów typu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<h1>Język Java: typy generyczne</h1>
+<p>Podczas inicjalizacji obiektu parametr typu zastępujemy konkretnym typem.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container&lt;String&gt; containerOfString = new Container&lt;String&gt;(&quot;value&quot;);
+Container&lt;Integer&gt; containerOfInteger = new Container&lt;Integer&gt;(1);
+</span></span></foreignObject></svg></code></pre>
+<p>Podczas inicjalizacji z przypisaniem możemy pominąć pomiędzy nawiasami <code>&lt;&gt;</code> (ang. diamond operator). Będzie on automatycznie wydedukowany na podstawie typu zmiennej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container&lt;String&gt; containerOfString = new Container&lt;&gt;(&quot;value&quot;);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h1><strong>Programowanie: przykład 30</strong></h1>
+<p>Definicja klasy generycznej.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> T data;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Container</span><span class="hljs-params">(T data)</span> </span>{
+        <span class="hljs-keyword">this</span>.data = data;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">getData</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.data;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Container&lt;String&gt; containerOfString = <span class="hljs-keyword">new</span> Container&lt;String&gt;(<span class="hljs-string">&quot;value&quot;</span>);
+        Container&lt;Integer&gt; containerOfInteger = <span class="hljs-keyword">new</span> Container&lt;Integer&gt;(<span class="hljs-number">1</span>);
+
+        System.out.println(<span class="hljs-string">&quot;containerOfString: &quot;</span> + containerOfString.getData());
+        System.out.println(<span class="hljs-string">&quot;containerOfInteger: &quot;</span> + containerOfInteger.getData());
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Język Java: typy generyczne</h1>
+<p>Typy generyczne możemy zagnieżdżać i tworzyć bardziej skomplikowane konstrukcje.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container&lt;Container&lt;String&gt;&gt; container = new Container&lt;&gt;(new Container&lt;&gt;(&quot;value&quot;));
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1><strong>Programowanie: zadanie 19</strong></h1>
+<p>Stwórz kontener przechowujący pojedynczą wartość <code>Container&lt;T&gt;</code> oraz parę przechowującą dwie wartości <code>Pair&lt;T, U&gt;</code>. Przetestuj działanie, definiując dwie instancje o typach:</p>
+<ul>
+<li><code>Pair&lt;Integer, String&gt;</code> oraz</li>
+<li><code>Pair&lt;Container&lt;Integer&gt;, Container&lt;String&gt;&gt;</code>.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h1>Język Java: problemy typów generycznych</h1>
+<p>Typy generyczne zostały wprowadzone do Javy w wersji 1.5. Przekazany typ jest usuwany podczas kompilacji, aby zapewnić wsteczną kompatybilność. Ciągle możliwe jest następujące przypisanie:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container container1 = new Container&lt;&gt;(1);
+Container container2 = new Container(1);
+</span></span></foreignObject></svg></code></pre>
+<p>Co więcej, możemy przypisać tak zdefiniowaną generyczną instancję to zmiennej sparametryzowanej. Może to prowadzić do błędów podczas uruchomienia:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Container container = new Container(1);
+Container&lt;Integer&gt; containerInteger = container;
+Container&lt;String&gt; containerString = container;
+
+Integer i = containerInteger.getData();
+String s = containerString.getData();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Język Java: rozszerzenie typu generycznego</h1>
+<p>Do tej pory definiowaliśmy typy generyczne, które pozwalały na użycie dowolnych klas. Java wprowadza mechanizm ograniczający typy, które mogą zostać użyte do jako parametry typu generycznego. Ograniczenie to uzyskujemy poprzez rozszerzenie deklaracji o słowo kluczowe <code>extends</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Container&lt;T extends Animal&gt; {
+    private T data;
+
+    /* ... */
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Dzięki temu nowy obiekt może zostać zainicjalizowany jedynie z typami, które rozszerzają klasę <code>Animal</code> lub też implementują interfejs <code>Animal</code>.</p>
+<p>Główną zaletą takiego zapisu jest późniejsza możliwość użycia metod <code>Animal</code> z poziomu klasy generycznej.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1>Język Java: metody generyczne</h1>
+<p>Analogicznie do klas generycznych możemy zdefiniować metody generyczne (niestatyczne oraz statyczne).</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class WithGenericMethods {
+    
+    public &lt;T&gt; void nonStaticMethod(T value) {
+        System.out.println(&quot;nonStaticMethod: &quot; + value);
+    }
+
+    public static &lt;T&gt; void staticMethod(T value) {
+        System.out.println(&quot;staticMethod: &quot; + value);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h1>Język Java: typ generyczny jako parametr</h1>
+<p>Podczas wywołania przekazujemy typ. Może on jednak zostać pomięty. Zostanie automatycznie wydedukowany przez kompilator na podstawie przekazanego parametru.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>WithGenericMethods.&lt;String&gt;staticMethod(&quot;test&quot;);
+WithGenericMethods.staticMethod(&quot;test&quot;);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h1><strong>Programowanie: przykład 31</strong></h1>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WithGenericMethods</span> </span>{
+
+    <span class="hljs-keyword">public</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">nonStaticMethod</span><span class="hljs-params">(T value)</span> </span>{
+        System.out.printf(<span class="hljs-string">&quot;nonStaticMethod: %s: %s%n&quot;</span>, value, value.getClass().getName());
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">staticMethod</span><span class="hljs-params">(T value)</span> </span>{
+        System.out.printf(<span class="hljs-string">&quot;staticMethod: %s: %s%n&quot;</span>, value, value.getClass().getName());
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        WithGenericMethods withGenericMethods = <span class="hljs-keyword">new</span> WithGenericMethods();
+        withGenericMethods.&lt;String&gt;nonStaticMethod(<span class="hljs-string">&quot;test&quot;</span>);
+        withGenericMethods.nonStaticMethod(<span class="hljs-string">&quot;test&quot;</span>);
+        withGenericMethods.&lt;Integer&gt;nonStaticMethod(<span class="hljs-number">1</span>);
+        withGenericMethods.nonStaticMethod(<span class="hljs-number">1</span>);
+
+        WithGenericMethods.&lt;String&gt;staticMethod(<span class="hljs-string">&quot;test&quot;</span>);
+        WithGenericMethods.staticMethod(<span class="hljs-string">&quot;test&quot;</span>);
+        WithGenericMethods.&lt;Integer&gt;staticMethod(<span class="hljs-number">1</span>);
+        WithGenericMethods.staticMethod(<span class="hljs-number">1</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h1>Język Java: typ generyczny jako parametr</h1>
+<p>Podczas definicji metod ze sparametryzowanymi typami generycznymi definiowaliśmy typ:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static &lt;T&gt; void consumeOfT(Container&lt;T&gt; value) { /* ... */ }
+</span></span></foreignObject></svg></code></pre>
+<p>Jeżeli typ T jest nieistotny możemy użyć <code>&lt;?&gt;</code> (tzw. wildcard), który opisuje dowolny typ. Dzięki temu możemy pominąć definicję parametry typu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void consumeOfWildcard(Container&lt;?&gt; value) { /* ... */ }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1>Język Java: typ generyczny jako parametr</h1>
+<p>Kolejną elementem języka jest ograniczanie typów sparametryzowanych przekazanych w parametrach metody.</p>
+<h4>Ograniczenie z góry (ang. upper bonds)</h4>
+<p>Pozwala na przekazanie klas rozszerzających dany typ.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void consumeOfExtendsAnimal(Container&lt;? extends Animal&gt; value) {
+</span></span></foreignObject></svg></code></pre>
+<h4>Ograniczenie z dołu (ang. lower bonds)</h4>
+<p>Pozwala na przekazanie klas będących rozszerzeniem danego typu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void consumeOfSuperAnimal(Container&lt;? super Animal&gt; value) {
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+<h1><strong>Programowanie: przykład 32</strong></h1>
+<p>Użycie <code>upper bonds</code> oraz <code>lower bonds</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Container&lt;Cat&gt; catContainer = <span class="hljs-keyword">new</span> Container&lt;&gt;(<span class="hljs-keyword">new</span> Cat());
+        Container&lt;Dog&gt; dogContainer = <span class="hljs-keyword">new</span> Container&lt;&gt;(<span class="hljs-keyword">new</span> Dog());
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">consume1</span><span class="hljs-params">(Container&lt;T&gt; container)</span> </span>{
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">consume2</span><span class="hljs-params">(Container&lt;?&gt; container)</span> </span>{
+        <span class="hljs-comment">// container.setData(new Dog());</span>
+        <span class="hljs-comment">// container.setData(new Cat());</span>
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">consume3</span><span class="hljs-params">(Container&lt;? extends Animal&gt; container)</span> </span>{
+        <span class="hljs-comment">// container.setData(new Dog());</span>
+        <span class="hljs-comment">// container.setData(new Cat());</span>
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;T&gt; <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">consume4</span><span class="hljs-params">(Container&lt;? <span class="hljs-keyword">super</span> Animal&gt; container)</span> </span>{
+        container.setData(<span class="hljs-keyword">new</span> Dog());
+        container.setData(<span class="hljs-keyword">new</span> Cat());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">consume5</span><span class="hljs-params">(Container&lt;Animal&gt; container)</span> </span>{
+        container.setData(<span class="hljs-keyword">new</span> Dog());
+        container.setData(<span class="hljs-keyword">new</span> Cat());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">consume6</span><span class="hljs-params">(Container&lt;Object&gt; container)</span> </span>{
+        container.setData(<span class="hljs-keyword">new</span> Dog());
+        container.setData(<span class="hljs-keyword">new</span> Cat());
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+<h1>Język Java: typy generyczne a dziedziczenie</h1>
+<p>Załóżmy, że <code>Dog extends Animal</code>. Niestety w tak zdefiniowanej hierarchii dziedziczenia nie zachodzi relacja <code>Container&lt;Dog&gt; extends Container&lt;Animal&gt;</code>.</p>
+<p>Jest to związane z usuwaniem typu podczas kompilacji oraz kompatybilnością wsteczną.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1>Język Java: metod generyczne a przeciążanie</h1>
+<p>Przeciążanie metod nie zachodzi, dla typów generycznych. Poniższa deklaracja spowoduje błąd kompilacji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void consume(Container&lt;Dog&gt; value) { }
+public static void consume(Container&lt;Cat&gt; value) { }
+</span></span></foreignObject></svg></code></pre>
+<p>Jest to związane z usuwaniem typu podczas kompilacji oraz kompatybilnością wsteczną.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1>Język Java: kolekcje</h1>
+<p>Java dostarcza szereg klas i interfejsów, które implementują struktury danych i algorytmy, o których była już mowa.</p>
+<p>Przykładem może być klasa <code>HashSet</code> implementująca interfejs <code>Set</code>, który jest odzwierciedleniem struktury danych zbioru.</p>
+<p>Do tej pory implementowaliśmy struktury danych. Pozwoliło to poznać ich zachowanie i możliwe implementacje. Od tego momentu będziemy się starali używać wbudowanych struktur.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+<h1>Język Java: kolekcje</h1>
+<p>Zbiór dostępnych struktur danych możemy zaprezentować poprzez hierarchię interfejsów.</p>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-03-1/java-collection-map.gif" alt="Java Collection Framework" /></p>
+<p>Źródło: <a href="https://docs.oracle.com/javase/tutorial/collections/interfaces/">https://docs.oracle.com/javase/tutorial/collections/interfaces/</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
+<h1>Język Java: Collection</h1>
+<p><code>Collection</code> - interfejs definiujący wspólne operacje na kolekcjach.</p>
+<p>Do głównych operacji należą:</p>
+<ul>
+<li><code>add()</code> - dodanie elementu do kolekcji.</li>
+<li><code>addAll()</code> - dodanie wielu elementów do kolekcji.</li>
+<li><code>remove()</code> - usunięcie elementu z kolekcji.</li>
+<li><code>removeAll()</code> - usunięcie wielu elementów z kolekcji.</li>
+<li><code>clear()</code> - usunięcie wszystkich elementów z kolekcji.</li>
+<li><code>size()</code> - pobranie rozmiaru kolekcji.</li>
+<li><code>iterator()</code> - pobranie iteratora pozwalającego na przejście po wszystkich elementach kolekcji.</li>
+<li><code>contains()</code> - sprawdzenie, czy kolekcja posiada dany element.</li>
+<li><code>containsAll()</code> - sprawdzenie, czy kolekcja posiada dane elementy.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+<h1>Język Java: List</h1>
+<p><code>List</code> - interfejs definiujący operacje na uszeregowanych kolekcjach, do których możemy odnosić się w sposób znany z tablic.</p>
+<ul>
+<li><code>get()</code> - pobranie elementu pod danych indeksem.</li>
+<li><code>set()</code> - ustawienie elementu pod danym indeksem.</li>
+<li><code>remove()</code> - usunięcie elementu pod danym indeksem.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+<h1>Język Java: Set</h1>
+<p><code>Set</code> - interfejs definiujący operacje na zbiorach elementów, gdzie elementy są unikatowe w kolekcji. Nie rozszerza interfejsu <code>Collection</code> o istotne metody. Do głównych różnic zaliczamy:</p>
+<ul>
+<li>zmianę podejścia do przechowywanych elementów,</li>
+<li>brak uszeregowania elementów.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+<h1>Język Java: Queue</h1>
+<p><code>Queue</code> - interfejs definiujący operacje na kolejce, w której elementy zarządzane są w porządku FIFO.</p>
+<ul>
+<li><code>offer()</code> - dodanie elementu do kolejki.</li>
+<li><code>element()</code> - pobranie pierwszego elementu z kolejki lub błąd w przypadku braku elementu.</li>
+<li><code>peek()</code> - pobranie pierwszego elementu z kolejki lub <code>null</code> w przypadku braku elementu.</li>
+<li><code>remove()</code> - pobranie oraz usunięcie pierwszego elementu z kolejki lub błąd w przypadku braku elementu.</li>
+<li><code>poll()</code> - pobranie oraz usunięcie pierwszego elementu z kolejki lub <code>null</code> w przypadku braku elementu.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
+<h1>Język Java: Deque</h1>
+<p><code>Deque</code> - interfejs definiujący kolejkę dwustronną będącą rozszerzeniem klasycznej kolejki (ang. double ended queue). W tym przypadku elementy mogą zostać dodane i usunięte zarówno z początku, jak i z końca kolejki.</p>
+<p>Do podstawowych operacji zaliczamy:<br />
+<code>addFirst()</code> - dodanie elementu na początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>addLast()</code> - dodanie elementu na końcu kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>offerFirst()</code> - dodanie elementu na początku kolejki lub zwrócenie <code>false</code> w przypadku pełnej kolejki.<br />
+<code>offerLast()</code> - dodanie elementu na końcu kolejki lub zwrócenie <code>false</code> w przypadku pełnej kolejki.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
+<h1>Język Java: Deque</h1>
+<p>Do podstawowych operacji zaliczamy:<br />
+<code>getFirst()</code> - pobranie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>getLast()</code> - pobranie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>peekFirst()</code> - pobranie elementu z początku kolejki lub zwrócenie <code>null</code> w przypadku pełnej kolejki<br />
+<code>peekLast()</code> - pobranie elementu z końca kolejki lub zwrócenie <code>null</code> w przypadku pełnej kolejki</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
+<h1>Język Java: Deque</h1>
+<p>Do podstawowych operacji zaliczamy:<br />
+<code>removeFirst()</code> - pobranie oraz usunięcie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>removeLast()</code> - pobranie oraz usunięcie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.<br />
+<code>pollFirst()</code> - pobranie oraz usunięcie elementu z początku kolejki lub zwrócenie <code>null</code> w przypadku pełnej kolejki.<br />
+<code>pollLast()</code> - pobranie oraz usunięcie elementu z końca kolejki lub zwrócenie <code>null</code> w przypadku pełnej kolejki.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
+<h1>Język Java: Deque</h1>
+<p>Dzięki dwukierunkowości kolejki interfejsy ten definiuje też metody znane ze stosu. Są to:<br />
+<code>push()</code> - dodanie elementu na początku stosu/kolejki dwukierunkowej.<br />
+<code>pop()</code> - pobranie oraz usunięcie elementu z początku stosu/kolejki dwukierunkowej.<br />
+<code>peek()</code> - obranie elementu z początku stosu/kolejki dwukierunkowej.</p>
+<blockquote>
+<p>Java definiuje również klasę <code>Stack</code> realizujący stos, ale nie będziemy się na niej koncentrować. Jest ona głównie przewidziana do środowisk wielowątkowych, gdyż jej metody są synchronizowane.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
+<h1>Język Java: Map</h1>
+<p><code>Map</code> - interfejs definiujący operacje na elementach przechowywanych w parach klucz-wartość. Klucze są unikatowe. Dostęp do elementu odbywa się poprzez klucz.</p>
+<p>Do podstawowych operacji zdefiniowanych przez interfejs zaliczamy:</p>
+<ul>
+<li><code>put(K, V)</code> - dodanie elementu V pod kluczem K. Jeżeli istnieje element pod kluczem K, powinien on zostać zastąpiony nowym elementem.</li>
+<li><code>putAll()</code> - dodanie wszystkich elementów.</li>
+<li><code>putIfAbsent(K, V)</code> - dodanie elementu V pod kluczem K tylko w przypadku, gdy pod kluczem K nie istnieje żaden element.</li>
+<li><code>get(K)</code> - pobranie elementu pod kluczem K lub <code>null</code> jeżeli nie istnieje taki element.</li>
+<li><code>getOrDefault(K, V def)</code> - pobranie elementu pod kluczem K lub <code>def</code> jeżeli element nie istnieje.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
+<h1>Język Java: Map</h1>
+<p>Do podstawowych operacji zdefiniowanych przez interfejs zaliczamy:</p>
+<ul>
+<li><code>containsKey(K)</code> - sprawdzenie, czy pod danym kluczem istnieje jakikolwiek element.</li>
+<li><code>containsValue(V)</code> - sprawdzenie, czy dany element istnieje.</li>
+<li><code>replace(K, V)</code> - zamiana elementu pod kluczem K, jeżeli pod kluczem istnieje element.</li>
+<li><code>replace(K, V old, V new)</code> - zamiana elementu pod kluczem K, jeżeli pod kluczem K istnieje element oraz jego wartość jest równa <code>old</code>.</li>
+<li><code>remove(K)</code> - usuwanie elementu pod kluczem K.</li>
+<li><code>remove(K, V)</code> - usuwanie elementu pod kluczem K, jeżeli jego wartość to V.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
+<h1>Język Java: Map</h1>
+<p>Oraz operacje na wewnętrznych kolekcjach:<br />
+<code>keySet()</code> - pobranie wszystkich kluczy w mapie.<br />
+<code>values()</code> - pobranie wszystkich wartości w mapie.<br />
+<code>entrySet()</code> - pobranie wszystkich par klucz-wartość w mapie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
+<h1>Język Java: Iterator</h1>
+<p><code>Iterator</code> - interfejs dostarczający operacje umożliwiające przejście po wszystkich elementach danej struktury.</p>
+<p>Wszystkie kolekcje dostarczają metodę <code>iterator()</code> zwracającą iterator.</p>
+<p>Do podstawowych operacji zaliczamy:</p>
+<ul>
+<li><code>hasNext()</code> - sprawdzenie, czy istnieje kolejny element w kolekcji.</li>
+<li><code>next()</code> - pobranie następnego elementu z kolekcji.</li>
+<li><code>remove()</code> - usunięcie ostatniego elementu z kolekcji.</li>
+<li><code>forEachRemaining()</code> - wykonanie konkretnej akcji na wszystkich pozostałych elementach kolekcji.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
+<h1>Język Java: kolekcje</h1>
+<p>Do tej pory poznaliśmy interfejsy, które definiują zbiór operacji dostępnych dla danej strukturach danych. Istnieje szereg klas je implementujących. Skupimy się na najczęściej używanych.</p>
+<ul>
+<li>ArrayList</li>
+<li>LinkedList</li>
+<li>HashSet</li>
+<li>HashMap</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
+<h1>Język Java: ArrayList</h1>
+<p>Kolekcja <code>ArrayList</code> implementuje interfejs <code>List</code>. Wewnętrznie używa tablicy do przechowywania elementów. Tablica ta jest rozszerzana wraz z dodawaniem nowych elementów do listy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
+<h1><strong>Programowanie: przykład 33</strong></h1>
+<p>Wykorzystanie listy oraz iteratora.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.Iterator;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        List&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        items.add(<span class="hljs-string">&quot;item1&quot;</span>);
+        items.add(<span class="hljs-string">&quot;item2&quot;</span>);
+        items.add(<span class="hljs-string">&quot;item3&quot;</span>);
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; items.size(); i++) {
+            System.out.println(<span class="hljs-string">&quot;for: &quot;</span> + items.get(i));
+        }
+
+        <span class="hljs-keyword">for</span> (String item: items) {
+            System.out.println(<span class="hljs-string">&quot;foreach: &quot;</span> + item);
+        }
+
+        Iterator&lt;String&gt; iterator = items.iterator();
+        <span class="hljs-keyword">while</span> (iterator.hasNext()) {
+            System.out.println(<span class="hljs-string">&quot;iterator: &quot;</span> + iterator.next());
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
+<h1>Język Java: LinkedList</h1>
+<p>Kolekcja <code>LinkedList</code> implementuje interfejsy <code>List</code> oraz <code>Deque</code>. Wewnętrznie używa dwukierunkowej listy elementów do przechowywania.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>List&lt;String&gt; list = new LinkedList&lt;String&gt;();
+Deque&lt;String&gt; deque = new LinkedList&lt;String&gt;();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
+<h1>Język Java: ArrayList a LinkedList</h1>
+<h4>ArrayList</h4>
+<p>Dostęp do elementu pod wskazanym indeksem o złożoności O(1).<br />
+W teorii dodanie nowego elementu odbywa się w stałym czasie.<br />
+Niektóre operacje dodawania mogą powodować problemy wydajnościowe w związku z koniecznością kopiowania elementów.</p>
+<h4>LinkedList</h4>
+<p>Nie dostarcza szybkiego dostępu do elementów o wskazanym indeksie. Dotarcie do konkretnego elementu wymaga przejśćia po liście.<br />
+Optymalna w sytuacjach, w których większość operacji to operacje dodawania elementów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
+<h1>Język Java: HashSet</h1>
+<p>Kolekcja <code>HashSet</code> implementuje interfejs <code>Set</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Set&lt;String&gt; set = new HashSet&lt;String&gt;();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
+<h1><strong>Programowanie: przykład 34</strong></h1>
+<p>Użycie <code>HashSet</code> wraz z ciągiem znaków oraz własną klasą.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Set&lt;String&gt; setOfString = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
+        setOfString.add(<span class="hljs-string">&quot;aaaaa&quot;</span>);
+        setOfString.add(<span class="hljs-string">&quot;bbbbb&quot;</span>);
+        setOfString.add(<span class="hljs-string">&quot;aaaaa&quot;</span>);
+
+        System.out.println(setOfString);
+
+        Set&lt;ClassNoEquals&gt; setOfClassNoEquals = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
+        setOfClassNoEquals.add(<span class="hljs-keyword">new</span> ClassNoEquals(<span class="hljs-string">&quot;aaaaa&quot;</span>));
+        setOfClassNoEquals.add(<span class="hljs-keyword">new</span> ClassNoEquals(<span class="hljs-string">&quot;bbbbb&quot;</span>));
+        setOfClassNoEquals.add(<span class="hljs-keyword">new</span> ClassNoEquals(<span class="hljs-string">&quot;aaaaa&quot;</span>));
+
+        System.out.println(setOfClassNoEquals);
+
+        Set&lt;ClassWithEquals&gt; setOfClassWithEquals = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
+        setOfClassWithEquals.add(<span class="hljs-keyword">new</span> ClassWithEquals(<span class="hljs-string">&quot;aaaaa&quot;</span>));
+        setOfClassWithEquals.add(<span class="hljs-keyword">new</span> ClassWithEquals(<span class="hljs-string">&quot;bbbbb&quot;</span>));
+        setOfClassWithEquals.add(<span class="hljs-keyword">new</span> ClassWithEquals(<span class="hljs-string">&quot;aaaaa&quot;</span>));
+
+        System.out.println(setOfClassWithEquals);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
+<h1>Język Java: HashMap</h1>
+<p>Mapa <code>HashMap</code> implementuje interfejs <code>Map</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Map&lt;String, MyClass&gt; map = new HashMap&lt;String, MyClass&gt;();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
+<h1><strong>Programowanie: zadanie 20</strong></h1>
+<p>Zaimplementuj program pobierający słowa zadane przez użytkownika oraz zliczający ilość wystąpień danego słowa.</p>
+<p>Do pobierania słów użyj metody <code>Scanner.next()</code>.<br />
+Do zliczania ilości wystąpień słów użyj klasy <code>HashSet</code>.</p>
+<p>Przykładowe użycie programu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
+<h1>Język Java: algorytmy na kolekcjach</h1>
+<p><code>Collections.sort()</code> - sortowanie elementów.<br />
+<code>Collections.shuffle()</code> - przeorganizowanie elementów w pseudolosowej kolejności.<br />
+<code>Collections.reverse()</code> - odwrócenie kolejności elementów.<br />
+<code>Collections.fill()</code> - ustawienie każdego z elementów listy wartością zadaną.<br />
+<code>Collections.copy()</code> - przekopiowanie elementów z jednej kolekcji do drugiej przy zachowaniu indeksów.<br />
+<code>Collections.swap()</code> - podmienienie elementów na zadanych indeksach.<br />
+<code>Collections.addAll()</code> - dodanie wszystkich elementów jednej kolekcji do drugiej.<br />
+<code>Collections.frequency()</code> - sprawdzenie ilości wystąpień danej wartości w kolekcji.<br />
+<code>Collections.disjoint()</code> - sprawdzenie, czy dwie listy posiadają wspólne elementy.<br />
+<code>Collections.min()</code> - wyszukanie najmniejszego elementu.<br />
+<code>Collections.max()</code> - wyszukanie największego elementu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
+<h1>Język Java: typ wyliczeniowy</h1>
+<p>W Javie typ wyliczeniowy (ang. enumeration) jest typem o stałych wartościach, które są inicjalizowane podczas implementacji. Typ ten definiujemy wraz z listą wartości, które może przyjmować.</p>
+<p>Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>enum Direction { 
+   NORTH, SOUTH, EAST, WEST 
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Stworzyliśmy typ wyliczeniowy <code>Direction</code> z 4 możliwymi wartościami. Wartości te możemy przypisać do zmiennej:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Direction direction = Direction.NORTH;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
+<h1>Język Java: typ wyliczeniowy</h1>
+<p>Typ wyliczeniowym jest specjalnym typem klasy. Uogólniając:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>enum Name { 
+   VAL1, VAL2, ..., VALN 
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Stałe wartości typu wyliczeniowego są reprezentowane przez słowa pisane z wielkich liter.</p>
+</blockquote>
+<p>Typy wyliczeniowe zostały wprowadzone, aby usprawnić definicje stałych.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Direction {
+   public final static int NORTH = 1;
+   public final static int SOUTH = 2;
+   public final static int EAST = 3;
+   public final static int WEST = 4;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
+<h1>Język Java: typ wyliczeniowy</h1>
+<p>Jak każda z klas typ wyliczeniowy może posiadać: konstruktor, pola, oraz metody.</p>
+<p>Co istotne konstruktor jest automatycznie prywatny i nie może zostać wywołany spoza klasy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public enum Direction {
+    NORTH(&quot;N&quot;), SOUTH(&quot;S&quot;), EAST(&quot;E&quot;), WEST(&quot;W&quot;);
+
+    private String shortVersion;
+    
+    Direction(String shortVersion) {
+        this.shortVersion = shortVersion;
+    }
+    
+    public String getShortVersion() {
+        return shortVersion;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
+<h1>Język Java: typ wyliczeniowy</h1>
+<p>Do wbudowanych metod dla każdego typu wyliczeniowego należą:</p>
+<ul>
+<li><code>ordinal()</code> - pobranie pozycji danej wartości w postaci liczby całkowitej</li>
+<li><code>compareTo()</code> - porównanie dwóch wartości na podstawie <code>ordinal</code>.</li>
+<li><code>toString()</code> - pobranie reprezentacji tekstowej danej wartości.</li>
+<li><code>name()</code> - pobranie nazwy wartości w formacie tekstowym. Metoda ta nie może zostać nadpisana.</li>
+<li><code>valueOf()</code> - pobranie wartości na podstawie reprezentacji tekstowej. Jeżeli nie istnieje, zostanie zgłoszony wyjątek.</li>
+<li><code>values()</code> - pobranie tablicy z wszystkimi wartościami dla danego typu wyliczeniowego.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
+<h1><strong>Programowanie: zadanie 21</strong></h1>
+<p>Dla typu wyliczeniowego:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>enum Direction { 
+   NORTH, SOUTH, EAST, WEST 
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Zaimplementuj metodę <code>Direction safeValueOf(String value)</code> zwracającą wartość typu wyliczeniowego na podstawie reprezentacji tekstowej lub <code>null</code> jeżeli nie istnieje.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
+<h1>Język Java: niestatyczne klasy zagnieżdżone</h1>
+<p>Niestatyczne klasy zagnieżdżone (lub klasy wewnętrzne, ang. non-static nested classes, inner classes) są to klasy, które są zdefiniowanie w ciele innej klasy, mające one dostęp to pól i metod klasy zewnętrznej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Car {
+
+    private String model;
+
+    class Engine {
+
+        private Integer power;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64">
+<h1>Język Java: niestatyczne klasy zagnieżdżone</h1>
+<p>W związku z tym, że klasy wewnętrzne mają dostęp do klasy zewnętrznej, w pierwszej kolejności konieczne jest zainicjalizowanie klasy zewnętrznej. Można powiedzieć, że klasy wewnętrzne istnieją tylko w kontekście klas zewnętrznych.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Car car = new Car();
+Car.Engine engine = car.new Engine();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65">
+<h1>Język Java: niestatyczne klasy zagnieżdżone</h1>
+<p>Dostęp do klasy zewnętrznej z ciała klasy wewnętrznej odbywa się poprzez nazwę klasy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Car {
+
+    private String brand;
+
+    class Engine {
+
+        private String brand;
+        
+        public String getOverallBrand() {
+            return String.format(&quot;%s %s&quot;, Car.this.brand, this.brand);
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
+<h1>Język Java: statyczne klasy zagnieżdżone</h1>
+<p>Statyczne klasy zagnieżdżone (lub klasy wewnętrzne, ang. static nested classes) są to statyczne klasy, które są zdefiniowanie w ciele innej klasy. W związku z tym nie mają one dostępu to pól i metod klasy zewnętrznej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Car {
+
+    private String model;
+
+    static class Engine {
+
+        private Integer power;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
+<h1>Język Java: statyczne klasy zagnieżdżone</h1>
+<p>W związku z tym, że statyczne klasy zagnieżdżone nie mają dostępu do klasy zewnętrznej, do ich inicjalizacji nie używamy kontekstu klasy zewnętrznej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Car.Engine engine = new Car.Engine();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
+<h1>Język Java: klasy anonimowe</h1>
+<p>Klasy anonimowe to klasy, które zdefiniowane są zaraz podczas inicjalizacji. Nie posiadają one nazwy oraz mogą byc zdefiniowane na poziomie klasy zewnętrznej lub w metodzie.</p>
+<p>Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public class Main {
+
+    public static void main(String[] args) {
+        ParentType anonymous = new ParentType() {
+            public String toString() {
+                return &quot;Anonymous of ParentType&quot;;
+            }
+        };
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Gdzie <code>ParentType</code> to wcześniej zdefiniowany interfejs, który chcemy zaimplementować lub klasa, którą chcemy rozszerzyć.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69">
+<h1>Język Java: klasy anonimowe</h1>
+<p>Głównym miejscem użycia klas anonimowych są przypadki, w których dana definicja klasy jest użyta tylko raz w miejscu inicjalizacji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>interface Message {
+    String getValue();
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println(getDefaultMessage().getValue());
+    }
+    
+    public static Message getDefaultMessage() {
+        return new Message() {
+            public String getValue() {
+                return &quot;Anonymous of ParentType&quot;;
+            }
+        };
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
+<h1>Język Java: słowo kluczowe final</h1>
+<p>Słowo kluczowe <code>final</code> definiuje stałą, która jest niezmienna. Może ono byc użyte w połączeniu ze zmiennymi, klasami oraz metodami.</p>
+<h4>Zmienna <code>final</code></h4>
+<p>Zmienna <code>final</code> nie może zainicjalizowana drugi raz.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>final int value = 43;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71">
+<h1>Język Java: słowo kluczowe final</h1>
+<h4>Metoda <code>final</code></h4>
+<p>Metoda <code>final</code> nie może być przesłonięta.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public final int count() {
+    /* ... */
+}
+</span></span></foreignObject></svg></code></pre>
+<h4>Klasa <code>final</code></h4>
+<p>Klasa <code>final</code> nie może być rozszerzona.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public final class StringWrapper {
+    /* ... */
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72">
+<h1>Język Java: rzutowanie typów</h1>
+<p>Przy okazji typów prymitywnych mówiliśmy o automatycznej konwersji z typu prymitywnego do odpowiedniego typu obiektowego (tzw. autoboxing). Podobnie dla typów prymitywnych konwertowaliśmy typ <code>double</code> do typu <code>int</code>.</p>
+<p>W przypadku konwersji typów mamy do czynienia z ich rzutowaniem.</p>
+<p>Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>double d = 7.5;
+int i = (int) d;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73">
+<h1>Język Java: rzutowanie typów</h1>
+<p>Rzutowanie możemy też wykorzystać przy okazji obiektów oraz hierarchii dziedziczenia. Należy jednak uważać na potencjalne błędy związane z użyciem złych typów.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Animal</span> </span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Animal</span> </span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Animal</span> </span>{}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Animal animal = <span class="hljs-keyword">new</span> Dog();
+
+        Dog dog = (Dog) animal;
+        <span class="hljs-comment">// Cat cat = (Cat) animal; /* ClassCastException */</span>
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Aby zabezpieczyć się przed błędami rzutowania, warto używać operatora instanceof przed samą operacją rzutowania.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74">
+<h1>Język Java: rzutowanie typów</h1>
+<p>Istnieją dwa typy rzutowania:</p>
+<h4>Rzutowanie rozszerzające ( Widening Type Casting)</h4>
+<p>Konwersja zachodzi automatycznie, ponieważ typ o mniejszym rozmiarze zostaje zastąpiony typem o rozmiarze większym.</p>
+<p>Przykładowo: konwersja <code>int</code> do <code>double</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>int i = 1;
+double d = i;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75">
+<h1>Język Java: rzutowanie typów</h1>
+<h4>Rzutowanie zawężające (Narrowing Type Casting)</h4>
+<p>Konwersja musi być zdefiniowana explicite, ponieważ typ o większym rozmiarze zostaje zastąpiony typem o rozmiarze mniejszym.</p>
+<p>Przykładowo: konwersja <code>double</code> do <code>int</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>double d = 1.0;
+int i = (int) d;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76">
+<h1>Język Java: adnotacje</h1>
+<p>Adnotacje są metadanymi opisującymi kod źródłowy. Mogą one by używane w połączeniu z klasami, metodami, zmiennymi, parametrami, a nawet pakietami.</p>
+<p>Adnotacje mogą być usunięte lub zachowane podczas kompilacji. Daje to możliwość ich późniejszego odczytania podczas działania programu.</p>
+<p>Java definiuje wbudowane adnotacje. Do najpopularniejszych należą:</p>
+<p><code>@Override</code> - sprawdza, czy metoda jest przeciążona.<br />
+<code>@Deprecated</code> - oznacza metodę jako przestarzałą, zgłaszając ostrzeżenie podczas kompilacji.<br />
+<code>@SuppressWarnings</code> - informuje kompilator, aby pominął ostrzeżenia danego typu.</p>
+<p>Istnieje możliwość tworzenia własnych adnotacji.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77">
+<h1>Język Java: adnotacje</h1>
+<p>Deklaracja adnotacji jest podobna do deklaracji interfejsu. Wyróżnia ją jednak znak <code>@</code> poprzedzający słowo kluczowe <code>interface</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public @interface Author {
+    String name();
+    String company() default &quot;WSB&quot;;
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Dodatkowo możemy zdefiniować metody, które opisują elementy adnotacji. Metody te:</p>
+<ul>
+<li>Nie mogą przyjmować parametrów ani zgłaszać wyjątków.</li>
+<li>Wartości zwracane ograniczają się do typów prymitywnych, ciągów znaków <code>String</code>, klasy <code>Class</code>, typów wyliczeniowych oraz tablic wcześniej wymienionych typów.</li>
+<li>Mogą mieć wartości domyślne.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78">
+<h1>Język Java: adnotacje</h1>
+<p>Definicję adnotacji możemy wzbogacić o adnotacje, które definiują kiedy, i dla jakich elementów mogą one zostać użyte.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD, ElementType.TYPE})
+public @interface Author {
+    String name();
+    String company() default &quot;WSB&quot;;
+}
+</span></span></foreignObject></svg></code></pre>
+<p><code>@Retention</code> - wskazuje, do jakiego momentu dana adnotacja powinna być zachowana.<br />
+<code>@Target</code> - wskazuje, dla jakiego elementu może zostać użyta.</p>
+<p>Adnotacje same w sobie nie wykonują żadnych zadań. Są one przetwarzane przez zewnętrzne narzędzia lub kod programu i na ich podstawie tworzone jest dodatkowe zachowanie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79">
+<h1>Język Java: adnotacje</h1>
+<p>Możliwe wartości dla <code>RetentionPolicy</code>:</p>
+<ul>
+<li><code>SOURCE</code> - adnotacja powinna zostać usunięta przez kompilator.</li>
+<li><code>CLASS</code> - adnotacja powinna zostać zapisana w pliku wynikowym class, ale nie powinna być przetworzona podczas uruchomienia przez JVM (domyślne zachowanie).</li>
+<li><code>RUNTIME</code> - adnotacja powinna być dostępna i zachowana przez kompilator oraz JVM.</li>
+</ul>
+<blockquote>
+<p>Adnotacje typu RUNTIME są używane przez mechanizm refleksji. Korzysta z nich wiele bibliotek do automatycznego dodawania określonych zachowań do klas zdefiniowanych przez użytkownika.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80">
+<h1>Język Java: adnotacje</h1>
+<p>Wybrane wartości dla <code>Target</code>:</p>
+<ul>
+<li><code>TYPE</code> - adnotacja może zostać użyta na poziomie: klasy, interfejsu, adnotacji lub typu wyliczeniowego</li>
+<li><code>FIELD</code> - adnotacja może zostać użyta na własnościach klasy</li>
+<li><code>METHOD</code> - adnotacja może zostać użyta na poziomie metody</li>
+<li><code>PARAMETER</code> - adnotacja może zostać użyta na poziomie parametru.</li>
+<li><code>CONSTRUCTOR</code> - adnotacja może zostać użyta na poziomie konstruktora.</li>
+<li><code>LOCAL_VARIABLE</code> - adnotacja może zostać użyta na zmiennej lokalnej.</li>
+<li><code>ANNOTATION_TYPE</code> - adnotacja może zostać użyta przy deklaracji adnotacji</li>
+<li><code>PACKAGE</code> - adnotacja może zostać użyta przy deklaracji pakietu</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81">
+<h1>Język Java: refleksja</h1>
+<p>Refleksja to mechanizm pozwalający na przeglądanie oraz modyfikację klas, interfejsów, metod, konstruktorów i pól klas w czasie działania programu. Wszystkie te operacje mogą zostać wykonane z poziomu kodu źródłowego.</p>
+<p>Głównym elementem całego mechanizmu refleksji w Java jest klasa <code>Class</code>. Przechowuje ona informacje o klasie i jej składowych. Każda z instancji klasy <code>Class</code> opisuje jedną klasę i to dzięki nim mamy dostęp do szczegółowych informacji oraz mechanizmu refleksji.</p>
+<p>Adnotacje w połączeniu z mechanizmem refleksji pozwalają na sterowanie jej zachowaniem. To nic innego jak mechanizm tworzenia kodu na podstawie kodu już istniejącego. Adnotacje możemy rozumieć jako dodatkowe wskazówki dla mechanizmu refleksji precyzujące jej działanie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82">
+<h1>Język Java: klasa Class</h1>
+<p>Do stworzenia obiektu typu <code>Class</code> możemy użyć jednego z trzech sposobów.</p>
+<h4>Poprzez metodę Class.forName()</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Class&lt;?&gt; fooClazz = Class.forName(&quot;Foo&quot;);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83">
+<h1>Język Java: klasa Class</h1>
+<h4>Poprzez metodę Object.getClass()</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Foo foo = new Foo();
+Class&lt;?&gt; fooClazz = foo.getClass();
+</span></span></foreignObject></svg></code></pre>
+<h4>Poprzez rozszerzenie .class</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Class&lt;Foo&gt; fooClazz = Foo.class;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84">
+<h1><strong>Programowanie: przykład 35</strong></h1>
+<p>Przykład użycia refleksji do odczytania informacji o klasie, stworzenia obiektów, ustawienia wartości oraz wywołania metod.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.lang.reflect.Constructor;
+<span class="hljs-keyword">import</span> java.lang.reflect.Field;
+<span class="hljs-keyword">import</span> java.lang.reflect.Method;
+<span class="hljs-keyword">import</span> java.lang.reflect.Modifier;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SampleClass</span> </span>{
+
+    <span class="hljs-keyword">private</span> String privateField;
+    <span class="hljs-keyword">public</span> String publicField;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SampleClass</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked SampleClass()&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">privateMethod</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked privateMethod()&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">publicMethod</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked publicMethod()&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;{privateField: %s, privateField: %s}&quot;</span>, privateField, publicField);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        reflectionCreation();
+        describeClass(SampleClass.class);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reflectionCreation</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">// Create instance via reflection</span>
+        Constructor&lt;SampleClass&gt; constructor = SampleClass.class.getDeclaredConstructor();
+        SampleClass sampleClass = constructor.newInstance();
+
+        <span class="hljs-comment">// Set fields via reflection</span>
+        System.out.printf(<span class="hljs-string">&quot;sampleClass: %s%n&quot;</span>, sampleClass);
+        Field publicField = SampleClass.class.getDeclaredField(<span class="hljs-string">&quot;publicField&quot;</span>);
+        publicField.set(sampleClass, <span class="hljs-string">&quot;value-publicField&quot;</span>);
+
+        Field privateField = SampleClass.class.getDeclaredField(<span class="hljs-string">&quot;privateField&quot;</span>);
+        privateField.setAccessible(<span class="hljs-keyword">true</span>);
+        privateField.set(sampleClass, <span class="hljs-string">&quot;value-privateField&quot;</span>);
+
+        System.out.printf(<span class="hljs-string">&quot;sampleClass: %s%n&quot;</span>, sampleClass);
+
+        <span class="hljs-comment">// Invoke methods via reflection</span>
+        Method publicMethod = SampleClass.class.getDeclaredMethod(<span class="hljs-string">&quot;publicMethod&quot;</span>);
+        publicMethod.invoke(sampleClass);
+
+        Method privateMethod = SampleClass.class.getDeclaredMethod(<span class="hljs-string">&quot;privateMethod&quot;</span>);
+        privateMethod.setAccessible(<span class="hljs-keyword">true</span>);
+        privateMethod.invoke(sampleClass);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describeClass</span><span class="hljs-params">(Class&lt;?&gt; clazz)</span> </span>{
+        <span class="hljs-comment">// Get all fields</span>
+        System.out.println(<span class="hljs-string">&quot;Fields:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Field field: clazz.getDeclaredFields()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, field.getName(), Modifier.toString(field.getModifiers()));
+        }
+
+        <span class="hljs-comment">// Get all methods</span>
+        System.out.println(<span class="hljs-string">&quot;Methods:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Method method: clazz.getDeclaredMethods()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, method.getName(), Modifier.toString(method.getModifiers()));
+        }
+
+        <span class="hljs-comment">// Get all constructors</span>
+        System.out.println(<span class="hljs-string">&quot;Constructors:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Constructor&lt;?&gt; method: clazz.getDeclaredConstructors()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, method.getName(), Modifier.toString(method.getModifiers()));
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85">
+<h1><strong>Programowanie: przykład 36</strong></h1>
+<p>Połączenie mechanizmu adnotacji z refleksją na przykładzie walidacji obiektów.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> validator.NotEmpty;
+<span class="hljs-keyword">import</span> validator.Validator;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span> </span>{
+    <span class="hljs-meta">@NotEmpty</span>
+    <span class="hljs-keyword">private</span> String valueNotEmpty;
+    <span class="hljs-keyword">private</span> String valueAny;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sample</span><span class="hljs-params">(String valueNotEmpty, String valueAny)</span> </span>{
+        <span class="hljs-keyword">this</span>.valueNotEmpty = valueNotEmpty;
+        <span class="hljs-keyword">this</span>.valueAny = valueAny;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;{valueNotEmpty: %s, valueAny: %s}&quot;</span>, valueNotEmpty, valueAny);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Sample[] samples = {
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;test&quot;</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-keyword">null</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-keyword">null</span>, <span class="hljs-string">&quot;test&quot;</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>)
+        };
+
+        <span class="hljs-keyword">for</span> (Sample sample: samples) {
+            System.out.printf(<span class="hljs-string">&quot;%s: is valid: %s%n&quot;</span>, sample.toString(), Validator.validate(sample));
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86">
+<h1>Język Java: UNICODE</h1>
+<p>ASCII (ang. American Standard Code for Information Interchange) to 7-bitowy (2^7 = 128 możliwości) system kodowania znaków. Przyporządkowuje on liczbom z zakresu 0−127 litery alfabetu łacińskiego języka angielskiego, cyfry, znaki przestankowe i inne symbole. Jest on stosunkowo ograniczony ze względu na przestrzeń bitów używanych do jego reprezentacji.</p>
+<p>Unicode jest standardem kodowania, którego założeniem była możliwość zapisania każdego znanego języka na świecie. Jest on kompatybilny z ASCII, gdyż reprezentacja elementów 0-127 jest zgodna.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87">
+<h1>Język Java: UTF-8/UTF-16</h1>
+<p>Implementacja standardu Unicode są systemy kodowania znaków UTF (ang. Unicode Transformation Formats):</p>
+<ul>
+<li><code>UTF-8</code> wykorzystujący 8-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.</li>
+<li><code>UTF-16</code> wykorzystujący 16-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88">
+<h1>Język Java: String</h1>
+<p>Operacje na ciągach znaków są jednymi z najczęściej używanych. Klasa <code>String</code> wprowadza szereg wbudowanych metod:</p>
+<p><code>length()</code> - długość ciągu znaków<br />
+<code>isEmpty()</code> - sprawdzenie, czy ciąg znaków jest pusty<br />
+<code>equals(), equalsIgnoreCase(), compareTo(), compareToIgnoreCase()</code> - porównanie dwóch ciągów znaków<br />
+<code>startsWith(), endsWith()</code> - sprawdzenie, czy ciąg znaków rozpoczyna się/kończy się zadanym ciągiem znaków<br />
+<code>contains()</code> - sprawdzenie ciąg znaków zawiera zadany ciąg znaków<br />
+<code>toLowerCase(), toUpperCase</code> - zamiana ciągu znaków na małe/wielkie litery</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89">
+<h1>Język Java: String</h1>
+<p><code>replace(), replaceAll(), replaceFirst()</code> - podmiana zadanego ciągu znaków innym ciągiem znaków.<br />
+<code>trim()</code> - usunięcie białych znaków z początku i końca ciągu znaków<br />
+<code>substring()</code> - wyłuskanie ciągu znaków dla zadanych indeksów<br />
+<code>split()</code> - podział ciągu znaków na tablicę ciągu znaków na podstawie zadanego ciągu znaków<br />
+<code>join()</code> - połączenie ciągów znaków zadanym ciągiem<br />
+<code>format()</code> - formatowanie ciągu znaków</p>
+<blockquote>
+<p>Do konkatenacji ciągu znaków <code>String</code> w pętli powinniśmy używać klasy <code>StringBuilder</code>. Wynika to z faktu, że podczas konkatenacji zawsze powstaje nowy obiekt będący kopią.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90">
+<h1>Język Java: wyrażenia regularne</h1>
+<p>Wyrażenie regularne (ang. regular expression, w skrócie regex lub regexp) – wzorzec opisujący łańcuch symboli.<br />
+Wyrażenia regularne mogą określać zbiór pasujących łańcuchów, jak również wyszczególniać istotne części łańcucha.</p>
+<p>Przykłady:<br />
+<code>filename-[0-9]+.txt</code><br />
+<code>images.+\.jpg</code><br />
+<code>^M[a]+ci.*j$</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91">
+<h1><strong>Programowanie: zadanie 22</strong></h1>
+<p>Zdefiniuj metodę <code>String normalizeTitle(String value)</code> normalizującą tytuł:</p>
+<ul>
+<li>usuwającą spacje z początku i końca,</li>
+<li>ustawiającą pomiędzy każdym słowem jednynie jedną spację,</li>
+<li>zamieniającą każde słowo na format z pierwszą wielką literą.</li>
+</ul>
+<p>Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&quot; W pustyni i w PUSZCZy&quot; -&gt; &quot;W Pustyni I W Puszczy&quot;
+&quot; o dwóch TAKICH co ukradli      Księżyc&quot; -&gt; &quot;O Dwóch Takich Co Ukradli Księżyc
+&quot;pan   tadeusz&quot; -&gt; &quot;Pan Tadeusz&quot;
+</span></span></foreignObject></svg></code></pre>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.4.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

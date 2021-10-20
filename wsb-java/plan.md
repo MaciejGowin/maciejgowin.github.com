@@ -4,7 +4,7 @@ title: Plan
 
 {% include wsb-page-intro.md %}
 
-## [Zjazd 1 - Dzień 1]
+## Zjazd 1 - Dzień 1
 **Moduł:** WSTĘP DO PROGRAMOWANIA W JAVA (8/16)
 
 - Czym jest architektura systemu komputerowego?
@@ -16,7 +16,7 @@ title: Plan
 - **Programowanie**: pierwszy program oraz kompilacja.
 - Wirtualna maszyna Java (JVM), JRE, JDK.
 
-## [Zjazd 1 - Dzień 2]
+## Zjazd 1 - Dzień 2
 **Moduł:** WSTĘP DO PROGRAMOWANIA W JAVA (16/16)
 
 - Wstęp do CLI oraz uruchamianie programów z poziomu CLI.
@@ -28,7 +28,7 @@ title: Plan
 - Pakiety: podział programu.
 - **Programowanie**: wprowadzenie klas oraz pakietów.
 
-## [Zjazd 2 - Dzień 1]
+## Zjazd 2 - Dzień 1
 **Moduł:** ALGORYTMY I STRUKTURY DANYCH (8/8)
 
 - Wprowadzenie do podstawowych pojęć: problem, algorytm, program.
@@ -40,7 +40,7 @@ title: Plan
 - Algorytmy rekurencyjne: charakterystyka i przykłady.
 - **Programowanie**: implementacja funkcji silnia.
 
-## [Zjazd 2 - Dzień 2]
+## Zjazd 2 - Dzień 2
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (8/32)
 
 - Instrukcje sterujące i warunkowe (for, while, do, if, case, switch).
@@ -52,22 +52,38 @@ title: Plan
 - Identyfikatory, zmienne i stałe, zasięg zmiennych.
 - **Programowanie**: porównanie polimorfizmu oraz kompozycji praktyce.
 
-## Zjazd 3/1
+## Zjazd 3 - Dzień 1
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (16/32)
 
-- Typy wyliczeniowe.
+- Kontrakt Object.equals i Object.hashCode
 - Klasy szablonowe.
-- Strumienie (streams).
-- Obsługa wyjątków.
+- Wbudowane kolekcje.
+- Typy wyliczeniowe.
+- Klasy zagnieżdżone.
+- Klasy anonimowe.
+- Zmienne i metody final.
+- Rzutowanie typów.
+- Adnotacje.
+- Refleksja.
+- Standard Unicode oraz kodowanie UTF-8/UTF-16.
+- Operacje na ciągach znaków.
+- Wyrażenia regularne.
 
-## Zjazd 3/2
+## Zjazd 3 - Dzień 2
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (24/32)
 
+- Wyrażenia lambda.
+- Strumienie (streams).
+- Klasa Optional.
 - Operacje wejścia/wyjścia.
+- Obsługa systemu plików.
 - Obsługa czasu.
+- Obsługa wyjątków.
 - Wzorce projektowe.
+- Tworzenie bibliotek.
+- Budowanie aplikacji przy użyciu narzędzia Maven.
 
-## Zjazd 4/1
+## Zjazd 4 - Dzień 1
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (32/32)
 
 - Wprowadzenie do wielowątkowości.

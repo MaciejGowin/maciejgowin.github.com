@@ -24,7 +24,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
 <h1>Język Java: pętla for</h1>
-<p>Przy okazji tablic wspomnieliśmy o pętlach, które pozwalają na iterowanie po elementach tablicy. U swoich podstaw pętle służą do wykonywania danej operacji wielokrotnie.</p>
+<p>Przy okazji tablic wspomnieliśmy o pętlach, które pozwalają na iterowanie po jej elementach. U swoich podstaw pętle służą do wykonywania danej operacji wielokrotnie.</p>
 <p>Wyobraźmy sobie, że chcielibyśmy wypisać na ekran tekst <code>I like programming</code> dwadzieścia razy. Zamiast kopiować instrukcję:</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>System.out.println(&quot;I like programming&quot;);
 </span></span></foreignObject></svg></code></pre>
@@ -123,7 +123,7 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
 <h1>Język Java: pętla for...each</h1>
-<p>O pętli <code>for...each</code> mówiliśmy przy okazji tablic. Pozwalają one na przegląd wartości w kolekcjach i mają uproszczoną formę w porównaniu do klasycznej pętli <code>for</code>.</p>
+<p>O pętli <code>for...each</code> mówiliśmy przy okazji tablic. Pozwalają one na podgląd wartości w kolekcjach i mają uproszczoną formę w porównaniu do klasycznej pętli <code>for</code>.</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>FOR EACH item IN collection
     Statement to be executed
 </span></span></foreignObject></svg></code></pre>
@@ -156,7 +156,7 @@ for (String name: names) {
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
 <h1>Język Java: pętla while</h1>
 <p>Pętla <code>while</code> w założeniu jest podobna do pętli <code>for</code>. Pozwala na wielokrotne wykonanie bloku kodu. W tym przypadku jednak kod jest wykonywany, dopóki dany warunek jest spełniony:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>int = 0;
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>int i = 0;
 while (i &lt; 20) {
     System.out.println(&quot;I like programming&quot;);
     i++;
@@ -229,10 +229,9 @@ WHILE (condition)
             inputInt = input.nextInt();
         } <span class="hljs-keyword">while</span> (inputInt != MAGIC_NUMBER);
         
-        System.out.print(<span class="hljs-string">&quot;Finally!&quot;</span>);
+        System.out.println(<span class="hljs-string">&quot;Finally!&quot;</span>);
     }
 }
-
 </span></span></foreignObject></svg></code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
@@ -248,7 +247,7 @@ WHILE (condition)
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
 <h1>Język Java: break w pętlach</h1>
-<p>Wyrażenie to często jest używane z nieskończoną pętlą <code>while</code> pozwalając na jej przerwanie, gdy dany warunek jest spełniony:</p>
+<p>Wyrażenie to jest często używane z nieskończoną pętlą <code>while</code> pozwalając na jej przerwanie, gdy dany warunek jest spełniony:</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    while (true) {
         // Some statements
         
@@ -288,7 +287,7 @@ while (i &lt; 1000) {
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h1>Język Java: continue w pętlach</h1>
-<p>Java pozwala na definiowanie <code>labeled break</code>, które służą do przerywania wykonywania pętli i przekazania kontroli do wskazanego miejsca. Choć jest to możliwe, odradza się używania tej konstrukcji.</p>
+<p>Java pozwala na definiowanie <code>labeled continue</code>, które służą do przerywania wykonywania pętli i przekazania kontroli do wskazanego miejsca. Choć jest to możliwe, odradza się używania tej konstrukcji.</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>topContinue:
 while (i &lt; 1000) {
     while (j &lt; 1000) {
@@ -301,30 +300,800 @@ while (i &lt; 1000) {
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
 <h1><strong>Programowanie: zadanie 11</strong></h1>
-<p>Napisz program, który sczytuje liczny wpisane przez użytkownika do momentu wpisania liczby 0. Zsumuj liczny parzyste i nieparzyste oraz wypisz wynik na ekran.</p>
+<p>Napisz program, który sczytuje liczby wpisane przez użytkownika do momentu wpisania liczby 0. Zsumuj liczby parzyste i nieparzyste oraz wypisz wynik na ekran.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
 <h1>Język Java: instrukcja warunkowa switch</h1>
-<p>Znajdź przykład i porównaj z <code>if...elseif...else</code>.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    public static String getState(int i) {
-        String state;
-        switch (i) {
-            case 0:
-                state = &quot;stop&quot;;
-            case 1:
-                state = &quot;low-seed&quot;;
-            case 2:
-                state = &quot;top-speed&quot;;
-            default:
-                state = &quot;unknown&quot;;
-        }
-        return state;
-    }
+<p>Instrukcja <code>switch</code> przypomina swoim zachowanie instrukcję <code>if...elseif...else</code>. Pozwala jednak na lepsze uporządkowanie przypadków oraz poprawia czytelność kodu.</p>
+<p>Możemy to uogólnić do:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>SWITCH (value to be compared)
+    CASE (value 1):
+        Execute for value 1 if condition met
+        BREAK;
+    CASE (value 2):
+        Execute for value 2 if condition met
+        BREAK;
+    DEFAULT:
+        Exexcute if nothing else met
+WHILE (condition)
 </span></span></foreignObject></svg></code></pre>
+<p>Wartość porównywana jest z kolejnymi przypadkami. Kod jest wykonywany, tylko jeżeli dany warunek jest spełniony. W przeciwnym wypadku przy brakującym dopasowaniu wykonany zostanie przypadek domyślny.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
 <h1><strong>Programowanie: przykład 15</strong></h1>
 <p>Porównanie instrukcji warunkowej <code>switch</code> z instrukcją <code>if...elseif...else</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+            System.out.printf(<span class="hljs-string">&quot;=== Testing: %d%n&quot;</span>, i);
+            System.out.printf(<span class="hljs-string">&quot;State of switch: %s%n&quot;</span>, getStateOfSwitch(i));
+            System.out.printf(<span class="hljs-string">&quot;State of if: %s%n&quot;</span>, getStateOfIf(i));
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getStateOfSwitch</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        String state;
+        <span class="hljs-keyword">switch</span> (i) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                state = <span class="hljs-string">&quot;stop&quot;</span>;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                state = <span class="hljs-string">&quot;low-speed&quot;</span>;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                state = <span class="hljs-string">&quot;top-speed&quot;</span>;
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                state = <span class="hljs-string">&quot;unknown&quot;</span>;
+        }
+        <span class="hljs-keyword">return</span> state;
+    }
+
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getStateOfIf</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        String state;
+        <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) {
+            state = <span class="hljs-string">&quot;stop&quot;</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i == <span class="hljs-number">1</span>) {
+            state = <span class="hljs-string">&quot;low-speed&quot;</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i == <span class="hljs-number">2</span>) {
+            state = <span class="hljs-string">&quot;top-speed&quot;</span>;
+        } <span class="hljs-keyword">else</span> {
+            state = <span class="hljs-string">&quot;unknown&quot;</span>;
+        }
+        <span class="hljs-keyword">return</span> state;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Język Java: instrukcja warunkowa switch</h1>
+<p>Istotne w wyrażeniu <code>switch</code> było użycie słowa <code>break</code>, które to przerywa działanie całego bloku. Przy jego pominięciu wszystkie wyrażenia po pasującym przypadku zostaną wykonane.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>        switch (i) {
+            case 0:
+                state = &quot;stop&quot;;
+            case 1:
+                state = &quot;low-speed&quot;;
+            case 2:
+                state = &quot;top-speed&quot;;
+                break;
+            default:
+                state = &quot;unknown&quot;;
+        }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1><strong>Programowanie: przykład 16</strong></h1>
+<p>Porównanie instrukcji warunkowych <code>switch</code> z instrukcją <code>break</code>.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        getStateOfSwitchBreak(<span class="hljs-number">0</span>);
+        getStateOfSwitchNoBreak(<span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getStateOfSwitchBreak</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        <span class="hljs-keyword">switch</span> (i) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchBreak: index 0&quot;</span>);
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchBreak: index 1&quot;</span>);
+            <span class="hljs-keyword">default</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchBreak: index 2&quot;</span>);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getStateOfSwitchNoBreak</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        <span class="hljs-keyword">switch</span> (i) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchNoBreak: index 0&quot;</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchNoBreak: index 1&quot;</span>);
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                System.out.println(<span class="hljs-string">&quot;getStateOfSwitchNoBreak: index 2&quot;</span>);
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h1>Język Java: typy prymitywne a obiekty</h1>
+<p>Język Java dostarcza obiektowych odpowiedników dla typów prostych. Każdy z typów prymitywnych pomoże być reprezentowany przez adekwatną klasę.</p>
+<p>Konwersja pomiędzy typami prymitywnymi, a ich obiektowymi odpowiednikami zachodzi automatycznie. Mechanizm ten nazywamy <code>autoboxing</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void test() {
+    Integer i = 3;
+    print(i);
+}
+
+public static void print(int i) {
+    System.out.println(i);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h1>Język Java: typy prymitywne a obiekty</h1>
+<p>Co ciekawe możemy przeciążać metody na podstawie różnicy typu nawet dla typów, dla których zachodzi <code>autoboxing</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static void print(int i) {
+    System.out.println(&quot;Print for int: &quot; + i);
+}
+
+public static void print(Integer i) {
+    System.out.println(&quot;Print for Integer&quot; + i);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h1>Język Java: typy prymitywne a obiekty</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Typ prymitywny</th>
+<th style="text-align:left">Odpowiednik obiektowy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Boolean</td>
+</tr>
+<tr>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">Byte</td>
+</tr>
+<tr>
+<td style="text-align:left">short</td>
+<td style="text-align:left">Short</td>
+</tr>
+<tr>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Integer</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1>Język Java: typy prymitywne a obiekty</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Typ prymitywny</th>
+<th style="text-align:left">Odpowiednik obiektowy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">long</td>
+<td style="text-align:left">Long</td>
+</tr>
+<tr>
+<td style="text-align:left">double</td>
+<td style="text-align:left">Double</td>
+</tr>
+<tr>
+<td style="text-align:left">float</td>
+<td style="text-align:left">Float</td>
+</tr>
+<tr>
+<td style="text-align:left">char</td>
+<td style="text-align:left">Char</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+<h1>Język Java: klasa i konstruktor</h1>
+<p>Podczas tworzenia obiektów wywoływany jest konstruktor, który odpowiedzialny jest za jego inicjalizację. Możemy go zdefiniować w podobny sposób do tego, który znamy z definicji metody:</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    <span class="hljs-keyword">public</span> String firstName; 
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span> </span>{
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Konstruktor w odróżnieniu od klasycznej metody:</p>
+<ul>
+<li>ma nazwę tożsamą z nazwą klasy</li>
+<li>nie zwraca wartości</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+<h1>Język Java: klasa i konstruktor</h1>
+<p>Konstruktor, podobnie jak metoda, może przyjmować parametry. Usprawnia to inicjalizację obiektu znaną z poprzednich przykładów.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    <span class="hljs-keyword">public</span> String firstName;
+    <span class="hljs-keyword">public</span> String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String newFirstName, String newLastName)</span> </span>{
+        firstName = newFirstName;
+        lastName = newLastName;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1>Język Java: klasa i konstruktor</h1>
+<p>W dotychczasowych przykładach nie definiowaliśmy konstruktora. W takim przypadku domyślny konstruktor zostanie automatycznie stworzony. To on jest odpowiedzialny za przypisywanie wartości początkowych.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1><strong>Programowanie: przykład 17</strong></h1>
+<p>Konstruktor wieloargumentowy oraz tworzenie obiektów.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+    String firstName;
+    String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String newFirstName, String newLastName)</span> </span>{
+        firstName = newFirstName;
+        lastName = newLastName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFullName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;%s %s&quot;</span>, dashOnNull(firstName), dashOnNull(lastName));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">dashOnNull</span><span class="hljs-params">(String value)</span> </span>{
+        <span class="hljs-keyword">return</span> value != <span class="hljs-keyword">null</span> ? value: <span class="hljs-string">&quot;-&quot;</span>;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Person[] persons = {
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Jan&quot;</span>, <span class="hljs-string">&quot;Kowalski&quot;</span>),
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Andrzej&quot;</span>, <span class="hljs-keyword">null</span>),
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-keyword">null</span>, <span class="hljs-string">&quot;Nowak&quot;</span>),
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>)};
+
+        <span class="hljs-keyword">for</span> (Person person: persons) {
+            System.out.printf(<span class="hljs-string">&quot;Person: %s%n&quot;</span>, person.getFullName());
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+<h1>Język Java: klasa i konstruktor</h1>
+<h4>Konstruktor domyślny</h4>
+<p>Konstruktor dodawany automatycznie, gdy żaden inny nie zostanie zdefiniowany.</p>
+<h4>Konstruktor bezargumentowy</h4>
+<p>Konstruktor zdefiniowany explicite nieposiadający żadnych parametrów.</p>
+<h4>Konstruktor wieloargumentowy</h4>
+<p>Konstruktor zdefiniowany explicite posiadający parametry.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
+<h1>Język Java: klasa i konstruktor - przeciążanie</h1>
+<p>Podobnie jak w przypadku metod, konstruktor może zostać przeciążony na podstawie parametrów przekazanych.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+    
+    String firstName;
+    String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String newLastName)</span> </span>{
+        firstName = <span class="hljs-keyword">null</span>;
+        lastName = newLastName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String newFirstName, String newLastName)</span> </span>{
+        firstName = newFirstName;
+        lastName = newLastName;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+<h1>Język Java: słowo kluczowe this</h1>
+<p>W sytuacji, w której chcemy odnieść się do referencji obiektu z jego wnętrza używamy słowa <code>this</code>. W skrócie możemy go rozumieć jako <code>obecny obiekt</code>. Poniższe przykłady są równoznaczne:</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    String firstName;
+    String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String newFirstName, String newLastName)</span> </span>{
+        firstName = newFirstName;
+        lastName = newLastName;
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFullName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> firstName + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-keyword">this</span>.lastName;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+<h1>Język Java: słowo kluczowe this</h1>
+<p>Odwołanie do obecnego obiektu jest szczególnie przydatne podczas używania tej samej nazwy zmiennej dla pól klasy oraz parametrów metody, czy też konstruktora. Związane jest to z zasięgiem zmiennej i bez użycia słowa <code>this</code> byłoby to niemożliwe.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getFullName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Full name: &quot;</span> + <span class="hljs-keyword">this</span>.name;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+<h1>Język Java: słowo kluczowe this</h1>
+<p>Przy definicji kilku konstruktorów możemy również użyć odwołania do innego konstruktora. W tym przypadku również użyjemy słowa <code>this</code>. Jest to przydatne w przypadku gdy konstruktory posiadają bardziej skomplikowaną logikę.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    String fullName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String firstName, String lastName)</span> </span>{
+        fullName = firstName + <span class="hljs-string">&quot; &quot;</span> + lastName;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String lastName)</span> </span>{
+        <span class="hljs-keyword">this</span>(<span class="hljs-keyword">null</span>, lastName);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Wywołanie konstruktora z poziomu innego konstruktora musi być pierwszą instrukcją.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
+<h1>Język Java: słowo kluczowe this</h1>
+<p>Słowo kluczowe <code>this</code> jest używane w dwóch przypadkach:</p>
+<ul>
+<li>referencja do obecnego obiektu i jego pól oraz metod</li>
+<li>wywołanie konstruktora z definicji innego konstruktora</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
+<h1><strong>Programowanie: przykład 18</strong></h1>
+<p>Klasa z kilkoma konstruktorami oraz prześledź jej działanie.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    String firstName;
+    String lastName;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String lastName)</span> </span>{
+        <span class="hljs-keyword">this</span>(<span class="hljs-keyword">null</span>, lastName);
+        System.out.println(<span class="hljs-string">&quot;Invoking: Person(lastName)&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String firstName, String lastName)</span> </span>{
+        <span class="hljs-keyword">this</span>.firstName = firstName;
+        <span class="hljs-keyword">this</span>.lastName = lastName;
+        System.out.println(<span class="hljs-string">&quot;Invoking: Person(firstName, lastName)&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;== Defined 1&quot;</span>);
+        Person person1 = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Jan&quot;</span>, <span class="hljs-string">&quot;Kowalski&quot;</span>);
+        
+        System.out.println(<span class="hljs-string">&quot;== Defined 2&quot;</span>);
+        Person person2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Kowalski&quot;</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
+<h1>Język Java: zasięg</h1>
+<p>Do tej pory w przykładach posługiwaliśmy się zasięgiem <code>public</code>. Oznacza to, że odwoływać się do pól i metod może każda inna klasa, z dowolnego miejsca oraz dowolnego innego pakietu.</p>
+<p>Java wprowadza koncepcję zasięgu, który pozwala na sterowanie tym, kto i w jaki sposób może odwoływać się do klas, jak i ich poszczególnych składowych. Innymi słowy, definiujemy ich <code>widoczność</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
+<h1>Język Java: zasięg</h1>
+<p>Wyróżniamy następujące zasięgi:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Zasięg</th>
+<th style="text-align:left">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">public</td>
+<td style="text-align:left">widoczność na każdym z poziomów</td>
+</tr>
+<tr>
+<td style="text-align:left">protected</td>
+<td style="text-align:left">widoczność na poziomie pakietu oraz wszystkich klas dziedziczących</td>
+</tr>
+<tr>
+<td style="text-align:left">private</td>
+<td style="text-align:left">widoczność na poziomie klasy definiującej</td>
+</tr>
+<tr>
+<td style="text-align:left">domyślny</td>
+<td style="text-align:left">widoczność na poziomie pakietu</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
+<h1>Język Java: zasięg</h1>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+    <span class="hljs-keyword">public</span> String firstName;
+    <span class="hljs-keyword">private</span> String lastName;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">int</span> yearOfBirth;
+    <span class="hljs-keyword">int</span> height;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
+<h1>Język Java: zasięg</h1>
+<p>Dobrą praktyką w programowaniu jest ukrywanie szczegółów implementacji oraz udostępnianie jedynie elementów, która powinny być dostępne przez użytkowników danej klasy oraz jej pól i metody.</p>
+<p>Bardzo często pola klasy są prywatne, a dostęp do nich jest definiowany poprzez publiczne metody tzw. <code>settery</code> oraz <code>gettery</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
+<h1>Język Java: hermetyzacja</h1>
+<p>Do <code>hermetyzacji</code> (ang. <code>encapsulation</code>) dochodzi podczas grupowania cech oraz zachowań w jednej klasie. Efektem hermetyzacji jest ukrywanie danych oraz szczegółów implementacji przed zewnętrznymi klasami.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
+<h1><strong>Programowanie: zadanie 12</strong></h1>
+<p>Klasa <code>Person</code> z ukrytymi szczegółami implementacji. Zdefiniuj metodę zwracającą:</p>
+<ul>
+<li>pełną nazwę użytkownika na podstawie imienia i nazwiska,</li>
+<li>jego wiek na podstawie roku urodzenia.</li>
+</ul>
+<p>Pozwól na zmianę jedynie roku urodzenia użytkownika. Pozostałe pola pozostaw ukryte oraz pozwól na ich zdefiniowanie tylko podczas konstrukcji.</p>
+<blockquote>
+<p>Do pobrania obecnego roku użyj <code>LocalDate.now().getYear()</code> z pakietu java.time.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
+<h1>Język Java: dziedziczenie</h1>
+<p>Klasy nie są osobnymi bytami. Często posiadają one zbiór podobnych cech oraz zachowań charakterystycznych dla danej grupy.</p>
+<p>Dla przykładu:</p>
+<ul>
+<li>Pies jest zwierzęciem domowym, które posiada imię oraz potrafi jeść i spać.</li>
+<li>Kot jest zwierzęciem domowym, które posiada imię oraz potrafi jeść i spać.</li>
+</ul>
+<p>Wspólne cechy moglibyśmy zdefiniować dla obu zwierząt w klasie nadrzędnej. Mechanizm ten nazywamy <code>dziedziczeniem</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
+<h1>Język Java: dziedziczenie</h1>
+<p>W przykładzie <code>Cat</code> oraz <code>Dog</code> dziedziczą po klasie <code>Animal</code> automatycznie przejmując zachowania klasy nadrzędnej. Do definicji dziedziczenia używamy słowa kluczowego <code>extends</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Animal {
+    public void eat() {
+    }
+}
+
+class Cat extends Animal {
+}
+
+class Dog extends Animal {
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Dana klasa może dziedziczyć tylko po jednej klasie.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
+<h1>Język Java: dziedziczenie</h1>
+<p>Dziedziczenie realizuje koncepcję relacji <code>jest</code> (ang. <code>is a</code>). Możemy powiedzieć, że:</p>
+<ul>
+<li>Pies jest Zwierzęciem.</li>
+<li>Kot jest Zwierzęciem.</li>
+<li>Trójkąt jest Figurą Geometryczną.</li>
+<li>Kwadrat jest Prostokątem.</li>
+</ul>
+<p>Będziemy mówić, że:</p>
+<ul>
+<li>klasa jest nadklasą (superclass), jeżeli istnieje klasa, która po niej dziedziczy</li>
+<li>klasa jest podklasą (subclass), jeżeli jest klasą, która dziedziczy po innej klasie</li>
+</ul>
+<blockquote>
+<p>Dziedziczenie nie ogranicza się do jednego poziomu. W strukturze dziedziczenia jedna klasa może być nadklasą, jak i podklasą.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
+<h1><strong>Programowanie: przykład 19</strong></h1>
+<p>Dziedziczenie wspólnego zachowania.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Eating&quot;</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Dog dog = <span class="hljs-keyword">new</span> Dog();
+        dog.eat();
+
+        Cat cat = <span class="hljs-keyword">new</span> Cat();
+        cat.eat();
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
+<h1>Język Java: dziedziczenie i przesłanianie metod</h1>
+<p>W sytuacji, gdy nadklasa i podklasa posiada zdefiniowaną metodę o tej samej sygnaturze mamy do czynienia z <code>przesłanianiem metod</code> (ang. <code>method overriding</code>). W takim przypadku zostanie wywołana metoda specyficzna dla danej klasy (jeżeli taka istnieje).</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
+<h1><strong>Programowanie: przykład 20</strong></h1>
+<p>Nadpisywanie metod.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">voice</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Voice&quot;</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">voice</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Barking&quot;</span>);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Dog dog = <span class="hljs-keyword">new</span> Dog();
+        dog.voice();
+
+        Cat cat = <span class="hljs-keyword">new</span> Cat();
+        cat.voice();
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
+<h1>Język Java: dziedziczenie a własności</h1>
+<p>Możemy też zdefiniować wspólne cechy na poziomie klasy nadrzędnej. W naszym przykładzie wspólną cechą może zostać <code>name</code>. Aby klasy podrzędne miały bezpośredni dostęp do pola <code>name</code> musimy je zdefiniować z zasięgiem <code>protected</code> (dla klas z innego pakietu) lub domyślnym, jeżeli podklasy znajdują się w tym samym pakiecie.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Animal {
+    protected String name;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
+<h1>Język Java: dziedziczenie i słowo kluczowe super</h1>
+<p>Podobnie jak w przypadku słowa kluczowego <code>this</code> słowo kluczowe <code>super</code> definiuje referencję obiektu. Tutaj do obiektu nadrzędnego. Dzięki niemu mamy bezpośredni dostęp do pół oraz metod klasy nadrzędnej z poziomu klasy podrzędnej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Dog extends Animal {
+    public void getName() {
+        return &quot;Dog: &quot; + super.name;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
+<h1>Język Java: dziedziczenie i słowo kluczowe super</h1>
+<p>Słowo kluczowe <code>super</code> ma jeszcze jedno zastosowanie. Możemy go użyć w przypadku wywołania konstruktora klasy nadrzędnej.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Animal {
+    private String name;    
+    
+    public Animan(String name) {
+        this.name = name;
+    } 
+}
+
+class Dog extends Animal {
+
+    public Dog(String name) {
+        super(name);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Podczas konstrukcji klasy podrzędnej klasa nadrzędna musi zostać poprawnie zainicjalizowana, stąd też konieczne jest wywołanie jej konstruktora.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
+<h1><strong>Programowanie: zadanie 13</strong></h1>
+<p>Stwórz klasę <code>animal.Animal</code> definiującą nazwę zwierzęcia inicjalizowaną przy pomocy konstruktora oraz metody:</p>
+<ul>
+<li><code>String getName()</code> służącą do pobrania nazwy zwierzęcia</li>
+<li><code>void voice()</code> służącą do imitacji odgłosu zwierzęcia</li>
+<li><code>void eat()</code> służącą do imitacji procesu jedzenia</li>
+</ul>
+<p>Zdefiniuj klasy dziedziczące po <code>animal.Animal</code>:</p>
+<ul>
+<li><code>animal.dog.Dog</code>: nadpisującą <code>void voice()</code></li>
+<li><code>animal.cat.Cat</code>: nadpisującą <code>void voice()</code></li>
+</ul>
+<p>Przetestuj zdefiniowane klasy.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
+<h1>Język Java: polimorfizm</h1>
+<p>W programowaniu obiektowym przez polimorfizm rozumiemy dynamiczny wybór metody wywołania. W ogólnym rozumieniu polimorfizm to traktowanie różnych podtypów danego typu w taki sam sposób.</p>
+<p>Dla przykładu język automatycznie dobierze wywołanie odpowiedniej metody na podstawie typu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Dog dog = new Dog();
+dog.voice();
+
+Animal animal = new Dog();
+animal.voice();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
+<h1>Język Java: hierarchia dziedziczenia</h1>
+<p>W przykładach definiowaliśmy hierarchię dziedziczenia, gdzie klasy mogła dziedziczyć po innej.</p>
+<p>Jeżeli natomiast klasa nie dziedziczy explicite po żadnej klasie to de facto jest automatycznie podklasą <code>Object</code>.</p>
+<p>Wynika z tego, że klasa <code>Object</code> jest korzeniem w hierarchii dziedziczenia i każda z klas automatycznie przejmuje wszystkie jej własności oraz zachowania.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
+<h1>Język Java: kompozycja</h1>
+<p>Wspomnieliśmy już, że dziedziczenie realizuje koncepcję relacji <code>jest</code> (ang. <code>is a</code>). W przykładach używaliśmy też innego mechanizmu służącego do ponownego użycia zdefiniowanych już klas i obiektów, czyli kompozycji.</p>
+<p>Kompozycja realizuje koncepcję <code>zawiera</code> (ang. <code>has a</code>). Możemy powiedzieć, że:</p>
+<ul>
+<li>Samochód zawiera silnik i koła.</li>
+<li>Kot zawiera głowę, nogi, tułów i ogon.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
+<h1>Język Java: dziedziczenie a kompozycja</h1>
+<p>Dziedziczenie stosowane jest w sytuacjach, gdy pomiędzy klasami zachodzi relacja &quot;uogólnienie - specjalizacja&quot;.</p>
+<p>Kompozycja stosowana jest w sytuacjach, gdy pomiędzy klasami zachodzi relacja &quot;całość - składowa&quot;.</p>
+<p>Zwykle przy tworzeniu struktury klas używamy dwóch mechanizmów równocześnie. Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Dom jest budynkiem (dziedziczenie) oraz zawiera: okna, drzwi, ściany i dach (kompozycja). 
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">House</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Building</span> </span>{
+    <span class="hljs-keyword">private</span> Window[] windows;
+    <span class="hljs-keyword">private</span> Door[] doors;
+    <span class="hljs-keyword">private</span> Wall[] walls;
+    <span class="hljs-keyword">private</span> Roof roof;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
+<h1>Język Java: instanceof</h1>
+<p>Operatora <code>instanceof</code> używany do sprawdzenia, czy dany obiekt jest danego typu. Jest to szczególnie przydatne podczas pracy z dziedziczeniem oraz polimorfizmem.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Dog dog = new Dog();
+boolea isDog = dog instanceof Dog;
+boolean isAnimal = dog instanceof Animan;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
+<h1><strong>Programowanie: przykład 21</strong></h1>
+<p>Przykład wykorzystania operatora <code>instanceof</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Animal {
+}
+
+class Dog extends Animal {
+}
+
+class Cat extends Animal {
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        Animal animal = new Dog();
+
+        System.out.printf(&quot;dog instanceof Dog: %s%n&quot;, dog instanceof Dog);
+        System.out.printf(&quot;dog instanceof Animal: %s%n&quot;, dog instanceof Animal);
+        System.out.printf(&quot;animal instanceof Dog: %s%n&quot;, animal instanceof Dog);
+        System.out.printf(&quot;animal instanceof Animal: %s%n&quot;, animal instanceof Animal);
+        System.out.printf(&quot;animal instanceof Cat: %s%n&quot;, animal instanceof Cat);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64">
+<h1>Język Java: klasy abstrakcyjne</h1>
+<p>W przypadku dotychczasowych definicji klas nadrzędnych zawsze dostarczaliśmy domyślną implementację każdej z metod. Jeżeli jest to niemożliwe z pomocą przychodzą <code>metody abstrakcyjne</code>.</p>
+<p>Metodę abstrakcyjną definiujemy z pominięciem jej ciała. Każda z podklas jest odpowiedzialna za dostarczenie jej implementacji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>abstract Animal {
+    abstract void voice();
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Co istotne, jeżeli klasa posiada choć jedną metodę abstrakcyjną sama też musi zostać zdefiniowana jako <code>abstrakcyjna</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65">
+<h1>Język Java: klasy abstrakcyjne</h1>
+<p>Głównym celem klas abstrakcyjnych jest definiowanie wspólnego zachowań oraz ukrywanie niepotrzebnych szczegółów. Pomijamy to, co złożone, udostępniając tylko wysokopoziomowy interfejs.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
+<h1>Język Java: klasy abstrakcyjne</h1>
+<p>Z klasami abstrakcyjnymi związane jest kilka założeń</p>
+<ul>
+<li>metoda abstrakcyjna nie posiada ciała</li>
+<li>nie możemy stworzyć obiektów klas abstrakcyjnej</li>
+<li>jeżeli klasa posiada choć jedną metodę abstrakcyjną sama staje się abstrakcyjna</li>
+<li>każda podklasa dziedzicząca po klasie abstrakcyjnej musi implementować wszystkie metody abstrakcyjne</li>
+<li>jeżeli podklasa nie implementuje metod abstrakcyjnych sama musi zostać zdefiniowana jako abstrakcyjna</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
+<h1>Język Java: interfejsy</h1>
+<p>Interfejs to nic innego jak klasa abstrakcyjna nieposiadająca żadnych właściwości niestatycznych z wszystkimi metodami abstrakcyjnymi. Definiujemy go przy pomocy słowa kluczowego <code>interface</code>. W tym przypadku pomijamy słowo <code>abstract</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>interface Animal {
+    public static final int MAX_AGE;
+    public void voice();
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Metody interfejsu automatycznie uzyskują zasięg <code>public</code>. Każda z własności staje się automatycznie <code>public static final</code>.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
+<h1>Język Java: interfejsy</h1>
+<p>Klasy mogą <code>imlementować</code> dany <code>interfejs</code>. W przeciwieństwie do klas abstrakcyjnych gdzie są one <code>rozszerzane</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Dog implements Animal {
+    public void voice() {
+        System.out.println(&quot;Barking&quot;);    
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Co ważne jedna klasa może implementować więcej niż jeden interfejs. W przeciwieństwie do dziedziczenia gdzie dziedziczyć możemy tylko po jednej klasie.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69">
+<h1>Język Java: interfejsy</h1>
+<p>Co więcej, interfejsy podlegają rozszerzeniom przy użyciu słowa <code>extends</code>. Interfejs może rozszerzać więcej niż jeden interfejs.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>interface Animal {
+    void eat();
+}
+
+interface Mammal extends Animal {
+    void breath();
+}
+
+class Dog implements Mammal {
+    public void eat() {
+        System.out.println(&quot;Eating&quot;);    
+    }
+
+    public void breath() {
+        System.out.println(&quot;Breathing&quot;);    
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
+<h1><strong>Programowanie: przykład 22</strong></h1>
+<p>Użycie klas abstrakcyjnych oraz interfejsów. Kod źródłowy dostępny na stronie.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>interface Animal { ...
+interface Mammal extends Animal { ...
+interface Nameable { ...
+abstract class Pet implements Mammal, Nameable { ...
+class Dog extends Pet { ...
+class Cat extends Pet { ...
+</span></span></foreignObject></svg></code></pre>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.4.1/lib/bespoke.js.LICENSE.txt */

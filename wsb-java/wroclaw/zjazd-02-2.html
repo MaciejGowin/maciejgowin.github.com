@@ -22,6 +22,490 @@
 <h4>Kod źródłowy przykładów oraz zadań</h4>
 <p><a href="https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java">https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java</a></p>
 </section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
+<h1>Problem obliczeniowy</h1>
+<p>Problem obliczeniowy to problem, który może zostać rozwiązany za pomocą maszyny obliczeniowej, w tym komputera.</p>
+<p>Definiowany jest on poprzez funkcję zamieniającą zbiór danych wejściowych na zbiór danych wyjściowych.</p>
+<p>Problemy obliczeniowe są rozwiązywane za pomocą algorytmów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+<h1>Algorytm</h1>
+<p>Ciąg zdefiniowanych czynności potrzebnych do zrealizowania danego zadania lub rozwiązania danego problemu.</p>
+<p>Algorytm nie jest zależny od języka oraz jego faktycznej implementacji. Do jego opisu stosuje się schematy blokowe lub też pseudokod, który przestawia przepis realizacji danego problemu.</p>
+<p>Programy są implementacją rozwiązań problemów obliczeniowych opisanych przy pomocy algorytmów.</p>
+<blockquote>
+<p>Dany problem może zostać rozwiązany przy pomocy więcej niż jednego algorytmu.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+<h1>Algorytm: suma liczb N</h1>
+<p>Problem: suma kolejnych N liczb naturalnych</p>
+<p>Algorytm</p>
+<ul>
+<li>Do SUM przypisz 0</li>
+<li>Do COUNTER przypisz 0</li>
+<li>Jeżeli COUNTER jest mniejszy lub równy od N
+<ul>
+<li>dodaj COUNTER do SUM</li>
+<li>zwiększ COUNTER o 1</li>
+<li>powtórz operację</li>
+</ul>
+</li>
+<li>W przeciwnym wypadku przerwij</li>
+<li>Wypisz SUM</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+<h1>Algorytm: suma liczb N</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>int SUM = 0;
+int COUNTER = 0;
+
+while (true) {
+    if (COUNTER &lt;= N) {
+        SUM = SUM + COUNTER;
+        COUNTER = COUNTER + 1;
+    } else {
+        break;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+<h1>Algorytm: suma liczb N</h1>
+<p>Podobne rozwiązanie zaimplementowane przy pomocy języka przy użyciu innej techniki.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>int SUM = 0;
+
+for (int COUNTER = 0; COUNTER &lt;= N; COUNTER++) {
+    SUM = SUM + COUNTER;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+<h1>Złożoność obliczeniowa</h1>
+<p>Złożoność obliczeniowa definiuje ilość zasobów (takich jak: pamięć, czas użycia procesora) potrzebnych do realizacji danego problemu obliczeniowego.</p>
+<p>Do określania złożoności obliczeniowej używamy oszacowań.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+<h1>Złożoność obliczeniowa</h1>
+<h4>Notacja Ο (dużego O)</h4>
+<p>Ograniczenie asymptotycznego tempa wzrostu czasu wykonywania algorytmu, gdzie wynik funkcji jest większy lub równy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>∀n⩾n0:f(n)⩽c∗g(n)
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Ilość zasobów potrzebnych do wykonania algorytmu przy założeniu &quot;najgorszych&quot; danych.</p>
+</blockquote>
+<p>W praktyce najczęściej spotykane oszacowanie złożoności obliczeniowej, którym będziemy się posługiwać.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<h1>Złożoność obliczeniowa</h1>
+<h4>Notacja Ω (omega)</h4>
+<p>Ograniczenie asymptotycznego tempa wzrostu czasu wykonywania algorytmu, gdzie wynik funkcji jest mniejszy lub równy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>∀n⩾n0:f(n)⩾c∗g(n)
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Ilość zasobów potrzebnych do wykonania algorytmu przy założeniu &quot;najlepszych&quot; danych.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+<h1>Złożoność obliczeniowa</h1>
+<h4>Notacja Θ (theta)</h4>
+<p>Ograniczenie asymptotycznego tempa wzrostu czasu wykonywania algorytmu, gdzie wynik funkcji jest jednocześnie większy lub równy, oraz mniejszy lub równy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>∀n⩾n0:c1∗g(n)⩾f(n)⩾c2∗g(n)
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>ilość zasobów potrzebnych do wykonania algorytmu przy założeniu &quot;typowych&quot; danych</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<h1>Rząd złożoności obliczeniowej</h1>
+<p>W praktyce złożoność obliczeniowa jest oszacowaniem, w którym pomijamy mniej istotne czynniki.</p>
+<p>Załóżmy zatem, że dla danych wejściowych <code>n</code> do obliczenia wyniku potrzebujemy: <code>f(n) = n^4 + 2*n^2 + 5</code> operacji. W takim przypadku dla rzędu złożoności obliczeniowej kluczowe znaczenie będzie miał czynnik <code>n^4</code>. Rząd złożoności zapiszemy jako <code>O(n^4)</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+<h1>Rząd złożoności O(1)</h1>
+<p>Złożoność stała, niezależna od ilości danych wejściowych.</p>
+<h4>Przykłady:</h4>
+<p>Suma liczb w ciągu liczb naturalnych do N.</p>
+<p>Instrukcja programu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+<h1>Rząd złożoności O(n)</h1>
+<p>Złożoność liniowa, wprost proporcjonalna do ilości danych wejściowych. Jest specjalnym przypadkiem złożoności wielomianowej <code>O(n^k)</code> gdzie <code>k=1</code>.</p>
+<h4>Przykłady</h4>
+<p>Suma liczb w tablicy o długości N.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Rząd złożoności O(log(n))</h1>
+<p>Złożoność logarytmiczna, zależna od logarytmu wielkości danych wejściowych.</p>
+<h4>Przykłady</h4>
+<p>Wyszukanie liczby <code>X</code> w posortowanej tablicy elementów o długości N.</p>
+<p>Algorytm Euklidesa.</p>
+<blockquote>
+<p>Logarytm jest niemal zawsze o podstawie 2.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Rząd złożoności Ο(nlog(n))</h1>
+<p>Złożoność liniowo-logarytmiczna, zależna od iloczynu wielkości oraz logarytmu wielkości danych wejściowych.</p>
+<h4>Przykład</h4>
+<p>Sortowanie elementów tablicy o długości N.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Rząd złożoności Ο(n^2)</h1>
+<p>Złożoność kwadratowa, proporcjonalna do kwadratu ilości danych wejściowych. Jest specjalnym przypadkiem złożoności wielomianowej <code>O(n^k)</code> gdzie <code>k=2</code>.</p>
+<h4>Przykład</h4>
+<p>Sortowanie elementów tablicy o długości N.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1>Rząd złożoności Ο(n^k)</h1>
+<p>Złożoność wielomianowa. Uogólniony przypadek dla złożoności liniowej oraz kwadratowej.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h1>Rząd złożoności Ο(k^n)</h1>
+<p>Złożoność wykładnicza, jej przykładem mogą być Ο(2^n), O(3^n) itp.</p>
+<h4>Przykład</h4>
+<p>Dla tablicy N unikalnych liczb znajdź wszystkie możliwe niepuste podzbiory.</p>
+<blockquote>
+<p>Algorytmy wykładnicze nazywane są nieefektywnymi. Są niezwykle czułe na wielkość danych wejściowych.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<h1>Rząd złożoności Ο(n!)</h1>
+<p>Złożoność typu silnia n.</p>
+<h4>Przykłady</h4>
+<p>Naiwne rozwiązanie problemu komiwojażera: dla N miast oraz odległości pomiędzy nimi znajdź najkrótsze przejście ze startem i metą w mieście A, zakładając, że odwiedzone zostaną wszystkie miasta.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h1><strong>Programowanie: zadanie 14</strong></h1>
+<p>Dla dwóch liczb naturalnych znajdź NWD (Największy Wspólny Dzielnik) przy pomocy algorytmu Euklidesa.</p>
+<p>Algorytm Euklidesa zakłada, że:</p>
+<ul>
+<li><code>NWD (a, b) = NWD (b, a mod b)</code> oraz</li>
+<li><code>NWD (a, 0) = a</code>.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Klasy złożoności</h1>
+<p>Klasa złożoności definiuje grupę problemów, do których rozwiązania potrzebna jest podobna grupa zasobów.</p>
+<h4>Problemy P: (ang. deterministic polynomial, deterministycznie wielomianowy)</h4>
+<p>Problem, dla którego rozwiązanie można znaleźć w czasie wielomianowym (n^k).</p>
+<h4>Problem NP: (ang. nondeterministic polynomial, niedeterministycznie wielomianowy)</h4>
+<p>Problem, dla którego rozwiązanie można zweryfikować w czasie wielomianowym (n^k).</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1>Algorytmy sortowania</h1>
+<p>Problem sortowania jest jednym z podstawowych problemów algorytmicznych. Polega na uporządkowaniu elementów zbioru danych pod względem danej cechy.</p>
+<p>Przykładowo:</p>
+<ul>
+<li>dla tablicy liczb cechą może być wielkość liczby</li>
+<li>dla tablicy nazwisk cechą może być porządek alfabetyczny słów</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h1>Algorytmy sortowania</h1>
+<p>Istnieje szereg opracowanych algorytmów sortowania. Do najpopularniejszych należą:</p>
+<ul>
+<li>Sortowanie bąbelkowe (ang. bubblesort) - O(n^2)</li>
+<li>Sortowanie przez wstawianie (ang. insertion sort) - O(n^2)</li>
+<li>Sortowanie przez scalanie (ang. merge sort) - O(nlog(n))</li>
+<li>Sortowanie kubełkowe (ang. bucket sort) - O(n^2)</li>
+<li>Sortowanie przez wybieranie (ang. selection sort) - O(n^2)</li>
+<li>Sortowanie szybkie (ang. quicksort) - O(nlog(n))</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Sortowanie bąbelkowe</h1>
+<p>Załóżmy, że do posortowania mamy N elementową tablicę liczb całkowitych. Algorytm polega na N-1 przejściach tablicy, gdzie w każdym przejściu K dokonujemy N-K porównań dwóch kolejnych liczb i zamiany ich kolejności, jeżeli zaburzają one porządek.</p>
+<p>Tablica: 3 7 5 6 2</p>
+<p>Przejście K = 1</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>1: [3 7] 5 6 2 -&gt; 3 7 5 6 2
+2: 3 [7 5] 6 2 -&gt; 3 5 7 6 2
+3: 3 5 [7 6] 2 -&gt; 3 5 6 7 2
+4: 3 5 6 [7 2] -&gt; 3 5 6 2 7
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1><strong>Programowanie: zadanie 15</strong></h1>
+<p>Zaimplementuj algorytm sortowania bąbelkowego dla tablicy liczb. Przetestuj działanie dla przykładowych tablic wejściowych.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h1>Sortowanie przez wybieranie</h1>
+<p>Załóżmy, że do posortowania mamy N elementową tablicę liczb całkowitych. Algorytm polega na N-1 przejściach tablicy, gdzie w każdym przejściu K wyszukujemy minimalnej wartości z nieposortowanych elementów oraz podmieniamy ją z pierwszym elementem z tablicy nieposortowanej.</p>
+<p>Tablica: 3 7 5 6 2</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Przejście K = 1: [3 7 5 6 2] -&gt; minumum: 2 -&gt; 2 3 7 5 6
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Przejście K = 2: 2 [3 7 5 6] -&gt; minumum: 3 -&gt; 2 3 7 5 6
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Przejście K = 3: 2 3 [7 5 6] -&gt; minimum: 5 -&gt; 2 3 5 7 6
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Przejście K = 4: 2 3 5 [7 6] -&gt; minimum: 6 -&gt; 2 3 5 6 7
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h1><strong>Programowanie: przykład 23</strong></h1>
+<p>Porównanie wydajności naiwnej implementacji algorytmu sortowania bąbelkowego ze wbudowaną metodą sortującą.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.Random;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StopWatch</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">long</span> start = <span class="hljs-number">0L</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">()</span> </span>{
+        start = System.currentTimeMillis();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">long</span> <span class="hljs-title">stop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> System.currentTimeMillis() - start;
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RandomGenerator</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Random RANDOM = <span class="hljs-keyword">new</span> Random();
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] randomTable(<span class="hljs-keyword">int</span> length) {
+        <span class="hljs-keyword">int</span>[] items = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[length];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+            items[i] = RANDOM.nextInt();
+        }
+        <span class="hljs-keyword">return</span> items;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h1><strong>Programowanie: przykład 23</strong></h1>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        testPerformance(<span class="hljs-number">1000</span>);
+        testPerformance(<span class="hljs-number">10000</span>);
+        testPerformance(<span class="hljs-number">100000</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testPerformance</span><span class="hljs-params">(<span class="hljs-keyword">int</span> length)</span> </span>{
+        StopWatch stopWatch = <span class="hljs-keyword">new</span> StopWatch();
+        <span class="hljs-keyword">int</span>[] items = RandomGenerator.randomTable(length);
+
+        <span class="hljs-keyword">int</span>[] bubleSortItems = Arrays.copyOf(items, items.length);
+        stopWatch.start();
+        bubleSort(bubleSortItems);
+        System.out.printf(<span class="hljs-string">&quot;items: %d: bubleSort: %d%n&quot;</span>, bubleSortItems.length, stopWatch.stop());
+
+        <span class="hljs-keyword">int</span>[] sortItems = Arrays.copyOf(items, items.length);
+        stopWatch.start();
+        Arrays.sort(sortItems);
+        System.out.printf(<span class="hljs-string">&quot;items: %d: sort: %d%n&quot;</span>, sortItems.length, stopWatch.stop());
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bubleSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] items)</span> </span>{
+        <span class="hljs-keyword">int</span> n = items.length;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n ;i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; n - i; j++) {
+                <span class="hljs-keyword">if</span> (items[j - <span class="hljs-number">1</span>] &gt; items[j]) {
+                    <span class="hljs-comment">// Replace items</span>
+                    <span class="hljs-keyword">int</span> temp = items[j - <span class="hljs-number">1</span>];
+                    items[j - <span class="hljs-number">1</span>] = items[j];
+                    items[j] = temp;
+                }
+            }
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1>Algorytmy rekurencyjne</h1>
+<p>Rekurencja (zwana także rekursją) polega na odwołaniu funkcji do samej siebie.</p>
+<p>Przykładem zastosowania rekurencji może być obliczanie sumy kolejnych N liczb naturalnych. Rozwiązaniem tego problemu może być:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>SUM(N) = SUM(N-1) + N;
+SUM(0) = 0;
+</span></span></foreignObject></svg></code></pre>
+<p>Istotny jest tutaj warunek brzegowy. W przypadku osiągnięcia wartości <code>N = 0</code> zwracana jest liczba 0.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+<h1><strong>Programowanie: przykład 24</strong></h1>
+<p>Sumowanie kolejnych liczb naturalnych przy użyciu rekurencji.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.printf(<span class="hljs-string">&quot;Sum of: %s: %d%n&quot;</span>, <span class="hljs-number">3</span>, sum(<span class="hljs-number">3</span>));
+        System.out.printf(<span class="hljs-string">&quot;Sum of: %s: %d%n&quot;</span>, <span class="hljs-number">5</span>, sum(<span class="hljs-number">5</span>));
+        System.out.printf(<span class="hljs-string">&quot;Sum of: %s: %d%n&quot;</span>, <span class="hljs-number">100</span>, sum(<span class="hljs-number">100</span>));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">return</span> sum(n - <span class="hljs-number">1</span>) + n;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+<h1>Algorytmy rekurencyjne</h1>
+<p>Warto zauważyć, że wiele algorytmów może zostać rozwiązanych przy użyciu rekurencji, jak i w podejściu iteracyjnym.</p>
+<p>Przykładami takich problemów są:</p>
+<ul>
+<li>obliczanie sumy liczb naturalnych</li>
+<li>obliczanie silni</li>
+<li>obliczanie NWD algorytmem Euklidesa</li>
+</ul>
+<p>Rozwiązania rekurencyjne są proste w opisie i zrozumieniu. Należy jednak uważać na poprawne zdefiniowanie warunków brzegowych. Ich zły dobór może spowodować niekończące się wywoływanie funkcji prowadzące do błędów w działaniu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1><strong>Programowanie: zadanie 16</strong></h1>
+<p>Zaimplementuj funkcję obliczającą wartość n-tego elementu ciąg Fibonacciego, jeżeli:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>fib(0) = 0
+fib(1) = 1
+fib(n) = fib(n-1) + fib(n-2)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1>Dziel i zwyciężaj</h1>
+<p>Strategia &quot;dziel i zwyciężaj&quot; opiera się na rekurencyjnym podziale problemu na większą liczbę mniejszych podproblemów podobnego typu. Podział następuje do momentu, aż podproblem staje się bezpośrednio rozwiązywalny. Otrzymane wyniki podproblemów scala się, aby uzyskać rozwiązanie dla całego problemu.</p>
+<p>Przykładem użycia strategi &quot;dziel i zwyciężaj&quot; jest algorytm sortowania szybkiego (quicksort).</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+<h1>Struktury danych</h1>
+<p>Struktury danych to sposoby przechowywania danych w pamięci, na których operują algorytmy.</p>
+<p>Dany problem może zostać uproszczony do problemu algorytmicznego operującego na danej strukturze danych.</p>
+<p>Używając przykładu <code>problemu komiwojażera</code>, w podejściu algorytmicznym, może on zostać opisany poprzez operacje na grafach.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
+<h1>Struktury danych</h1>
+<p>Do podstawowych struktur danych należą:</p>
+<ul>
+<li>Tablica</li>
+<li>Lista</li>
+<li>Stos</li>
+<li>Kolejka (LIDO, FIFO)</li>
+<li>Graf</li>
+<li>Drzewa i jego liczne odmiany (np. drzewo binarne)</li>
+<li>Kopiec</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+<h1>Tablica</h1>
+<p>Struktura uporządkowanych danych, w której każdy z elementów identyfikowany jest przez unikatową liczbę porządkową zwaną indeksem. Indeks jest sekwencyjny i najczęściej przyjmuję wartości liczb naturalnych.</p>
+<p>Wyróżniamy dwa główne typy tablic:</p>
+<ul>
+<li>statyczne, ze z góry zdefiniowaną ilościom elementów,</li>
+<li>dynamiczne, ze zmienną ilością elementów.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+<h1>Tablica</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-array.png" alt="Tablica" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+<h1>Lista</h1>
+<p>Struktura uporządkowanych danych dla zbiorów dynamicznych, w której elementy są ułożone w porządku liniowym.</p>
+<p>Wyróżniamy dwa główne typy list:</p>
+<ul>
+<li>jednokierunkowe, w który każdy element wskazuje na element następny,</li>
+<li>dwukierunkowe, w której każdy element wskazuje na element następny oraz poprzedni.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
+<h1>Lista</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-list.png" alt="Lista" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
+<h1>Stos</h1>
+<p>Liniowa struktura uporządkowanych danych realizująca założenie <code>LIFO (Last In, First Out)</code>. Elementy dodawane są na jego wierzchołku oraz z tego też wierzchołka są pobierane.</p>
+<p>W większości implementacji za dodawanie elementu odpowiedzialna jest operacja <code>push</code>, a za pobieranie operacja <code>pop</code>. Dodatkowo operacja <code>peek</code> ma na celu podgląd ostatniego elementu.</p>
+<p>Przykładem stosu mogą być produkty układane na półce sklepowej. Produkt dodany najpóźniej przez obsługę zostanie jako pierwszy ściągnięty przez klienta.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
+<h1>Stos</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-stack.png" alt="Stos" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
+<h1>Kolejka</h1>
+<p>Liniowa struktura uporządkowanych danych realizująca założenie <code>FIFO (First In, First Out)</code>. Elementy dodawane są na końcu struktury, ale pobierane z jej początku.</p>
+<p>W większości implementacji za dodawanie elementu odpowiedzialna jest operacja <code>enqueue</code>, a za pobieranie operacja <code>dequeue</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
+<h1>Kolejka</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-queue.png?reload" alt="Kolejka" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
+<h1><strong>Programowanie: zadanie 17</strong></h1>
+<p>Zaimplementuj klasę <code>IntegerQueue</code> przechowującą elementy typu <code>Integer</code> oraz realizującą założenia kolejki:</p>
+<ul>
+<li>pobieranie elementu z początku <code>Integer getFirst()</code>,</li>
+<li>dodawanie elementu na końcu <code>void addLast(Integer)</code>.</li>
+</ul>
+<p>Do implementacji kolejki użyj podejścia listy, gdzie każdy element przechowuje referencję do obiektu następnego.</p>
+<p>Przetestuj działanie oraz zaimplementuj metodę <code>String toString()</code> pozwalającą na wypisanie wszystkich elementów kolejki.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
+<h1>Graf</h1>
+<p>Struktura matematyczna opierająca się na zbiorze wierzchołków, które mogą być połączone ze sobą krawędziami, gdzie każda z krawędzi ma swój początek i koniec w którymś z wierzchołków.</p>
+<p>Istnieje wiele wariancji grafów, w których:</p>
+<ul>
+<li>wierzchołki mogą być numerowane,</li>
+<li>krawędzie mogą byc skierowane,</li>
+<li>krawędzie mogą mieć wagę, gdzie waga może być zależna od kierunku.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
+<h1>Graf</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-graph.png" alt="Graf" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
+<h1>Drzewo</h1>
+<p>Struktura danych będąca specjalnym przypadkiem grafu, który jest nieskierowany, acykliczny oraz spójny.</p>
+<p>Acykliczność to cecha, w której dla każdej pary wierzchołków istnieje dokładnie jedna ścieżka je łącząca.</p>
+<p>Spójność to cecha, w której dla każdej pary wierzchołków istnieje ścieżka, która je łączy.</p>
+<p>Przez swój charakter drzewa dobrze odwzorowują hierarchię danych, przyspieszają wyszukiwanie oraz operacje na posortowanych danych.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
+<h1>Drzewo</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-tree.png" alt="Drzewo" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
+<h1>Kopiec</h1>
+<p>Struktura danych będąca specjalnym przypadkiem drzewa, w którym wartości wierzchołków potomków są w stałej relacji do wartości rodziców.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
+<h1>Kopiec</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-heap.png" alt="Kopiec" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
+<h1>Mapa</h1>
+<p>Struktura danych przechowująca pary klucz-wartość, w której dany klucz jest unikatowy i występuje co najwyżej raz.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
+<h1>Mapa</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-map.png" alt="Mapa" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
+<h1>Zbiór</h1>
+<p>Struktura danych przechowująca unikatowe wartości bez ustalonego porządku.</p>
+<p>Do głównych cech należą:</p>
+<ul>
+<li>ponowne dodanie istniejącej wartości do zbioru nie powoduje zwiększania ilości jego elementów</li>
+<li>służy głównie do sprawdzenia, czy dana wartość jest jego częścią</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
+<h1>Zbiór</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-set.png" alt="Zbiór" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
+<h1><strong>Programowanie: zadanie 18</strong></h1>
+<p>Zaimplementuj klasę <code>IntSet</code> realizującą założenia zbioru oraz przechowującą elementy typu <code>int</code>. Do implementacji użyj struktury kolejki.</p>
+<p>Klasa powinna implementować następujące metody:</p>
+<ul>
+<li><code>boolean add(int)</code> dodającą element do zbioru oraz zwracającą <code>true</code> w przypadku dodania elementu lub <code>false</code> w przeciwnym przypadku</li>
+<li><code>boolean remove(int)</code> usuwającą element ze zbioru oraz zwracającą <code>true</code> w przypadku usunięcia elementu lub <code>false</code> w przeciwnym przypadku</li>
+<li><code>boolean contains(int)</code> sprawdzającą, czy dany element istnieje w zbiorze</li>
+<li><code>int size()</code> zwracającą ilość elementów w zbiorze</li>
+<li><code>String toString()</code> zwracającą tekstową wersję zbioru ze wszystkimi jego elementami</li>
+</ul>
+</section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.4.1/lib/bespoke.js.LICENSE.txt */
 !function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

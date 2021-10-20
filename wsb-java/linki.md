@@ -4,9 +4,15 @@ title: Linki
 
 {% include wsb-page-intro.md %}
 
+## Instalacje Javy
+
+#### Open JDK
+[https://jdk.java.net/17/](https://jdk.java.net/17/)
+
+#### Oracle JDK
+[https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
+
 ## Linki:
 
-- https://pl.wikipedia.org/wiki/Program_komputerowy
-- https://pl.wikipedia.org/wiki/J%C4%99zyk_maszynowy
-- https://pl.wikipedia.org/wiki/Asembler
+- https://pl.wikipedia.org/
 - https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/
