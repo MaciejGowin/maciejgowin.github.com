@@ -1,0 +1,1617 @@
+<!DOCTYPE html><html lang="en-IE"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template-areas:"current next" "current note" "info    note";grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp default theme.
+ *
+ * @theme default
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .octicon{fill:currentColor;display:inline-block;vertical-align:text-bottom}div#p>svg>foreignObject>section .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}div#p>svg>foreignObject>section .anchor:focus{outline:none}div#p>svg>foreignObject>section h1 .octicon-link,div#p>svg>foreignObject>section h2 .octicon-link,div#p>svg>foreignObject>section h3 .octicon-link,div#p>svg>foreignObject>section h4 .octicon-link,div#p>svg>foreignObject>section h5 .octicon-link,div#p>svg>foreignObject>section h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}div#p>svg>foreignObject>section h1:hover .anchor,div#p>svg>foreignObject>section h2:hover .anchor,div#p>svg>foreignObject>section h3:hover .anchor,div#p>svg>foreignObject>section h4:hover .anchor,div#p>svg>foreignObject>section h5:hover .anchor,div#p>svg>foreignObject>section h6:hover .anchor{text-decoration:none}div#p>svg>foreignObject>section h1:hover .anchor .octicon-link,div#p>svg>foreignObject>section h2:hover .anchor .octicon-link,div#p>svg>foreignObject>section h3:hover .anchor .octicon-link,div#p>svg>foreignObject>section h4:hover .anchor .octicon-link,div#p>svg>foreignObject>section h5:hover .anchor .octicon-link,div#p>svg>foreignObject>section h6:hover .anchor .octicon-link{visibility:visible}div#p>svg>foreignObject>section h1:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h2:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h3:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h4:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h5:hover .anchor .octicon-link:before,div#p>svg>foreignObject>section h6:hover .anchor .octicon-link:before{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'/%3E%3C/svg%3E");content:" ";display:inline-block;height:16px;width:16px}div#p>svg>foreignObject>section{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5}div#p>svg>foreignObject>section{--marpit-root-font-size:16px}div#p>svg>foreignObject>section details{display:block}div#p>svg>foreignObject>section summary{display:list-item}div#p>svg>foreignObject>section a{background-color:initial}div#p>svg>foreignObject>section a:active,div#p>svg>foreignObject>section a:hover{outline-width:0}div#p>svg>foreignObject>section strong{font-weight:inherit;font-weight:bolder}div#p>svg>foreignObject>section h1{margin:.67em 0}div#p>svg>foreignObject>section img{border-style:none}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section kbd,div#p>svg>foreignObject>section pre{font-family:monospace,monospace;font-size:1em}div#p>svg>foreignObject>section hr{box-sizing:initial;overflow:visible}div#p>svg>foreignObject>section input{font:inherit;margin:0;overflow:visible}div#p>svg>foreignObject>section [type=checkbox]{padding:0}div#p>svg>foreignObject>section *,div#p>svg>foreignObject>section [type=checkbox]{box-sizing:border-box}div#p>svg>foreignObject>section input{font-family:inherit;font-size:inherit;line-height:inherit}div#p>svg>foreignObject>section a{color:#0366d6;text-decoration:none}div#p>svg>foreignObject>section a:hover{text-decoration:underline}div#p>svg>foreignObject>section strong{font-weight:600}div#p>svg>foreignObject>section hr{background:transparent;border-bottom:1px solid #dfe2e5;height:0;margin:15px 0;overflow:hidden}div#p>svg>foreignObject>section hr:after,div#p>svg>foreignObject>section hr:before{content:"";display:table}div#p>svg>foreignObject>section hr:after{clear:both}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0}div#p>svg>foreignObject>section td,div#p>svg>foreignObject>section th{padding:0}div#p>svg>foreignObject>section details summary{cursor:pointer}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section h1{font-size:32px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{font-weight:600}div#p>svg>foreignObject>section h2{font-size:24px}div#p>svg>foreignObject>section h3{font-size:20px}div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4{font-weight:600}div#p>svg>foreignObject>section h4{font-size:16px}div#p>svg>foreignObject>section h5{font-size:14px}div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600}div#p>svg>foreignObject>section h6{font-size:12px}div#p>svg>foreignObject>section p{margin-bottom:10px;margin-top:0}div#p>svg>foreignObject>section blockquote{margin:0}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{margin-bottom:0;margin-top:0;padding-left:0}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ul ol{list-style-type:lower-roman}div#p>svg>foreignObject>section ol ol ol,div#p>svg>foreignObject>section ol ul ol,div#p>svg>foreignObject>section ul ol ol,div#p>svg>foreignObject>section ul ul ol{list-style-type:lower-alpha}div#p>svg>foreignObject>section dd{margin-left:0}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}div#p>svg>foreignObject>section pre{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section input::-webkit-inner-spin-button,div#p>svg>foreignObject>section input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}div#p>svg>foreignObject>section :checked+.radio-label{border-color:#0366d6;position:relative;z-index:1}div#p>svg>foreignObject>section .border{border:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .border-0{border:0!important}div#p>svg>foreignObject>section .border-bottom{border-bottom:1px solid #e1e4e8!important}div#p>svg>foreignObject>section .rounded-1{border-radius:3px!important}div#p>svg>foreignObject>section .bg-white{background-color:#fff!important}div#p>svg>foreignObject>section .bg-gray-light{background-color:#fafbfc!important}div#p>svg>foreignObject>section .text-gray-light{color:#6a737d!important}div#p>svg>foreignObject>section .pl-3,div#p>svg>foreignObject>section .px-3{padding-left:16px!important}div#p>svg>foreignObject>section .px-3{padding-right:16px!important}div#p>svg>foreignObject>section .f6{font-size:12px!important}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.f6{--marpit-root-font-size:12px!important}div#p>svg>foreignObject>section .lh-condensed{line-height:1.25!important}div#p>svg>foreignObject>section .text-bold{font-weight:600!important}div#p>svg>foreignObject>section .pl-c{color:#6a737d}div#p>svg>foreignObject>section .pl-c1,div#p>svg>foreignObject>section .pl-s .pl-v{color:#005cc5}div#p>svg>foreignObject>section .pl-e,div#p>svg>foreignObject>section .pl-en{color:#6f42c1}div#p>svg>foreignObject>section .pl-s .pl-s1,div#p>svg>foreignObject>section .pl-smi{color:#24292e}div#p>svg>foreignObject>section .pl-ent{color:#22863a}div#p>svg>foreignObject>section .pl-k{color:#d73a49}div#p>svg>foreignObject>section .pl-pds,div#p>svg>foreignObject>section .pl-s,div#p>svg>foreignObject>section .pl-s .pl-pse .pl-s1,div#p>svg>foreignObject>section .pl-sr,div#p>svg>foreignObject>section .pl-sr .pl-cce,div#p>svg>foreignObject>section .pl-sr .pl-sra,div#p>svg>foreignObject>section .pl-sr .pl-sre{color:#032f62}div#p>svg>foreignObject>section .pl-smw,div#p>svg>foreignObject>section .pl-v{color:#e36209}div#p>svg>foreignObject>section .pl-bu{color:#b31d28}div#p>svg>foreignObject>section .pl-ii{background-color:#b31d28;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2{background-color:#d73a49;color:#fafbfc}div#p>svg>foreignObject>section .pl-c2:before{content:"^M"}div#p>svg>foreignObject>section .pl-sr .pl-cce{color:#22863a;font-weight:700}div#p>svg>foreignObject>section .pl-ml{color:#735c0f}div#p>svg>foreignObject>section .pl-mh,div#p>svg>foreignObject>section .pl-mh .pl-en,div#p>svg>foreignObject>section .pl-ms{color:#005cc5;font-weight:700}div#p>svg>foreignObject>section .pl-mi{color:#24292e;font-style:italic}div#p>svg>foreignObject>section .pl-mb{color:#24292e;font-weight:700}div#p>svg>foreignObject>section .pl-md{background-color:#ffeef0;color:#b31d28}div#p>svg>foreignObject>section .pl-mi1{background-color:#f0fff4;color:#22863a}div#p>svg>foreignObject>section .pl-mc{background-color:#ffebda;color:#e36209}div#p>svg>foreignObject>section .pl-mi2{background-color:#005cc5;color:#f6f8fa}div#p>svg>foreignObject>section .pl-mdr{color:#6f42c1;font-weight:700}div#p>svg>foreignObject>section .pl-ba{color:#586069}div#p>svg>foreignObject>section .pl-sg{color:#959da5}div#p>svg>foreignObject>section .pl-corl{color:#032f62;text-decoration:underline}div#p>svg>foreignObject>section .mb-0{margin-bottom:0!important}div#p>svg>foreignObject>section .my-2{margin-bottom:8px!important;margin-top:8px!important}div#p>svg>foreignObject>section .pl-0{padding-left:0!important}div#p>svg>foreignObject>section .py-0{padding-bottom:0!important;padding-top:0!important}div#p>svg>foreignObject>section .pl-1{padding-left:4px!important}div#p>svg>foreignObject>section .pl-2{padding-left:8px!important}div#p>svg>foreignObject>section .py-2{padding-bottom:8px!important;padding-top:8px!important}div#p>svg>foreignObject>section .pl-3{padding-left:16px!important}div#p>svg>foreignObject>section .pl-4{padding-left:24px!important}div#p>svg>foreignObject>section .pl-5{padding-left:32px!important}div#p>svg>foreignObject>section .pl-6{padding-left:40px!important}div#p>svg>foreignObject>section .pl-7{padding-left:48px!important}div#p>svg>foreignObject>section .pl-8{padding-left:64px!important}div#p>svg>foreignObject>section .pl-9{padding-left:80px!important}div#p>svg>foreignObject>section .pl-10{padding-left:96px!important}div#p>svg>foreignObject>section .pl-11{padding-left:112px!important}div#p>svg>foreignObject>section .pl-12{padding-left:128px!important}div#p>svg>foreignObject>section hr{border-bottom-color:#eee}div#p>svg>foreignObject>section kbd{background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da;color:#444d56;display:inline-block;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section:before{
+  /* content:""; */display:table}div#p>svg>foreignObject>section:after{clear:both}div#p>svg>foreignObject>section>:first-child{margin-top:0!important}div#p>svg>foreignObject>section>:last-child{margin-bottom:0!important}div#p>svg>foreignObject>section a:not([href]){color:inherit;text-decoration:none}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section details,div#p>svg>foreignObject>section dl,div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section p,div#p>svg>foreignObject>section pre,div#p>svg>foreignObject>section table,div#p>svg>foreignObject>section ul{margin-bottom:16px;margin-top:0}div#p>svg>foreignObject>section hr{background-color:#e1e4e8;border:0;height:.25em;margin:24px 0;padding:0}div#p>svg>foreignObject>section blockquote{border-left:.25em solid #dfe2e5;color:#6a737d;padding:0 1em}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section blockquote>:last-child{margin-bottom:0}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}div#p>svg>foreignObject>section h1{font-size:2em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:1px solid #eaecef;padding-bottom:.3em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.25em}div#p>svg>foreignObject>section h4{font-size:1em}div#p>svg>foreignObject>section h5{font-size:.875em}div#p>svg>foreignObject>section h6{color:#6a737d;font-size:.85em}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{padding-left:2em}div#p>svg>foreignObject>section ol ol,div#p>svg>foreignObject>section ol ul,div#p>svg>foreignObject>section ul ol,div#p>svg>foreignObject>section ul ul{margin-bottom:0;margin-top:0}div#p>svg>foreignObject>section li{word-wrap:break-all}div#p>svg>foreignObject>section li>p{margin-top:16px}div#p>svg>foreignObject>section li+li{margin-top:.25em}div#p>svg>foreignObject>section dl{padding:0}div#p>svg>foreignObject>section dl dt{font-size:1em;font-style:italic;font-weight:600;margin-top:16px;padding:0}div#p>svg>foreignObject>section dl dd{margin-bottom:16px;padding:0 16px}div#p>svg>foreignObject>section table{display:block;overflow:auto;width:100%}div#p>svg>foreignObject>section table th{font-weight:600}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border:1px solid #dfe2e5;padding:6px 13px}div#p>svg>foreignObject>section table tr{background-color:#fff;border-top:1px solid #c6cbd1}div#p>svg>foreignObject>section table tr:nth-child(2n){background-color:#f6f8fa}div#p>svg>foreignObject>section img{background-color:#fff;box-sizing:initial;max-width:100%}div#p>svg>foreignObject>section img[align=right]{padding-left:20px}div#p>svg>foreignObject>section img[align=left]{padding-right:20px}div#p>svg>foreignObject>section code{background-color:rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em .4em}div#p>svg>foreignObject>section pre{word-wrap:normal}div#p>svg>foreignObject>section pre>code{background:transparent;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}div#p>svg>foreignObject>section .highlight{margin-bottom:16px}div#p>svg>foreignObject>section .highlight pre{margin-bottom:0;word-break:normal}div#p>svg>foreignObject>section pre{background-color:#f6f8fa;border-radius:3px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}div#p>svg>foreignObject>section pre code{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}div#p>svg>foreignObject>section .commit-tease-sha{color:#444d56;display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.commit-tease-sha{--marpit-root-font-size:90%}div#p>svg>foreignObject>section .full-commit .btn-outline:not(:disabled):hover{border-color:#005cc5;color:#005cc5}div#p>svg>foreignObject>section .blob-wrapper{overflow-x:auto;overflow-y:hidden}div#p>svg>foreignObject>section .blob-wrapper-embedded{max-height:240px;overflow-y:auto}div#p>svg>foreignObject>section .blob-num{color:rgba(27,31,35,.3);cursor:pointer;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;min-width:50px;padding-left:10px;padding-right:10px;text-align:right;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:top;white-space:nowrap;width:1%}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.blob-num{--marpit-root-font-size:12px}div#p>svg>foreignObject>section .blob-num:hover{color:rgba(27,31,35,.6)}div#p>svg>foreignObject>section .blob-num:before{content:attr(data-line-number)}div#p>svg>foreignObject>section .blob-code{line-height:20px;padding-left:10px;padding-right:10px;position:relative;vertical-align:top}div#p>svg>foreignObject>section .blob-code-inner{word-wrap:normal;color:#24292e;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;overflow:visible;white-space:pre}div#p>svg>foreignObject>section div#p>svg>foreignObject>section section.blob-code-inner{--marpit-root-font-size:12px}div#p>svg>foreignObject>section .pl-token.active,div#p>svg>foreignObject>section .pl-token:hover{background:#ffea7f;cursor:pointer}div#p>svg>foreignObject>section .tab-size[data-tab-size="1"]{-moz-tab-size:1;-o-tab-size:1;tab-size:1}div#p>svg>foreignObject>section .tab-size[data-tab-size="2"]{-moz-tab-size:2;-o-tab-size:2;tab-size:2}div#p>svg>foreignObject>section .tab-size[data-tab-size="3"]{-moz-tab-size:3;-o-tab-size:3;tab-size:3}div#p>svg>foreignObject>section .tab-size[data-tab-size="4"]{-moz-tab-size:4;-o-tab-size:4;tab-size:4}div#p>svg>foreignObject>section .tab-size[data-tab-size="5"]{-moz-tab-size:5;-o-tab-size:5;tab-size:5}div#p>svg>foreignObject>section .tab-size[data-tab-size="6"]{-moz-tab-size:6;-o-tab-size:6;tab-size:6}div#p>svg>foreignObject>section .tab-size[data-tab-size="7"]{-moz-tab-size:7;-o-tab-size:7;tab-size:7}div#p>svg>foreignObject>section .tab-size[data-tab-size="8"]{-moz-tab-size:8;-o-tab-size:8;tab-size:8}div#p>svg>foreignObject>section .tab-size[data-tab-size="9"]{-moz-tab-size:9;-o-tab-size:9;tab-size:9}div#p>svg>foreignObject>section .tab-size[data-tab-size="10"]{-moz-tab-size:10;-o-tab-size:10;tab-size:10}div#p>svg>foreignObject>section .tab-size[data-tab-size="11"]{-moz-tab-size:11;-o-tab-size:11;tab-size:11}div#p>svg>foreignObject>section .tab-size[data-tab-size="12"]{-moz-tab-size:12;-o-tab-size:12;tab-size:12}div#p>svg>foreignObject>section .task-list-item{list-style-type:none}div#p>svg>foreignObject>section .task-list-item+.task-list-item{margin-top:3px}div#p>svg>foreignObject>section .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}div#p>svg>foreignObject>section .hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-meta{color:#969896}div#p>svg>foreignObject>section .hljs-emphasis,div#p>svg>foreignObject>section .hljs-quote,div#p>svg>foreignObject>section .hljs-strong,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#df5000}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#d73a49}div#p>svg>foreignObject>section .hljs-attribute,div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-literal,div#p>svg>foreignObject>section .hljs-symbol{color:#0086b3}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section{color:#63a35c}div#p>svg>foreignObject>section .hljs-tag{color:#333}div#p>svg>foreignObject>section .hljs-attr,div#p>svg>foreignObject>section .hljs-selector-attr,div#p>svg>foreignObject>section .hljs-selector-class,div#p>svg>foreignObject>section .hljs-selector-id,div#p>svg>foreignObject>section .hljs-selector-pseudo,div#p>svg>foreignObject>section .hljs-title{color:#6f42c1}div#p>svg>foreignObject>section .hljs-addition{background-color:#eaffea;color:#55a532}div#p>svg>foreignObject>section .hljs-deletion{background-color:#ffecec;color:#bd2c00}div#p>svg>foreignObject>section .hljs-link{text-decoration:underline}div#p>svg>foreignObject>section .hljs-number{color:#005cc5}div#p>svg>foreignObject>section .hljs-string{color:#032f62}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:563px}div#p>svg>foreignObject>section h1{color:#246;font-size:1.6em}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2{border-bottom:none}div#p>svg>foreignObject>section h2{font-size:1.3em}div#p>svg>foreignObject>section h3{font-size:1.1em}div#p>svg>foreignObject>section h4{font-size:1.05em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#48c;font-weight:inherit}div#p>svg>foreignObject>section hr{height:0;padding-top:.25em}div#p>svg>foreignObject>section pre{border:1px solid #999;line-height:1.15;overflow:visible}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:529px}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{color:hsla(0,0%,40%,.75);font-size:18px;left:30px;margin:0;position:absolute}div#p>svg>foreignObject>section header{top:21px}div#p>svg>foreignObject>section footer{bottom:21px}div#p>svg>foreignObject>section{align-items:stretch;background:#fff;display:flex;flex-direction:column;flex-wrap:nowrap;font-size:29px;height:720px;justify-content:center;padding:78.5px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:29px}div#p>svg>foreignObject>section>:last-child,div#p>svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section:after{bottom:21px;color:#777;font-size:24px;padding:0;position:absolute;right:30px}div#p>svg>foreignObject>section:after{--marpit-root-font-size:24px}div#p>svg>foreignObject>section.invert{background-color:#222;color:#e6eaf0}div#p>svg>foreignObject>section.invert:after{color:#999}div#p>svg>foreignObject>section.invert img{background-color:transparent}div#p>svg>foreignObject>section.invert a{color:#50b3ff}div#p>svg>foreignObject>section.invert h1{color:#a3c5e7}div#p>svg>foreignObject>section.invert h2,div#p>svg>foreignObject>section.invert h3,div#p>svg>foreignObject>section.invert h4,div#p>svg>foreignObject>section.invert h5{color:#ebeff5}div#p>svg>foreignObject>section.invert blockquote,div#p>svg>foreignObject>section.invert h6{border-color:#3d3f43;color:#939699}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#7bf}div#p>svg>foreignObject>section.invert hr{background-color:#3d3f43}div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header{color:hsla(0,0%,60%,.75)}div#p>svg>foreignObject>section.invert code,div#p>svg>foreignObject>section.invert kbd{background-color:#111}div#p>svg>foreignObject>section.invert kbd{border-color:#666;box-shadow:inset 0 -1px 0 #555;color:#e6eaf0}div#p>svg>foreignObject>section.invert table tr{background-color:#12181d;border-color:#60657b}div#p>svg>foreignObject>section.invert table tr:nth-child(2n){background-color:#1b2024}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#5b5e61}div#p>svg>foreignObject>section.invert pre{background-color:#0a0e12;border-color:#777}div#p>svg>foreignObject>section.invert pre code{background-color:transparent}div#p>svg>foreignObject>section[data-color] h1,div#p>svg>foreignObject>section[data-color] h2,div#p>svg>foreignObject>section[data-color] h3,div#p>svg>foreignObject>section[data-color] h4,div#p>svg>foreignObject>section[data-color] h5,div#p>svg>foreignObject>section[data-color] h6{color:currentColor}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1">
+<p><img src="https://maciejgowin.github.io/assets/img/wsb-logo-wroclaw.png" alt="WSB" /></p>
+<h1>Programowanie aplikacji w Java</h1>
+<h2>Maciej Gowin</h2>
+<h3>Zjazd 4 - dzień 2</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
+<h1>Linki</h1>
+<h4>Opis</h4>
+<p><a href="https://maciejgowin.github.io/wsb-java/">https://maciejgowin.github.io/wsb-java/</a></p>
+<h4>Kod źródłowy przykładów oraz zadań</h4>
+<p><a href="https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java">https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
+<h1>Język Java: pliki jar</h1>
+<p>Dystrybucja skompilowanego kodu w postaci wielu plików <code>.class</code> byłaby uciążliwa. W Java możliwe jest archiwizowanie plików w formacie opartym na formacie <code>zip</code>. Pozwala to na łatwe współdzielenie kodu.</p>
+<p>Java wprowadza format <code>jar</code> (ang. Java archive).</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+<h1>Język Java: pliki jar</h1>
+<p>Do stworzenia pliku <code>jar</code> używamy polecenia:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>jar --create --file my-jar-name.jar Main.class Another1.class Another2.class ...
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>jar cf my-jar-name.jar Main.class Another1.class Another2.class ...
+</span></span></foreignObject></svg></code></pre>
+<p>gdzie:</p>
+<ul>
+<li><code>--create</code> opcja tworzenia archiwum</li>
+<li><code>--file</code> specyfikacja nazwy pliku</li>
+<li><code>my-jar-name.jar</code> nazwa archiwum</li>
+<li><code>Main.class Another1.class Another2.class ...</code> pliki do archiwizacji</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+<h1>Język Java: pliki jar</h1>
+<p>Po utworzeniu pliku <code>jar</code> możemy uruchomić program, używając polecenia:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -cp my-jar-name.jar Main
+</span></span></foreignObject></svg></code></pre>
+<p>Istotna jest definicja <code>-cp</code> (lub <code>-classpath</code>). W przypadku braku definicji tej opcji Java domyślnie ustawia ścieżkę przeszukiwań na obecny katalog <code>.</code>. W związku z tym, że nasze klasy umieszczone zostały w archiwum, musimy poinstruować JVM do jego przeszukania.</p>
+<p>Dodatkowo <code>Main</code> to klasa posiadającą metodę <code>main</code>. Używamy jej w analogiczny sposób jak w przypadku uruchomienia z domyślną ścieżką przeszukiwania.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+<h1>Język Java: pliki jar</h1>
+<p>Po rozpakowaniu archiwum możemy podejrzeć jego zawartość:</p>
+<p><code>jar --extract --file main.jar </code><br />
+<code>jar xf main.jar </code></p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>META-INF
+|- MANIFEST.MF
+Main.class
+Another1.class
+Another2.class
+...
+</span></span></foreignObject></svg></code></pre>
+<p>Java automatycznie dodaje plik <code>MANIFEST.MF</code>, który posiada rozszerzone opisy oraz instrukcje związane z jego zachowaniem. W podstawowej formie:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Manifest-Version: 1.0
+Created-By: 11.0.8 (N/A)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+<h1>Język Java: pliki jar</h1>
+<p>Jeżeli podczas budowania pliku zdefiniujemy klasę startową możemy przekształcić plik <code>jar</code> w plik uruchomieniowy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>jar --create --file my-jar-name.jar --main-class Main Main.class Another1.class Another2.class ...
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>jar --create --file my-jar-name.jar --manifest MANIFEST.MF Another1.class Another2.class ...
+</span></span></foreignObject></svg></code></pre>
+<p>Pozwoli to na uruchomienie programu bez zadawania klasy z metodą <code>main</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -jar my-jar-name.jar
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+<h1>Język Java: fat jar</h1>
+<p>W przypadku, w którym nasz kod używa zewnętrznych bibliotek, możemy je dodać do ścieżki wyszukiwań lub też umieścić je w wynikowym archiwum.</p>
+<p>W taki sposób powstaje tzw. <code>uber jar</code> lub <code>fat jar</code> zawierający wszystkie zależności.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+<h1><strong>Programowanie: przykład 48</strong></h1>
+<blockquote>
+<p>LineCounter.java</p>
+</blockquote>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LineCounter</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">if</span> (args.length != <span class="hljs-number">1</span>) {
+            System.out.println(<span class="hljs-string">&quot;Specify filename&quot;</span>);
+            <span class="hljs-keyword">return</span>;
+        }
+
+        FileUtils.countLines(args[<span class="hljs-number">0</span>]).ifPresent(count -&gt; System.out.printf(<span class="hljs-string">&quot;Lines: %d%n&quot;</span>, count));
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<h1><strong>Programowanie: przykład 48</strong></h1>
+<blockquote>
+<p>FileUtils.java</p>
+</blockquote>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.io.IOException;
+<span class="hljs-keyword">import</span> java.nio.file.Files;
+<span class="hljs-keyword">import</span> java.nio.file.Path;
+<span class="hljs-keyword">import</span> java.util.Optional;
+
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> java.util.Optional.empty;
+<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> java.util.Optional.of;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileUtils</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Optional&lt;Long&gt; <span class="hljs-title">countLines</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String filename)</span> </span>{
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">return</span> of(Files.readAllLines(Path.of(filename)).stream().filter(FileUtils::isNotBlank).count());
+        } <span class="hljs-keyword">catch</span> (IOException ex) {
+            System.out.println(<span class="hljs-string">&quot;Failed to load file: &quot;</span> + ex.getMessage());
+            <span class="hljs-keyword">return</span> empty();
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isNotBlank</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String value)</span> </span>{
+        <span class="hljs-keyword">return</span> value != <span class="hljs-keyword">null</span> &amp;&amp; value.replaceAll(<span class="hljs-string">&quot;\\s&quot;</span>,<span class="hljs-string">&quot;&quot;</span>).length() &gt; <span class="hljs-number">0</span>;
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+<h1><strong>Programowanie: przykład 48</strong></h1>
+<h4>Compile</h4>
+<p><code>javac LineCounter.java</code></p>
+<h4>Create jar</h4>
+<p><code>jar --create --file line-counter.jar LineCounter.class FileUtils.class</code></p>
+<p><code>jar cf line-counter.jar LineCounter.class FileUtils.class</code></p>
+<h4>Run with jar-based classpath</h4>
+<p><code>java -cp line-counter.jar LineCounter</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<h1><strong>Programowanie: przykład 48</strong></h1>
+<h4>Run as jar</h4>
+<p><code>java -jar line-counter.jar</code></p>
+<blockquote>
+<p>no main manifest attribute, in test.jar</p>
+</blockquote>
+<h4>Create Jar with main class definition</h4>
+<p><code>jar --create --file line-counter.jar --manifest MANIFEST.MF LineCounter.class FileUtils.class</code></p>
+<p><code>jar --create --file line-counter.jar --main-class LineCounter LineCounter.class FileUtils.class</code></p>
+<h4>Run as jar</h4>
+<p><code>java -jar line-counter.jar</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+<h1>Budowanie aplikacji: automatyzacja procesu</h1>
+<p>Proces budowania może być uciążliwy. W szczególności, gdy nasze oprogramowanie zależne jest od wielu zewnętrznych bibliotek oraz wymagane są dodatkowe kroki niekoniecznie związane z samą kompilacją.</p>
+<p>Dostępny jest szereg narzędzi, które automatyzują ten proces:</p>
+<ul>
+<li>Apache Ant</li>
+<li>Apache Maven</li>
+<li>Gradle</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+<h1>Budowanie aplikacji: Apache Ant</h1>
+<p>Korzysta z opisu procesu oraz kroków zdefiniowanych za pomocą pliku w formacie XML (o domyślnej nazwie <code>build.xml</code>). Wywołanie konkretnych kroków odbywa się przy pomocy polecenia <code>ant</code>, które operuje na zdefiniowanym wcześniej pliku.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>ant compile
+ant jar
+ant run
+</span></span></foreignObject></svg></code></pre>
+<p>Głównym narzędziem jest program konsolowy (ang. CLI, command-line interface) o nazwie <code>ant</code>.</p>
+<p>Narzędzie <code>ant</code> dostępne jest pod adresem <a href="https://ant.apache.org/bindownload.cgi">https://ant.apache.org/bindownload.cgi</a>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Budowanie aplikacji: Apache Ant</h1>
+<blockquote>
+<p>build.xml</p>
+</blockquote>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;project name=&quot;Main&quot; default=&quot;compile&quot;&gt;
+  &lt;target name=&quot;clean&quot; description=&quot;Deletes previous compile files&quot;&gt;
+    &lt;delete dir=&quot;classes&quot;/&gt;
+  &lt;/target&gt;
+  &lt;target name=&quot;compile&quot; description=&quot;Compiles application&quot;&gt;
+    &lt;mkdir dir=&quot;classes&quot; /&gt;
+    &lt;javac srcdir=&quot;.&quot; destdir=&quot;classes&quot;/&gt;
+  &lt;/target&gt;
+  &lt;target name=&quot;jar&quot; depends=&quot;compile&quot; description=&quot;Creates application jar file&quot;&gt;
+    &lt;jar destfile=&quot;line-counter.jar&quot;&gt;
+      &lt;fileset dir=&quot;classes&quot; includes=&quot;**/*.class&quot;/&gt;
+      &lt;manifest&gt;
+        &lt;attribute name=&quot;Main-Class&quot; value=&quot;LineCounter&quot;/&gt;
+      &lt;/manifest&gt;
+    &lt;/jar&gt;
+  &lt;/target&gt;
+&lt;/project&gt;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Budowanie aplikacji: Apache Maven</h1>
+<p>Korzysta z opisu przy pomocy plików w formacie XML o nazwie POM (ang. Project Object Model). Opis skupia się na tym, co budujemy, a nie na tym, jak jest to wykonywane.</p>
+<p>Budowanie odbywa się na podstawie <strong>faz (ang. phase).</strong> Fazy cyklu życia procesu budowania są z góry ustalone.</p>
+<p>Głównym narzędziem jest program konsolowy (ang. CLI, command-line interface) o nazwie <code>mvn</code>.</p>
+<p>Narzędzie <code>mvn</code> dostępne jest pod adresem <a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Apache Maven: fazy</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Faza</th>
+<th style="text-align:left">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">clean</td>
+<td style="text-align:left">czyszczenie projektu z wcześniej wygenerowanych plików</td>
+</tr>
+<tr>
+<td style="text-align:left">validate</td>
+<td style="text-align:left">sprawdzenie czy wszystkie informacje potrzebne do procesu budowania są dostępne</td>
+</tr>
+<tr>
+<td style="text-align:left">compile</td>
+<td style="text-align:left">kompilacja kodu źródłowego</td>
+</tr>
+<tr>
+<td style="text-align:left">test-compile</td>
+<td style="text-align:left">kompilacja kodu źródłowego testów</td>
+</tr>
+<tr>
+<td style="text-align:left">test</td>
+<td style="text-align:left">wykonanie testów jednostkowych</td>
+</tr>
+<tr>
+<td style="text-align:left">package</td>
+<td style="text-align:left">budowanie paczki dystrybucyjnej (jar, war)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1>Apache Maven: fazy</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Faza</th>
+<th style="text-align:left">Opis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">integration-test</td>
+<td style="text-align:left">wykonanie testów integracyjnych</td>
+</tr>
+<tr>
+<td style="text-align:left">install</td>
+<td style="text-align:left">instalacja pakietu w lokalnym repozytorium</td>
+</tr>
+<tr>
+<td style="text-align:left">deploy</td>
+<td style="text-align:left">instalacja pakietu z zdalnym repozytorium</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h1>Apache Maven: fazy</h1>
+<p>Uruchomienie procesu następuje poprzez wybranie danej fazy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn &lt;phase&gt;
+mvn package
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Automatycznie wykonywane są wszystkie fazy poprzedzające.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<h1>Apache Maven: cele</h1>
+<p>Każda faza składa się z <strong>celów (ang. goal),</strong> które wykonywane są w kolejności. Cele są dostarczane poprzez mechanizm <strong>wtyczek</strong>, które je implementują. Każdy z celów musi definiować fazę, do której zostanie dodany.</p>
+<p>Wtyczki mogą zostać dodane do procesu explicite lub też automatycznie. Maven dostarcza domyślną konfigurację celów na podstawie definicji <code>packaging</code>.</p>
+<p>W najczęstszej konfiguracji możemy spotkać się z ustawieniem <code>packaging</code> na <code>jar</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h1>Apache Maven: cele</h1>
+<h4>process-resources</h4>
+<p>resources:resources<br />
+org.apache.maven.plugins:maven-resources-plugin:2.6:resources</p>
+<h4>compile</h4>
+<p>compiler:compile<br />
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile</p>
+<h4>process-test-resources</h4>
+<p>resources:testResources<br />
+org.apache.maven.plugins:maven-resources-plugin:2.6:testResources</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Apache Maven: cele</h1>
+<h4>test-compile</h4>
+<p>compiler:testCompile<br />
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:testCompile</p>
+<h4>test</h4>
+<p>surefire:test<br />
+org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test</p>
+<h4>package</h4>
+<p>jar:jar<br />
+org.apache.maven.plugins:maven-jar-plugin:2.4:jar</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1>Apache Maven: cele</h1>
+<h4>install</h4>
+<p>install:install<br />
+org.apache.maven.plugins:maven-install-plugin:2.4:install</p>
+<h4>deploy</h4>
+<p>deploy:deploy<br />
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h1>Apache Maven: wtyczki</h1>
+<p>Możemy zauważyć, że każda ze wspomnianych wtyczek zdefiniowana jest przez identyfikatory przedzielone <code>:</code>. Dla przykładu:</p>
+<p><code>org.apache.maven.plugins : maven-deploy-plugin : 2.7</code></p>
+<p>Gdzie:<br />
+<code>org.apache.maven.plugins</code> - definiuje grupę.<br />
+<code>maven-deploy-plugin</code> - definiuje artefakt.<br />
+<code>2.7</code> - definiuje wersję.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Apache Maven: wtyczki</h1>
+<p>Każda ze wtyczek może definiować więcej niż jeden cel niekoniecznie z tej samej fazy.</p>
+<p>Istnieje możliwość wykonania danego celu z pominięciem fazy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn &lt;plugin&gt;:&lt;goal&gt;
+mvn compliler:compile
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1>Apache Maven: główne fazy</h1>
+<p>Najczęściej będziemy używać polecenia łączącego 2 fazy:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn clean install
+</span></span></foreignObject></svg></code></pre>
+<p>Pozwoli nam on na wyczyszczenie projektu z poprzednio wygenerowanych plików oraz pełne zbudowanie, połączone z uruchomieniem testów oraz instalacją w lokalnym repozytorium.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h1><strong>Programowanie: zadanie 25</strong></h1>
+<p>Wygeneruj pierwszy projekt ze strukturą Maven. Użyj komendy (wpisanej w jednej linii):</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn archetype:generate 
+    -DgroupId=pl.wsb.programowaniejava 
+    -DartifactId=example
+    -DarchetypeArtifactId=maven-archetype-quickstart
+    -DarchetypeVersion=1.4
+    -DinteractiveMode=false
+</span></span></foreignObject></svg></code></pre>
+<p>Przejdź do utworzonego katalogu <code>test</code> oraz uruchom proces:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>cd example
+mvn clean install
+</span></span></foreignObject></svg></code></pre>
+<p>Uruchom program:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -cp target/example-1.0-SNAPSHOT.jar pl.wsb.programowaniejava.App
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h1>Apache Maven: lokalne repozytorium .m2</h1>
+<p>Podczas budowania aplikacji na komputerze, na którym program Maven został użyty po raz pierwszy, zauważyć można wiele pobrań plików.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.1.0/maven-clean-plugin-3.1.0.jar (30 kB at 244 kB/s)
+</span></span></foreignObject></svg></code></pre>
+<p>Maven automatycznie pobiera zależności użyte w projekcie oraz instaluje je w lokalnych repozytorium artefaktów. Mieści się ono w katalogu <code>.m2/repository</code> w katalogu użytkownika. Pobieranie nowych artefaktów odbywa się jednorazowo.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h1>Apache Maven: lokalne repozytorium .m2</h1>
+<p>Katalog <code>.m2</code> nie tylko przechowuje lokalne repozytorium. Znajdują się w nim też pliki konfiguracyjne Maven, w tym informacje o lokalizacji repozytoriów zewnętrznych, z których pobierane są zależności.</p>
+<blockquote>
+<p>Lokalizacja tego katalogu równi się od platformy.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Platforma</th>
+<th style="text-align:left">Domyślna lokalizacja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows</td>
+<td style="text-align:left"><code>C:\Users\&lt;NAZWA_UZYTKOWNIKA&gt;\.m2</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Linux</td>
+<td style="text-align:left"><code>/home/&lt;NAZWA_UZYTKOWNIKA&gt;/.m2</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Mac</td>
+<td style="text-align:left"><code>/Users/&lt;NAZWA_UZYTKOWNIKA&gt;/.m2</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1>Apache Maven: lokalne repozytorium .m2</h1>
+<p>Podczas budowania poinstruowaliśmy Maven, aby zainstalował nasz artefakt aplikacji w lokalnym repozytorium. W wyniku tego wynikowy plik <code>jar</code> zostanie dodany do katalogu <code>.m2/repository</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ test ---
+[INFO] Installing /Users/gowinm/dev/external-projects/wsb-programowanie-aplikacji-java/0-zadanie-tworzenie-maven/test/target/test-1.0-SNAPSHOT.jar to /Users/gowinm/.m2/repository/pl/wsb/programowaniejava/test/1.0-SNAPSHOT/test-1.0-SNAPSHOT.jar
+</span></span></foreignObject></svg></code></pre>
+<p>Artefakt został przekopiowany pod ścieżkę:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Users/gowinm/.m2/repository/pl/wsb/programowaniejava/test/1.0-SNAPSHOT/test-1.0-SNAPSHOT.jar
+</span></span></foreignObject></svg></code></pre>
+<p>Gdzie:</p>
+<ul>
+<li><code>pl/wsb/programowaniejava</code> to część ścieżki powstała z identyfikatora grupy (<code>groupId</code>),</li>
+<li><code>test</code> to część ścieżki powstała z identyfikatora artefaktu (<code>artefactId</code>),</li>
+<li><code>1.0-SNAPSHOT</code> to część ścieżki powstała z wersji artefaktu (<code>version</code>).</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+<h1>Apache Maven: struktura</h1>
+<p>Maven definiuje podstawową strukturę projektu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>test
+|-- pom.xml
+|-- src
+|   |-- main
+|   |   `-- java
+|   |       `-- pl
+|   |           `-- wsb
+|   |               `-- programowaniejava
+|   |                   `-- App.java
+|   `-- test
+|       `-- java
+|           `-- pl
+|               `-- wsb
+|                   `-- programowaniejava
+|                       `-- AppTest.java
+`-- target
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+<h1>Apache Maven: struktura</h1>
+<p>Maven definiuje podstawową strukturę projektu.</p>
+<ul>
+<li><code>pom.xml</code> zawiera definicję projektu oraz procesu budowania.</li>
+<li><code>src/main/java</code> zawiera pliki z kodem źródłowym aplikacji.</li>
+<li><code>src/test/java</code> zawiera pliki kodem źródłowym testów aplikacji.</li>
+<li><code>target</code> zawiera pliki wygenerowane w procesie budowania.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1>Apache Maven: pom.xml</h1>
+<p>Informacje o projekcie.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>pl.wsb.programowaniejava<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://www.example.com<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Istotnymi elementami definiującymi projekt są identyfikator grupy (<code>groupId</code>), identyfikator artefaktu (<code>artifactId</code>) oraz wersja (<code>version</code>).</p>
+<blockquote>
+<p>Element <code>packaging</code> nie został zdefiniowany przez co przyjął domyślną wartość <code>jar</code>.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1>Apache Maven: identyfikatory</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Identyfikator</th>
+<th style="text-align:left">Znaczenie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">groupId</td>
+<td style="text-align:left">Unikatowy identyfikator dla projektu. Powinien nawiązywać do konwencji nazewniczych związanych z pakietami Java. Zalecane jest używanie odwróconych nazw domen np. <code>pl.wsb</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left">artifactId</td>
+<td style="text-align:left">Nazwa wygenerowanego pliku Jar bez rozszerzenia. Nazwa dla konkretnego elementu, będącego częścią projektu.</td>
+</tr>
+<tr>
+<td style="text-align:left">version</td>
+<td style="text-align:left">Wersja przeważnie w formacie <code>x.x.x</code>, np. <code>0.1.2</code>. Dla projektów w fazie rozwojowym używamy rozszerzenia <code>-SNAPSHOT</code>, pozwalającego na definicję wersji tymczasowych.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+<h1>Apache Maven: zmienne</h1>
+<p>Informacje o zmiennych dla naszego projektu. Element definiuje zmienne specyficzne dla projektu oraz pozwala na ustawienie wartości dla zmiennych oczekiwanych przez wtyczki.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.7<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Zmienna <code>maven.compiler.source</code> jest zdefiniowana przez wtyczkę kompilatora oraz opisuje wersję Java.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
+<h1>Apache Maven: budowanie i wtyczki</h1>
+<p>Informacje o procesie budowania oraz wtyczkach użytych do jego wykonania.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">pluginManagement</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-clean-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">pluginManagement</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Element <code>pluginManagement</code> służy do specyfikacji używanych wtyczek bez konieczności ich ładowania. W naszym przypadku Maven użył domyślnej konfiguracji dla <code>packaging</code> ustawionego na <code>jar</code> co spowodowało załadowanie <code>maven-clean-plugin</code>. Nadpisujemy jedynie wersję wtyczki.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+<h1>Apache Maven: budowanie i wtyczki</h1>
+<p>Aby załadować wtyczkę bezpośrednio, użyjemy elementu <code>plugins</code> będącego dzieckiem <code>build</code>.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">pluginManagement</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">pluginManagement</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+<h1>Apache Maven: zależności</h1>
+<p>Informacje o zależnościach projektu. Definiuje biblioteki używane przez kod źródłowy programu oraz kod źródłowy testów.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.11<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>Dla zależności definiujemy również element <code>dependencyManagement</code>, którego rola jest podobna do tego znanego z <code>pluginManagement</code>.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+<h1><strong>Programowanie: przykład 49</strong></h1>
+<p>Tworzenie projektu LineCounter przy pomocy Maven.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>pl.wsb.programowaniejava<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>line-counter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
+<h1><strong>Programowanie: przykład 49</strong></h1>
+<p>Uruchomienie programu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -cp target/line-counter-1.0-SNAPSHOT.jar pl.wsb.programowaniejava.LineCounter sample
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
+<h1><strong>Programowanie: przykład 50</strong></h1>
+<p>Użycie zewnętrznej biblioteki StringUtils z Apache Commons Lang.</p>
+<pre><code class="language-xml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>pl.wsb.programowaniejava<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>line-counter-extended<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>11<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.commons<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>commons-lang3<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.12.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven-assembly-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.1.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">descriptorRefs</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">descriptorRef</span>&gt;</span>jar-with-dependencies<span class="hljs-tag">&lt;/<span class="hljs-name">descriptorRef</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">descriptorRefs</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">executions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">execution</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>make-assembly<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">phase</span>&gt;</span>package<span class="hljs-tag">&lt;/<span class="hljs-name">phase</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">goals</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">goal</span>&gt;</span>single<span class="hljs-tag">&lt;/<span class="hljs-name">goal</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">goals</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">execution</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">executions</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
+<h1><strong>Programowanie: przykład 50</strong></h1>
+<p>Uruchomienie programu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -cp target/line-counter-extended-1.0-SNAPSHOT.jar pl.wsb.programowaniejava.LineCounter sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn exec:java -Dexec.mainClass=pl.wsb.programowaniejava.LineCounter -Dexec.args=sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>java -cp target/line-counter-extended-1.0-SNAPSHOT-jar-with-dependencies.jar pl.wsb.programowaniejava.LineCounter sample
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
+<h1>Budowanie aplikacji: Apache Maven Central repository</h1>
+<p>Wszystkie artefakty są domyślnie ściągane z naszego lokalnego repozytorium. Jeżeli artefakt nie jest dostępny, Maven będzie starał się go pobrać z repozytorium zewnętrznego.</p>
+<p>Domyślnie Maven używa repozytorium zewnętrznego dostępnego pod adresem:<br />
+<code>https://repo.maven.apache.org/maven2/.</code></p>
+<p>W celu łatwiejszego wyszukiwania artefaktów możemy posłużyć się stroną:<br />
+<code>https://mvnrepository.com/</code></p>
+<p>Istnieje możliwość zdefiniowania własnych repozytoriów zewnętrznych np. wspólnych dla danej firmy. Możliwe jest to z poziomu <code>pom.xml</code> lub też <code>.m2/settings.xml</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
+<h1>Kontrola wersji</h1>
+<p>Podczas prac nad oprogramowaniem kod źródłowy ulega ciągłym zmianom. Dodatkowo proces tworzenia oprogramowania nie jest liniowy. Często nad jego rozwojem pracuje więcej niż jedna osoba.</p>
+<p>Aby usprawnić zarządzanie zmianami, wprowadzamy systemy kontroli wersji wspierające procesy tworzenia.</p>
+<p>Dostępnych jest szereg systemów, takich jak:</p>
+<ul>
+<li>CVS</li>
+<li>SVN</li>
+<li>Mercurial</li>
+<li>Git</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
+<h1>Git: charakterystyka</h1>
+<p>Git jest rozproszonym systemem kontroli wersji. Może zostać scharakteryzowany przez swoje główne cechy.</p>
+<h4>Silne wsparcie dla nieliniowego procesu tworzenia oprogramowania</h4>
+<p>Git wspiera model tworzenia rozgałęzień oraz ich łączenia. Każdy programista może pracować nad własnymi lokalnymi zmianami, a następnie w łatwy sposób łączyć je ze zmianami innych.</p>
+<h4>Rozproszone tworzenie oprogramowania</h4>
+<p>Każdy programista posiada własną kopię repozytorium pozwalającą na pracę offline. Kopia ta zawiera pełną historię zmian. Lokalne repozytoria mogą wymieniać zmiany pomiędzy sobą.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
+<h1>Git: charakterystyka</h1>
+<h4>Kompatybilność z istniejącymi protokołami</h4>
+<p>Git używa istniejących protokołów do wymiany danych takich jak: HTTP oraz FTP.</p>
+<h4>Wydajna obsługa dużych projektów</h4>
+<p>Głównym założeniem jest wydajność dla dużych projektów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
+<h1>Git: charakterystyka</h1>
+<h4>Autentykacja historii zmian</h4>
+<p>Dla zmian opublikowanych jakiekolwiek modyfikacje pozostawiają ślady, które w jasny sposób pokazują niepożądane zachowanie.</p>
+<h4>System narzędziowy</h4>
+<p>Git składa się z zestawu narzędzi, które pozwalają na zarządzanie wersją.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
+<h1>Git: charakterystyka</h1>
+<h4>Strategie łączenia zmian</h4>
+<p>Git zawiera szereg algorytmów odpowiedzialnych za łączenie zmian. W przypadku konfliktów, gdy automatyczne łączenie zmian nie jest możliwe, wymagana jest ręczna finalizacja procesu.</p>
+<h4>Przechowywanie pełnego obrazu zmian</h4>
+<p>Git nie zapamiętuje zmian między kolejnymi rewizjami, lecz kompletne obrazy.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
+<h1>Git: narzędzie</h1>
+<p>Praca z Git opera się na wykonywaniu komend, które pozwalają na zarządzanie zmianami, ich dodawanie, łączenie oraz publikację.</p>
+<p>Głównym narzędziem jest program konsolowy (ang. CLI, command-line interface) o nazwie <code>git</code>, aczkolwiek istnieją też wersje graficzne. Niektóre z nich dostarczane z IDE.</p>
+<p>Rozwiązanie konsolowe pozwala na łatwiejsze zrozumienie nazewnictwa oraz podstawowych koncepcji jego działania.</p>
+<p>Narzędzie <code>git</code> dostępne jest pod adresem <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
+<h1>Git: podstawowy przepływ</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-04-2/git-basic-flow.png" alt="Podstawowy przepływ Git" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
+<h1>Git: pojęcia</h1>
+<h4>Katalog lokalny/obszar roboczy</h4>
+<p>Katalog, zawierający pliki, na których dokonujemy zmian.</p>
+<h4>Przestrzeń staging</h4>
+<p>Obszar, do którego dodawane są zmiany z obszaru roboczego, które zostaną dodane do repozytorium w postaci rewizji. Niejako bufor zmian.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
+<h1>Git: pojęcia</h1>
+<h4>Repozytorium</h4>
+<p>Przestrzeń, w której znajdują się wszystkie pliki, pełna historia zmian oraz inne dane związane z <code>git</code>. Definiujemy repozytorium lokalne (znajdujące się na danej maszynie roboczej) oraz zdalne (zewnętrzne względem danej maszyny roboczej).</p>
+<h4>Rewizja</h4>
+<p>Rewizja (ang. commit) to pojedynczy wpis w repozytorium zawierający wszystkie pliki wraz z konkretnymi zamianami. Posiada przypisany unikatowy identyfikator.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
+<h1>Git: pojęcia</h1>
+<h4>Gałąź</h4>
+<p>Gałąź (ang. branch) oddzielna przestrzeń, w której znajduje się kod posiadająca swój własny stan katalogu roboczego, przestrzeni staging oraz historię rewizji. Każde repozytorium posiada przynajmniej jedną gałąź. Domyślna gałąź to <code>master</code>.</p>
+<blockquote>
+<p>Niektóre systemy definiują domyślną gałąź jako <code>main</code>.</p>
+</blockquote>
+<h4>Scalanie</h4>
+<p>Scalanie (ang. merge) to proces łączenia zmian z dwóch różnych gałęzi. Najprostszą jego formą jest typ <code>Fast Forward</code>, w którym zmiany są liniowe.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
+<h1>Git: pojęcia</h1>
+<h4>HEAD</h4>
+<p>Wskaźnik na ostatnią rewizję aktywnej gałęzi. Innymi słowy, to miejsce, w którym znajdujemy się w danym momencie.</p>
+<h4>origin</h4>
+<p>Domyślna nazwa dla repozytorium zewnętrznego.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
+<h1>Git: przypadki użycia</h1>
+<p>Tworzenie katalogu przechowującego kod źródłowy projektu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~&gt; mkdir line-counter
+</span></span></foreignObject></svg></code></pre>
+<p>Inicjalizacja lokalnego repozytorium dla projektu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~&gt; cd line-counter
+gowinm:~/line-counter&gt; git init
+Initialized empty Git repository in /Users/gowinm/line-counter/.git/
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
+<h1>Git: katalog .git</h1>
+<p>Git automatycznie utworzył katalog <code>.git</code> przechowujący historię zmian lokalnego repozytorium oraz dane konfiguracyjne.</p>
+<p>Dane konfiguracyjne repozytorium umieszczone są w pliku <code>.git/config</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+        ignorecase = true
+        precomposeunicode = true
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
+<h1>Git: plik .gitconfig</h1>
+<p>Globalna konfiguracja jest definiowana w pliku <code>.gitconfig</code> w katalogu domowym użytkownika. Jego lokalizacja jest zależna od platformy.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[user]
+        name = Maciej Gowin
+        email = gowinm@ryanair.com
+[core]
+        autocrlf = false
+[push]
+        default = simple
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zmian w lokalnym repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log
+fatal: your current branch 'master' does not have any commits yet
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zmian w przestrzeni staging.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use &quot;git add&quot; to track)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
+<h1>Git: przypadki użycia</h1>
+<p>Nowy, pusty plik <code>LineCounter.java</code>. Sprawdzenie zmian w przestrzeni staging.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; touch LineCounter.java
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+	LineCounter.java
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie pliku do przestrzeni staging.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git add LineCounter.java
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+
+	new file:   LineCounter.java
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
+<h1>Git: przypadki użycia</h1>
+<p>Utworzenie pierwszej rewizji na podstawie zmian w przestrzeni staging.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -m &quot;First change&quot;
+[master (root-commit) 2a675e4] First change
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 LineCounter.java
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+nothing to commit, working tree clean
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
+<h1>Git: przypadki użycia</h1>
+<p>Historia zmian w repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log
+commit 2a675e48ead1ef2bd8bc538a2749832544be7640 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:21:50 2021 +0100
+
+    First change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64">
+<h1>Git: przypadki użycia</h1>
+<p>Zmiana zawartości pliku <code>LineCounter.java</code> oraz dodanie nowego, pustego pliku <code>sample</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi LineCounter.java 
+gowinm:~/line-counter&gt; touch sample
+</span></span></foreignObject></svg></code></pre>
+<blockquote>
+<p>LineCounter.java</p>
+</blockquote>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LineCounter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Line Counter&quot;</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zmian.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+	modified:   LineCounter.java
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+	sample
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zmian do przestrzeni staging oraz sprawdzenie jej zawartości. Utworzenie nowej rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git add LineCounter.java
+gowinm:~/line-counter&gt; git add sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+	modified:   LineCounter.java
+	new file:   sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -m &quot;Second change&quot;
+[master e800c8e] Second change
+ 2 files changed, 5 insertions(+)
+ create mode 100644 sample
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
+<h1>Git: przypadki użycia</h1>
+<p>Zmiana zawartości pliku oraz sprawdzenie statusu zmian.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+	modified:   sample
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zmian.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git diff
+diff --git a/sample b/sample
+index e69de29..d95f3ad 100644
+--- a/sample
++++ b/sample
+@@ -0,0 +1 @@
++content
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie pliku do przestrzeni staging oraz automatyczne utworzenie rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -am &quot;Third change&quot;
+[master cf92ad8] Third change
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
+<h1>Git: przypadki użycia</h1>
+<p>Przegląd rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+
+commit e800c8e0bf4ba823e2a6da0103d197554e160deb
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:32:52 2021 +0100
+
+    Second change
+
+commit 2a675e48ead1ef2bd8bc538a2749832544be7640
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:21:50 2021 +0100
+
+    First change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie dostępnych gałęzi oraz utworzenie nowej gałęzi <code>feature</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch
+* master
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch feature
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch
+  feature
+* master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81 (HEAD -&gt; master, feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+
+commit e800c8e0bf4ba823e2a6da0103d197554e160deb
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:32:52 2021 +0100
+
+    Second change
+
+commit 2a675e48ead1ef2bd8bc538a2749832544be7640
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:21:50 2021 +0100
+
+    First change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73">
+<h1>Git: przypadki użycia</h1>
+<p>Przełączenie się na gałąź <code>feature</code> oraz sprawdzenie aktywnej gałęzi.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git checkout feature
+Switched to branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch
+* feature
+  master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81 (HEAD -&gt; feature, master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+
+commit e800c8e0bf4ba823e2a6da0103d197554e160deb
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:32:52 2021 +0100
+
+    Second change
+
+commit 2a675e48ead1ef2bd8bc538a2749832544be7640
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:21:50 2021 +0100
+
+    First change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zmiany na gałęzi <code>feature</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -am &quot;Feature first change&quot;
+[feature ef14f54] Feature first change
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie ostatnich 3 rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 3
+commit ef14f5478fb1c5b26dbcda355c0b482149664e57 (HEAD -&gt; feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:19:59 2021 +0100
+
+    Feature first change
+
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81 (master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+
+commit e800c8e0bf4ba823e2a6da0103d197554e160deb
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:32:52 2021 +0100
+
+    Second change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77">
+<h1>Git: przypadki użycia</h1>
+<p>Przełączenie się na gałąź <code>master</code> oraz sprawdzenie ostatnich 2 rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git checkout master
+Switched to branch 'master'
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+
+commit e800c8e0bf4ba823e2a6da0103d197554e160deb
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:32:52 2021 +0100
+
+    Second change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78">
+<h1>Git: przypadki użycia</h1>
+<p>Scalenie zmian z gałęzi <code>feature</code> do gałęzi <code>master</code>. Sprawdzenie stanu rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git merge feature
+Updating cf92ad8..ef14f54
+Fast-forward
+ sample | 1 +
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit ef14f5478fb1c5b26dbcda355c0b482149664e57 (HEAD -&gt; master, feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:19:59 2021 +0100
+
+    Feature first change
+
+commit cf92ad802d57c2a7f62610c4ea2157af729d4a81
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 21:37:01 2021 +0100
+
+    Third change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zmian do pliku <code>sample</code> na gałęzi <code>master</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -am &quot;Fourth change&quot;
+[master 75e6de4] Fourth change
+ 1 file changed, 1 insertion(+)
+gowinm:~/line-counter&gt; git log -n 2
+commit 75e6de4963baf1de596b119a6d23f9f38a958865 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:46:51 2021 +0100
+
+    Fourth change
+
+commit ef14f5478fb1c5b26dbcda355c0b482149664e57 (feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:19:59 2021 +0100
+
+    Feature first change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zmian do pliku <code>LineCounter.java</code> na gałęzi <code>feature</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git checkout feature
+Switched to branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch
+* feature
+  master
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi LineCounter.java 
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -am &quot;Feature second change&quot;
+[feature f7d651d] Feature second change
+ 1 file changed, 5 insertions(+)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie rewizji na gałęzi <code>feature</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit f7d651d66d1565a9e2541fee7de18eeb3bea20fa (HEAD -&gt; feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:00:52 2021 +0100
+
+    Feature second change
+
+commit ef14f5478fb1c5b26dbcda355c0b482149664e57
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:19:59 2021 +0100
+
+    Feature first change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82">
+<h1>Git: przypadki użycia</h1>
+<p>Przełączenie się na gałąź <code>master</code> oraz scalenie zmian z gałęzi <code>feature</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git checkout master
+Switched to branch 'master'
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git merge feature
+Merge made by the 'recursive' strategy.
+ LineCounter.java | 5 +++++
+ 1 file changed, 5 insertions(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Merge branch 'feature'
+  
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie stanu rewizji gałęzi <code>master</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 3
+commit 3be9d76885d10da31292db9a6a860f23b969dd70 (HEAD -&gt; master)
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+
+commit f7d651d66d1565a9e2541fee7de18eeb3bea20fa (feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:00:52 2021 +0100
+
+    Feature second change
+
+commit 75e6de4963baf1de596b119a6d23f9f38a958865
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:46:51 2021 +0100
+
+    Fourth change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84">
+<h1>Git: GitHub</h1>
+<p><strong>GitHub</strong> (<a href="https://github.com">https://github.com</a>) jest platformą hostingową do rozwoju oprogramowania oraz kontroli wersji przy użyciu <code>git</code>. Oferuje funkcjonalności wbudowane w <code>git</code> oraz szereg własnych. Pozwala na tworzenie zdalnych repozytoriów przez użytkowników. Repozytoria te mogą być prywatne (widoczne przez zdefiniowaną grupę użytkowników) lub też publiczne (widoczne przez każdego).</p>
+<p>Podobnym rozwiązaniem jest <strong>Bitbucket</strong> (<a href="https://bitbucket.org">https://bitbucket.org</a>).</p>
+<p>Istnieją też rozwiązania firmowe pozwalające na definiowanie własnych serwerów z platformami do rozwoju oprogramowania oraz tworzenia scentralizowanych repozytoriów zdalnych.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zdalnego repozytorium pod identyfikatorem <code>origin</code>. Połączenie lokalnej gałęzi ze zdalną gałęzią pod tą samą nazwą.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git remote add origin https://github.com/MaciejGowin/line-counter.git
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git push -u origin master
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (20/20), 1.88 KiB | 1.88 MiB/s, done.
+Total 20 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/MaciejGowin/line-counter.git
+ * [new branch]      master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86">
+<h1>Git: przypadki użycia</h1>
+<p>Po dodaniu zdalnego repozytorium <code>.git/config</code> zostało rozszerzone o:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[remote &quot;origin&quot;]
+        url = https://github.com/MaciejGowin/line-counter.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+</span></span></foreignObject></svg></code></pre>
+<p>Po ustawieniu zdalnej gałęzi <code>.git/config</code> zostało rozszerzone o:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[branch &quot;master&quot;]
+        remote = origin
+        merge = refs/heads/master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zdalnych gałęzi.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git branch -r
+  origin/master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie stanu rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 3
+commit 3be9d76885d10da31292db9a6a860f23b969dd70 (HEAD -&gt; master, origin/master)
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+
+commit f7d651d66d1565a9e2541fee7de18eeb3bea20fa (feature)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:00:52 2021 +0100
+
+    Feature second change
+
+commit 75e6de4963baf1de596b119a6d23f9f38a958865
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 22:46:51 2021 +0100
+
+    Fourth change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie zmian do pliku <code>sample</code> oraz utworzenie nowej rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git commit -am &quot;Fifth change&quot;
+[master 1771ecf] Fifth change
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie rewizji.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+
+commit 3be9d76885d10da31292db9a6a860f23b969dd70 (origin/master)
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91">
+<h1>Git: przypadki użycia</h1>
+<p>Wysłanie zmian do zdalnego repozytorium. Sprawdzenie stanu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/MaciejGowin/line-counter.git
+   3be9d76..1771ecf  master -&gt; master
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 1
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3 (HEAD -&gt; master, origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92">
+<h1>Git: przypadki użycia</h1>
+<p>Imitacja pracy na drugim lokalnym repozytorium. Pobranie obecnego stanu repozytorium zdalnego.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~&gt; mkdir line-counter-another
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~&gt; cd line-counter-another
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git clone https://github.com/MaciejGowin/line-counter.git .
+Cloning into '.'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 23 (delta 2), reused 23 (delta 2), pack-reused 0
+Unpacking objects: 100% (23/23), done.
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie rewizji. Dodanie zmiany.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3 (HEAD -&gt; master, origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+
+commit 3be9d76885d10da31292db9a6a860f23b969dd70
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94">
+<h1>Git: przypadki użycia</h1>
+<p>Wysłanie zmian do zdalnego repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git commit -am &quot;Remote first change&quot;
+[master 383996a] Remote first change
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/MaciejGowin/line-counter.git
+   1771ecf..383996a  master -&gt; master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="95">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie stanu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git log -n 1
+commit 383996a9df19b3daa26b7abc6c6721efdd73b1e8 (HEAD -&gt; master, origin/master, origin/HEAD)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Wed Dec 8 00:06:12 2021 +0100
+
+    Remote first change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="96">
+<h1>Git: przypadki użycia</h1>
+<p>Przejście do oryginalnego repozytorium lokalnego. Porównanie zmian ze zmianami zewnętrznymi.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log master..origin/master
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3 (HEAD -&gt; master, origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+
+commit 3be9d76885d10da31292db9a6a860f23b969dd70
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="97">
+<h1>Git: przypadki użycia</h1>
+<p>Pobranie zmian ze zdalnych gałęzi. Porównanie zmian ze zmianami zewnętrznymi.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/MaciejGowin/line-counter
+   1771ecf..383996a  master     -&gt; origin/master
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log master..origin/master
+commit 383996a9df19b3daa26b7abc6c6721efdd73b1e8 (origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Wed Dec 8 00:06:12 2021 +0100
+
+    Remote first change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="98">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie zmian.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3 (HEAD -&gt; master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+
+commit 3be9d76885d10da31292db9a6a860f23b969dd70
+Merge: 75e6de4 f7d651d
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:03:37 2021 +0100
+
+    Merge branch 'feature'
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="99">
+<h1>Git: przypadki użycia</h1>
+<p>Scalenie zewnętrznych zmian ze zdalnego repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git merge origin/master
+Updating 1771ecf..383996a
+Fast-forward
+ sample | 1 +
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 383996a9df19b3daa26b7abc6c6721efdd73b1e8 (HEAD -&gt; master, origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Wed Dec 8 00:06:12 2021 +0100
+
+    Remote first change
+
+commit 1771ecf8489bf59cec32dad6e7a679b1633d90d3
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Tue Dec 7 23:40:54 2021 +0100
+
+    Fifth change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="100">
+<h1>Git: przypadki użycia</h1>
+<p>Dodanie oraz opublikowanie kolejnych zmian na drugim lokalnym repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; vi sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git commit -am &quot;Remote second change&quot;
+[master 96bb69e] Remote second change
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter-another&gt; git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/MaciejGowin/line-counter.git
+   383996a..96bb69e  master -&gt; master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="101">
+<h1>Git: przypadki użycia</h1>
+<p>Jednorazowe pobranie oraz scalenie zmian z zewnętrznego repozytorium.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/MaciejGowin/line-counter
+   383996a..96bb69e  master     -&gt; origin/master
+Updating 383996a..96bb69e
+Fast-forward
+ sample | 1 +
+ 1 file changed, 1 insertion(+)
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git log -n 2
+commit 96bb69e0d6df284d3685bef8f46ba186262dca16 (HEAD -&gt; master, origin/master)
+Author: Maciej Gowin &lt;gowinm@ryanair.com&gt;
+Date:   Wed Dec 8 00:16:41 2021 +0100
+
+    Remote second change
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="102">
+<h1>Git: przypadki użycia</h1>
+<p>Kompilacja programu. Wynikowe pliki <code>class</code> są widoczne podczas sprawdzenia statusu.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; javac LineCounter.java
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+	LineCounter.class
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="103">
+<h1>Git: przypadki użycia</h1>
+<p>Pominięcie plików o rozszerzeniu <code>class</code> przez Git poprzez dodanie ich do <code>.gitignore</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; echo &quot;*.class&quot; &gt; .gitignore
+gowinm:~/line-counter&gt; git add .gitignore 
+gowinm:~/line-counter&gt; git commit -m &quot;Define gitignore&quot;
+[master 3635755] Define gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/MaciejGowin/line-counter.git
+   96bb69e..3635755  master -&gt; master
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="104">
+<h1>Git: przypadki użycia</h1>
+<p>Sprawdzenie statusu zmian.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; ls
+LineCounter.class	LineCounter.java	sample
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="105">
+<h1>Git: przypadki użycia</h1>
+<p>Nadpisanie autora.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>gowinm:~/line-counter&gt; git config user.name &quot;Maciej Henryk Gowin&quot;
+gowinm:~/line-counter&gt; cat .git/config 
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote &quot;origin&quot;]
+	url = https://github.com/MaciejGowin/line-counter.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;master&quot;]
+	remote = origin
+	merge = refs/heads/master
+[user]
+	name = Maciej Henryk Gowin
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="106">
+<h1>Git: podsumowanie komend</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>git init
+git clone &lt;REMOTE_URL&gt;
+git add &lt;FILE&gt;
+git commit -m &lt;MESSAGE&gt;
+git commit -am &lt;MESSAGE&gt;
+git status
+git diff
+git log
+git log -n &lt;LIMIT&gt;
+git log &lt;BRANCH1&gt;..&lt;BRANCH2&gt;
+git branch
+git branch -r
+git branch &lt;BRANCH&gt;
+git checkout &lt;BRANCH&gt;
+git merge &lt;BRANCH&gt;
+git remote add &lt;REMOTE_ID&gt; &lt;REMOTE_URL&gt;
+git push
+git push -u &lt;REMOTE_ID&gt; &lt;BRANCH&gt;
+git fetch
+git pull
+</span></span></foreignObject></svg></code></pre>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.4.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

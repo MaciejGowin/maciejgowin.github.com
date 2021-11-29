@@ -46,7 +46,7 @@ public class Main {
 
         System.out.printf("a1 == a2: %b%n", a1 == a2);
         System.out.printf("a1 == a3: %b%n", a1 == a3);
-        System.out.printf("a1 == a3: %b%n", a1 == a4);
+        System.out.printf("a1 == a4: %b%n", a1 == a4);
     }
 }
 ```
@@ -88,7 +88,7 @@ public class Main {
 
         System.out.printf("a1 == a2: %b%n", a1 == a2);
         System.out.printf("a1 == a3: %b%n", a1 == a3);
-        System.out.printf("a1 == a3: %b%n", a1 == a4);
+        System.out.printf("a1 == a4: %b%n", a1 == a4);
 
         System.out.printf("a1 equals a2: %b%n", a1.equals(a2));
         System.out.printf("a1 equals a3: %b%n", a1.equals(a3));
@@ -146,7 +146,7 @@ public class Main {
 
         System.out.printf("a1 == a2: %b%n", a1 == a2);
         System.out.printf("a1 == a3: %b%n", a1 == a3);
-        System.out.printf("a1 == a3: %b%n", a1 == a4);
+        System.out.printf("a1 == a4: %b%n", a1 == a4);
         System.out.printf("a1 == null: %b%n", a1 == null);
 
         System.out.printf("a1 equals a2: %b%n", a1.equals(a2));
@@ -217,7 +217,7 @@ Metoda `equals()` powinna być:
 - spójna: wartość `equals()` powinna ulec zmianie, tylko jeżeli własność użyta w `equals()` uległa zmianie (brak losowości)
 
 ---
-# Język Java: metoda Object.hasCode()
+# Język Java: metoda Object.hashCode()
 
 Klasa obiekt wprowadza jeszcze drugą ważną metodę `hashCode()` powiązaną z metodą `equals()`.
 
@@ -513,7 +513,7 @@ public static void consumeOfWildcard(Container<?> value) { /* ... */ }
 
 Kolejną elementem języka jest ograniczanie typów sparametryzowanych przekazanych w parametrach metody.
 
-#### Ograniczenie z góry (ang. upper bonds)
+#### Ograniczenie z góry (ang. upper bounds)
 
 Pozwala na przekazanie klas rozszerzających dany typ.
 
@@ -521,7 +521,7 @@ Pozwala na przekazanie klas rozszerzających dany typ.
 public static void consumeOfExtendsAnimal(Container<? extends Animal> value) {
 ```
 
-#### Ograniczenie z dołu (ang. lower bonds)
+#### Ograniczenie z dołu (ang. lower bounds)
 
 Pozwala na przekazanie klas będących rozszerzeniem danego typu.
 
@@ -532,7 +532,7 @@ public static void consumeOfSuperAnimal(Container<? super Animal> value) {
 ---
 # **Programowanie: przykład 32**
 
-Użycie `upper bonds` oraz `lower bonds`.
+Użycie `upper bounds` oraz `lower bounds`.
 
 ```java
 public class Main {
@@ -543,8 +543,10 @@ public class Main {
     }
 
     public static <T> void consume1(Container<T> container) {
+        // container.setData(new Dog());
+        // container.setData(new Cat());
     }
-    
+
     public static void consume2(Container<?> container) {
         // container.setData(new Dog());
         // container.setData(new Cat());
@@ -864,7 +866,7 @@ Map<String, MyClass> map = new HashMap<String, MyClass>();
 Zaimplementuj program pobierający słowa zadane przez użytkownika oraz zliczający ilość wystąpień danego słowa.
 
 Do pobierania słów użyj metody `Scanner.next()`.
-Do zliczania ilości wystąpień słów użyj klasy `HashSet`.
+Do zliczania ilości wystąpień słów użyj klasy `HashMap`.
 
 Przykładowe użycie programu.
 
@@ -1196,317 +1198,4 @@ Przykładowo: konwersja `double` do `int`.
 ```
 double d = 1.0;
 int i = (int) d;
-```
-
----
-# Język Java: adnotacje
-
-Adnotacje są metadanymi opisującymi kod źródłowy. Mogą one by używane w połączeniu z klasami, metodami, zmiennymi, parametrami, a nawet pakietami.
-
-Adnotacje mogą być usunięte lub zachowane podczas kompilacji. Daje to możliwość ich późniejszego odczytania podczas działania programu.
-
-Java definiuje wbudowane adnotacje. Do najpopularniejszych należą:
-
-`@Override` - sprawdza, czy metoda jest przeciążona.
-`@Deprecated` - oznacza metodę jako przestarzałą, zgłaszając ostrzeżenie podczas kompilacji.
-`@SuppressWarnings` - informuje kompilator, aby pominął ostrzeżenia danego typu.
-
-Istnieje możliwość tworzenia własnych adnotacji.
-
----
-# Język Java: adnotacje
-
-Deklaracja adnotacji jest podobna do deklaracji interfejsu. Wyróżnia ją jednak znak `@` poprzedzający słowo kluczowe `interface`.
-
-```
-public @interface Author {
-    String name();
-    String company() default "WSB";
-}
-```
-
-Dodatkowo możemy zdefiniować metody, które opisują elementy adnotacji. Metody te:
-- Nie mogą przyjmować parametrów ani zgłaszać wyjątków.
-- Wartości zwracane ograniczają się do typów prymitywnych, ciągów znaków `String`, klasy `Class`, typów wyliczeniowych oraz tablic wcześniej wymienionych typów.
-- Mogą mieć wartości domyślne.
-
----
-# Język Java: adnotacje
-
-Definicję adnotacji możemy wzbogacić o adnotacje, które definiują kiedy, i dla jakich elementów mogą one zostać użyte.
-
-```
-@Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.TYPE})
-public @interface Author {
-    String name();
-    String company() default "WSB";
-}
-```
-
-`@Retention` - wskazuje, do jakiego momentu dana adnotacja powinna być zachowana.
-`@Target` - wskazuje, dla jakiego elementu może zostać użyta.
-
-Adnotacje same w sobie nie wykonują żadnych zadań. Są one przetwarzane przez zewnętrzne narzędzia lub kod programu i na ich podstawie tworzone jest dodatkowe zachowanie.
-
----
-# Język Java: adnotacje
-
-Możliwe wartości dla `RetentionPolicy`:
-- `SOURCE` - adnotacja powinna zostać usunięta przez kompilator.
-- `CLASS` - adnotacja powinna zostać zapisana w pliku wynikowym class, ale nie powinna być przetworzona podczas uruchomienia przez JVM (domyślne zachowanie).
-- `RUNTIME` - adnotacja powinna być dostępna i zachowana przez kompilator oraz JVM.
-
-> Adnotacje typu RUNTIME są używane przez mechanizm refleksji. Korzysta z nich wiele bibliotek do automatycznego dodawania określonych zachowań do klas zdefiniowanych przez użytkownika.
-   
----
-# Język Java: adnotacje
-
-Wybrane wartości dla `Target`:
-- `TYPE` - adnotacja może zostać użyta na poziomie: klasy, interfejsu, adnotacji lub typu wyliczeniowego
-- `FIELD` - adnotacja może zostać użyta na własnościach klasy
-- `METHOD` - adnotacja może zostać użyta na poziomie metody
-- `PARAMETER` - adnotacja może zostać użyta na poziomie parametru.
-- `CONSTRUCTOR` - adnotacja może zostać użyta na poziomie konstruktora.
-- `LOCAL_VARIABLE` - adnotacja może zostać użyta na zmiennej lokalnej.
-- `ANNOTATION_TYPE` - adnotacja może zostać użyta przy deklaracji adnotacji
-- `PACKAGE` - adnotacja może zostać użyta przy deklaracji pakietu
-
----
-# Język Java: refleksja
-
-Refleksja to mechanizm pozwalający na przeglądanie oraz modyfikację klas, interfejsów, metod, konstruktorów i pól klas w czasie działania programu. Wszystkie te operacje mogą zostać wykonane z poziomu kodu źródłowego.
-
-Głównym elementem całego mechanizmu refleksji w Java jest klasa `Class`. Przechowuje ona informacje o klasie i jej składowych. Każda z instancji klasy `Class` opisuje jedną klasę i to dzięki nim mamy dostęp do szczegółowych informacji oraz mechanizmu refleksji.
-
-Adnotacje w połączeniu z mechanizmem refleksji pozwalają na sterowanie jej zachowaniem. To nic innego jak mechanizm tworzenia kodu na podstawie kodu już istniejącego. Adnotacje możemy rozumieć jako dodatkowe wskazówki dla mechanizmu refleksji precyzujące jej działanie.
-
----
-# Język Java: klasa Class
-
-Do stworzenia obiektu typu `Class` możemy użyć jednego z trzech sposobów.
-
-#### Poprzez metodę Class.forName()
-
-```
-class Foo {
-}
-
-Class<?> fooClazz = Class.forName("Foo");
-```
-
----
-# Język Java: klasa Class
-
-#### Poprzez metodę Object.getClass()
-
-```
-class Foo {
-}
-
-Foo foo = new Foo();
-Class<?> fooClazz = foo.getClass();
-```
-
-#### Poprzez rozszerzenie .class
-
-```
-class Foo {
-}
-
-Class<Foo> fooClazz = Foo.class;
-```
-
----
-# **Programowanie: przykład 35**
-
-Przykład użycia refleksji do odczytania informacji o klasie, stworzenia obiektów, ustawienia wartości oraz wywołania metod.
-
-```java
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-
-class SampleClass {
-
-    private String privateField;
-    public String publicField;
-
-    public SampleClass() {
-        System.out.println("Invoked SampleClass()");
-    }
-
-    private void privateMethod() {
-        System.out.println("Invoked privateMethod()");
-    }
-
-    public void publicMethod() {
-        System.out.println("Invoked publicMethod()");
-    }
-
-    @Override
-    public String toString() {
-        return String.format("{privateField: %s, privateField: %s}", privateField, publicField);
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) throws Exception {
-        reflectionCreation();
-        describeClass(SampleClass.class);
-    }
-
-    public static void reflectionCreation() throws Exception {
-        // Create instance via reflection
-        Constructor<SampleClass> constructor = SampleClass.class.getDeclaredConstructor();
-        SampleClass sampleClass = constructor.newInstance();
-
-        // Set fields via reflection
-        System.out.printf("sampleClass: %s%n", sampleClass);
-        Field publicField = SampleClass.class.getDeclaredField("publicField");
-        publicField.set(sampleClass, "value-publicField");
-
-        Field privateField = SampleClass.class.getDeclaredField("privateField");
-        privateField.setAccessible(true);
-        privateField.set(sampleClass, "value-privateField");
-
-        System.out.printf("sampleClass: %s%n", sampleClass);
-
-        // Invoke methods via reflection
-        Method publicMethod = SampleClass.class.getDeclaredMethod("publicMethod");
-        publicMethod.invoke(sampleClass);
-
-        Method privateMethod = SampleClass.class.getDeclaredMethod("privateMethod");
-        privateMethod.setAccessible(true);
-        privateMethod.invoke(sampleClass);
-    }
-
-    public static void describeClass(Class<?> clazz) {
-        // Get all fields
-        System.out.println("Fields:");
-        for (Field field: clazz.getDeclaredFields()) {
-            System.out.printf(" - %s: %s%n", field.getName(), Modifier.toString(field.getModifiers()));
-        }
-
-        // Get all methods
-        System.out.println("Methods:");
-        for (Method method: clazz.getDeclaredMethods()) {
-            System.out.printf(" - %s: %s%n", method.getName(), Modifier.toString(method.getModifiers()));
-        }
-
-        // Get all constructors
-        System.out.println("Constructors:");
-        for (Constructor<?> method: clazz.getDeclaredConstructors()) {
-            System.out.printf(" - %s: %s%n", method.getName(), Modifier.toString(method.getModifiers()));
-        }
-    }
-}
-```
-
----
-# **Programowanie: przykład 36**
-
-Połączenie mechanizmu adnotacji z refleksją na przykładzie walidacji obiektów.
-
-```java
-import validator.NotEmpty;
-import validator.Validator;
-
-class Sample {
-    @NotEmpty
-    private String valueNotEmpty;
-    private String valueAny;
-
-    public Sample(String valueNotEmpty, String valueAny) {
-        this.valueNotEmpty = valueNotEmpty;
-        this.valueAny = valueAny;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("{valueNotEmpty: %s, valueAny: %s}", valueNotEmpty, valueAny);
-    }
-}
-
-public class Main {
-
-    public static void main(String[] args) throws Exception {
-        Sample[] samples = {
-                new Sample("test", "test"),
-                new Sample("test", null),
-                new Sample(null, "test"),
-                new Sample(null, null)
-        };
-
-        for (Sample sample: samples) {
-            System.out.printf("%s: is valid: %s%n", sample.toString(), Validator.validate(sample));
-        }
-    }
-}
-```
-
----
-# Język Java: UNICODE
-
-ASCII (ang. American Standard Code for Information Interchange) to 7-bitowy (2^7 = 128 możliwości) system kodowania znaków. Przyporządkowuje on liczbom z zakresu 0−127 litery alfabetu łacińskiego języka angielskiego, cyfry, znaki przestankowe i inne symbole. Jest on stosunkowo ograniczony ze względu na przestrzeń bitów używanych do jego reprezentacji.
-
-Unicode jest standardem kodowania, którego założeniem była możliwość zapisania każdego znanego języka na świecie. Jest on kompatybilny z ASCII, gdyż reprezentacja elementów 0-127 jest zgodna.
-
----
-# Język Java: UTF-8/UTF-16
-
-Implementacja standardu Unicode są systemy kodowania znaków UTF (ang. Unicode Transformation Formats):
-- `UTF-8` wykorzystujący 8-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.
-- `UTF-16` wykorzystujący 16-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.
-
----
-# Język Java: String
-
-Operacje na ciągach znaków są jednymi z najczęściej używanych. Klasa `String` wprowadza szereg wbudowanych metod:
-
-`length()` - długość ciągu znaków
-`isEmpty()` - sprawdzenie, czy ciąg znaków jest pusty
-`equals(), equalsIgnoreCase(), compareTo(), compareToIgnoreCase()` - porównanie dwóch ciągów znaków
-`startsWith(), endsWith()` - sprawdzenie, czy ciąg znaków rozpoczyna się/kończy się zadanym ciągiem znaków
-`contains()` - sprawdzenie ciąg znaków zawiera zadany ciąg znaków
-`toLowerCase(), toUpperCase` - zamiana ciągu znaków na małe/wielkie litery
-
----
-# Język Java: String
-
-`replace(), replaceAll(), replaceFirst()` - podmiana zadanego ciągu znaków innym ciągiem znaków.
-`trim()` - usunięcie białych znaków z początku i końca ciągu znaków
-`substring()` - wyłuskanie ciągu znaków dla zadanych indeksów
-`split()` - podział ciągu znaków na tablicę ciągu znaków na podstawie zadanego ciągu znaków
-`join()` - połączenie ciągów znaków zadanym ciągiem
-`format()` - formatowanie ciągu znaków
-
-> Do konkatenacji ciągu znaków `String` w pętli powinniśmy używać klasy `StringBuilder`. Wynika to z faktu, że podczas konkatenacji zawsze powstaje nowy obiekt będący kopią.
-
----
-# Język Java: wyrażenia regularne
-
-Wyrażenie regularne (ang. regular expression, w skrócie regex lub regexp) – wzorzec opisujący łańcuch symboli.
-Wyrażenia regularne mogą określać zbiór pasujących łańcuchów, jak również wyszczególniać istotne części łańcucha.
-
-Przykłady:
-`filename-[0-9]+.txt`
-`images.+\.jpg`
-`^M[a]+ci.*j$`
-
----
-# **Programowanie: zadanie 22**
-
-Zdefiniuj metodę `String normalizeTitle(String value)` normalizującą tytuł:
-- usuwającą spacje z początku i końca,
-- ustawiającą pomiędzy każdym słowem jednynie jedną spację,
-- zamieniającą każde słowo na format z pierwszą wielką literą.
-
-Dla przykładu:
-```
-" W pustyni i w PUSZCZy" -> "W Pustyni I W Puszczy"
-" o dwóch TAKICH co ukradli      Księżyc" -> "O Dwóch Takich Co Ukradli Księżyc
-"pan   tadeusz" -> "Pan Tadeusz"
 ```

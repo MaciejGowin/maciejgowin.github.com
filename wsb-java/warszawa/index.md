@@ -23,3 +23,23 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 - Zjazd 3
   - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-03-1.html) [PDF](/wsb-java/warszawa/zjazd-03-1.pdf)
   - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-03-2.html) [PDF](/wsb-java/warszawa/zjazd-03-2.pdf)
+  - Zadania dodatkowe: [HTML](/wsb-java/warszawa/zjazd-03-zadania-dodatkowe.html) [PDF](/wsb-java/warszawa/zjazd-03-zadania-dodatkowe.pdf)
+- Zjazd 4
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-04-1.html) [PDF](/wsb-java/warszawa/zjazd-04-1.pdf)
+  - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-04-2.html) [PDF](/wsb-java/warszawa/zjazd-04-2.pdf)
+  - Zadania dodatkowe: [HTML](/wsb-java/warszawa/zjazd-04-zadania-dodatkowe.html) [PDF](/wsb-java/warszawa/zjazd-04-zadania-dodatkowe.pdf)
+- Zjazd 5
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-05-1.html) [PDF](/wsb-java/warszawa/zjazd-05-1.pdf)
+  - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-05-2.html) [PDF](/wsb-java/warszawa/zjazd-05-2.pdf)
+- Zjazd 6
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-06-1.html) [PDF](/wsb-java/warszawa/zjazd-06-1.pdf)
+  - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-06-2.html) [PDF](/wsb-java/warszawa/zjazd-06-2.pdf)
+- Zjazd 7
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-07-1.html) [PDF](/wsb-java/warszawa/zjazd-07-1.pdf)
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-07-2.html) [PDF](/wsb-java/warszawa/zjazd-07-2.pdf)
+- Zjazd 8
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-08-1.html) [PDF](/wsb-java/warszawa/zjazd-08-1.pdf)
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-08-2.html) [PDF](/wsb-java/warszawa/zjazd-08-2.pdf)
+- Zjazd 9
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-09-1.html) [PDF](/wsb-java/warszawa/zjazd-09-1.pdf)
+  - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-09-2.html) [PDF](/wsb-java/warszawa/zjazd-09-2.pdf)

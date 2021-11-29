@@ -23,6 +23,285 @@
 <p><a href="https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java">https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java</a></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
+<h1>Język Java: adnotacje</h1>
+<p>Adnotacje są metadanymi opisującymi kod źródłowy. Mogą one by używane w połączeniu z klasami, metodami, zmiennymi, parametrami, a nawet pakietami.</p>
+<p>Adnotacje mogą być usunięte lub zachowane podczas kompilacji. Daje to możliwość ich późniejszego odczytania podczas działania programu.</p>
+<p>Java definiuje wbudowane adnotacje. Do najpopularniejszych należą:</p>
+<p><code>@Override</code> - sprawdza, czy metoda jest przeciążona.<br />
+<code>@Deprecated</code> - oznacza metodę jako przestarzałą, zgłaszając ostrzeżenie podczas kompilacji.<br />
+<code>@SuppressWarnings</code> - informuje kompilator, aby pominął ostrzeżenia danego typu.</p>
+<p>Istnieje możliwość tworzenia własnych adnotacji.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+<h1>Język Java: adnotacje</h1>
+<p>Deklaracja adnotacji jest podobna do deklaracji interfejsu. Wyróżnia ją jednak znak <code>@</code> poprzedzający słowo kluczowe <code>interface</code>.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public @interface Author {
+    String name();
+    String company() default &quot;WSB&quot;;
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Dodatkowo możemy zdefiniować metody, które opisują elementy adnotacji. Metody te:</p>
+<ul>
+<li>Nie mogą przyjmować parametrów ani zgłaszać wyjątków.</li>
+<li>Wartości zwracane ograniczają się do typów prymitywnych, ciągów znaków <code>String</code>, klasy <code>Class</code>, typów wyliczeniowych oraz tablic wcześniej wymienionych typów.</li>
+<li>Mogą mieć wartości domyślne.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+<h1>Język Java: adnotacje</h1>
+<p>Definicję adnotacji możemy wzbogacić o adnotacje, które definiują kiedy, i dla jakich elementów mogą one zostać użyte.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD, ElementType.TYPE})
+public @interface Author {
+    String name();
+    String company() default &quot;WSB&quot;;
+}
+</span></span></foreignObject></svg></code></pre>
+<p><code>@Retention</code> - wskazuje, do jakiego momentu dana adnotacja powinna być zachowana.<br />
+<code>@Target</code> - wskazuje, dla jakiego elementu może zostać użyta.</p>
+<p>Adnotacje same w sobie nie wykonują żadnych zadań. Są one przetwarzane przez zewnętrzne narzędzia lub kod programu i na ich podstawie tworzone jest dodatkowe zachowanie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+<h1>Język Java: adnotacje</h1>
+<p>Możliwe wartości dla <code>RetentionPolicy</code>:</p>
+<ul>
+<li><code>SOURCE</code> - adnotacja powinna zostać usunięta przez kompilator.</li>
+<li><code>CLASS</code> - adnotacja powinna zostać zapisana w pliku wynikowym class, ale nie powinna być przetworzona podczas uruchomienia przez JVM (domyślne zachowanie).</li>
+<li><code>RUNTIME</code> - adnotacja powinna być dostępna i zachowana przez kompilator oraz JVM.</li>
+</ul>
+<blockquote>
+<p>Adnotacje typu RUNTIME są używane przez mechanizm refleksji. Korzysta z nich wiele bibliotek do automatycznego dodawania określonych zachowań do klas zdefiniowanych przez użytkownika.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+<h1>Język Java: adnotacje</h1>
+<p>Wybrane wartości dla <code>Target</code>:</p>
+<ul>
+<li><code>TYPE</code> - adnotacja może zostać użyta na poziomie: klasy, interfejsu, adnotacji lub typu wyliczeniowego</li>
+<li><code>FIELD</code> - adnotacja może zostać użyta na własnościach klasy</li>
+<li><code>METHOD</code> - adnotacja może zostać użyta na poziomie metody</li>
+<li><code>PARAMETER</code> - adnotacja może zostać użyta na poziomie parametru.</li>
+<li><code>CONSTRUCTOR</code> - adnotacja może zostać użyta na poziomie konstruktora.</li>
+<li><code>LOCAL_VARIABLE</code> - adnotacja może zostać użyta na zmiennej lokalnej.</li>
+<li><code>ANNOTATION_TYPE</code> - adnotacja może zostać użyta przy deklaracji adnotacji</li>
+<li><code>PACKAGE</code> - adnotacja może zostać użyta przy deklaracji pakietu</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+<h1>Język Java: refleksja</h1>
+<p>Refleksja to mechanizm pozwalający na przeglądanie oraz modyfikację klas, interfejsów, metod, konstruktorów i pól klas w czasie działania programu. Wszystkie te operacje mogą zostać wykonane z poziomu kodu źródłowego.</p>
+<p>Głównym elementem całego mechanizmu refleksji w Java jest klasa <code>Class</code>. Przechowuje ona informacje o klasie i jej składowych. Każda z instancji klasy <code>Class</code> opisuje jedną klasę i to dzięki nim mamy dostęp do szczegółowych informacji oraz mechanizmu refleksji.</p>
+<p>Adnotacje w połączeniu z mechanizmem refleksji pozwalają na sterowanie jej zachowaniem. To nic innego jak mechanizm tworzenia kodu na podstawie kodu już istniejącego. Adnotacje możemy rozumieć jako dodatkowe wskazówki dla mechanizmu refleksji precyzujące jej działanie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+<h1>Język Java: klasa Class</h1>
+<p>Do stworzenia obiektu typu <code>Class</code> możemy użyć jednego z trzech sposobów.</p>
+<h4>Poprzez metodę Class.forName()</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Class&lt;?&gt; fooClazz = Class.forName(&quot;Foo&quot;);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<h1>Język Java: klasa Class</h1>
+<h4>Poprzez metodę Object.getClass()</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Foo foo = new Foo();
+Class&lt;?&gt; fooClazz = foo.getClass();
+</span></span></foreignObject></svg></code></pre>
+<h4>Poprzez rozszerzenie .class</h4>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>class Foo {
+}
+
+Class&lt;Foo&gt; fooClazz = Foo.class;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+<h1><strong>Programowanie: przykład 35</strong></h1>
+<p>Przykład użycia refleksji do odczytania informacji o klasie, stworzenia obiektów, ustawienia wartości oraz wywołania metod.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.lang.reflect.Constructor;
+<span class="hljs-keyword">import</span> java.lang.reflect.Field;
+<span class="hljs-keyword">import</span> java.lang.reflect.Method;
+<span class="hljs-keyword">import</span> java.lang.reflect.Modifier;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SampleClass</span> </span>{
+
+    <span class="hljs-keyword">private</span> String privateField;
+    <span class="hljs-keyword">public</span> String publicField;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SampleClass</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked SampleClass()&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">privateMethod</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked privateMethod()&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">publicMethod</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Invoked publicMethod()&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;{privateField: %s, privateField: %s}&quot;</span>, privateField, publicField);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        reflectionCreation();
+        describeClass(SampleClass.class);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reflectionCreation</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">// Create instance via reflection</span>
+        Constructor&lt;SampleClass&gt; constructor = SampleClass.class.getDeclaredConstructor();
+        SampleClass sampleClass = constructor.newInstance();
+
+        <span class="hljs-comment">// Set fields via reflection</span>
+        System.out.printf(<span class="hljs-string">&quot;sampleClass: %s%n&quot;</span>, sampleClass);
+        Field publicField = SampleClass.class.getDeclaredField(<span class="hljs-string">&quot;publicField&quot;</span>);
+        publicField.set(sampleClass, <span class="hljs-string">&quot;value-publicField&quot;</span>);
+
+        Field privateField = SampleClass.class.getDeclaredField(<span class="hljs-string">&quot;privateField&quot;</span>);
+        privateField.setAccessible(<span class="hljs-keyword">true</span>);
+        privateField.set(sampleClass, <span class="hljs-string">&quot;value-privateField&quot;</span>);
+
+        System.out.printf(<span class="hljs-string">&quot;sampleClass: %s%n&quot;</span>, sampleClass);
+
+        <span class="hljs-comment">// Invoke methods via reflection</span>
+        Method publicMethod = SampleClass.class.getDeclaredMethod(<span class="hljs-string">&quot;publicMethod&quot;</span>);
+        publicMethod.invoke(sampleClass);
+
+        Method privateMethod = SampleClass.class.getDeclaredMethod(<span class="hljs-string">&quot;privateMethod&quot;</span>);
+        privateMethod.setAccessible(<span class="hljs-keyword">true</span>);
+        privateMethod.invoke(sampleClass);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describeClass</span><span class="hljs-params">(Class&lt;?&gt; clazz)</span> </span>{
+        <span class="hljs-comment">// Get all fields</span>
+        System.out.println(<span class="hljs-string">&quot;Fields:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Field field: clazz.getDeclaredFields()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, field.getName(), Modifier.toString(field.getModifiers()));
+        }
+
+        <span class="hljs-comment">// Get all methods</span>
+        System.out.println(<span class="hljs-string">&quot;Methods:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Method method: clazz.getDeclaredMethods()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, method.getName(), Modifier.toString(method.getModifiers()));
+        }
+
+        <span class="hljs-comment">// Get all constructors</span>
+        System.out.println(<span class="hljs-string">&quot;Constructors:&quot;</span>);
+        <span class="hljs-keyword">for</span> (Constructor&lt;?&gt; method: clazz.getDeclaredConstructors()) {
+            System.out.printf(<span class="hljs-string">&quot; - %s: %s%n&quot;</span>, method.getName(), Modifier.toString(method.getModifiers()));
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<h1><strong>Programowanie: przykład 36</strong></h1>
+<p>Połączenie mechanizmu adnotacji z refleksją na przykładzie walidacji obiektów.</p>
+<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> validator.NotEmpty;
+<span class="hljs-keyword">import</span> validator.Validator;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span> </span>{
+    <span class="hljs-meta">@NotEmpty</span>
+    <span class="hljs-keyword">private</span> String valueNotEmpty;
+    <span class="hljs-keyword">private</span> String valueAny;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sample</span><span class="hljs-params">(String valueNotEmpty, String valueAny)</span> </span>{
+        <span class="hljs-keyword">this</span>.valueNotEmpty = valueNotEmpty;
+        <span class="hljs-keyword">this</span>.valueAny = valueAny;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;{valueNotEmpty: %s, valueAny: %s}&quot;</span>, valueNotEmpty, valueAny);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Sample[] samples = {
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-string">&quot;test&quot;</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-string">&quot;test&quot;</span>, <span class="hljs-keyword">null</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-keyword">null</span>, <span class="hljs-string">&quot;test&quot;</span>),
+                <span class="hljs-keyword">new</span> Sample(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>)
+        };
+
+        <span class="hljs-keyword">for</span> (Sample sample: samples) {
+            System.out.printf(<span class="hljs-string">&quot;%s: is valid: %s%n&quot;</span>, sample.toString(), Validator.validate(sample));
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+<h1>Język Java: UNICODE</h1>
+<p>ASCII (ang. American Standard Code for Information Interchange) to 7-bitowy (2^7 = 128 możliwości) system kodowania znaków. Przyporządkowuje on liczbom z zakresu 0−127 litery alfabetu łacińskiego języka angielskiego, cyfry, znaki przestankowe i inne symbole. Jest on stosunkowo ograniczony ze względu na przestrzeń bitów używanych do jego reprezentacji.</p>
+<p>Unicode jest standardem kodowania, którego założeniem była możliwość zapisania każdego znanego języka na świecie. Jest on kompatybilny z ASCII, gdyż reprezentacja elementów 0-127 jest zgodna.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+<h1>Język Java: UTF-8/UTF-16</h1>
+<p>Implementacja standardu Unicode są systemy kodowania znaków UTF (ang. Unicode Transformation Formats):</p>
+<ul>
+<li><code>UTF-8</code> wykorzystujący 8-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.</li>
+<li><code>UTF-16</code> wykorzystujący 16-bitowe słowa oraz od 1 do 4 bajtów do zakodowania pojedynczego znaku.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Język Java: String</h1>
+<p>Operacje na ciągach znaków są jednymi z najczęściej używanych. Klasa <code>String</code> wprowadza szereg wbudowanych metod:</p>
+<p><code>length()</code> - długość ciągu znaków<br />
+<code>isEmpty()</code> - sprawdzenie, czy ciąg znaków jest pusty<br />
+<code>equals(), equalsIgnoreCase(), compareTo(), compareToIgnoreCase()</code> - porównanie dwóch ciągów znaków<br />
+<code>startsWith(), endsWith()</code> - sprawdzenie, czy ciąg znaków rozpoczyna się/kończy się zadanym ciągiem znaków<br />
+<code>contains()</code> - sprawdzenie ciąg znaków zawiera zadany ciąg znaków<br />
+<code>toLowerCase(), toUpperCase</code> - zamiana ciągu znaków na małe/wielkie litery</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Język Java: String</h1>
+<p><code>replace(), replaceAll(), replaceFirst()</code> - podmiana zadanego ciągu znaków innym ciągiem znaków.<br />
+<code>trim()</code> - usunięcie białych znaków z początku i końca ciągu znaków<br />
+<code>substring()</code> - wyłuskanie ciągu znaków dla zadanych indeksów<br />
+<code>split()</code> - podział ciągu znaków na tablicę ciągu znaków na podstawie zadanego ciągu znaków<br />
+<code>join()</code> - połączenie ciągów znaków zadanym ciągiem<br />
+<code>format()</code> - formatowanie ciągu znaków</p>
+<blockquote>
+<p>Do konkatenacji ciągu znaków <code>String</code> w pętli powinniśmy używać klasy <code>StringBuilder</code>. Wynika to z faktu, że podczas konkatenacji zawsze powstaje nowy obiekt będący kopią.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Język Java: wyrażenia regularne</h1>
+<p>Wyrażenie regularne (ang. regular expression, w skrócie regex lub regexp) – wzorzec opisujący łańcuch symboli.<br />
+Wyrażenia regularne mogą określać zbiór pasujących łańcuchów, jak również wyszczególniać istotne części łańcucha.</p>
+<p>Przykłady:<br />
+<code>filename-[0-9]+.txt</code><br />
+<code>images.+\.jpg</code><br />
+<code>^M[a]+ci.*j$</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1><strong>Programowanie: zadanie 22</strong></h1>
+<p>Zdefiniuj metodę <code>String normalizeTitle(String value)</code> normalizującą tytuł:</p>
+<ul>
+<li>usuwającą spacje z początku i końca,</li>
+<li>ustawiającą pomiędzy każdym słowem jednynie jedną spację,</li>
+<li>zamieniającą każde słowo na format z pierwszą wielką literą.</li>
+</ul>
+<p>Dla przykładu:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&quot; W pustyni i w PUSZCZy&quot; -&gt; &quot;W Pustyni I W Puszczy&quot;
+&quot; o dwóch TAKICH co ukradli      Księżyc&quot; -&gt; &quot;O Dwóch Takich Co Ukradli Księżyc
+&quot;pan   tadeusz&quot; -&gt; &quot;Pan Tadeusz&quot;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h1>Język Java: interfejs funkcyjny</h1>
 <p>Istnieją sytuacje, w których tworzymy interfejs realizujący jedno konkretne zadanie. Załóżmy, że biblioteka dostarcza interfejs walidatora:</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>interface Validator {
@@ -31,7 +310,7 @@
 </span></span></foreignObject></svg></code></pre>
 <p>Możemy dostarczać różne jego implementacje. Przyjmijmy, że na potrzeby weryfikacji zadanego ciągu znaków chcielibyśmy zweryfikować czy dany ciąg znaków nie jest pusty. Zadanie to moglibyśmy zrealizować przy pomocy klasy anonimowej.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
 <h1>Język Java: interfejs funkcyjny</h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Validator</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(String value)</span></span>;
@@ -55,14 +334,14 @@
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h1>Język Java: interfejs funkcyjny</h1>
 <p>Interfejsy definiujące jedną metodę abstrakcyjną określane są mianem interfejsów SAM (ang. Single Abstract Method)</p>
 <p>Wraz z Java 8 wprowadzona została adnotacja opisująca takie interfejsy: <code>@FunctionalInterface</code>.</p>
 <p>Każdy interfejs oznaczony tą adnotacją zostanie zweryfikowany podczas kompilacji. Kompilator upewni się, czy interfejs oznaczony taką adnotacją ma tylko jedną metodę abstrakcyjną.</p>
 <p>Adnotacja ta nie jest wymagana. Z założenia każdy interfejs o dokładnie jednej metodzie abstrakcyjnej jest interfejsem funkcjonalnym.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
 <h1>Język Java: wyrażenie lambda</h1>
 <p>W Javie 1.8 wprowadzony został uproszczony zapis pozwalający na definiowanie implementacji interfejsów funkcjonalnych.</p>
 <p>Używamy do tego wyrażeń lambda.</p>
@@ -73,10 +352,10 @@
 <p>Wyrażania <code>lambda</code> umożliwiają definiowanie metod anonimowych.</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
 <h1>Język Java: wyrażenie lambda</h1>
 <p>Format wyrażeń lambda możemy opisać za pomocą:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>(paramers list) -&gt; body
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>(parameters list) -&gt; body
 </span></span></foreignObject></svg></code></pre>
 <p>Gdzie:</p>
 <ul>
@@ -87,7 +366,7 @@
 <p>Wyrażanie lambda nie jest wykonywane podczas definicji, ale podczas wywołania.</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
 <h1>Język Java: typy wyrażeń lambda</h1>
 <h4>Wyrażenie lambda bez parametrów</h4>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>() -&gt; System.out.println(&quot;Invokeed&quot;);
@@ -102,7 +381,7 @@
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
 <h1>Język Java: typy wyrażeń lambda</h1>
 <h4>Wyrażenie lambda z wieloma wyrażeniami i wartością zwracaną</h4>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>(a, b) -&gt; {
@@ -114,7 +393,7 @@
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>(a, b) -&gt; a + b;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
 <h1>Język Java: wbudowane interfejsy funkcyjne</h1>
 <p>Java wprowadza szereg wbudowanych interfejsów funkcyjnych. Dostępne są one w pakiecie <code>java.util.function</code>.</p>
 <h4>Function&lt;T, R&gt;</h4>
@@ -125,7 +404,7 @@
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Function&lt;String, String&gt; quoted = value -&gt; &quot;\&quot;&quot; + value + &quot;\&quot;&quot;;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
 <h1>Język Java: wbudowane interfejsy funkcyjne</h1>
 <h4>BiFunction&lt;T, U, R&gt;</h4>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public interface BiFunction&lt;T, U, R&gt; {
@@ -142,7 +421,7 @@
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Supplier&lt;String&gt; sample = () -&gt; &quot;sample&quot;;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
 <h1>Język Java: wbudowane interfejsy funkcyjne</h1>
 <h4>Consumer&lt;T&gt;</h4>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public interface Consumer&lt;T&gt; {
@@ -158,7 +437,7 @@
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Predicate&lt;String&gt; empty = value -&gt; value == null || value.length() == 0;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
 <h1>Język Java: wykorzystanie wyrażeń lambda</h1>
 <p>Wiele wbudowanych klas zawiera metody oraz funkcjonalności operujące na wyrażeniach lambda. Dla przykładu kolekcje Java używają ich do manipulacji na elementach.</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>List&lt;String&gt; users = new ArrayList&lt;&gt;();
@@ -168,8 +447,8 @@ users.add(&quot;user3&quot;);
 users.replaceAll(user -&gt; user != null ? user.toLowerCase() : null);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
-<h1><strong>Programowanie: przykład 36</strong></h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h1><strong>Programowanie: przykład 37</strong></h1>
 <p>Przykład użycia kolekcji z lambdami.</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.HashMap;
 <span class="hljs-keyword">import</span> java.util.Map;
@@ -206,7 +485,7 @@ users.replaceAll(user -&gt; user != null ? user.toLowerCase() : null);
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
 <h1>Język Java: strumienie</h1>
 <p>Strumienie (ang. streams) to narzędzia służące do procesowania sekwencji elementów, takich jak kolejki, listy czy mapy. Pozwalają na operacje takie jak: wyszukiwanie, filtrowanie czy mapowanie wartości.</p>
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();
@@ -223,14 +502,14 @@ names.stream()
     .forEach(name -&gt; System.out.printf(&quot;User: %s%n&quot;, name));
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
 <h1>Język Java: strumienie</h1>
 <p>Zestaw klas do operacji na strumieniach zdefiniowany jest w pakiecie <code>java.util.stream</code>. Główną klasą dostarczającą funkcjonalności przetwarzania strumieniowego jest <code>Stream&lt;T&gt;</code>.</p>
 <p>Strumienie w dużym stopniu opierają się na wyrażeniach <code>lambda</code>, które pozwalają na manipulowanie elementami. Co istotnie, zdefiniowane operacje w postaci wyrażeń <code>lambda</code> nie są wykonywane zaraz po ich definicji, ale w momencie ich faktycznego użycia.</p>
 <p>Strumienie używają podejścia <code>fluent API</code>. Polega ono na łączeniu obiektów za pomocą łańcucha wywołań metod. Celem takiego zapisu jest zwiększenie czytelności oraz używalności kodu.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
-<h1><strong>Programowanie: przykład 37</strong></h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1><strong>Programowanie: przykład 38</strong></h1>
 <p>Wywołania strumieni.</p>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.ArrayList;
 <span class="hljs-keyword">import</span> java.util.List;
@@ -270,7 +549,20 @@ names.stream()
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1>Język Java: strumienie</h1>
+<p>Działanie strumieni możemy podzielić na 3 etapy:</p>
+<ul>
+<li>tworzenie strumienia,</li>
+<li>operacje pośrednie,</li>
+<li>operacje kończącą.</li>
+</ul>
+<p>Po utworzeniu strumienia możemy wywołać wiele operacji pośrednik zwracających nowy, zmodyfikowany strumień. Każdy ze strumieni może zostać zakończony tylko przez jedną operację kończącą.</p>
+<blockquote>
+<p>Operacje na strumieniach zostają wykonywane dopiero w momencie, gdy są wymagane przez operację kończącą.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
 <h1>Język Java: strumienie</h1>
 <p>Podstawowe operacje na strumieniach:</p>
 <p><code>of()</code> - stworzenie strumienia na podstawie zadanych elementów.<br />
@@ -283,7 +575,7 @@ names.stream()
 <code>findFirst()</code> - pobranie pierwszego elementu.<br />
 <code>findAny()</code> - pobranie dowolnego elementu.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
 <h1>Język Java: strumienie</h1>
 <p>Strumienie mogą zostać zredukowane do innego typu. Najczęściej redukcja zachodzi to kolekcji. Strumienie Java wprowadzają podstawowe implementacje <code>Collectors</code> pozwalające na redukcję:</p>
 <p><code>Collectors.toList()</code> - redukcja do listy elementów.<br />
@@ -292,8 +584,8 @@ names.stream()
 <code>Collectors.groupingBy()</code> - redukcja grupująca elementy na podstawie danej cechy.<br />
 <code>Collectors.joining()</code> - redukcja łącząca zwracająca ciąg znaków.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
-<h1><strong>Programowanie: przykład 38</strong></h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+<h1><strong>Programowanie: przykład 39</strong></h1>
 <pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.ArrayList;
 <span class="hljs-keyword">import</span> java.util.Arrays;
 <span class="hljs-keyword">import</span> java.util.HashSet;
@@ -386,656 +678,6 @@ names.stream()
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">joining</span><span class="hljs-params">(List&lt;String&gt; initNames)</span> </span>{
         String names = initNames.stream().collect(Collectors.joining(<span class="hljs-string">&quot; and &quot;</span>));
         System.out.println(<span class="hljs-string">&quot;Names: &quot;</span> + names);
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
-<h1>Język Java: Optional</h1>
-<p>Częstym problemem pojawiającym się w systemach jest błąd <code>NullPointerException</code>. Wynika to najczęściej z operacji na obiektach, które zakładają, że zmienna zawsze ma przypisaną wartość:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer percent(Integer value) {
-    return value * 100;
-}
-</span></span></foreignObject></svg></code></pre>
-<p>Tak zdefiniowana metoda jest podatna na błędy. Wywołanie jej z <code>value = null</code> spowoduje błąd <code>NullPointerException</code>.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
-<h1>Język Java: Optional</h1>
-<p>Problem możemy rozwiązać, sprawdzając, czy <code>value</code> nie jest nullem.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer percent(Integer value) {
-    if (value == null) {
-        return null;    
-    }
-
-   return value * 100;
-}
-</span></span></foreignObject></svg></code></pre>
-<p>Była to częsta praktyka do momentu wprowadzenia klasy <code>Optional</code>. Instrukcja warunkowa rozwiązuje problemy z <code>NullPointerException</code>.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
-<h1>Język Java: Optional</h1>
-<p>Głównym celem klasy <code>Optional</code> jest reprezentacja wartości opcjonalnej. Operacje są wykonywane jedynie w przypadku, w którym wartość zadana nie jest równa <code>null</code>. Wartość opcjonalną z pustą wartością możemy rozumieć jako zastępstwo referencji do <code>null</code>.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer percent(Integer value) {
-    return Optional.ofNullable(value)
-        .map(v -&gt; v * 100)
-        .orElse(null);
-}
-</span></span></foreignObject></svg></code></pre>
-<blockquote>
-<p>Klasa <code>Optional</code> pozwala na łatwe radzenie sobie z wartościami <code>null</code> wymuszając dobre praktyki programistyczne.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
-<h1>Język Java: Optional</h1>
-<p>Do podstawowych operacji na klasie <code>Optional</code>:</p>
-<p><code>of()</code> - stworzenie obiektu z wartością na podstawie parametru lub błąd, gdy parametr jest równy <code>null</code>.<br />
-<code>ofNullable()</code> - stworzenie obiektu z wartością na podstawie parametru lub pustego obiektu, gdy parametr jest równy <code>null</code>.<br />
-<code>empty()</code> - stworzenie pustego obiektu.<br />
-<code>isPresent()</code> - sprawdzenie, czy wartość nie jest pusta.<br />
-<code>isEmpty()</code> - sprawdzenie, czy wartość jest pusta.<br />
-<code>get()</code> - pobranie wartości lub błąd, gdy wartość jest pusta.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
-<h1>Język Java: Optional</h1>
-<p><code>orElse()</code> - pobranie wartości lub wartość domyślna, gdy wartość jest pusta.<br />
-<code>orElseGet()</code> - pobranie wartości lub wartość wygenerowanie wartości domyślnej, gdy wartość jest pusta.<br />
-<code>orElseThrow()</code> - pobranie wartości lub błąd, gdy wartość jest pusta.<br />
-<code>orElseThrow()</code> - pobranie wartości lub zadany błąd, gdy wartość jest pusta.<br />
-<code>or()</code> - pobranie innego obiektu z wartością, gdy wartość obecnego jest pusta.<br />
-<code>filter()</code> - filtrowanie wartości, jeżeli nie jest pusta.<br />
-<code>map()</code> - mapowanie wartości, jeżeli nie jest pusta.<br />
-<code>stream()</code> - konwersja obiektu na strumień.<br />
-<code>ifPresent()</code> - wykonanie operacji, jeżeli wartość nie jest pusta.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
-<h1><strong>Programowanie: przykład 39</strong></h1>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.Optional;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        System.out.printf(<span class="hljs-string">&quot;First character: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;bit&quot;</span>, firstCharacter(<span class="hljs-string">&quot;bit&quot;</span>).orElse(<span class="hljs-string">&#x27;-&#x27;</span>));
-        System.out.printf(<span class="hljs-string">&quot;First character: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;9bit&quot;</span>, firstCharacter(<span class="hljs-string">&quot;9bit&quot;</span>).orElse(<span class="hljs-string">&#x27;-&#x27;</span>));
-        System.out.printf(<span class="hljs-string">&quot;First character: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, firstCharacter(<span class="hljs-string">&quot;&quot;</span>).orElse(<span class="hljs-string">&#x27;-&#x27;</span>));
-        System.out.printf(<span class="hljs-string">&quot;First character: %s: %s%n&quot;</span>, <span class="hljs-keyword">null</span>, firstCharacter(<span class="hljs-keyword">null</span>).orElse(<span class="hljs-string">&#x27;-&#x27;</span>));
-
-        System.out.printf(<span class="hljs-string">&quot;Starts with digit: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;bit&quot;</span>, startsWithDigit(<span class="hljs-string">&quot;bit&quot;</span>));
-        System.out.printf(<span class="hljs-string">&quot;Starts with digit: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;9bit&quot;</span>, startsWithDigit(<span class="hljs-string">&quot;9bit&quot;</span>));
-        System.out.printf(<span class="hljs-string">&quot;Starts with digit: %s: %s%n&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, startsWithDigit(<span class="hljs-string">&quot;&quot;</span>));
-        System.out.printf(<span class="hljs-string">&quot;Starts with digit: %s: %s%n&quot;</span>, <span class="hljs-keyword">null</span>, startsWithDigit(<span class="hljs-keyword">null</span>));
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Optional&lt;Character&gt; <span class="hljs-title">firstCharacter</span><span class="hljs-params">(String value)</span> </span>{
-        <span class="hljs-keyword">return</span> Optional.ofNullable(value)
-                .filter(v -&gt; v.length() &gt; <span class="hljs-number">0</span>)
-                .map(v -&gt; v.charAt(<span class="hljs-number">0</span>));
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">startsWithDigit</span><span class="hljs-params">(String value)</span> </span>{
-        <span class="hljs-keyword">return</span> firstCharacter(value).filter(c -&gt; Character.isDigit(c)).isPresent();
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
-<h1><strong>Programowanie: zadanie 23</strong></h1>
-<p>Korzystając z klasy <code>Optional</code> zdefiniuj metodę sprawdzającą czy dana liczba jest cyfrą, której zapis przy użyciu instrukcji warunkowych byłby następujący:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static boolean isDigitWithoutOptional(Integer value) {
-    boolean isDigit = false;
-    if (value != null &amp;&amp; value &gt;= 0 &amp;&amp; value &lt;= 9) {
-        isDigit = true;
-    }
-    return isDigit;
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
-<h1>Język Java: referencje do metod</h1>
-<p>Do tej pory tworzyliśmy wyrażenia lambda w postaci metod anonimowych.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, null, &quot;two&quot;).filter(value -&gt; Objects.nonNull(value));
-</span></span></foreignObject></svg></code></pre>
-<p>Istnieje specjalny typ wyrażeń <code>lambda</code>, które określane są mianem referencji do metod. To nic innego jak użycie danej funkcji w postaci wyrażenia <code>lambda</code>.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, null, &quot;two&quot;).filter(Objects::nonNull);
-</span></span></foreignObject></svg></code></pre>
-<p>Istnieją 4 typy referencji.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
-<h1>Język Java: referencje do metod</h1>
-<h4>Metody statyczne</h4>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, null, &quot;two&quot;).filter(value -&gt; Objects.nonNull(value));
-</span></span></foreignObject></svg></code></pre>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, null, &quot;two&quot;).filter(Objects::nonNull);
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
-<h1>Język Java: referencje do metod</h1>
-<h4>Metody poszczególnych obiektów</h4>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>String prefix = &quot;prefix-&quot;;
-Stream.of(&quot;one&quot;, &quot;two&quot;).map(value -&gt; prefix.concat(value));
-</span></span></foreignObject></svg></code></pre>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>String prefix = &quot;prefix-&quot;;
-Stream.of(&quot;one&quot;, &quot;two&quot;).map(prefix::concat);
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
-<h1>Język Java: referencje do metod</h1>
-<h4>Metody dowolnego obiektu określonego typu</h4>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, &quot;two&quot;).map(value -&gt; value.toLowerCase());
-</span></span></foreignObject></svg></code></pre>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, &quot;two&quot;).map(String::toLowerCase);
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
-<h1>Język Java: referencje do metod</h1>
-<h4>Konstruktory</h4>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, &quot;two&quot;).map(value -&gt; new Item(value));
-</span></span></foreignObject></svg></code></pre>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Stream.of(&quot;one&quot;, &quot;two&quot;).map(Item::new);
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
-<h1>Język Java: wyjątki</h1>
-<p>Wyjątek to nieoczekiwany błąd, który pojawia się podczas działania programu.</p>
-<p>Przyczyn pojawiania się wyjątków jest wiele: zaczynając od błędów programistycznych, poprzez błędy w danych użytkowników aż po błędy związane z dostępem do danych. Powodują one nieoczekiwane zachowanie i możliwe niedeterministyczne zakończenie programu.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
-<h1>Język Java: wyjątki</h1>
-<p>Java wprowadza hierarchę klas wyjątków.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Throwable
-|-----&gt; Error
-|-----&gt; Exception
-        |-----&gt; RuntimeException
-        |-----&gt; Any other subclass of Exception
-</span></span></foreignObject></svg></code></pre>
-<h4>Throwable</h4>
-<p>Główna klasa w hierarchii definiująca dowolny błąd.</p>
-<h4>Error</h4>
-<p>Reprezentuje nieodwracalne zdarzenia takie jak: wycieki pamięci, przepełnienia stosu czy nieskończone wywołania rekurencyjne.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
-<h1>Język Java: wyjątki</h1>
-<h4>Exception</h4>
-<p>Reprezentuje wyjątki, które mogą zostać obsłużone przez program. Zawiera informacje o zdarzeniu oraz stan programu, w którym dany błąd został zgłoszony.</p>
-<h5>RuntimeException</h5>
-<p>Reprezentuje wyjątki wynikające z błędów programistycznych.</p>
-<h4>Any other subclass of Exception</h4>
-<p>Reprezentuje wyjątki sprawdzane przez kompilator podczas kompilacji. Wymuszają obsługę z poziomu kodu źródłowego programu.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
-<h1>Język Java: typy wyjątków</h1>
-<p>Wyjątki możemy podzielić na 2 grupy, w zależności od konieczności ich obsługi.</p>
-<h4>Unchecked Exceptions</h4>
-<p>Wyjątki, które nie są sprawdzane podczas kompilacji. Do tej grupy należą <code>Error</code>, <code>RuntimeException</code> oraz ich wszystkie podklasy.</p>
-<p>Przykłady <code>RuntimeException</code>:</p>
-<ul>
-<li><code>NullPointerException</code>, zgłaszany podczas próby dostępu do niezainicjalizowanej zmiennej.</li>
-<li><code>ArrayIndexOutOfBoundsException</code>, zgłaszany podczas próby dostępu do nieistniejącego indeksu tablicy lub kolekcji.</li>
-<li><code>ArithmeticException</code>, zgłaszany podczas dzielenia przez 0.</li>
-<li><code>IllegalArgumentException</code>, zgłaszany podczas niepopranego użycia danej klasy lub metody.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
-<h1>Język Java: typy wyjątków</h1>
-<h4>Checked Exceptions</h4>
-<p>Wyjątki, które są sprawdzane podczas kompilacji. Do tej grupy należą wszystkie pozostałe wyjątki. Wyjątki te muszą zostać obsłużone.</p>
-<p>Przykłady:</p>
-<ul>
-<li><code>IOException</code>, zgłaszany podczas błędów w operacjach I/O.</li>
-<li><code>FileNotFoundException</code>, zgłaszany podczas prób dostępu do nieistniejącego pliku.</li>
-<li><code>InterruptedException</code>, zgłaszany podczas przerwania wątku, który jest oczekujący.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
-<h1>Język Java: typy wyjątków</h1>
-<p>Możemy tworzyć własne typy wyjątków poprzez rozszerzanie klas <code>Exception</code> oraz <code>RuntimeException</code>.</p>
-<blockquote>
-<p><code>Unchecked Excetions</code> nie są zwyczajowo obsługiwane, gdyż wynikają z błędów programistycznych. Ich usunięcie powinno odbywać się przez naprawienie wadliwego kodu.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
-<h1>Język Java: zgłaszanie wyjątków</h1>
-<p>Do zgłoszenia wyjątku używamy słowa kluczowego <code>throw</code>.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>throw new ExceptionType();
-</span></span></foreignObject></svg></code></pre>
-<p>Dla przykładu:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer percent(Integer value) {
-    if (value == null) {
-        throw new IllegalArgumentException(&quot;Value may not be null&quot;);
-    }
-    return value * 100;
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
-<h1>Język Java: obsługa wyjątków try</h1>
-<p>Do obsługi wyjątków używamy bloku <code>try...catch...finally</code></p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>try {
-    /* ... */
-} catch (ExceptionClass1 e1) { 
-    /* ... */
-} catch (ExceptionClass2 | ExceptionClass3 e1) { 
-    /* ... */
-} finally {
-    /* ... */
-}
-</span></span></foreignObject></svg></code></pre>
-<ul>
-<li>Wyjątek może zostać zgłoszony w bloku <code>try {}</code></li>
-<li>Wyrażenie <code>catch</code> jest odpowiedzialne za obsługę wyjątku o typie <code>ExceptionClass1</code>. Dla wyjątków o takim samym sposobie obsługi możemy użyć uwspólnionego wyrażenia <code>ExceptionClass2 | ExceptionClass3</code>.</li>
-<li>Blok <code>finally {}</code> jest wykonywany po blokach <code>try {} catch {}</code> nawet w przypadku zgłoszenia błędu. Jest to blok opcjonalny.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
-<h1>Język Java: obsługa wyjątków try</h1>
-<p>Dla przykładu:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer safeParseInt(String value) {
-    try {
-        return Integer.parseInt(&quot;i&quot;);
-    } catch (NumberFormatException ex) {
-        System.out.println(&quot;Failed to parse integer: &quot; + ex.getMessage());
-    } finally {
-        System.out.println(&quot;Finished integer parsing&quot;);
-    }
-    return null;
-}
-</span></span></foreignObject></svg></code></pre>
-<blockquote>
-<p>Obsługa wyjątku typu <code>RuntimeException</code> posłużyła jedynie do prezentacji użycia bloku <code>try</code>. Kod powinien być napisany w sposób, który nie dopuszcza do takich sytuacji.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
-<h1>Język Java: obsługa wyjątków</h1>
-<p>Obsługa wyjątków odbywa się sekwencyjnie. Pierwszy napotkany blok <code>catch</code>, którego typ jest zgodny z typem zgłoszonego wyjątku, zostanie użyty do obsługi błędu.</p>
-<p>Definicje <code>catch</code> powinny zaczynać się od typów bardziej specyficznych, a kończyć na bardziej ogólnych.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
-<h1>Język Java: deklaracja wyjątków</h1>
-<p>Do deklaracji typów wyjątków zwracanych przez metodę używamy słowa kluczowego <code>throws</code>.</p>
-<p>Dla przykładu:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>public static Integer percent(Integer value) throws IllegalArgumentException {
-    if (value == null) {
-        throw new IllegalArgumentException(&quot;Value may not be null&quot;);
-    }
-    return value * 100;
-}
-</span></span></foreignObject></svg></code></pre>
-<blockquote>
-<p>Wyjątki typu <code>unchecked</code> nie muszą być zadeklarowany podczas definicji metody.</p>
-</blockquote>
-<blockquote>
-<p>W przypadku, gdy metoda zgłasza wyjątek typu <code>checked</code>, który nie został obsłużony w jej ciele, musi on zostać zadeklarowany podczas definicji metody.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
-<h1><strong>Programowanie: przykład 40</strong></h1>
-<p>Wyjątek typu <code>checked</code> wraz z jego obsługą.</p>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.util.stream.Stream;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        Stream
-                .of(
-                        <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Andrzej&quot;</span>, <span class="hljs-number">1984</span>),
-                        <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Andrzej&quot;</span>, <span class="hljs-number">2020</span>),
-                        <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;       &quot;</span>, <span class="hljs-number">1984</span>),
-                        <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;       &quot;</span>, <span class="hljs-number">2020</span>))
-                .forEach(Main::validate);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">validate</span><span class="hljs-params">(Person person)</span> </span>{
-        <span class="hljs-keyword">try</span> {
-            Validator.validateName(person);
-            Validator.validateAdult(person);
-        } <span class="hljs-keyword">catch</span> (ValidationException ex) {
-            System.out.println(<span class="hljs-string">&quot;Validation failed: &quot;</span> + ex.getMessage());
-        }
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
-<h1>Język Java: operacje wejścia/wyjścia (I/O)</h1>
-<p>Strumień wejściowy (input stream) jest odpowiedzialny za czytanie danych ze źródła.<br />
-Strumień wyjściowy (output stream) jest odpowiedzialny za pisanie danych do źródła.</p>
-<p>Istnieją dwa główne typy strumieni:</p>
-<h3>Strumienie binarne (byte streams)</h3>
-<p>Używane do odczytu pojedynczych bajtów danych. Do ich obsługi służą wszystkie podklasy <code>InputStream</code> oraz <code>OutputStream</code>.</p>
-<h3>Strumienie binarne (byte streams)</h3>
-<p>Używane do odczytu pojedynczych znaków danych. Do ich obsługi służą wszystkie podklasy <code>Reader</code> oraz <code>Writer</code>.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
-<h1>Język Java: operacje wejścia/wyjścia (I/O)</h1>
-<p>Do tej pory spotkaliśmy się ze strumieniami przy okazji czytania oraz pisania na konsolę.</p>
-<p><code>System.out</code> - obiekt typu <code>PrintStream</code>, rozszerzający <code>OutputStream</code>.<br />
-<code>System.in</code> - obiekt typu <code>InputStream</code></p>
-<p>Java posiada bardzo rozbudowaną strukturę strumieni wejścia i wyjścia udostępnioną w pakiecie <code>java.io</code>. Skupimy się jedynie na podstawowych przykładach pozwalających na odczyt danych z pliku oraz ich zapis do pliku.</p>
-<p>W najnowszych wersjach Javy został wprowadzony pakiet <code>java.nio</code> (new I/O) rozszerzający strumienie o dodatkowe mechanizmy.</p>
-<blockquote>
-<p>Przy okazji strumieni warto wspomnieć, że w wielu miejscach używają klas opakowujących. Każda z kolejnych warstw dodaje nowe funkcjonalności, zwiększając poziom abstrakcji.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
-<h1><strong>Programowanie: przykład 41</strong></h1>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.io.FileInputStream;
-<span class="hljs-keyword">import</span> java.io.FileOutputStream;
-<span class="hljs-keyword">import</span> java.io.IOException;
-<span class="hljs-keyword">import</span> java.time.LocalDateTime;
-<span class="hljs-keyword">import</span> java.util.Optional;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String INPUT_FILE = <span class="hljs-string">&quot;/tmp/input&quot;</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String OUTPUT_FILE = <span class="hljs-string">&quot;/tmp/output&quot;</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
-        readFile(INPUT_FILE).ifPresent(content -&gt; writeFile(OUTPUT_FILE, content + LocalDateTime.now()));
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Optional&lt;String&gt; <span class="hljs-title">readFile</span><span class="hljs-params">(String filename)</span> </span>{
-        FileInputStream input = <span class="hljs-keyword">null</span>;
-        <span class="hljs-keyword">try</span> {
-            input = <span class="hljs-keyword">new</span> FileInputStream(filename);
-            StringBuilder stringBuilder = <span class="hljs-keyword">new</span> StringBuilder();
-
-            <span class="hljs-keyword">int</span> i = input.read();
-            <span class="hljs-keyword">while</span>(i != -<span class="hljs-number">1</span>) {
-                stringBuilder.append((<span class="hljs-keyword">char</span>) i);
-                i = input.read();
-            }
-
-            input.close();
-            <span class="hljs-keyword">return</span> Optional.of(stringBuilder.toString());
-        }  <span class="hljs-keyword">catch</span>(Exception ex) {
-            <span class="hljs-keyword">try</span> {
-                <span class="hljs-keyword">if</span> (input != <span class="hljs-keyword">null</span>) {
-                    input.close();
-                }
-            } <span class="hljs-keyword">catch</span> (IOException ioEx) {
-            }
-            System.out.println(<span class="hljs-string">&quot;Reading failed: &quot;</span> + ex.getMessage());
-        }
-        <span class="hljs-keyword">return</span> Optional.empty();
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeFile</span><span class="hljs-params">(String filename, String content)</span> </span>{
-        FileOutputStream output = <span class="hljs-keyword">null</span>;
-        <span class="hljs-keyword">try</span> {
-            output = <span class="hljs-keyword">new</span> FileOutputStream(filename);
-            <span class="hljs-keyword">byte</span>[] array = content.getBytes();
-            output.write(array);
-            output.close();
-        } <span class="hljs-keyword">catch</span>(Exception ex) {
-            <span class="hljs-keyword">try</span> {
-                <span class="hljs-keyword">if</span> (output != <span class="hljs-keyword">null</span>) {
-                    output.close();
-                }
-            } <span class="hljs-keyword">catch</span> (IOException ioEx) {
-            }
-            System.out.println(<span class="hljs-string">&quot;Writing failed: &quot;</span> + ex.getMessage());
-        }
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
-<h1>Język Java: obsługa wyjątków try-with-resource</h1>
-<p>Obsługa wyjątków przy pomocy <code>try-with-resource</code> pozwala na automatyczne zamykanie zasobów bez konieczności wywoływania metody <code>close()</code> explicite w bloku <code>finally</code>.</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>try (resource declaration) {
-  /* ... */
-} catch (ExceptionType e1) {
-  * ... */
-}
-</span></span></foreignObject></svg></code></pre>
-<p>Zasób (jeden lub więcej) musi zostać zadeklarowany oraz zainicjalizowany w wyrażeniu <code>try()</code>.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
-<h1>Język Java: obsługa wyjątków try-with-resource</h1>
-<p>Dla przykładu:</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>try (FileReader input = new FileReader(filename)) {
-    /* ... */
-} catch(IOException ex) {
-}
-</span></span></foreignObject></svg></code></pre>
-<p>Dowolny obiekt, który implementuje <code>java.lang.AutoCloseable</code>, również te, które implementują <code>java.io.Closeable</code> mogą zostać użyte jako zasoby.</p>
-<blockquote>
-<p>Wyrażenie <code>try-with-resource</code> automatycznie zamyka wszystkie zasoby po wykonaniu bloku <code>try</code> nawet w przypadku wystąpienia błędu.</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
-<h1><strong>Programowanie: przykład 42</strong></h1>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.io.FileReader;
-<span class="hljs-keyword">import</span> java.io.FileWriter;
-<span class="hljs-keyword">import</span> java.time.LocalDateTime;
-<span class="hljs-keyword">import</span> java.util.Optional;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String INPUT_FILE = <span class="hljs-string">&quot;/tmp/input&quot;</span>;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String OUTPUT_FILE = <span class="hljs-string">&quot;/tmp/output&quot;</span>;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
-        readFile(INPUT_FILE).ifPresent(content -&gt; writeFile(OUTPUT_FILE, content + LocalDateTime.now()));
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Optional&lt;String&gt; <span class="hljs-title">readFile</span><span class="hljs-params">(String filename)</span> </span>{
-        <span class="hljs-keyword">char</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">1</span>];
-
-        <span class="hljs-keyword">try</span> (FileReader input = <span class="hljs-keyword">new</span> FileReader(filename)) {
-            StringBuilder stringBuilder = <span class="hljs-keyword">new</span> StringBuilder();
-
-            <span class="hljs-keyword">int</span> result = input.read(array);
-            <span class="hljs-keyword">while</span> (result != -<span class="hljs-number">1</span>) {
-                stringBuilder.append(array);
-                result = input.read(array);
-            }
-
-            <span class="hljs-keyword">return</span> Optional.of(stringBuilder.toString());
-        } <span class="hljs-keyword">catch</span>(Exception ex) {
-            System.out.println(<span class="hljs-string">&quot;Reading failed: &quot;</span> + ex.getMessage());
-        }
-
-        <span class="hljs-keyword">return</span> Optional.empty();
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeFile</span><span class="hljs-params">(String filename, String content)</span> </span>{
-        <span class="hljs-keyword">try</span> (FileWriter output = <span class="hljs-keyword">new</span> FileWriter(filename)) {
-            output.write(content);
-        } <span class="hljs-keyword">catch</span> (Exception ex) {
-            System.out.println(<span class="hljs-string">&quot;Writing failed: &quot;</span> + ex.getMessage());
-        }
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
-<h1>Język Java: obsługa systemu plików</h1>
-<p>W Javie podstawową klasą do operacji na plikach jest klasa <code>java.io.File</code>. Pozwala ona na zarządzanie systemem plików, ścieżkami plików oraz ich własnościami.</p>
-<p>Wraz z pakietem <code>java.nio.file</code> zostały wprowadzone dodatkowe klasy do zarządzania ścieżkami:</p>
-<ul>
-<li><code>java.nio.file.Path</code>, reprezentującą ścieżkę pliku,</li>
-<li><code>java.nio.file.Files</code>, definiującą operacje na ścieżkach plików oraz systemie plików.</li>
-</ul>
-<p>Istnieje szereg innych klas współpracujących oraz usprawniających działania na systemie plików.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
-<h1><strong>Programowanie: przykład 43</strong></h1>
-<p>Przykładowe użycie klas <code>File</code> oraz <code>Path</code> do przeglądania systemu plików.</p>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.io.File;
-<span class="hljs-keyword">import</span> java.io.IOException;
-<span class="hljs-keyword">import</span> java.nio.file.FileVisitResult;
-<span class="hljs-keyword">import</span> java.nio.file.Files;
-<span class="hljs-keyword">import</span> java.nio.file.Path;
-<span class="hljs-keyword">import</span> java.nio.file.SimpleFileVisitor;
-<span class="hljs-keyword">import</span> java.nio.file.attribute.BasicFileAttributes;
-<span class="hljs-keyword">import</span> java.util.Arrays;
-<span class="hljs-keyword">import</span> java.util.Optional;
-<span class="hljs-keyword">import</span> java.util.stream.Stream;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>{
-
-        File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;.&quot;</span>);
-        System.out.println(<span class="hljs-string">&quot;Absolute path: &quot;</span> + file.getCanonicalFile().getAbsolutePath());
-        System.out.println(<span class="hljs-string">&quot;Is directory: &quot;</span> + file.isDirectory());
-        System.out.println(<span class="hljs-string">&quot;Is directory: &quot;</span> + file.isFile());
-        System.out.println(<span class="hljs-string">&quot;Is directory: &quot;</span> + file.exists());
-
-        Optional.ofNullable(file.listFiles()).stream().flatMap(Arrays::stream)
-                .forEach(subFile -&gt; {
-                    <span class="hljs-keyword">try</span> {
-                        System.out.println(<span class="hljs-string">&quot;Sub file absolute path: &quot;</span> + subFile.getCanonicalFile().getAbsolutePath());
-                    } <span class="hljs-keyword">catch</span> (Exception ex) {
-                        System.out.println(<span class="hljs-string">&quot;Something went wrong: &quot;</span> + ex.getMessage());
-                    }
-                });
-
-        Path path = file.toPath().toAbsolutePath().normalize();
-        System.out.println(<span class="hljs-string">&quot;Absolute path: &quot;</span> + path.toString());
-        System.out.println(<span class="hljs-string">&quot;Parent absolute path: &quot;</span> + path.getParent().toString());
-
-        <span class="hljs-keyword">try</span> (Stream&lt;Path&gt; stream = Files.list(path)) {
-            stream.forEach(subPath -&gt; {
-                System.out.println(<span class="hljs-string">&quot;Sub file absolute path: &quot;</span> + subPath.toAbsolutePath().toString());
-            });
-        }
-
-        <span class="hljs-keyword">try</span> (Stream&lt;Path&gt; stream = Files.walk(path, <span class="hljs-number">2</span>)) {
-            stream.forEach(subPath -&gt; {
-                System.out.println(<span class="hljs-string">&quot;Sub file absolute path: &quot;</span> + subPath.toAbsolutePath().toString());
-            });
-        }
-
-        Files.walkFileTree(path, <span class="hljs-keyword">new</span> SimpleFileVisitor&lt;&gt;() {
-            <span class="hljs-meta">@Override</span>
-            <span class="hljs-function"><span class="hljs-keyword">public</span> FileVisitResult <span class="hljs-title">visitFile</span><span class="hljs-params">(Path subPath, BasicFileAttributes attrs)</span> </span>{
-                <span class="hljs-keyword">if</span> (!Files.isDirectory(subPath) &amp;&amp; subPath.toString().endsWith(<span class="hljs-string">&quot;java&quot;</span>)) {
-                    System.out.println(<span class="hljs-string">&quot;Sub file absolute path: &quot;</span> + subPath.toAbsolutePath().toString());
-                }
-                <span class="hljs-keyword">return</span> FileVisitResult.CONTINUE;
-            }
-        });
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
-<h1>Język Java: obsługa czasu</h1>
-<p>Czas lokalny opisuje czas w danej strefie czasowej.</p>
-<p><code>2021-01-01T00:00</code></p>
-<p>Dodatkowo czas lokalny może zostać rozszerzony o informacje o:</p>
-<ul>
-<li>przesunięciu czasowym definiowanym w godzinach względem UTC<br />
-<code>2021-01-01T00:00+02:00</code></li>
-<li>strefie czasowej definiowanej identyfikatorem strefy czasowej oraz przesunięciem czasowym względem UTC<br />
-<code>2021-07-01T00:00+02:00[Europe/Warsaw]</code></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
-<h1>Język Java: obsługa czasu</h1>
-<p>Jedna strefa czasowa może przyjmować dwa różne przesunięcia czasowe w zależności od pory roku.</p>
-<p>Dla przykładu polska strefa czasowa: <code>Europe/Warsaw</code> przyjmuje przesunięcie +1h w zimie oraz +2h w lecie. Związane jest to ze zmianą czasu na czas letni (ang. Daylight Saving Time, DST).</p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Czas zimowy: 2021-01-01T00:00+01:00[Europe/Warsaw]
-Czas letni: 2021-07-01T00:00+02:00[Europe/Warsaw]
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
-<h1>Język Java: obsługa czasu</h1>
-<p>UTC (ang. Universal Time Coordinated) to wzorcowy czas koordynowany względem czasu słonecznego oraz nieuwzględniający zmian czasu.</p>
-<p>Znany również pod swoją wojskową nazwą Zulu time (czas Zulu, Z). Litera &quot;z&quot; oznacza południk zerowy, czyli długość geograficzną 0.</p>
-<p>Jest następcą GMT (ang. Greenwich Mean Time).</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
-<h1>Język Java: obsługa czasu</h1>
-<p>Do zarządzenia czasem i datą służy pakiet <code>java.time</code>. Do głównych klas należą:</p>
-<ul>
-<li><code>Instant</code>: reprezentuje dany moment w czasie.</li>
-<li><code>LocalDate</code>: informacje o lokalnej dacie.</li>
-<li><code>LocalDateTime</code>: informacje o lokalnej dacie wraz z czasem.</li>
-<li><code>OffsetDateTime</code>: informacje o dacie wraz z czasem wzbogaconej o offset czasowy.</li>
-<li><code>ZonedDateTime</code>: informacje o dacie wraz z czasem wzbogaconej o offset czasowy oraz strefę czasową.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
-<h1>Język Java: obsługa czasu</h1>
-<p>W systemach informatycznych używane jest pojęcie <code>Unix epoch</code>. Jest to ilość sekund, które upłynęły od 1970-01-01 00:00 UTC.</p>
-<p>Obiekty <code>Instant</code> przechowują dane w postaci sekund i nanosekund w formacie <code>Unix epoch</code>. Obiekty te nie przechowują kontekstu przesunięcia czasowego czy strefy czasowej.</p>
-<p>Stała <code>Instant.EPOCH</code> wewnętrznie reprezentowana jest przez 0 sekund i 0 nanosekund.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
-<h1><strong>Programowanie: przykład 44</strong></h1>
-<p>Przykładowe użycie klas <code>LocalDateTime</code>, <code>ZonedDateTime</code> oraz <code>ZonedDateTime</code>.</p>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.time.LocalDateTime;
-<span class="hljs-keyword">import</span> java.time.ZoneId;
-<span class="hljs-keyword">import</span> java.time.ZonedDateTime;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        System.out.printf(<span class="hljs-string">&quot;##### Local%n&quot;</span>);
-
-        <span class="hljs-comment">// Winter</span>
-        LocalDateTime winterLocal = LocalDateTime.of(<span class="hljs-number">2021</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
-        <span class="hljs-comment">// Summer</span>
-        LocalDateTime summerLocal = LocalDateTime.parse(<span class="hljs-string">&quot;2021-07-01T00:00:00&quot;</span>);
-
-        System.out.println(<span class="hljs-string">&quot;Winter Local: &quot;</span> + winterLocal);
-        System.out.println(<span class="hljs-string">&quot;Summer Local: &quot;</span> + summerLocal);
-
-        System.out.printf(<span class="hljs-string">&quot;%n##### Same instant%n&quot;</span>);
-
-        <span class="hljs-comment">// Zones</span>
-        ZoneId warsawZone = ZoneId.of(<span class="hljs-string">&quot;Europe/Warsaw&quot;</span>);
-        ZoneId dublinZone = ZoneId.of(<span class="hljs-string">&quot;Europe/Dublin&quot;</span>);
-
-        ZonedDateTime winterWarsawZone = ZonedDateTime.of(winterLocal, warsawZone);
-        ZonedDateTime summerWarsawZone = ZonedDateTime.of(summerLocal, warsawZone);
-
-        System.out.println(<span class="hljs-string">&quot;Winter Warsaw Zoned: &quot;</span> + winterWarsawZone);
-        System.out.println(<span class="hljs-string">&quot;Summer Warsaw Zoned: &quot;</span> + summerWarsawZone);
-
-        System.out.println(<span class="hljs-string">&quot;Winter Warsaw Offset: &quot;</span> + winterWarsawZone.toOffsetDateTime());
-        System.out.println(<span class="hljs-string">&quot;Summer Warsaw Offset: &quot;</span> + summerWarsawZone.toOffsetDateTime());
-
-        System.out.println(<span class="hljs-string">&quot;Winter Dublin Zoned: &quot;</span> + winterWarsawZone.withZoneSameInstant(dublinZone));
-        System.out.println(<span class="hljs-string">&quot;Summer Dublin Zoned: &quot;</span> + summerWarsawZone.withZoneSameInstant(dublinZone));
-
-        System.out.println(<span class="hljs-string">&quot;Winter Dublin Offset: &quot;</span> + winterWarsawZone.withZoneSameInstant(dublinZone).toOffsetDateTime());
-        System.out.println(<span class="hljs-string">&quot;Summer Dublin Offset: &quot;</span> + summerWarsawZone.withZoneSameInstant(dublinZone).toOffsetDateTime());
-
-        System.out.printf(<span class="hljs-string">&quot;%n##### Same local%n&quot;</span>);
-
-        System.out.println(<span class="hljs-string">&quot;Winter Warsaw Zoned: &quot;</span> + winterWarsawZone);
-        System.out.println(<span class="hljs-string">&quot;Summer Warsaw Zoned: &quot;</span> + summerWarsawZone);
-
-        System.out.println(<span class="hljs-string">&quot;Winter Dublin Zoned (same local): &quot;</span> + winterWarsawZone.withZoneSameLocal(dublinZone));
-        System.out.println(<span class="hljs-string">&quot;Summer Dublin Zoned (same local): &quot;</span> + summerWarsawZone.withZoneSameLocal(dublinZone));
-    }
-}
-</span></span></foreignObject></svg></code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
-<h1><strong>Programowanie: przykład 45</strong></h1>
-<p>Formatowanie klas opisujących datę oraz czas.</p>
-<pre><code class="language-java"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> java.time.LocalDateTime;
-<span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;
-<span class="hljs-keyword">import</span> java.time.format.FormatStyle;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        LocalDateTime value = LocalDateTime.parse(<span class="hljs-string">&quot;2021-07-01T01:21:31&quot;</span>);
-
-        System.out.println(<span class="hljs-string">&quot;toString: &quot;</span> + value.toString());
-        System.out.println(<span class="hljs-string">&quot;ISO_DATE_TIME: &quot;</span> + value.format(DateTimeFormatter.ISO_DATE_TIME));
-        System.out.println(<span class="hljs-string">&quot;ISO_LOCAL_DATE_TIME: &quot;</span> + value.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-        System.out.println(<span class="hljs-string">&quot;ISO_LOCAL_DATE: &quot;</span> + value.format(DateTimeFormatter.ISO_LOCAL_DATE));
-        System.out.println(<span class="hljs-string">&quot;LocalizedDateTime MEDIUM: &quot;</span> + value.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)));
-        System.out.println(<span class="hljs-string">&quot;LocalizedDate FULL: &quot;</span> + value.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
-        System.out.println(<span class="hljs-string">&quot;custom: &quot;</span> + value.format(DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yyyy/MM/dd HH:mm:ss&quot;</span>)));
-        System.out.println(<span class="hljs-string">&quot;custom: &quot;</span> + value.format(DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yy/M/d H:m:s&quot;</span>)));
-        System.out.println(<span class="hljs-string">&quot;custom: &quot;</span> + value.format(DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yy/M/d H:m:s&quot;</span>)));
     }
 }
 </span></span></foreignObject></svg></code></pre>

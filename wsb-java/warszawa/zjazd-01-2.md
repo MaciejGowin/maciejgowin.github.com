@@ -87,6 +87,8 @@ Jeżeli pierwszym indeksem jest 0, możemy wywnioskować, że dla tabeli o rozmi
 - pierwszym indeksem będzie 0
 - ostatnim indeksem będzie 9 (uogólniając `n - 1`)
 
+> W przypadku próby dostępu do nieistniejącego indeksu tablicy (np. n + 1) zostanie zgłoszony wyjątek `ArrayIndexOutOfBoundsException`.
+
 ---
 # Język Java: tablice
 

@@ -56,61 +56,109 @@ title: Plan
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (16/32)
 
 - Kontrakt Object.equals i Object.hashCode
-- Klasy szablonowe.
+- Typy generyczne/klasy szablonowe.
 - Wbudowane kolekcje.
 - Typy wyliczeniowe.
 - Klasy zagnieżdżone.
 - Klasy anonimowe.
 - Zmienne i metody final.
 - Rzutowanie typów.
+
+## Zjazd 3 - Dzień 2
+**Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (24/32)
+
 - Adnotacje.
 - Refleksja.
 - Standard Unicode oraz kodowanie UTF-8/UTF-16.
 - Operacje na ciągach znaków.
 - Wyrażenia regularne.
-
-## Zjazd 3 - Dzień 2
-**Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (24/32)
-
-- Wyrażenia lambda.
+- Interfejs funkcyjny oraz wyrażenia lambda.
 - Strumienie (streams).
-- Klasa Optional.
-- Operacje wejścia/wyjścia.
-- Obsługa systemu plików.
-- Obsługa czasu.
-- Obsługa wyjątków.
-- Wzorce projektowe.
-- Tworzenie bibliotek.
-- Budowanie aplikacji przy użyciu narzędzia Maven.
 
 ## Zjazd 4 - Dzień 1
 **Moduł:** PROGRAMOWANIE OBIEKTOWE W JAVIE (32/32)
 
+- Klasa Optional.
+- Referencje do metod.
+- Obsługa wyjątków.
+- Operacje wejścia/wyjścia.
+- Obsługa systemu plików.
+- Obsługa czasu.
+- Konstrukcja varargs.
+
+Wielowątkowość - Przeniesione na Zjazd 7 Dzień 2:
 - Wprowadzenie do wielowątkowości.
 - Process a wątek.
 - Wątki: tworzenie i zarządzanie.
 - Podstawowe problemy dla aplikacji wielowątkowych.
 
-## Zjazd 4/2
+## Zjazd 4 - Dzień 2
+**Moduł:** WSTĘP DO NARZĘDZI PROGRAMISTYCZNYCH (8/8)
+
+- Tworzenie bibliotek.
+- Automatyzacja procesu budowania.
+- Systemy budowania: Ant oraz Maven.
+- Wprowadzenie do Ant oraz Maven.
+- Budowanie aplikacji przy użyciu narzędzia Maven.
+- Kontrola wersji oraz współdzielenie kodu.
+- Wprowadzenie do Git.
+- Zarządzanie wersjami przy użyciu narzędzia Git.
+
+## Zjazd 5 - Dzień 1
 **Moduł:** BAZY DANYCH (8/16)
 
-## Zjazd 5/1
+- Wprowadzenie do zapisu danych oraz formatów przechowywania danych.
+- Wprowadzenie do baz danych.
+- Relacyjne bazy danych - podstawowe pojęcia.
+- Typy relacji.
+- Wprowadzenie do MySQL.
+- MySQL w praktyce.
+
+## Zjazd 5 - Dzień 2
 **Moduł:** BAZY DANYCH (16/16)
 
-## Zjazd 5/2
+- MySQL w praktyce.
+- Klucze oraz indeksy.
+- Transakcje.
+- Zasady ACID.
+- Normalizacja baz danych.
+
+## Zjazd 6 - Dzień 1
 **Moduł:** ORM – MAPOWANIE OBIEKTOWO-RELACYJNE (8/32)
 
-## Zjazd 6/1
+- Połączenie z bazą danych.
+- JDBC.
+- Sterowniki baz danych.
+- Obsługa bazy danych przy pomocy pakiety java.sql.
+- Ładowanie zasobów.
+- Porównanie ORM, JPA oraz Hibernate.
+- Klasy a tabele.
+- Hibernate i mapowania.
+
+## Zjazd 6 - Dzień 2
 **Moduł:** ORM – MAPOWANIE OBIEKTOWO-RELACYJNE (16/32)
 
-## Zjazd 6/2
+- Hibernate w szczegółach
+- Konfiguracja przez XML, properties oraz adnotacje.
+- Sesje oraz zapytania i transakcje.
+- Stany obiektów w sesji.
+- POJO vs Java Bean vs encje
+- Sesja oraz zapisywanie, ładowanie, modyfikowanie i usuwanie.
+
+## Zjazd 7 - Dzień 1
 **Moduł:** ORM – MAPOWANIE OBIEKTOWO-RELACYJNE (24/32)
 
-## Zjazd 7/1
+- Zapytania w szczegółach.
+- Relacje.
+
+## Zjazd 7 - Dzień 2
 **Moduł:** ORM – MAPOWANIE OBIEKTOWO-RELACYJNE (32/32)
 
-## Zjazd 7/2
-**Moduł:** WSTĘP DO NARZĘDZI PROGRAMISTYCZNYCH (8/8)
+Wielowątkowość - Przeniesione ze Zjazd 4 Dzień 1:
+- Wprowadzenie do wielowątkowości.
+- Process a wątek.
+- Wątki: tworzenie i zarządzanie.
+- Podstawowe problemy dla aplikacji wielowątkowych.
 
 ## Zjazd 8/1
 **Moduł:** PROGRAMOWANIE APLIKACJI WEBOWYCH (SPRING FRAMEWORK) (8/24)
