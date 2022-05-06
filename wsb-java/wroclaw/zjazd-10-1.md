@@ -17,7 +17,12 @@
 - JUnit i testy jednostkowe
 - JUnit oraz umiejscowienie testów Maven
 - Cykl Maven dla testów
+
+---
+# Zawartość
+
 - Mockito i mockowanie zależności
 - Testy integracyjne
 - Testy Spring
 - Automatyzacja testów: Selenium/Robot Framework, Cucumber/Gherkin
+- Automatyzacja testów: Gatling
