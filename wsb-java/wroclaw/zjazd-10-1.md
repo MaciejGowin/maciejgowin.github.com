@@ -14,15 +14,18 @@
 - Serwery aplikacji a chmura
 - Bazy NoSQL
 - Typy testów
-- JUnit i testy jednostkowe
-- JUnit oraz umiejscowienie testów Maven
+- JUnit5 i testy jednostkowe
+- JUnit5 oraz umiejscowienie testów Maven
 - Cykl Maven dla testów
+- AssertJ
+- Zadania z testów
 
 ---
 # Zawartość
 
 - Mockito i mockowanie zależności
-- Testy integracyjne
 - Testy Spring
-- Automatyzacja testów: Selenium/Robot Framework, Cucumber/Gherkin
-- Automatyzacja testów: Gatling
+- Testy integracyjne
+- Zadania z testów
+- Automatyzacja testów: Selenium/Robot Framework, Cucumber/Gherkin (prosty opis)
+- Automatyzacja testów: Gatling (przyład)

@@ -7,6 +7,230 @@
 ### Zjazd 10 - dzień 2
 
 ---
-# Testowanie aplikacji
+# Test Driven Development
 
-Przykłady
+W klasycznym podejściu rozwoju oprogramowania właściwy kod programu powstaje przed powstaniem testów, w tym testów jednostkowych.
+
+Możliwe jest odwrócenie tego procesu, a podejście to jest opisywane jako Test Driven Development.
+
+---
+# Test Driven Development
+
+Test Driven Development (ang. TDD) to podejście do tworzenia oprogramowanie, w którym głównym nacisk kładzie się na rozwijanie testów.
+
+Opiera się ono na tworzeniu testów przed stworzeniem właściwego kodu programu.
+
+---
+# Test Driven Development
+
+Cykl tworzenia opiera się na kilku krokach:
+
+- dodaj test,
+- uruchom test, który powinien zwrócić błąd,
+- zaimplementuj funkcjonalność w najprostszy możliwy sposób,
+- wszystkie testy powinny zakończyć się sukcesem,
+- zrefaktoruj kod w razie potrzeby, upewniając się, że wszystkie testy zawracają sukces.
+
+---
+# Test Driven Development
+
+Oczywiście podejście TDD może być używane nie tylko przy okazji pisania testów jednostkowych, ale też testów integracyjnych.
+
+Definiuje ono jedynie model pracy i tworzenia oprogramowania.
+
+---
+# Behavioral Driven Development
+
+BDD (behavior-driven development) jest rozszerzeniem podejścia TDD. Podobnie jak w przypadku TDD rozwój oprogramowania opiera się na początkowym tworzeniu testów. Główną różnicą jest samo podejście do opisu testów.
+
+W podejściu BDD testy opisują zachowanie i oczekiwane efekty tego zachowania - w przeciwieństwie do prostych testów jednostkowych, które opisuje mały wycinek funkcjonalności, która jest przedmiotem testów.
+
+---
+# Behavioral Driven Development
+
+Istnieje szereg narzędzi, które pozwalają na opisywanie zachowań oraz testów przy pomocy podejścia BDD w sposób zrozumiały dla użytkowników nietechnicznych takich jak analitycy biznesu czy testerzy manualni.
+
+Dzięki temu możemy oddzielić definicję zachowań aplikacji od samej implementacji testów oraz umożliwić definicję testów behawioralnych nie tylko na poziomie kodu.
+
+---
+# Cucumber
+
+Narzędzie `Cucumber` jest narzędziem wspierającym rozwój oprogramowania na podstawie koncepcji BDD. Testy definiowane są za pomocą specjalnego języka `Gherkin`.
+
+Gherkin pozwala na definiowanie zachowań oprogramowania w sposób zrozumiały nie tylko dla programistów, ale też użytkowników. Dzięki temu opis testów może posłużyć jako definicja funkcjonalności danego oprogramowania.
+
+W wielu przypadkach Cucumber jest używany wraz z innymi narzędziami wspierającymi testowania oprogramowania. Dodatkowo wspiera wiele języków programowania w połączeniu, z którymi może zostać użyty.
+
+---
+# Cucumber - Gherkin
+
+Testy definiujemy w plikach `.feature`, które opisują daną funkcjonalność. Format pliku oraz słowa kluczowe są definiowane przez język Gherkin.
+
+```
+Feature: bank account operations
+
+    Back account operations
+
+    Scenario: Customer wants to add money to his bank account
+        Given account balance is 100
+        When customer adds 50
+        Then account balance is 150
+
+    Scenario: Customer wants to withdraw money from his bank account
+        ...
+```
+
+---
+# Cucumber - Gherkin
+
+Do słów kluczowych zaliczamy:
+
+`Feature` - każda z funkcjonalności może zawierać jeden lub więcej scenariuszy oraz opisuje daną funkcjonalność oprogramowania.
+`Scenario` - opisuje konkretny test, który zostanie wykonany. Scenariusze składają się z kroków, które sprawdzają dane zdarzenie.
+
+Oraz kroki (ang. steps):
+
+`Given` - opisuje warunki początkowe oraz stan przed uruchomieniem testów
+`When` - opisuje akcje wykonane przez użytkownika podczas testu
+`Then` - opisuje rezultaty testów
+
+---
+# Cucumber - Gherkin
+
+Kroki budujące scenariusze mogą być rozumiane jako wywołania funkcji. Aby mechanizm Cucumber mógł wykonać dany scenariusz, należy zdefiniować sposób, w jaki krok powinien zostać przetworzony.
+
+Definicja kroków odbywa się na poziomie kodu źródłowego testów.
+
+---
+# Cucumber - Gherkin
+
+```
+    @Given("account balance is set to {value}")
+    public void account_balance_is_set_to(double value) {
+        /* ... */
+    }
+
+    @When("customer adds {value}")
+    public void customer_adds(double value) {
+        /* ... */
+    }
+
+    @Then("account balance is {value}")
+    public void account_balance_is(double value) {
+        /* ... */
+    }
+```
+
+---
+# **Programowanie: przyklad-cucumber**
+
+Implementacja testów przy pomocy biblioteki Cucumber. Do wykonania testów użyj standardowego kroku:
+
+```
+mvn test
+```
+
+---
+# Testy manualne
+
+Testowanie manualne opierają się na manualnym sprawdzeniu aplikacji.
+
+Testy te najczęściej dotyczą stron internetowych oraz aplikacji mobilnych - czyli interfejsów użytkownika. Podczas ich wykonywania implicite testowane są też rozwiązania backendowe, które są konsumowane przez aplikacje frontendowe.
+
+Błędy pojawiające się podczas testów manualnych mogą wynikać z błędów na poziomie FE oraz BE.
+
+---
+# Testy manualne - problemy
+
+Wyobraźmy sobie aplikacje do logowania użytkowników.
+
+Przy dowolnej zmianie ekranu logowania lub też systemu wspierającego zapytania logowania wymagane jest przetestowanie aplikacji w celu sprawdzenia poprawności jej działania.
+
+Krok ten powinien być wykonany przy każdej nowej wersji aplikacji. W przypadku testów manualnych musimy wykonać powtarzalną czynność, której kroki będą identyczne w każdej iteracji rozwoju oprogramowania.
+
+---
+# Testy automatyczne
+
+Aby rozwiązać problem powtarzalności manualnych testów, wprowadzamy testy automatyczne.
+
+Testy automatyczne mają na celu zautomatyzowanie czynności, które musielibyśmy wykonać przy każdorazowej weryfikacji oprogramowania.
+
+Testy te są oparte na skryptach, które imitują czynności wykonywane przez testera manualnego i mogą zostać uruchomione w dowolnym momencie.
+
+---
+# Testy automatyczne
+
+Aby zdefiniować test automatyczny, w większości przypadków definiujemy scenariusz testu, czyli kroki, które test powinien wykonać.
+
+Skrypt definiujący kroki imituje zachowanie testera manualnego oraz stara się wykonać analogiczne czynności.
+
+Uruchomienie skryptu równoznaczne jest z wykonaniem testu.
+
+---
+# Testy automatyczne
+
+Istnieje szereg systemów ułatwiających wykonywanie testów automatycznych. 
+
+Dla przykładu: do tej pory używaliśmy narzędzia Cucumber do testów jednostkowych aplikacji. Równie dobrze moglibyśmy użyć tego narzędzia do stworzenia
+scenariuszy testów automatycznych dla istniejącej aplikacji backend. Kroki odpowiadałyby wywołaniom API zdefiniowanego przez aplikację webową.
+
+---
+# Testy automatyczne
+
+Testowanie systemu backendowego takiego jak aplikacja backend wydaje się stosunkowo proste. Wywołania API mogą zostać wykonane z poziomu kodu programu.
+
+Istnieje też możliwość automatycznego testowania aplikacji webowych, w tym stron internetowych. Testy te imitują zachowanie użytkownika przechodzącego po kolejnych stronach oraz wykonujących działania na stronie.
+
+---
+# Testy automatyczne - Selenium
+
+Przykładem narzędzia, które wspiera automatyczne testowanie aplikacji webowych - stron internetowych jest narządzie Selenium.
+
+Selenium pozwala na definiowanie testów przy pomocy wielu języków - w tym Java.
+
+---
+# **Programowanie: przyklad-selenium**
+
+Przykładowa automatyzacja akcji na stornie internetowej.
+
+---
+# Testy automatyczne - łączenie rozwiązań
+
+Jak widać rozwiązania i narzędzia testujące łączą się w łatwy sposób. Używając poznanych bibliotek, moglibyśmy zdefiniować scenariusze testów przy pomocy Cucumber, gdzie kroki testów wykorzystywałyby Selenium do wykonywania akcji na stornie internetowej.
+
+---
+# Testy wydajnościowe
+
+Aplikacje backendowa uruchomiona na serwerze jest w stanie obsłużyć ograniczoną ilość zapytań.
+
+Ograniczenia te mogą wynikać z różnych czynników takich jak:
+- zasobów serwera (procesor, pamięć),
+- wymogów pamięciowych aplikacji,
+- złożoności obliczeniowej aplikacji,
+- ilości przypisanych wątków
+- czasu przetworzenia zapytania
+- wydajności zależności.
+
+Testy sprawdzające zachowanie aplikacji dla określonego obciążenia to testy wydajnościowe.
+
+---
+# Testy wydajnościowe
+
+Testy wydajnościowe przyjmują formę eksperymentowania i sprawdzania aplikacji w różnych warunkach.
+
+Ich analiza opera się na 3 głównych aspektach:
+- zachowanie w czasie: zdolność systemu do reagowania na dane wejściowe użytkownika lub systemu w określonym czasie i w określonych warunkach,
+- wykorzystanie zasobów: ilość zasobów wymaganych przez system do poprawnego działania,
+- przepustowość: ograniczenie systemu w zakresie limitów wydajnościowych (np. ograniczenia w ilości zapytań).
+
+---
+# Testy wydajnościowe - Gatling
+
+Gatling jest narzędziem pozwalającym na łatwe tworzenie testów wydajnościowych oraz ich automatyzację.
+
+Testy opierają się na symulacjach wywołań aplikacji oraz zapisywaniu rezultatów dla danych warunków wykonywania.
+
+---
+# **Programowanie: przyklad-gatling**
+
+Test wydajnościowy dla RESTful API.

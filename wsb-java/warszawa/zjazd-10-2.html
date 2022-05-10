@@ -16,8 +16,182 @@
 <h3>Zjazd 10 - dzień 2</h3>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
-<h1>Testowanie aplikacji</h1>
-<p>Przykłady</p>
+<h1>Test Driven Development</h1>
+<p>W klasycznym podejściu rozwoju oprogramowania właściwy kod programu powstaje przed powstaniem testów, w tym testów jednostkowych.</p>
+<p>Możliwe jest odwrócenie tego procesu, a podejście to jest opisywane jako Test Driven Development.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
+<h1>Test Driven Development</h1>
+<p>Test Driven Development (ang. TDD) to podejście do tworzenia oprogramowanie, w którym głównym nacisk kładzie się na rozwijanie testów.</p>
+<p>Opiera się ono na tworzeniu testów przed stworzeniem właściwego kodu programu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
+<h1>Test Driven Development</h1>
+<p>Cykl tworzenia opiera się na kilku krokach:</p>
+<ul>
+<li>dodaj test,</li>
+<li>uruchom test, który powinien zwrócić błąd,</li>
+<li>zaimplementuj funkcjonalność w najprostszy możliwy sposób,</li>
+<li>wszystkie testy powinny zakończyć się sukcesem,</li>
+<li>zrefaktoruj kod w razie potrzeby, upewniając się, że wszystkie testy zawracają sukces.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
+<h1>Test Driven Development</h1>
+<p>Oczywiście podejście TDD może być używane nie tylko przy okazji pisania testów jednostkowych, ale też testów integracyjnych.</p>
+<p>Definiuje ono jedynie model pracy i tworzenia oprogramowania.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
+<h1>Behavioral Driven Development</h1>
+<p>BDD (behavior-driven development) jest rozszerzeniem podejścia TDD. Podobnie jak w przypadku TDD rozwój oprogramowania opiera się na początkowym tworzeniu testów. Główną różnicą jest samo podejście do opisu testów.</p>
+<p>W podejściu BDD testy opisują zachowanie i oczekiwane efekty tego zachowania - w przeciwieństwie do prostych testów jednostkowych, które opisuje mały wycinek funkcjonalności, która jest przedmiotem testów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
+<h1>Behavioral Driven Development</h1>
+<p>Istnieje szereg narzędzi, które pozwalają na opisywanie zachowań oraz testów przy pomocy podejścia BDD w sposób zrozumiały dla użytkowników nietechnicznych takich jak analitycy biznesu czy testerzy manualni.</p>
+<p>Dzięki temu możemy oddzielić definicję zachowań aplikacji od samej implementacji testów oraz umożliwić definicję testów behawioralnych nie tylko na poziomie kodu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
+<h1>Cucumber</h1>
+<p>Narzędzie <code>Cucumber</code> jest narzędziem wspierającym rozwój oprogramowania na podstawie koncepcji BDD. Testy definiowane są za pomocą specjalnego języka <code>Gherkin</code>.</p>
+<p>Gherkin pozwala na definiowanie zachowań oprogramowania w sposób zrozumiały nie tylko dla programistów, ale też użytkowników. Dzięki temu opis testów może posłużyć jako definicja funkcjonalności danego oprogramowania.</p>
+<p>W wielu przypadkach Cucumber jest używany wraz z innymi narzędziami wspierającymi testowania oprogramowania. Dodatkowo wspiera wiele języków programowania w połączeniu, z którymi może zostać użyty.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
+<h1>Cucumber - Gherkin</h1>
+<p>Testy definiujemy w plikach <code>.feature</code>, które opisują daną funkcjonalność. Format pliku oraz słowa kluczowe są definiowane przez język Gherkin.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>Feature: bank account operations
+
+    Back account operations
+
+    Scenario: Customer wants to add money to his bank account
+        Given account balance is 100
+        When customer adds 50
+        Then account balance is 150
+
+    Scenario: Customer wants to withdraw money from his bank account
+        ...
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
+<h1>Cucumber - Gherkin</h1>
+<p>Do słów kluczowych zaliczamy:</p>
+<p><code>Feature</code> - każda z funkcjonalności może zawierać jeden lub więcej scenariuszy oraz opisuje daną funkcjonalność oprogramowania.<br />
+<code>Scenario</code> - opisuje konkretny test, który zostanie wykonany. Scenariusze składają się z kroków, które sprawdzają dane zdarzenie.</p>
+<p>Oraz kroki (ang. steps):</p>
+<p><code>Given</code> - opisuje warunki początkowe oraz stan przed uruchomieniem testów<br />
+<code>When</code> - opisuje akcje wykonane przez użytkownika podczas testu<br />
+<code>Then</code> - opisuje rezultaty testów</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
+<h1>Cucumber - Gherkin</h1>
+<p>Kroki budujące scenariusze mogą być rozumiane jako wywołania funkcji. Aby mechanizm Cucumber mógł wykonać dany scenariusz, należy zdefiniować sposób, w jaki krok powinien zostać przetworzony.</p>
+<p>Definicja kroków odbywa się na poziomie kodu źródłowego testów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
+<h1>Cucumber - Gherkin</h1>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    @Given(&quot;account balance is set to {value}&quot;)
+    public void account_balance_is_set_to(double value) {
+        /* ... */
+    }
+
+    @When(&quot;customer adds {value}&quot;)
+    public void customer_adds(double value) {
+        /* ... */
+    }
+
+    @Then(&quot;account balance is {value}&quot;)
+    public void account_balance_is(double value) {
+        /* ... */
+    }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
+<h1><strong>Programowanie: przyklad-cucumber</strong></h1>
+<p>Implementacja testów przy pomocy biblioteki Cucumber. Do wykonania testów użyj standardowego kroku:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>mvn test
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
+<h1>Testy manualne</h1>
+<p>Testowanie manualne opierają się na manualnym sprawdzeniu aplikacji.</p>
+<p>Testy te najczęściej dotyczą stron internetowych oraz aplikacji mobilnych - czyli interfejsów użytkownika. Podczas ich wykonywania implicite testowane są też rozwiązania backendowe, które są konsumowane przez aplikacje frontendowe.</p>
+<p>Błędy pojawiające się podczas testów manualnych mogą wynikać z błędów na poziomie FE oraz BE.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<h1>Testy manualne - problemy</h1>
+<p>Wyobraźmy sobie aplikacje do logowania użytkowników.</p>
+<p>Przy dowolnej zmianie ekranu logowania lub też systemu wspierającego zapytania logowania wymagane jest przetestowanie aplikacji w celu sprawdzenia poprawności jej działania.</p>
+<p>Krok ten powinien być wykonany przy każdej nowej wersji aplikacji. W przypadku testów manualnych musimy wykonać powtarzalną czynność, której kroki będą identyczne w każdej iteracji rozwoju oprogramowania.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>Testy automatyczne</h1>
+<p>Aby rozwiązać problem powtarzalności manualnych testów, wprowadzamy testy automatyczne.</p>
+<p>Testy automatyczne mają na celu zautomatyzowanie czynności, które musielibyśmy wykonać przy każdorazowej weryfikacji oprogramowania.</p>
+<p>Testy te są oparte na skryptach, które imitują czynności wykonywane przez testera manualnego i mogą zostać uruchomione w dowolnym momencie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>Testy automatyczne</h1>
+<p>Aby zdefiniować test automatyczny, w większości przypadków definiujemy scenariusz testu, czyli kroki, które test powinien wykonać.</p>
+<p>Skrypt definiujący kroki imituje zachowanie testera manualnego oraz stara się wykonać analogiczne czynności.</p>
+<p>Uruchomienie skryptu równoznaczne jest z wykonaniem testu.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+<h1>Testy automatyczne</h1>
+<p>Istnieje szereg systemów ułatwiających wykonywanie testów automatycznych.</p>
+<p>Dla przykładu: do tej pory używaliśmy narzędzia Cucumber do testów jednostkowych aplikacji. Równie dobrze moglibyśmy użyć tego narzędzia do stworzenia<br />
+scenariuszy testów automatycznych dla istniejącej aplikacji backend. Kroki odpowiadałyby wywołaniom API zdefiniowanego przez aplikację webową.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+<h1>Testy automatyczne</h1>
+<p>Testowanie systemu backendowego takiego jak aplikacja backend wydaje się stosunkowo proste. Wywołania API mogą zostać wykonane z poziomu kodu programu.</p>
+<p>Istnieje też możliwość automatycznego testowania aplikacji webowych, w tym stron internetowych. Testy te imitują zachowanie użytkownika przechodzącego po kolejnych stronach oraz wykonujących działania na stronie.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
+<h1>Testy automatyczne - Selenium</h1>
+<p>Przykładem narzędzia, które wspiera automatyczne testowanie aplikacji webowych - stron internetowych jest narządzie Selenium.</p>
+<p>Selenium pozwala na definiowanie testów przy pomocy wielu języków - w tym Java.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h1><strong>Programowanie: przyklad-selenium</strong></h1>
+<p>Przykładowa automatyzacja akcji na stornie internetowej.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Testy automatyczne - łączenie rozwiązań</h1>
+<p>Jak widać rozwiązania i narzędzia testujące łączą się w łatwy sposób. Używając poznanych bibliotek, moglibyśmy zdefiniować scenariusze testów przy pomocy Cucumber, gdzie kroki testów wykorzystywałyby Selenium do wykonywania akcji na stornie internetowej.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h1>Testy wydajnościowe</h1>
+<p>Aplikacje backendowa uruchomiona na serwerze jest w stanie obsłużyć ograniczoną ilość zapytań.</p>
+<p>Ograniczenia te mogą wynikać z różnych czynników takich jak:</p>
+<ul>
+<li>zasobów serwera (procesor, pamięć),</li>
+<li>wymogów pamięciowych aplikacji,</li>
+<li>złożoności obliczeniowej aplikacji,</li>
+<li>ilości przypisanych wątków</li>
+<li>czasu przetworzenia zapytania</li>
+<li>wydajności zależności.</li>
+</ul>
+<p>Testy sprawdzające zachowanie aplikacji dla określonego obciążenia to testy wydajnościowe.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h1>Testy wydajnościowe</h1>
+<p>Testy wydajnościowe przyjmują formę eksperymentowania i sprawdzania aplikacji w różnych warunkach.</p>
+<p>Ich analiza opera się na 3 głównych aspektach:</p>
+<ul>
+<li>zachowanie w czasie: zdolność systemu do reagowania na dane wejściowe użytkownika lub systemu w określonym czasie i w określonych warunkach,</li>
+<li>wykorzystanie zasobów: ilość zasobów wymaganych przez system do poprawnego działania,</li>
+<li>przepustowość: ograniczenie systemu w zakresie limitów wydajnościowych (np. ograniczenia w ilości zapytań).</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h1>Testy wydajnościowe - Gatling</h1>
+<p>Gatling jest narzędziem pozwalającym na łatwe tworzenie testów wydajnościowych oraz ich automatyzację.</p>
+<p>Testy opierają się na symulacjach wywołań aplikacji oraz zapisywaniu rezultatów dla danych warunków wykonywania.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h1><strong>Programowanie: przyklad-gatling</strong></h1>
+<p>Test wydajnościowy dla RESTful API.</p>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.4.1/lib/bespoke.js.LICENSE.txt */
