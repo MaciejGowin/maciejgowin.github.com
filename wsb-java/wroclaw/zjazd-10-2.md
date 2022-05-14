@@ -234,3 +234,13 @@ Testy opierają się na symulacjach wywołań aplikacji oraz zapisywaniu rezulta
 # **Programowanie: przyklad-gatling**
 
 Test wydajnościowy dla RESTful API.
+
+Uruchomienie:
+```
+mvn gatling:test
+```
+
+Rezultaty:
+```
+/target/gatling
+```
