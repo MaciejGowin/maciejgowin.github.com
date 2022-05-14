@@ -34,6 +34,67 @@
 # CZĘŚĆ
 
 ---
+# Testowanie aplikacji
+- **Ręczne**
+  - Łatwe w przypadku małych aplikacji
+  - Przy częstych zmianach kodu staje się uciążliwe
+  - Bardzo wolne
+  - Łatwo popełnić błąd
+- **Automatyczne**
+  - Wymaga stworzenia kodu testującego kod
+  - Pomaga w programowaniu
+  - Szybkie (w uruchomieniu / otrzymaniu wyników)
+  - Rzetelne
+
+---
+# Rodzaje testowania
+- Testowanie statyczne  
+    Analiza napisanego kodu poprzez **code review** albo użycie aplikacji do statycznej analizy kodu, np. **Sonar**
+- Testowanie dynamiczne  
+    Testy uruchamiane na działającej aplikacji. Sprawdzają czy program działa tak jak się tego spodziewamy
+
+---
+# Rodzaje testowania
+- **Testy funkcjonalne** (ang. black-box testing)  
+    Tester wie tyle jak program ma się zachować, nie zna szczegółów implementacji.
+
+
+- **Testy strukturalne** (ang. while-box testing)  
+    Testy skupiające się na wewnętrznej pracy pojedynczego modułu.
+
+---
+# Poziomy testowania
+- **Testy jednostkowe**  
+  Jest to najniższy poziom testów.
+  Ich zadaniem jest sprawdzenie poszczególnych funkcjonalności aplikacji.
+  Testowane są zwykle małe fragmenty kodu, po czym wynik porównywany jest z wartością oczekiwaną.
+  Najcześciej pisane są przez programistę w trakcie tworzenia implementacji.
+
+
+- **Testy integracyjne**  
+    Testy sprawdzające działanie poszczególnych interface'ów aplikacji i ich wzajemne oddziaływanie.
+
+
+- **Testy end-to-end**  
+    Testy sprawdzające działanie aplikacji jako całości od początku do końca (stąd nazwa end-to-end).
+    Mają na celu znalezienie błędów wpływających na użytkownika.
+
+---
+# Mockowanie
+Uruchomienie aplikacji wiąże się z dostarczeniem wszystkich wymaganych zależności do klasy poddawanej testowi.  
+Zamiast używać rzeczywistych implementacji obiektów (np. repozytorium) można zastąpić je obiektami imitującymi ich działanie.  
+Taki sposób ułatwia pisanie testów oraz umożliwia skupienie się na testowaniu funkcjonalności danej klasy.
+
+---
+# Mockowanie
+- **Dummy** to obiekt w teście, który jest nam potrzebny jako wypełnienie. Najczęściej w formie pustej klasy.
+
+- **Stub** to obiekt mający minimalną implementację interfejsu, bez skomplikowanej logiki.
+
+- **Mock** to obiekt, któremu wskazujemy dokładne zachowania dla określonych metod. 
+Najlepiej skorzystać już z dostępnych wchodzących w skład bibliotek (Mockito)
+
+---
 # Junit 5
 
 **Junit** - framework służący do pisania testów w języku Java. Wspomaga nas w pisaniu oraz uruchamianiu testów 
@@ -97,14 +158,6 @@ public class ExampleTest {
 4. Klasa testowa może zawierać wiele testów (dotyczących jednej bądź wielu metod dostępnych w klasie głównej)
 
 ---
-# Test jednostkowy
-
-Jest to najniższy poziom testów.   
-Ich zadaniem jest sprawdzenie poszczególnych funkcjonalności aplikacji.  
-Testowane są zwykle małe fragmenty kodu, po czym wynik porównywany jest z wartością oczekiwaną.  
-Najcześciej pisane są przez programistę w trakcie tworzenia implementacji.
-
----
 # Test jednostkowy - podział
 ### given
 Część ustawiająca wartości na potrzeby danego testu.   
@@ -149,6 +202,59 @@ src
 - Uruchomienie testów - `mvn test`
 
 ---
+# Maven
+Wykonanie komendy `mvn test` spowoduje uruchomienie testów programu.   
+
+Przykładowy rezultat:
+```shell
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.106 s - in pl.wsb.tests.TestsApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.045 s
+[INFO] Finished at: 2022-05-14T09:57:35+02:00
+[INFO] ------------------------------------------------------------------------
+```
+
+---
+# Cykl Maven dla testów
+[Lifecycle Reference](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+
+W lifecycle Maven (default) istnieją 2 fazy, które umożliwiają uruchomienie testów.
+- test
+- integration-test
+
+Istnieje możliwość pogrupowania testów (separacji testów unitowych oraz integracyjnych), np.
+ - poprzez użycie innych suffixów - *Test oraz *IntegrationTest
+ - poprzez oznaczenie poszczególnych testów poprzez adnotację `@Tag`
+
+---
+# Cykl Maven dla testów
+Wybór grupowania testów należy skonfigurować w opisie plugina w `pom.xml` np.
+
+`@Tag(junit5)`
+```shell
+<build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <properties>
+                    <includeTags>junit5</includeTags>
+                </properties>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
+
+---
 # Junit - ciekawe linki
 * [A Guide to JUnit 5](https://www.baeldung.com/junit-5)
 * [Intellij IDEA - uruchamianie testów](https://www.jetbrains.com/help/idea/performing-tests.html)
+* [Running a Single Test or Method With Maven](https://www.baeldung.com/maven-run-single-test)
