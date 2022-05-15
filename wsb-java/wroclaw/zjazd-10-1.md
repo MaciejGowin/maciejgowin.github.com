@@ -299,6 +299,45 @@ import static org.assertj.core.api.Assertions.*;
 </dependency>
 ```
 
+--- 
+# AssertJ - podstawowe asercje
+Podstawowa forma:  
+```java
+assertThat(referenceOrValue).<ASERCJA>
+```
+
+W przypadku potrzeby przetestowania przypadku wystąpienia wyjątku forma ma nieco inny wygląd:
+```java
+assertThatThrownBy(() -> {} }
+```
+
+---
+# AssertJ - assertThat
+
+`assertThat().`
+- obiekty
+  - `isEqualTo() / isNotEqualTo()` - porównanie dwóch obiektów
+  - `isEqualToComparingFieldByFieldRecursively()` - porównanie pół dwóch obiektów tego samego typu
+- typ Boolean
+  - `isTrue() / isFalse()` - sprawdzenie czy wartość typu boolean jest równa true albo false
+- kolekcje
+  - `hasSize()` - sprawdza wielkość kolekcji
+  - `isEmpty() / isNotEmpty()` - sprawdza czy kolekcja jest pusta / nie jest pusta
+  - `containsAll() / containsExactly()` - sprawdza czy kolekcja zawiera podane wartości
+
+---
+# AssertJ - assertThat
+Powyższe przykłady to jedynie ułamek możliwości tej biblioteki.  
+Dla krótszego zapisu w sytuacji, w której chcemy sprawdzić kilka rzeczy dla sprawdzanego obiektu można połączyć kilka 
+metod używając _method chaining_, np:
+```shell
+assertThat(myList)
+          .isNotNull()
+          .isNotEmpty()
+          .hasSize(2)
+          .containsExactly(1,2);
+```
+
 ---
 # Testowanie - ciekawe linki
 * [A Guide to JUnit 5](https://www.baeldung.com/junit-5)
