@@ -254,7 +254,55 @@ Wybór grupowania testów należy skonfigurować w opisie plugina w `pom.xml` np
 ```
 
 ---
-# Junit - ciekawe linki
+# Asercje - dostępne opcje
+- wbudowane - asercje dostępne w bibliotece JUnit
+```java
+assertEquals(expected, actual);
+assertArrayEquals(expected, actual);
+assertNull(object);
+```
+- Hamcrest 
+```java
+assertThat(array, hasItemInArray("text"));
+assertThat("text", isOneOf(array));
+assertThat(5, greaterThanOrEqualTo(5));
+```
+- Truth
+```java
+assertThat(text).contains("wsb");
+assertThat(projectsByTeam()).valuesForKey("field1").containsExactly("w","s","b");
+```
+- AssertJ
+```java
+assertThat(stringVariable).isEqualTo("Frodo");
+assertThat(array).hasSize(9).contains(a1, a2).doesNotContain(a3);
+assertThatThrownBy(() -> { throw new Exception("boom!"); }).hasMessage("boom!");
+```
+
+---
+# AssertJ
+Bogata biblioteka dostarczająca zbiór asercji.  
+Świetnie współpracuje z JUnit.  
+Umożliwia pisanie bardzo czytelnych asercji, co ułatwia pracę i przyspiesza detekcję błędów.  
+
+```java
+import static org.assertj.core.api.Assertions.*;
+```
+---
+# AssertJ - zależność Maven
+```shell
+<dependency>
+    <groupId>org.assertj</groupId>
+    <artifactId>assertj-core</artifactId>
+    <version>3.22.0</version>
+    <scope>test</scope>
+</dependency>
+```
+
+---
+# Testowanie - ciekawe linki
 * [A Guide to JUnit 5](https://www.baeldung.com/junit-5)
 * [Intellij IDEA - uruchamianie testów](https://www.jetbrains.com/help/idea/performing-tests.html)
 * [Running a Single Test or Method With Maven](https://www.baeldung.com/maven-run-single-test)
+* [AssertJ docs](https://assertj.github.io/doc/)
+* [AssertJ - wprowadzenie](https://www.baeldung.com/introduction-to-assertj)
