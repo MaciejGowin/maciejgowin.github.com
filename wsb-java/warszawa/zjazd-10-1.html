@@ -18,39 +18,43 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2">
 <h1>Zawartość</h1>
 <ul>
-<li>Wdrażanie aplikacji</li>
-<li>Hosting</li>
+<li>Wdrażanie i hosting aplikacji</li>
 <li>CI/CD</li>
+<li>Strategie integracji kodu</li>
+<li>Strategie wdrażania aplikacji</li>
 <li>Zadanie z CI/CD</li>
 <li>Bazy NoSQL</li>
+<li>Zadanie z NoSQL</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3">
 <h1>Wdrażanie aplikacji</h1>
 <p>Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych<br />
-komputerach. Skończyliśmy właśnie pracę nad jej pierwszą wersją.</p>
-<p>Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników. Rozważymy teraz istniejące opcje dostarczenia naszej<br />
-aplikacji do użytkowników oraz przejdziemy przez cały proces wdrażania aplikacji.</p>
+komputerach.</p>
+<p>Załóżmy, że skończyliśmy właśnie pracę nad jej pierwszą wersją.</p>
+<p>Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników.</p>
+<p>Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces<br />
+wdrażania aplikacji.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4">
 <h1>Hosting</h1>
-<p>Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administrowaniem serwerem. O ile<br />
-nie jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją<br />
+<p>Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie<br />
+jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją<br />
 będzie skorzystanie z usług firm zewnętrznych.</p>
-<p>Powstało, więc wile firm, która posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc<br />
-obliczeniową potrzebną do uruchomienia aplikacji. Udostępnianie zasobów serwera klientowi nazywamy <strong>hostingiem</strong>.</p>
-<p>Istnieje wiele rodzaju hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za<br />
-poszczególne czynności związane z hostingiem naszej aplikacji,</p>
+<p>Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc<br />
+obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy <strong>hostingiem</strong>.</p>
+<p>Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za<br />
+poszczególne czynności związane z funkcjonowaniem naszej aplikacji.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
 <h1>Rodzaje hostingu</h1>
 <ul>
-<li>Serwer dedykowany (eng. dedicated server)</li>
-<li>Hosting współdzielony (eng. shared hosting)</li>
+<li>Serwer dedykowany</li>
+<li>Hosting współdzielony</li>
 <li>Serwer VPS (Virtual Private Server)</li>
-<li>Hosting zarządzany (eng. managed hosting)</li>
-<li>Kolokacja (eng. colocation)</li>
-<li>Hosting w chmurze (eng. cloud hosting)</li>
+<li>Hosting zarządzany</li>
+<li>Kolokacja</li>
+<li>Hosting w chmurze</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6">
@@ -58,125 +62,137 @@ poszczególne czynności związane z hostingiem naszej aplikacji,</p>
 <p>Serwer dedykowany jest dostępny tylko dla nas i nasza aplikacja jest jedyną uruchomioną na nim.</p>
 <p>W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza<br />
 aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.</p>
-<p>Serwer dedykowany wymaga najwięcej wysiłku i wiedzy z zakresu instalacji i zarządzania serwerem.</p>
+<p>Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i zarządzania nim.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7">
 <h1>Hosting współdzielony</h1>
-<p>W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości interakcji z serwerem, ponieważ na jednym<br />
-serwerze uruchomione jest wiele aplikacji różnych klientów.</p>
+<p>W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym<br />
+serwerze uruchomione może być wiele aplikacji różnych klientów.</p>
 <p>Serwery współdzielone pozwalają na lepsze wykorzystanie zasobów poprzez uruchamianie wielu aplikacji na jednej maszynie.<br />
-Są znacznie tańsza</p>
-<p>Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ na wydajność aplikacji<br />
-uruchomionych na tym samym serwerze.</p>
+Dzięki temu są znacznie tańsze od serwerów dedykowanych.</p>
+<p>Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych<br />
+na tym samym serwerze.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8">
 <h1>Serwer VPS</h1>
-<p>Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym. Na jednej maszynie uruchomione<br />
-jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (maszynie wirtualnej).</p>
-<p>Dzięki temu możliwa jest zbliżona kontrola nad środowiskiem, w którym uruchomiona jest nasza aplikacja jak w przypadku<br />
-serwera dedykowanego, przy wykorzystaniu zasobów podobnym do hostingu współdzielonego.</p>
-<p>Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym komputerze, jednak<br />
-oznacza to również konieczność alokacji oddzielnych zasobów na każdy z nich.</p>
+<p>Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym.</p>
+<p>Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (<br />
+maszynie wirtualnej).</p>
+<p>Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów<br />
+podobnym do hostingu współdzielonego.</p>
+<p>Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza<br />
+to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9">
 <h1>Hosting zarządzany</h1>
 <p>W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu<br />
-oraz oprogramowania. Przykładami takiej czynności jest np. monitorowanie oraz instalacja aktualizacji poprawiających<br />
-bezpieczeństwo serwera.</p>
-<p>W zależności od dostawcy pakiety usług wchodzących w skład hostingu zarządzanego mogą się znacznie różnić.</p>
+oraz oprogramowania.</p>
+<p>Wsparcie techniczne może obejmować monitorowanie czy instalacje aktualizacji poprawiających bezpieczeństwo serwera.</p>
+<p>W zależności od dostawcy, pakiety usług wchodzących w skład hostingu zarządzanego mogą się różnić.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10">
 <h1>Kolokacja</h1>
-<p>Kolokacja polega na wynajęciu przestrzeni na serwery.</p>
-<p>Dzięki temu możemy sami zdecydować jaki rodzaj sprzętu chcemy umieścić w naszym serwerze, a rola firmy zewnętrznej<br />
-ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia dla naszego serwera.</p>
+<p>Kolokacja polega na wynajęciu fizycznej przestrzeni na serwery.</p>
+<p>Dzięki temu możemy sami zdecydować, z jakiego rodzaju sprzętu chcemy korzystać.</p>
+<p>Rola firmy zewnętrznej ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia naszego serwera.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11">
 <h1>Hosting w chmurze</h1>
 <p>Hosting w chmurze charakteryzuje się możliwością uruchomienia aplikacji z użyciem połączonych zasobów wielu komputerów.</p>
-<p>Dzięki niemu ułatwione jest budowanie i zarządzanie infrastruktury dla naszej aplikacji. Pozwala ono również poprawić<br />
-niezawodność naszej aplikacji. Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy<br />
-danych, które mogą zostać wdrożone bez konieczności ręcznej instalacji oraz utrzymania w późniejszym czasie.</p>
+<p>Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone<br />
+bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.</p>
+<p>Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność<br />
+naszej aplikacji.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12">
-<h1>Rodzaje hostingu w chmurze</h1>
+<h1>Rodzaje hostingu w chmurze - 1</h1>
 <ul>
-<li>Chmura publiczna (eng. public cloud) - zasoby chmury wspóldzielone przez użytkowników chmury
+<li><strong>Chmura publiczna</strong> - zasoby chmury są współdzielone przez użytkowników
 <ul>
-<li>IaaS (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego<br />
+<li><strong>IaaS</strong> (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego<br />
 konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji, przykład: AWS EC2</li>
-<li>PaaS (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko dla uruchomienia naszej<br />
+<li><strong>PaaS</strong> (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej<br />
 aplikacji, przykład: AWS Elastic Beanstalk</li>
-<li>FaaS (Function as a Service) - pozwala uruchomić nasz kod na żądanie, nie rezerwujemy żadnego serwera (serverless)<br />
-i płacimy tylko za zużyte zasoby na naszą operację, przykład: AWS Lambda</li>
-<li>SaaS (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie, przykład: Dropbox</li>
+<li><strong>FaaS</strong> (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (<br />
+serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby, przykład: AWS Lambda</li>
+<li><strong>SaaS</strong> (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie, przykład: Dropbox</li>
 </ul>
 </li>
-<li>Chmura prywatna (eng. private cloud) - korzytsanie z usług chmurowych na sprzęcie na własnośc</li>
-<li>Chmura hybrydowa - zasoby składają się zarówno z chmury publicznej jak i prywatnej</li>
-<li>Multi cloud - zasoby składają się z więcej niż jednego dostawcy chmury</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13">
-<h1>Podejścia do chmury</h1>
+<h1>Rodzaje hostingu w chmurze - 2</h1>
 <ul>
-<li>Cloud native - używamy usług specyficznych dla danej chmury
-<ul>
-<li>Trudniejsza zmiana dostawcy chmury (eng. vendor locking)</li>
-<li>Lepsze wykorzystanie zasobów chmury poprzez wykorzytsywanie zoptymalizownych dla niej serwisów</li>
-</ul>
-</li>
-<li>Cloud agnostic - używamy usług, które mogą zostać wdrożone na każdej platformie
-<ul>
-<li>Łatwiejsza zmiana dostawcy chmury</li>
-<li>Niekorzystanie z zoptymalizowanych przez dostawcę usług, zazwyczaj gorsza wydajność i koszt rozwiązania</li>
-</ul>
-</li>
+<li><strong>Chmura prywatna</strong> - pozwala na korzystanie z usług chmurowych na sprzęcie, który posiadamy na własność</li>
+<li><strong>Chmura hybrydowa</strong> - nasze zasoby składają się zarówno z chmury publicznej jak i prywatnej</li>
+<li><strong>Multicloud</strong> - nasze zasoby składają się z usług więcej niż jednego dostawcy chmury</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14">
-<h1>Udziały w rynku</h1>
-<p><img src="https://www.idc.com/getfile.dyn?containerId=prUS47279621&amp;attachmentId=47407552" alt="Udział w rynku" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
-<h1>CI/CD</h1>
-<p>Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję dla naszych<br />
-użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej<br />
-wersji.</p>
-<p>Aby oszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy<br />
-stworzyć nasz process CI/CD.</p>
-<p>Skrót CI/CD oznacza:</p>
+<h1>Podejścia do chmury</h1>
 <ul>
-<li>CI (Continuous Integration) - przez CI rozumiemy regularne budowanie i testowanie zmian w kodzie różnych członków<br />
-zespołu pracujących nad daną aplikacją.</li>
-<li>CD (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed dostarczeniem<br />
-nowej wersji dla użytkownika konieczna jest manualne potwierdzenie.</li>
-<li>CD (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są<br />
-automatycznie dostarczane do użytkownika aplikacji,</li>
+<li><strong>Cloud native</strong> - używamy usług specyficznych dla danej chmury
+<ul>
+<li>Trudniejsza zmiana dostawcy chmury (vendor locking)</li>
+<li>Lepsze wykorzystanie zasobów chmury poprzez wykorzystanie zoptymalizowanych dla niej serwisów</li>
+</ul>
+</li>
+<li><strong>Cloud agnostic</strong> - używamy usług, które mogą zostać wdrożone na różnych chmurach
+<ul>
+<li>Łatwiejsza zmiana dostawcy chmury</li>
+<li>Niekorzystanie z zoptymalizowanych przez dostawcę usług, powoduje zazwyczaj gorszą wydajność oraz wyższy koszt<br />
+rozwiązania</li>
+</ul>
+</li>
 </ul>
 </section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15">
+<p><img src="https://www.idc.com/getfile.dyn?containerId=prUS47279621&amp;attachmentId=47407552" alt="Udział w rynku" /></p>
+</section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16">
+<h1>CI/CD - 1</h1>
+<p>Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych<br />
+użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej<br />
+wersji.</p>
+<p>Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy<br />
+stworzyć process CI/CD.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+<h1>CI/CD -2</h1>
+<p><strong>CI/CD</strong> oznacza:</p>
+<ul>
+<li><strong>CI</strong> (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących<br />
+nad aplikacją.</li>
+<li><strong>CD</strong> (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed<br />
+dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.</li>
+<li><strong>CD</strong> (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są<br />
+automatycznie dostarczane do użytkowników aplikacji.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
 <h1>CI/CD - Continuous Integration vs Continuous Delivery vs Continuous Deployment</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/ci-cd.png" alt="CI/CD" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
 <h1>Strategie integracji kodu</h1>
 <p>Najpopularniejsze strategie integracji kodu to:</p>
 <ul>
 <li>Trunk-based development</li>
 <li>Git-flow</li>
+<li>Github-flow</li>
+<li>Gitlab-flow</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
 <h1>Trunk-based development</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/trunk-based-development.png" alt="Trunk-based development" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
 <h1>Git-flow</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/git-flow.png" alt="Git-flow" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20">
-<h1>Strategie wdrażanie kolejnych wersji aplikacji</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h1>Strategie dostarczania kolejnych wersji aplikacji</h1>
 <p>Najczęściej używanymi strategiami dostarczania nowych wersji aplikacji do użytkownika są:</p>
 <ul>
 <li>Basic Deployment</li>
@@ -186,27 +202,27 @@ automatycznie dostarczane do użytkownika aplikacji,</li>
 <li>A/B Testing</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
 <h1>Basic deployment</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/basic-deployment.png" alt="Basic development" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
 <h1>Rolling update</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/rolling-update.png" alt="Rolling deployment" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
 <h1>Blue-Green deployment</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/blue-green.png" alt="Blue-Green deployment" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
 <h1>Canary deployment</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/canary-deployment.png" alt="Canary-Deployment" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
 <h1>A/B Testing</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/a-b-testy.png" alt="A/B testing" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
 <h1>Narzędzia</h1>
 <p>Do implementacji naszego procesu CI/CD możemy użyć jednego z popularnych narzędzi, np.</p>
 <ul>
@@ -218,39 +234,34 @@ automatycznie dostarczane do użytkownika aplikacji,</li>
 <li>AWS CodePipeline</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
 <h1>Zadanie</h1>
 <p>Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem Gitlab CI/CD. Proces ten powinien pobrać najnowszą wersję kodu<br />
 aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.</p>
-<ol>
-<li>Utwórz konto na platformie Gitlab - <a href="https://gitlab.com/users/sign_up">https://gitlab.com/users/sign_up</a></li>
-<li>Utwórz fork z repozytorium: TODO</li>
-<li>Uruchom process CI/CD</li>
-</ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
 <h1>Bazy NoSQL</h1>
-<p>Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań firmy wynika, że musimy być przygotowani na obsługę dużego ruchu<br />
-w przyszłości oraz przechowywanie bardzo dużej ilości danych.</p>
-<p>Bazy danych SQL, które poznaliśmy do tej pory, oferują pewne możliwości skalowania w celu obsługi większego ruchu i<br />
-ilości danych, jednak są one dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.</p>
-<p>Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają znacznie lepsze możliwości skalowania bez podejmowania<br />
-dodatkowych czynności w porównaniu do baz NoSQL. Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych<br />
-przechowywanych w bazie danych.</p>
+<p>Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do<br />
+naszej aplikacji oraz przechowywanie bardzo dużej ilości danych.</p>
+<p>Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości<br />
+danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.</p>
+<p>Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez<br />
+podejmowania dodatkowych działań.</p>
+<p>Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych przechowywanych w bazie danych.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
 <h1>Typy baz NoSQL</h1>
 <p>Najpopularniejsze typy baz NoSQL to:</p>
 <ul>
-<li>Klucz-wartość - klucz jest zanany, ale wartości nie. Sprawdzają się w przychowywaniu nieustrukturyzowanych danych.</li>
-<li>Dokumentowe - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w<br />
+<li><strong>Klucz-wartość</strong> - klucz jest znany, ale wartości nie. Sprawdzają się w przechowywaniu nieustrukturyzowanych danych.</li>
+<li><strong>Dokumentowe</strong> - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w<br />
 zapytaniach.</li>
-<li>Rodziny kolumn - dane przechowywane w postaci rodziny kolumn. Pozwalaja na szybkie przeszkuiwanie dużej ilości danych,<br />
-ale wymaga to dobrze przemyślanego schematu bazy.</li>
-<li>Grafowe - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.</li>
+<li><strong>Rodziny kolumn</strong> - dane są przechowywane w postaci rodziny kolumn. Pozwala to na szybkie przeszukiwanie dużej ilości<br />
+danych, ale wymaga to dobrze przemyślanego schematu bazy.</li>
+<li><strong>Grafowe</strong> - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
 <h1>Bazy klucz wartość i dokumentowe</h1>
 <pre><code class="language-json"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
@@ -273,11 +284,11 @@ ale wymaga to dobrze przemyślanego schematu bazy.</li>
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
-<h1>Rodziny kolumn</h1>
-<p>Klucz składający się z wielu kolumn posortowanych rosnąco.</p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+<h1>Rodziny kolumn - 1</h1>
+<p>Klucz składa się z wielu posortowanych kolumn</p>
 <p>Przykład:<br />
-Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny</p>
+<em>Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny</em></p>
 <table>
 <thead>
 <tr>
@@ -300,28 +311,27 @@ Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny</p>
 </tr>
 </tbody>
 </table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+<h1>Rodziny kolumn - 2</h1>
 <p>Przykład wydajnego zapytania:</p>
 <ul>
-<li>
-<p>Lokalizacje konkretnego busa w danym zakresie czasu</p>
-</li>
-<li>
-<p>Niewydajne zapytania:</p>
-</li>
-<li>
-<p>Nazwy busów w znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)</p>
-</li>
+<li>Lokalizacje konkretnego busa w danym zakresie czasu</li>
+</ul>
+<p>Przykład niewydajnego zapytania:</p>
+<ul>
+<li>Nazwy busów znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
 <h1>Bazy grafowe</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/graf.png" alt="Bazy grafowe" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
 <h1>Skalowanie wertykalne (w górę), a skalowanie horyzontalne (wszerz)</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/skalowanie.png" alt="Skalowanie wertykalne, a skalowanie horyzontalne" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
 <h1>ACID - przypomnienie</h1>
 <ul>
 <li>(A)tomicity - Niepodzielność</li>
@@ -329,38 +339,29 @@ Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny</p>
 <li>(I)solation - Izolacja</li>
 <li>(D)urability - Trwałość</li>
 </ul>
-<h1>Twierdzenie CAP</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png" alt="CAP" /></p>
-<ul>
-<li>(C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.</li>
-<li>(A)vailability - system rozproszonego zwróci zawsze dane, pomimo problemu z jego częścią, jednak nie gwarantuje, że<br />
-będą one w najnowszej wersji.</li>
-<li>(P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.</li>
-</ul>
-<p>Rozproszone bazy danych mogą mieć tylko 2 z 3 cech.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+<h1>Twierdzenie CAP - 1</h1>
+<ul>
+<li>
+<p>(C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.</p>
+</li>
+<li>
+<p>(A)vailability - system rozproszony zwróci dane nawet pomimo problemu z jego częścią, jednak nie ma gwarancji, że będą<br />
+one w najnowszej wersji.</p>
+</li>
+<li>
+<p>(P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+<h1>Twierdzenie CAP - 2</h1>
+<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png" alt="CAP" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
 <h1>Zadanie</h1>
-<ol>
-<li>
-<p>Utwórz konto na platformie mLab: <a href="https://mlab.com/">https://mlab.com/</a></p>
-</li>
-<li>
-<p>Utwórz nową bazę danych</p>
-</li>
-<li>
-<p>Dodaj nowy dokument</p>
-</li>
-<li>
-<p>Wyszukaj dokument</p>
-</li>
-<li>
-<p>CAP vs ACID, jak sie skaluje (vertical vs horiznotal) - <a href="https://www.thorntech.com/sql-vs-nosql/">https://www.thorntech.com/sql-vs-nosql/</a></p>
-</li>
-<li>
-<p>Optimistic locking, eventual consistency</p>
-</li>
-</ol>
+<p>Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie <a href="https://mlab.com">https://mlab.com</a> załadowanie do niej danych oraz napisanie kilku prostych zapytań.</p>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:f}=t.children;for(let r=0;r<f;r+=1){const o=t.children[r];if(o.getScreenCTM){const t=o.getScreenCTM();if(t){const r=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,a=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.children.length;for(let e=0;e<l;e+=1){const n=o.children[e];if("SECTION"===n.tagName){const{style:e}=n;e.transformOrigin||(e.transformOrigin=`${-r}px ${-a}px`),e.transform=`scale(${c}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-d.left}, ${t.f-d.top}) translateZ(0.0001px)`;break}}}}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),f=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",f)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.7.2/lib/bespoke.js.LICENSE.txt */
