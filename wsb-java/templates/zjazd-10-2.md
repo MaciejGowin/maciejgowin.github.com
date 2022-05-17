@@ -135,9 +135,93 @@ Taki test polega na **uruchomieniu** aplikacji oraz wykonaniu na niej testu (np.
 
 ---
 # Testy Spring
-W przypadku użycia Springa jest możliwość uruchomienia całej aplikacji, łącznie z podłączeniem jej do bazy danych.  
+W przypadku użycia Springa jest możliwość uruchomienia całej aplikacji podczas wykonywanie testu, włącznie z podłączeniem jej do bazy danych.  
 W zależności co chcemy przetestować możemy uruchomić całość bądź skupić się jedynie na części aplikacji (np. tylko test repozytorium).
 
+- `@SpringBootTest` - uruchamia cały kontekst Spring
+
+
+- `@WebMvcTest` - używany do testowania pojedynczego controllera
+  - nie przeskanuje beanów takich jak `@Service`, `@Repository` (należy pamiętać aby dostarczyć odpowiednie zależności)
+
+
+- `@DataJpaTest` - używany do testowania warstwy persistence (repozytoria, dao)
+  - uruchomi jedynie część aplikacji w warstwie persistence (JPA)
+  - uruchomi testową bazę in-memory H2 (należy dostarczyć zależność w `pom.xml`)
+  - przestawi aplikację w tryb logowania SQL na konsoli
+
+---
+# Testy Spring
+Jednym z przykładów testu integracyjnego jest wykonanie zapytania HTTP do jednego z endpointów naszej aplikacji
+oraz sprawdzenie czy wynik jest zgodny z oczekiwanym.  
+
+Istnieje mechanizm umozliwiający w prosty sposób wykonanie zapytania HTTP w teście - `MockMvc`. Aby skonfigurować `MockMvc` można użyć adnotacji  
+`@AutoConfigureMockMvc`, który utworzy nam bean typu `MockMvc`. Przykład testu:
+```java
+@SpringBootTest
+@AutoConfigureMockMvc
+class ExampleControllerTest {
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Test
+    void shouldReturnString() throws Exception {  // wykonanie HTTP GET /example
+        // when & then
+        MvcResult result = mockMvc.perform(get("/example"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("example String"))
+                .andDo(print()).andReturn();
+    }
+}
+```
+---
+# Testy Spring
+Testy integracyjne mogą korzystać z :
+1. rzeczywistych implementacji 
+2. mocków
+
+Aby zamokować bean należy użyć adnotacji `@MockBean`, przykład:
+```java
+@SpringBootTest
+@AutoConfigureMockMvc
+class ExampleControllerTest {
+    @Autowired
+    private MockMvc mockMvc;
+    @MockBean
+    private ExampleService exampleService;  // serwis jest zamokowany
+
+    @Test
+    void shouldReturnString() throws Exception {  // wykonanie HTTP GET /example
+        // given
+        when(exampleService.returnHello()).thenReturn("Siema");  // definicja zachowania metody
+
+        // when & then
+        MvcResult result = mockMvc.perform(get("/example"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("example String"))
+                .andDo(print()).andReturn();
+    }
+}
+```
+
+---
+# Testy Spring - zależności Maven
+```java
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+    <version>2.5.0</version>
+</dependency>
+
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+Warto zwrócić uwagę na _scope_ zależności
 
 ---
 # Test Driven Development
