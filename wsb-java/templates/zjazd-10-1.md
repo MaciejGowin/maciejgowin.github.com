@@ -10,46 +10,52 @@
 
 # Zawartość
 
-- Wdrażanie aplikacji
-- Hosting
+- Wdrażanie i hosting aplikacji
 - CI/CD
+- Strategie integracji kodu
+- Strategie wdrażania aplikacji
 - Zadanie z CI/CD
 - Bazy NoSQL
+- Zadanie z NoSQL
 
 ---
 
 # Wdrażanie aplikacji
 
 Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych
-komputerach. Skończyliśmy właśnie pracę nad jej pierwszą wersją.
+komputerach.
 
-Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników. Rozważymy teraz istniejące opcje dostarczenia naszej
-aplikacji do użytkowników oraz przejdziemy przez cały proces wdrażania aplikacji.
+Załóżmy, że skończyliśmy właśnie pracę nad jej pierwszą wersją.
+
+Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników.
+
+Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces
+wdrażania aplikacji.
 
 ---
 
 # Hosting
 
-Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administrowaniem serwerem. O ile
-nie jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją
+Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie
+jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją
 będzie skorzystanie z usług firm zewnętrznych.
 
-Powstało, więc wile firm, która posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc
-obliczeniową potrzebną do uruchomienia aplikacji. Udostępnianie zasobów serwera klientowi nazywamy **hostingiem**.
+Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc
+obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy **hostingiem**.
 
-Istnieje wiele rodzaju hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za
-poszczególne czynności związane z hostingiem naszej aplikacji,
+Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za
+poszczególne czynności związane z funkcjonowaniem naszej aplikacji.
 
 ---
 
 # Rodzaje hostingu
 
-- Serwer dedykowany (eng. dedicated server)
-- Hosting współdzielony (eng. shared hosting)
+- Serwer dedykowany
+- Hosting współdzielony
 - Serwer VPS (Virtual Private Server)
-- Hosting zarządzany (eng. managed hosting)
-- Kolokacja (eng. colocation)
-- Hosting w chmurze (eng. cloud hosting)
+- Hosting zarządzany
+- Kolokacja
+- Hosting w chmurze
 
 ---
 
@@ -60,52 +66,56 @@ Serwer dedykowany jest dostępny tylko dla nas i nasza aplikacja jest jedyną ur
 W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza
 aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.
 
-Serwer dedykowany wymaga najwięcej wysiłku i wiedzy z zakresu instalacji i zarządzania serwerem.
+Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i zarządzania nim.
 
 ---
 
 # Hosting współdzielony
 
-W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości interakcji z serwerem, ponieważ na jednym
-serwerze uruchomione jest wiele aplikacji różnych klientów.
+W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym
+serwerze uruchomione może być wiele aplikacji różnych klientów.
 
 Serwery współdzielone pozwalają na lepsze wykorzystanie zasobów poprzez uruchamianie wielu aplikacji na jednej maszynie.
-Są znacznie tańsza
+Dzięki temu są znacznie tańsze od serwerów dedykowanych.
 
-Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ na wydajność aplikacji
-uruchomionych na tym samym serwerze.
+Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych
+na tym samym serwerze.
 
 ---
 
 # Serwer VPS
 
-Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym. Na jednej maszynie uruchomione
-jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (maszynie wirtualnej).
+Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym.
 
-Dzięki temu możliwa jest zbliżona kontrola nad środowiskiem, w którym uruchomiona jest nasza aplikacja jak w przypadku
-serwera dedykowanego, przy wykorzystaniu zasobów podobnym do hostingu współdzielonego.
+Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (
+maszynie wirtualnej).
 
-Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym komputerze, jednak
-oznacza to również konieczność alokacji oddzielnych zasobów na każdy z nich.
+Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów
+podobnym do hostingu współdzielonego.
+
+Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza
+to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.
 
 ---
 
 # Hosting zarządzany
 
 W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu
-oraz oprogramowania. Przykładami takiej czynności jest np. monitorowanie oraz instalacja aktualizacji poprawiających
-bezpieczeństwo serwera.
+oraz oprogramowania.
 
-W zależności od dostawcy pakiety usług wchodzących w skład hostingu zarządzanego mogą się znacznie różnić.
+Wsparcie techniczne może obejmować monitorowanie czy instalacje aktualizacji poprawiających bezpieczeństwo serwera.
+
+W zależności od dostawcy, pakiety usług wchodzących w skład hostingu zarządzanego mogą się różnić.
 
 ---
 
 # Kolokacja
 
-Kolokacja polega na wynajęciu przestrzeni na serwery.
+Kolokacja polega na wynajęciu fizycznej przestrzeni na serwery.
 
-Dzięki temu możemy sami zdecydować jaki rodzaj sprzętu chcemy umieścić w naszym serwerze, a rola firmy zewnętrznej
-ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia dla naszego serwera.
+Dzięki temu możemy sami zdecydować, z jakiego rodzaju sprzętu chcemy korzystać.
+
+Rola firmy zewnętrznej ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia naszego serwera.
 
 ---
 
@@ -113,62 +123,74 @@ ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia dla
 
 Hosting w chmurze charakteryzuje się możliwością uruchomienia aplikacji z użyciem połączonych zasobów wielu komputerów.
 
-Dzięki niemu ułatwione jest budowanie i zarządzanie infrastruktury dla naszej aplikacji. Pozwala ono również poprawić
-niezawodność naszej aplikacji. Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy
-danych, które mogą zostać wdrożone bez konieczności ręcznej instalacji oraz utrzymania w późniejszym czasie.
+Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone
+bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.
+
+Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność
+naszej aplikacji.
+
+
 
 ---
 
-# Rodzaje hostingu w chmurze
+# Rodzaje hostingu w chmurze - 1
 
-- Chmura publiczna (eng. public cloud) - zasoby chmury wspóldzielone przez użytkowników chmury
-    - IaaS (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego
+- **Chmura publiczna** - zasoby chmury są współdzielone przez użytkowników
+    - **IaaS** (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego
       konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji, przykład: AWS EC2
-    - PaaS (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko dla uruchomienia naszej
+    - **PaaS** (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej
       aplikacji, przykład: AWS Elastic Beanstalk
-    - FaaS (Function as a Service) - pozwala uruchomić nasz kod na żądanie, nie rezerwujemy żadnego serwera (serverless)
-      i płacimy tylko za zużyte zasoby na naszą operację, przykład: AWS Lambda
-    - SaaS (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie, przykład: Dropbox
-- Chmura prywatna (eng. private cloud) - korzytsanie z usług chmurowych na sprzęcie na własnośc
-- Chmura hybrydowa - zasoby składają się zarówno z chmury publicznej jak i prywatnej
-- Multi cloud - zasoby składają się z więcej niż jednego dostawcy chmury
+    - **FaaS** (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (
+      serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby, przykład: AWS Lambda
+    - **SaaS** (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie, przykład: Dropbox
+
+---
+
+# Rodzaje hostingu w chmurze - 2
+
+- **Chmura prywatna** - pozwala na korzystanie z usług chmurowych na sprzęcie, który posiadamy na własność
+- **Chmura hybrydowa** - nasze zasoby składają się zarówno z chmury publicznej jak i prywatnej
+- **Multicloud** - nasze zasoby składają się z usług więcej niż jednego dostawcy chmury
 
 ---
 
 # Podejścia do chmury
 
-- Cloud native - używamy usług specyficznych dla danej chmury
-    - Trudniejsza zmiana dostawcy chmury (eng. vendor locking)
-    - Lepsze wykorzystanie zasobów chmury poprzez wykorzytsywanie zoptymalizownych dla niej serwisów
-- Cloud agnostic - używamy usług, które mogą zostać wdrożone na każdej platformie
+- **Cloud native** - używamy usług specyficznych dla danej chmury
+    - Trudniejsza zmiana dostawcy chmury (vendor locking)
+    - Lepsze wykorzystanie zasobów chmury poprzez wykorzystanie zoptymalizowanych dla niej serwisów
+- **Cloud agnostic** - używamy usług, które mogą zostać wdrożone na różnych chmurach
     - Łatwiejsza zmiana dostawcy chmury
-    - Niekorzystanie z zoptymalizowanych przez dostawcę usług, zazwyczaj gorsza wydajność i koszt rozwiązania
+    - Niekorzystanie z zoptymalizowanych przez dostawcę usług, powoduje zazwyczaj gorszą wydajność oraz wyższy koszt
+      rozwiązania
 
 ---
-
-# Udziały w rynku
 
 ![Udział w rynku](https://www.idc.com/getfile.dyn?containerId=prUS47279621&attachmentId=47407552)
 
 ---
 
-# CI/CD
+# CI/CD - 1
 
-Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję dla naszych
+Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych
 użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej
 wersji.
 
-Aby oszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy
-stworzyć nasz process CI/CD.
+Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy
+stworzyć process CI/CD.
 
-Skrót CI/CD oznacza:
+---
 
-- CI (Continuous Integration) - przez CI rozumiemy regularne budowanie i testowanie zmian w kodzie różnych członków
-  zespołu pracujących nad daną aplikacją.
-- CD (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed dostarczeniem
-  nowej wersji dla użytkownika konieczna jest manualne potwierdzenie.
-- CD (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są
-  automatycznie dostarczane do użytkownika aplikacji,
+# CI/CD -2
+
+**CI/CD** oznacza:
+
+- **CI** (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących
+  nad aplikacją.
+- **CD** (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed
+  dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.
+- **CD** (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są
+  automatycznie dostarczane do użytkowników aplikacji.
 
 ---
 
@@ -184,6 +206,8 @@ Najpopularniejsze strategie integracji kodu to:
 
 - Trunk-based development
 - Git-flow
+- Github-flow
+- Gitlab-flow
 
 ---
 
@@ -199,7 +223,7 @@ Najpopularniejsze strategie integracji kodu to:
 
 ---
 
-# Strategie wdrażanie kolejnych wersji aplikacji
+# Strategie dostarczania kolejnych wersji aplikacji
 
 Najczęściej używanymi strategiami dostarczania nowych wersji aplikacji do użytkownika są:
 
@@ -259,23 +283,20 @@ Do implementacji naszego procesu CI/CD możemy użyć jednego z popularnych narz
 Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem Gitlab CI/CD. Proces ten powinien pobrać najnowszą wersję kodu
 aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.
 
-1. Utwórz konto na platformie Gitlab - https://gitlab.com/users/sign_up
-2. Utwórz fork z repozytorium: TODO
-3. Uruchom process CI/CD
-
 ---
 
 # Bazy NoSQL
 
-Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań firmy wynika, że musimy być przygotowani na obsługę dużego ruchu
-w przyszłości oraz przechowywanie bardzo dużej ilości danych.
+Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do
+naszej aplikacji oraz przechowywanie bardzo dużej ilości danych.
 
-Bazy danych SQL, które poznaliśmy do tej pory, oferują pewne możliwości skalowania w celu obsługi większego ruchu i
-ilości danych, jednak są one dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.
+Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości
+danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.
 
-Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają znacznie lepsze możliwości skalowania bez podejmowania
-dodatkowych czynności w porównaniu do baz NoSQL. Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych
-przechowywanych w bazie danych.
+Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez
+podejmowania dodatkowych działań.
+
+Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych przechowywanych w bazie danych.
 
 ---
 
@@ -283,12 +304,12 @@ przechowywanych w bazie danych.
 
 Najpopularniejsze typy baz NoSQL to:
 
-- Klucz-wartość - klucz jest zanany, ale wartości nie. Sprawdzają się w przychowywaniu nieustrukturyzowanych danych.
-- Dokumentowe - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w
+- **Klucz-wartość** - klucz jest znany, ale wartości nie. Sprawdzają się w przechowywaniu nieustrukturyzowanych danych.
+- **Dokumentowe** - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w
   zapytaniach.
-- Rodziny kolumn - dane przechowywane w postaci rodziny kolumn. Pozwalaja na szybkie przeszkuiwanie dużej ilości danych,
-  ale wymaga to dobrze przemyślanego schematu bazy.
-- Grafowe - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.
+- **Rodziny kolumn** - dane są przechowywane w postaci rodziny kolumn. Pozwala to na szybkie przeszukiwanie dużej ilości
+  danych, ale wymaga to dobrze przemyślanego schematu bazy.
+- **Grafowe** - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.
 
 ---
 
@@ -318,12 +339,12 @@ Najpopularniejsze typy baz NoSQL to:
 
 ---
 
-# Rodziny kolumn
+# Rodziny kolumn - 1
 
-Klucz składający się z wielu kolumn posortowanych rosnąco.
+Klucz składa się z wielu posortowanych kolumn
 
 Przykład:
-Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny
+_Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny_
 
 | Klucz                                     | Lokalizacja            |
 |-------------------------------------------|------------------------|
@@ -331,12 +352,17 @@ Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny
 | MTA/M86-SBS/2020-01-01T13:02:00/NYCT_5840 | (40.780664,-73.958357) |
 | MTA/M86-SBS/2020-01-01T13:03:00/NYCT_5867 | (40.780281,-73.946890) |
 
+---
+
+# Rodziny kolumn - 2
+
 Przykład wydajnego zapytania:
 
 - Lokalizacje konkretnego busa w danym zakresie czasu
 
-- Niewydajne zapytania:
-- Nazwy busów w znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)
+Przykład niewydajnego zapytania:
+
+- Nazwy busów znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)
 
 ---
 
@@ -359,27 +385,27 @@ Przykład wydajnego zapytania:
 - (I)solation - Izolacja
 - (D)urability - Trwałość
 
-# Twierdzenie CAP
+---
 
-![CAP](https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png)
+# Twierdzenie CAP - 1
 
 - (C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.
-- (A)vailability - system rozproszonego zwróci zawsze dane, pomimo problemu z jego częścią, jednak nie gwarantuje, że
-  będą one w najnowszej wersji.
+
+- (A)vailability - system rozproszony zwróci dane nawet pomimo problemu z jego częścią, jednak nie ma gwarancji, że będą
+  one w najnowszej wersji.
+
 - (P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.
 
-Rozproszone bazy danych mogą mieć tylko 2 z 3 cech.
+---
+
+# Twierdzenie CAP - 2
+
+![CAP](https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png)
 
 ---
 
 # Zadanie
 
-1. Utwórz konto na platformie mLab: https://mlab.com/
-2. Utwórz nową bazę danych
-3. Dodaj nowy dokument
-4. Wyszukaj dokument
-
-5. CAP vs ACID, jak sie skaluje (vertical vs horiznotal) - https://www.thorntech.com/sql-vs-nosql/
-6. Optimistic locking, eventual consistency
+Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie https://mlab.com załadowanie do niej danych oraz napisanie kilku prostych zapytań.
 
 
