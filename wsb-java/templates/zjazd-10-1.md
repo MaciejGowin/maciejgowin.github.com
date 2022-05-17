@@ -137,12 +137,12 @@ naszej aplikacji.
 
 - **Chmura publiczna** - zasoby chmury są współdzielone przez użytkowników
     - **IaaS** (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego
-      konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji, przykład: AWS EC2
+      konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji
     - **PaaS** (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej
-      aplikacji, przykład: AWS Elastic Beanstalk
+      aplikacji
     - **FaaS** (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (
-      serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby, przykład: AWS Lambda
-    - **SaaS** (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie, przykład: Dropbox
+      serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby
+    - **SaaS** (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie
 
 ---
 
