@@ -80,21 +80,6 @@
   Mają na celu znalezienie błędów wpływających na użytkownika.
 
 ---
-# Mockowanie
-Uruchomienie aplikacji wiąże się z dostarczeniem wszystkich wymaganych zależności do klasy poddawanej testowi.  
-Zamiast używać rzeczywistych implementacji obiektów (np. repozytorium) można zastąpić je obiektami imitującymi ich działanie.  
-Taki sposób ułatwia pisanie testów oraz umożliwia skupienie się na testowaniu funkcjonalności danej klasy.
-
----
-# Mockowanie
-- **Dummy** to obiekt w teście, który jest nam potrzebny jako wypełnienie. Najczęściej w formie pustej klasy.
-
-- **Stub** to obiekt mający minimalną implementację interfejsu, bez skomplikowanej logiki.
-
-- **Mock** to obiekt, któremu wskazujemy dokładne zachowania dla określonych metod.
-  Najlepiej skorzystać już z dostępnych wchodzących w skład bibliotek (Mockito)
-
----
 # Junit 5
 
 **Junit** - framework służący do pisania testów w języku Java. Wspomaga nas w pisaniu oraz uruchamianiu testów

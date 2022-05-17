@@ -7,6 +7,139 @@
 ### Zjazd 10 - dzień 2
 
 ---
+# Mockowanie
+Uruchomienie aplikacji wiąże się z dostarczeniem wszystkich wymaganych zależności do klasy poddawanej testowi.  
+Zamiast używać rzeczywistych implementacji obiektów (np. repozytorium) można zastąpić je obiektami imitującymi ich działanie.  
+Taki sposób ułatwia pisanie testów oraz umożliwia skupienie się na testowaniu funkcjonalności danej klasy.
+
+---
+# Mockowanie
+Rodzaje mockowania:
+- **Dummy** to obiekt w teście, który jest nam potrzebny jako wypełnienie. Najczęściej w formie pustej klasy.
+
+
+- **Stub** to obiekt mający minimalną implementację interfejsu, bez skomplikowanej logiki.
+
+
+- **Mock** to obiekt, któremu wskazujemy dokładne zachowania dla określonych metod.
+  Najlepiej skorzystać już z dostępnych wchodzących w skład bibliotek (Mockito)
+
+---
+# Mockito
+Mockito - biblioteka dostarczająca mechanizmy służące do mockowania obiektów i definiowania ich zachowania. 
+Świetnie współgrająca z JUnit.
+```xml
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>4.5.1</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-junit-jupiter</artifactId>
+    <version>4.5.1</version>
+    <scope>test</scope>
+</dependency>
+```
+Zależności są już dostarczone wraz z paczkami Spring Boot
+
+---
+# Mockowanie zależności z Mockito
+```java
+@ExtendWith(MockitoExtension.class)
+class ExampleServiceTest {
+    @InjectMocks
+    private ExampleService exampleService;
+    @Mock
+    private DummyRepository dummyRepository;
+
+    @Test
+    void shouldCallSaveBook() {
+        // given
+        when(dummyRepository.save(any(Book.class))).thenReturn(4);
+        // when
+        int result = exampleService.saveRandomBook();
+        // then
+        assertThat(result).isEqualTo(4);
+        verify(dummyRepository, times(1)).save(any(Book.class));
+    }
+}
+```
+
+---
+# Mockowanie zależności z Mockito
+
+Zalety użycia Mockito:
+- Chcemy napisać testy sprawdzający działanie pojedynczej metody, nie zależy nam na stawianiu całego kontekstu Springa
+- Testy wykonują się bardzo szybko
+- Jesteśmy w stanie sprawdzić wykonanie kodu linijka po linijce, śledząc stan obiektów na każdym kroku
+- Można zamockować wszystko lub jedynie pojedyncze beany (np. repozytoria, co eliminuje potrzebę stawiania bazy danych)
+
+Wady użycia Mockito:
+- Test będzie tak dobry jak dobre będą mocki (jeśli będziemy zwracać nierealne dane to taki test nie będzie pomocny)
+- Zielone testy z użyciem Mockito nie gwarantują, że kontekst Springa wstanie (nie sprawdzają poprawności konfiguracji)
+
+---
+# Mockowanie zależności z Mockito
+Mockowanie polega na ustaleniu odpowiedzi metody danej klasy w formie:  
+JEŚLI zostanie wykonana metoda X, WTEDY zwróć Y
+```java
+when(object.method()).thenReturn(objectOrValue);
+```
+Podobna składnia jest w przypadku chęci zwrócenia wyjątku:
+```java
+when(object.method()).thenThrow(ex);
+```
+
+---
+# Weryfikacja działania metody z Mockito
+Oprócz mockowania odpowiedzi method istnieje możliwość weryfikacji czy dana metoda faktycznie została wykonana oraz ile razy.  
+Przykład (sprawdzenie czy metoda `dummyRepository.save()` została wykonana 1 raz):
+```java
+verify(dummyRepository, times(1)).save(any(Book.class));
+```
+Możemy również "złapać" dowolny obiekt przekazywany jako parametr do metody i sprawdzić czy jest poprawnie ustawiony.
+Ten mechanizm umożliwia dotarcie do konkretnej linijki metody, gdzie "coś się psuje".  
+Przykład:
+```java
+@Test
+void shouldCallSaveBook() {
+    // given
+    when(dummyRepository.save(any(Book.class))).thenReturn(4);
+    // when
+    int result = exampleService.saveRandomBook();
+    // then
+    ArgumentCaptor<Book> argumentCaptor = ArgumentCaptor.forClass(Book.class);
+    verify(dummyRepository, times(1)).save(argumentCaptor.capture());
+
+    Book book = argumentCaptor.getValue();
+    assertThat(book).isNotNull();
+}
+```
+
+---
+# Testy integracyjne
+Testy integracyjne służą sprawdzeniu połączeń i interakcji między poszczególnymi modułami lub innymi systemami.
+W przypadku testów jednostkowych możemy sprawdzić, że:
+- zapis do bazy działa poprawnie
+- metoda serwisu poprawnia przepisuje obiekty i wykonuje skomplikowaną logikę
+
+Czego nie wiemy?
+- Czy aplikacja w ogóle się włączy?
+- Czy request HTTP zakończy się poprawnym zapisem danych do bazy danych?
+
+Na tego typu pytania odpowiadają testy integracyjne.  
+Taki test polega na **uruchomieniu** aplikacji oraz wykonaniu na niej testu (np. wykonanie zapytania HTTP)
+
+---
+# Testy Spring
+W przypadku użycia Springa jest możliwość uruchomienia całej aplikacji, łącznie z podłączeniem jej do bazy danych.  
+W zależności co chcemy przetestować możemy uruchomić całość bądź skupić się jedynie na części aplikacji (np. tylko test repozytorium).
+
+
+---
 # Test Driven Development
 
 W klasycznym podejściu rozwoju oprogramowania właściwy kod programu powstaje przed powstaniem testów, w tym testów jednostkowych.
