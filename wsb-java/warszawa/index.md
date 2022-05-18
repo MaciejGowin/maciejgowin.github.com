@@ -43,3 +43,6 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 - Zjazd 9
   - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-09-1.html) [PDF](/wsb-java/warszawa/zjazd-09-1.pdf)
   - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-09-2.html) [PDF](/wsb-java/warszawa/zjazd-09-2.pdf)
+- Zjazd 10
+  - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-10-1.html) [PDF](/wsb-java/warszawa/zjazd-10-1.pdf)
+  - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-10-2.html) [PDF](/wsb-java/warszawa/zjazd-10-2.pdf)
