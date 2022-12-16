@@ -411,7 +411,7 @@ Istnieją dwa główne typy strumieni:
 
 Używane do odczytu pojedynczych bajtów danych. Do ich obsługi służą wszystkie podklasy `InputStream` oraz `OutputStream`.
 
-### Strumienie binarne (byte streams)
+### Strumienie znakowe (character streams)
 
 Używane do odczytu pojedynczych znaków danych. Do ich obsługi służą wszystkie podklasy `Reader` oraz `Writer`.
 

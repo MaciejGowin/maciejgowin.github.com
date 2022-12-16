@@ -2,7 +2,7 @@
 
 DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-for FILE in "$DIR"/zjazd-10-*.md; do
+for FILE in "$DIR"/zjazd-04-*.md; do
     FILENAME=$(echo $FILE | xargs basename | sed 's/.md//')
 
     cp "$DIR/$FILENAME.md" "$DIR/../wroclaw/$FILENAME.md"
@@ -15,7 +15,7 @@ for FILE in "$DIR"/zjazd-10-*.md; do
     marp "$DIR/../wroclaw/$FILENAME.md" -o "$DIR/../wroclaw/$FILENAME.html"
     marp "$DIR/../warszawa/$FILENAME.md" -o "$DIR/../warszawa/$FILENAME.html"
 
-    #echo "Generating PDF for: $FILENAME"
-    #marp --pdf "$DIR/../wroclaw/$FILENAME.md" -o "$DIR/../wroclaw/$FILENAME.pdf"
-    #marp --pdf "$DIR/../warszawa/$FILENAME.md" -o "$DIR/../warszawa/$FILENAME.pdf"
+    echo "Generating PDF for: $FILENAME"
+    marp --pdf "$DIR/../wroclaw/$FILENAME.md" -o "$DIR/../wroclaw/$FILENAME.pdf"
+    marp --pdf "$DIR/../warszawa/$FILENAME.md" -o "$DIR/../warszawa/$FILENAME.pdf"
 done
