@@ -236,4 +236,4 @@ title: Plan
 - Behavioral Driven Development (BDD).
 - Narzędzie Cucumber oraz język Gherkin.
 - Narzędzie Selenium oraz automatyzacja testów. 
-- Narzędzie Gatling oraz wprowadzenie do testów wydajnościowych .
+- Narzędzie Gatling oraz wprowadzenie do testów wydajnościowych.

@@ -600,7 +600,7 @@ W zapytaniach możemy używać skróconych nazw łączeń: `join`, `left join` o
 ---
 # Hibernate w praktyce: Query/HQL oraz łączenia
 
-Istnieje mała rożnica pomiędzy automatycznym łączeniem danych (implicite) a użyciem łączenia explicite. Podczas użycia łączeń zwrócony dane są zgodne z danymi zwróconymi przez zapytania znane z SQL.
+Istnieje mała różnica pomiędzy automatycznym łączeniem danych (implicite) a użyciem łączenia explicite. Podczas użycia łączeń zwrócone dane są zgodne z danymi zwróconymi przez zapytania znane z SQL.
 
 ```
 session.createQuery("FROM City", City.class);

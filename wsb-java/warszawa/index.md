@@ -8,7 +8,7 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 
 ## Kontakt
 
-* mail prowadzącego: maciej.gowin@wsb.warszawa.pl
+* mail prowadzącego: maciej@coderbrother.pl
 
 ## Materiały do zjazdów
 
@@ -43,6 +43,7 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 - Zjazd 9
   - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-09-1.html) [PDF](/wsb-java/warszawa/zjazd-09-1.pdf)
   - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-09-2.html) [PDF](/wsb-java/warszawa/zjazd-09-2.pdf)
+  - Zadania dodatkowe: [HTML](/wsb-java/warszawa/zjazd-09-zadania-dodatkowe.html) [PDF](/wsb-java/warszawa/zjazd-09-zadania-dodatkowe.pdf)
 - Zjazd 10
   - Dzień 1: [HTML](/wsb-java/warszawa/zjazd-10-1.html) [PDF](/wsb-java/warszawa/zjazd-10-1.pdf)
   - Dzień 2: [HTML](/wsb-java/warszawa/zjazd-10-2.html) [PDF](/wsb-java/warszawa/zjazd-10-2.pdf)
