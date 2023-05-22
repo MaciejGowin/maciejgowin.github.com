@@ -448,6 +448,11 @@ Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie https://
   Testy sprawdzające działanie aplikacji jako całości od początku do końca (stąd nazwa end-to-end). Mają na celu znalezienie błędów wpływających na użytkownika.
 
 ---
+# Poziomy testowania
+
+![Poziomy testowania](https://maciejgowin.github.io/assets/img/zjazd-10-1/poziomy-testowania.png)
+
+---
 # Junit 5
 
 **Junit** - framework służący do pisania testów w języku Java. Wspomaga nas w pisaniu oraz uruchamianiu testów
@@ -703,6 +708,87 @@ assertThat(myList)
 ```
 
 ---
+# Junit 5 - testy parametryzowane
+```java
+public class NumberUtils {
+
+  public static boolean isOdd(int number) {
+    return number % 2 != 0;
+  }
+
+}
+```
+```java
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class NumberUtilsParametrizedTest {
+
+    @ParameterizedTest
+    @ValueSource(ints = {1, 3, 5, -3, 15})
+    void shouldReturnTrueForOddNumbers(int number) {
+        assertTrue(NumberUtils.isOdd(number));
+    }
+}
+```
+
+---
+# Junit 5 - testy parametryzowane
+```java
+import java.math.BigDecimal;
+import java.util.Map;
+
+public class CurrencyConversion {
+
+  private static Map<String, BigDecimal> CURRENCY_TO_PLN_RATIO = Map.of(
+          "USD", BigDecimal.valueOf(4.5123),
+          "EUR", BigDecimal.valueOf(4.1989)
+  );
+
+  public static BigDecimal convert(BigDecimal priceInPLN, String currencyCode) {
+    return priceInPLN.multiply(CURRENCY_TO_PLN_RATIO.get(currencyCode));
+  }
+}
+```
+
+---
+# Junit 5 - testy parametryzowane
+```java
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import java.math.BigDecimal;
+import java.util.stream.Stream;
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class CurrencyConversionParametrizedTest {
+    
+    private static Stream<Arguments> shouldCalculatePriceInGivenCurrency() {
+        return Stream.of(
+            Arguments.of(BigDecimal.valueOf(10), "USD", BigDecimal.valueOf(45.123)),
+            Arguments.of(BigDecimal.valueOf(10.34), "EUR", BigDecimal.valueOf(43.416626)));
+    }
+
+    @ParameterizedTest
+    @MethodSource
+    void shouldCalculatePriceInGivenCurrency(
+          BigDecimal priceInPLN, String currencyCode, BigDecimal expected) {
+
+        BigDecimal actual = CurrencyConversion.convert(priceInPLN, currencyCode);
+        assertThat(actual.doubleValue()).isEqualTo(expected.doubleValue());
+    }
+}
+```
+
+---
+# Zadanie
+
+1. Popraw funkcję `CurrencyConversion.convert` tak, aby zaokrąglała w dół, do 2 miejsc po przecinku w następujący sposób: 1.6 -> 1, 1.5 -> 1, 1.1 -> 1, 1.0 -> 1
+2. Dodaj więcej przypadków testowych. Pamiętaj o scenariuszach negatywnych - niepoprawne dane, błędy
+
+--
 # Testowanie - ciekawe linki
 
 - [A Guide to JUnit 5](https://www.baeldung.com/junit-5)
