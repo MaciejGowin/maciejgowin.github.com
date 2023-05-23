@@ -166,10 +166,6 @@ naszej aplikacji.
 
 ---
 
-![Udział w rynku](https://www.idc.com/getfile.dyn?containerId=prUS47279621&attachmentId=47407552)
-
----
-
 # CI/CD - 1
 
 Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych
