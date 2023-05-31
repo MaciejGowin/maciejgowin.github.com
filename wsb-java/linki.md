@@ -12,7 +12,7 @@ title: Linki
 #### Oracle JDK
 [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
 
-## Linki:
+## Materiały:
 
 - https://pl.wikipedia.org/
 - https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/

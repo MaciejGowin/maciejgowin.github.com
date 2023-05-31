@@ -438,7 +438,7 @@ Do podstawowych struktur danych należą:
 - Tablica
 - Lista
 - Stos
-- Kolejka (LIDO, FIFO)
+- Kolejka (LIFO, FIFO)
 - Graf
 - Drzewa i jego liczne odmiany (np. drzewo binarne)
 - Kopiec

@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-warszawa.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-warsaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -165,7 +165,7 @@ Do tej pory podczas porównywania obiektów typu `String` używaliśmy operatora
 ```
 String s1 = "test";
 String s2 = "test";
-boolea isEqual = s1 == 2;
+boolean isEqual = s1 == 2;
 ```
 
 Porównania te działały zgodnie z oczekiwaniami, ponieważ do zmiennych przypisywane były literały.
@@ -859,6 +859,18 @@ Mapa `HashMap` implementuje interfejs `Map`.
 ```
 Map<String, MyClass> map = new HashMap<String, MyClass>();
 ```
+
+---
+# Język Java: of()
+
+Od Java 9 kolekcje oraz mapy dodają nowe metody wytwórcze pozwalające na łatwe tworzenie instancji.
+
+```
+List<String> list = List.of("one", "two", "three");
+Map<String, String> map = Map.of("key1", "one", "key2", "two", "key3", "three");
+```
+
+> Uwaga! Przekazanie wartości `null` powoduje pojawienie się błędu.
 
 ---
 # **Programowanie: zadanie 20**

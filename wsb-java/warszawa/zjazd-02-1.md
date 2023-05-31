@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-warszawa.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-warsaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -370,7 +370,6 @@ SWITCH (value to be compared)
         BREAK;
     DEFAULT:
         Exexcute if nothing else met
-WHILE (condition)
 ```
 
 Wartość porównywana jest z kolejnymi przypadkami. Kod jest wykonywany, tylko jeżeli dany warunek jest spełniony. W przeciwnym wypadku przy brakującym dopasowaniu wykonany zostanie przypadek domyślny.
@@ -432,17 +431,41 @@ public class Main {
 Istotne w wyrażeniu `switch` było użycie słowa `break`, które to przerywa działanie całego bloku. Przy jego pominięciu wszystkie wyrażenia po pasującym przypadku zostaną wykonane.
 
 ```
-        switch (i) {
-            case 0:
-                state = "stop";
-            case 1:
-                state = "low-speed";
-            case 2:
-                state = "top-speed";
-                break;
-            default:
-                state = "unknown";
-        }
+switch (i) {
+    case 0:
+        state = "stop";
+    case 1:
+        state = "low-speed";
+    case 2:
+        state = "top-speed";
+        break;
+    default:
+        state = "unknown";
+}
+```
+
+---
+# Język Java: instrukcja warunkowa switch
+
+Wersja Java 12 wprowadza nowy zapis pozwalający na pominięcie `break` a nawet przypisanie wartości do zmiennej.
+
+```
+String state = "";
+switch (i) {
+    case 0 -> state = "stop";
+    case 1 -> state = "low-speed";
+    case 2 -> state = "top-speed";
+    default -> state = "unknown";
+};
+```
+
+```
+String state = switch (i) {
+    case 0 -> "stop";
+    case 1 -> "low-speed";
+    case 2 -> "top-speed";
+    default -> "unknown";
+};
 ```
 
 ---
@@ -973,7 +996,7 @@ Słowo kluczowe `super` ma jeszcze jedno zastosowanie. Możemy go użyć w przyp
 class Animal {
     private String name;    
     
-    public Animan(String name) {
+    public Animal(String name) {
         this.name = name;
     } 
 }
@@ -1064,8 +1087,8 @@ Operatora `instanceof` używany do sprawdzenia, czy dany obiekt jest danego typu
 
 ```
 Dog dog = new Dog();
-boolea isDog = dog instanceof Dog;
-boolean isAnimal = dog instanceof Animan;
+boolean isDog = dog instanceof Dog;
+boolean isAnimal = dog instanceof Animal;
 ```
 
 ---

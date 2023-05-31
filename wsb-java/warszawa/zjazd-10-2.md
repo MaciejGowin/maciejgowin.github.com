@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-warszawa.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-warsaw-logo.png)
 
 # Programowanie aplikacji w Java
 

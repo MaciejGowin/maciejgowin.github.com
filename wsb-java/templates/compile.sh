@@ -1,5 +1,6 @@
 #!/bin/bash
 
+PROXY=""
 DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 for FILE in "$DIR"/zjazd-*.md; do
@@ -8,14 +9,20 @@ for FILE in "$DIR"/zjazd-*.md; do
     cp "$DIR/$FILENAME.md" "$DIR/../wroclaw/$FILENAME.md"
     cp "$DIR/$FILENAME.md" "$DIR/../warszawa/$FILENAME.md"
 
-    sed -i '' 's/LOGO/https:\/\/maciejgowin.github.io\/assets\/img\/wsb-logo-wroclaw.png/g' "$DIR/../wroclaw/$FILENAME.md"
-    sed -i '' 's/LOGO/https:\/\/maciejgowin.github.io\/assets\/img\/wsb-logo-warszawa.png/g' "$DIR/../warszawa/$FILENAME.md"
+    sed -i '' 's/LOGO/https:\/\/maciejgowin.github.io\/assets\/img\/wsb-merito-wroclaw-logo.png/g' "$DIR/../wroclaw/$FILENAME.md"
+    sed -i '' 's/LOGO/https:\/\/maciejgowin.github.io\/assets\/img\/wsb-merito-warsaw-logo.png/g' "$DIR/../warszawa/$FILENAME.md"
 
     echo "Generating HTML for: $FILENAME"
-    marp "$DIR/../wroclaw/$FILENAME.md" -o "$DIR/../wroclaw/$FILENAME.html"
-    marp "$DIR/../warszawa/$FILENAME.md" -o "$DIR/../warszawa/$FILENAME.html"
+    cd "$DIR/../wroclaw" || exit
+    docker run --rm --init -v $PWD:/home/marp/app/ --env HTTP_PROXY="$PROXY" --env HTTPS_PROXY="$PROXY" -e LANG=$LANG marpteam/marp-cli "$FILENAME.md" -o "$FILENAME.html"
+    cd "$DIR/../warszawa" || exit
+    docker run --rm --init -v $PWD:/home/marp/app/ --env HTTP_PROXY="$PROXY" --env HTTPS_PROXY="$PROXY" -e LANG=$LANG marpteam/marp-cli "$FILENAME.md" -o "$FILENAME.html"
 
     echo "Generating PDF for: $FILENAME"
-    marp --pdf "$DIR/../wroclaw/$FILENAME.md" -o "$DIR/../wroclaw/$FILENAME.pdf"
-    marp --pdf "$DIR/../warszawa/$FILENAME.md" -o "$DIR/../warszawa/$FILENAME.pdf"
+    cd "$DIR/../wroclaw" || exit
+    docker run --rm --init -v $PWD:/home/marp/app/ --env HTTP_PROXY="$PROXY" --env HTTPS_PROXY="$PROXY" -e LANG=$LANG marpteam/marp-cli --pdf "$FILENAME.md" -o "$FILENAME.pdf"
+    cd "$DIR/../warszawa" || exit
+    docker run --rm --init -v $PWD:/home/marp/app/ --env HTTP_PROXY="$PROXY" --env HTTPS_PROXY="$PROXY" -e LANG=$LANG marpteam/marp-cli --pdf "$FILENAME.md" -o "$FILENAME.pdf"
 done
+
+cd "$DIR" || exit

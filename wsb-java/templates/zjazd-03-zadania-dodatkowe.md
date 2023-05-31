@@ -106,3 +106,34 @@ Map<String, List<String>> customByFirstLetter = names.stream()
     });
 
 ```
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Do listy imion i nazwisk oddzielonych białymi znakami zdefiniuj strumień konwertujący ciąg do ciągu posortowanych inicjałów z wielkich liter.
+
+```
+Wejście: ["Maciej Gowin", "andrzej   nowak", "  jan kowalski"]
+Wyjście: ["MG", "AN", "JK"]
+```
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Zdefiniuj kolektor (lub użyj istniejącego) zliczający ilość wystąpień danego słowa w liście.
+
+
+```
+Wejście: ["ccc", "aaa", "bbb", "ccc", "aaa", "ccc"]
+Wyjście: [{"aaa": 2}, {"bbb": 1}, {"ccc": 3}]
+```
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Dla listy obiektów klasy `Rectangle` posiadających metodę definiującą pole powierzchni `int getArea()` oraz używając strumieni oblicz całkowitą powierzchnię figur w liście.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Zamodeluj strukturę grafu przy pomocy własnych klas oraz przedstawionych wbudowanych struktur danych.

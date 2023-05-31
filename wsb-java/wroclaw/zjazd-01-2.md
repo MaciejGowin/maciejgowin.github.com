@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-wroclaw.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-wroclaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -605,7 +605,7 @@ W przykładzie klasa `Main` używa klasy `Car` zdefiniowanej w innym pliku. Jest
 
 # Język Java: pakiety
 
-Przy bardziej skompilowanych programach przydatne jest grupowanie klas w `pakiety`. Tak jak klasom odpowiadają pliki, tak za podział na pakiety odpowiedzialne są katalogi. Nazwa pakietu wynika z nazw katalogów, w jakich znajdują się pliki.
+Przy bardziej skomplikowanych programach, przydatne jest grupowanie klas w `pakiety`. Tak jak klasom odpowiadają pliki, tak za podział na pakiety odpowiedzialne są katalogi. Nazwa pakietu wynika z nazw katalogów, w jakich znajdują się pliki.
 
 ```
 Ścieżka katalogów: {root}/my/first/package
@@ -689,3 +689,20 @@ import java.util.ArrayList;
 # **Programowanie: zadanie 09**
 
 Zmodyfikuj program z zadania 08, dzieląc go na osobne pliki, dla każdej z klas oraz wprowadzając pakiet `cars` dla klas `Car` oraz `CarCalculator`.
+
+---
+
+# Język Java: komentarze
+
+Aby dodać komentarze do kodu, możemy użyć następującej konstrukcji:
+- `//` dla komentarzy w jednej linii
+- `/* */` dla komentarzy w wielu liniach
+
+```
+// Komentarz w jednej linii.
+        
+/*
+    Komentarz w wielu
+    liniach.
+*/
+```

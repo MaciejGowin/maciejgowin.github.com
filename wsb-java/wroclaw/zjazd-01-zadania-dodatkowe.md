@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-wroclaw.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-wroclaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -25,7 +25,7 @@ Wszystkie zadanie dodatkowe zostały stworzone z myślą utrwalenia materiału p
 # **Programowanie: zadanie dodatkowe 01**
 
 Stwórz klasę `Person` zawierającą własności `String firstName` oraz `String lastName`. Klasa ta powinna posiadać metody:
-- `String getFullName()` pobierjącą pełne imię i nazwisko osoby przedzielonego spacją
+- `String getFullName()` pobierającą pełne imię i nazwisko osoby przedzielonego spacją
   - w przypadku braku danej wartości powinna ona zostać pominięta
   - dla przykładu: `Maciej Gowin`, `Gowin`
 - statyczną `Person constructPerson(String firstName, String lastName)` tworzącą nową instancję `Person`
@@ -65,5 +65,62 @@ Zdefiniuj klasę `UniqueTable` imitującą zachowanie dynamicznej tabeli z unika
 - `void addItem(double newItem)` dodającą nową wartość na koniec tabeli, jeżeli wartość ta jeszcze nie istnieje
 - `void deleteItem(double deleteItem)` usuwającą element o danej wartości, jeżeli istnieje
 - `String toString()` zwracającą tekstową reprezentację tablicy, dla przykładu: `[1.0, 2.0, 3.0]`
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Napisz program pozwalający na zliczenie ilości wystąpień każdego ze znaków w zadanym ciągu znaków. Załóż, że każdy ciąg może składać się jedynie z małych liter od `a` do `z`.
+
+Przykład: dla ciągu znaków `mamakota` powinniśmy otrzymać wynik:
+`m = 2, a = 3, k = 1 , o = 1, t = 1`
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Napisz metodę pozwalającą na porównanie ciągu znaków względem kolejności alfabetycznej na podstawie tablicy znaków. Tablicę tą można uzyskać przy pomocy metody `String.toCharArray`.
+Sygnatura metody powinna być następująca:
+`int compareTo(String left, String right)`
+
+Wartość zwrócona powinna być równa:
+- `-1`, gdy alfabetyczne `left` znajduje się przed `right`
+- `1`, gdy alfabetyczne`right` znajduje się przed `left`
+- `0`, gdy są `left` oraz `right` są takie same
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Dla tablicy liczb całkowitych znajdź medianę. Dla pustej tablicy zwróć 0;
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Stwórz klasę `Decimal` pozwalającą na dokładne operacje na liczbach dziesiętnych. Do przechowywania wartości liczb dziesiętnych w klasie użyj dwóch liczna całkowitych. Odpowiednio dla części całkowitej oraz ułamkowej.
+
+Zdefiniuj metody:
+- `Decimal add(Decimal value)` dodającą drugą liczbę oraz zwracającą wynik
+- `Decimal multiply(Decimal value)` mnożącą przez drugą liczbę oraz zwracającą wynik
+- `String toString()` zwracającą tekstową reprezentację tablicy, dla przykładu: `111.222`
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Napisz metodę statyczną sprawdzającą, czy dany rok jest rokiem przestępnym.
+
+Przetestuj działanie w metodzie `main`.
+
+---
+# **Programowanie: zadanie dodatkowe**
+
+Napisz metodę statyczną sprawdzającą dzień tygodnia dla zadanej daty. Datę przekaż do metody za pomocą 2 liczb całkowitych reprezentujących kolejno: rok, miesiąc oraz dzień.
 
 Przetestuj działanie w metodzie `main`.

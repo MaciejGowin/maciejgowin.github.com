@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-warszawa.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-warsaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -438,7 +438,7 @@ Do podstawowych struktur danych należą:
 - Tablica
 - Lista
 - Stos
-- Kolejka (LIDO, FIFO)
+- Kolejka (LIFO, FIFO)
 - Graf
 - Drzewa i jego liczne odmiany (np. drzewo binarne)
 - Kopiec

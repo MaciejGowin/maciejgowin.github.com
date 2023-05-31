@@ -1,4 +1,4 @@
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-wroclaw.png)
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-wroclaw-logo.png)
 
 # Programowanie aplikacji w Java
 
@@ -574,7 +574,7 @@ session.load(customer, 1);
 
 Należy zwrócić uwagę na fakt, że metoda ta zgłasza wyjątek w przypadku braku pasującego wiersza w bazie.
 
-W przypadku, gdy nie jesteśmy pewni czy dany wiersz istnieje w bazie powinniśmy użyć metody `save()`. Pobiera ona element natychmiastowo oraz zwraca `null` w przypadku braku wiersza.
+W przypadku, gdy nie jesteśmy pewni czy dany wiersz istnieje w bazie powinniśmy użyć metody `get()`. Pobiera ona element natychmiastowo oraz zwraca `null` w przypadku braku wiersza.
 
 ```
 Customer customer = session.get(Customer.class, 1);

@@ -174,7 +174,7 @@ title: Plan
 - Spring Context oraz konfiguracja poprzez pliki w formacie XML, kod Java i adnotacje.
 - Automatyczne wiązania poprzez adnotację Autowired.
 
-## Zjazd 8/2
+## Zjazd 8 - Dzień 2
 #### PROGRAMOWANIE APLIKACJI WEBOWYCH (SPRING FRAMEWORK) (8/24)
 
 - Protokół HTTP.
@@ -188,7 +188,7 @@ title: Plan
 - Podejście JSP.
 - Tworzenie aplikacji webowej przy użyciu podstawowych adnotacji (Controller, RequestMapping).
 
-## Zjazd 9/1
+## Zjazd 9 - Dzień 1
 #### PROGRAMOWANIE APLIKACJI WEBOWYCH (SPRING FRAMEWORK) (16/24)
 
 - Zakresy ziaren.
@@ -200,7 +200,7 @@ title: Plan
 - Serwisy RESTful oraz związanie z nimi reguły. 
 
   
-## Zjazd 9/2
+## Zjazd 9 - Dzień 2
 #### PROGRAMOWANIE APLIKACJI WEBOWYCH (SPRING FRAMEWORK) (24/24)
 
 - Walidacja danych.
@@ -211,7 +211,7 @@ title: Plan
 - Actuator oraz żywotność aplikacji.
 - Wprowadzenie do Spring Security.
 
-## Zjazd 10/1
+## Zjazd 10 - Dzień 1
 #### TESTOWANIE APLIKACJI (8/16)
 
 - Wdrażanie aplikacji.
@@ -227,7 +227,7 @@ title: Plan
 - Testowanie w kontekście budowania przy pomocy Maven.
 - Bonus: bazy danych NoSQL oraz teoria CAP
 
-## Zjazd 10/2
+## Zjazd 10 - Dzień 2
 #### TESTOWANIE APLIKACJI (16/16)
 
 - Biblioteka Mockito oraz "mockowanie" obiektów i zachowań.
