@@ -272,10 +272,10 @@ Do realizacji relacji wiele do wielu konieczna jest tabela pomocnicza łącząca
 ```
 
 ```
-| riverId | name      |
-+-----------+---------+
-| 1         | Oder    |
-| 2         | Vistula |
+| riverId | name    |
++---------+---------+
+| 1       | Oder    |
+| 2       | Vistula |
 ```
 
 ```
@@ -414,7 +414,7 @@ Stwórz bazę reprezentującą dane przechowywane przez prosty system rezerwacji
 |:------------|:---------|
 | customers   | id (int), first_name (string), last_name (string), date_of_birth (date)
 | flights     | id (int), departure_airport_code (string), arrival_airport_code (string), departure_date_time (datetime), arrival_date_time (datetime)
-| bookings    | id, customer_id (int), flight_id (int), price (double)
+| bookings    | id (int), customer_id (int), flight_id (int), price (double)
 | airports    | code (string), name (string), latitude (double), longitude (double)
 
 ---

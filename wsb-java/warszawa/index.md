@@ -4,7 +4,7 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 
 {% include wsb-page-intro.md %}
 
-![WSB](https://maciejgowin.github.io/assets/img/wsb-logo-warszawa.png) 
+![WSB](https://maciejgowin.github.io/assets/img/wsb-merito-warsaw-logo.png) 
 
 ## Kontakt
 
