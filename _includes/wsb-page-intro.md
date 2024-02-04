@@ -1,1 +1,1 @@
-[Wyższa Szkoła Bankowa - Programowanie aplikacji Java]({% link wsb-java/index.md %})
+[WSB Merito - Programowanie aplikacji Java]({% link wsb-java/index.md %})

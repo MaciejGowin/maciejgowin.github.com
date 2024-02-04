@@ -2,6 +2,8 @@
 title: Przykładowe tematy prac
 ---
 
+{% include wsb-page-intro.md %}
+
 ### System do zarządzania budżetem domowym
 
 * Zarządzanie użytkownikami.
