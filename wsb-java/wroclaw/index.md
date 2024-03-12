@@ -31,6 +31,8 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 - Zjazd 5
   - Dzień 1: [HTML](/wsb-java/wroclaw/zjazd-05-1.html) [PDF](/wsb-java/wroclaw/zjazd-05-1.pdf)
   - Dzień 2: [HTML](/wsb-java/wroclaw/zjazd-05-2.html) [PDF](/wsb-java/wroclaw/zjazd-05-2.pdf)
+  - Zadania dodatkowe: [HTML](/wsb-java/wroclaw/zjazd-05-zadania-dodatkowe.html) [PDF](/wsb-java/wroclaw/zjazd-05-zadania-dodatkowe.pdf)
+  - Pytania/odpowiedzi: [HTML](/wsb-java/wroclaw/zjazd-05-pytania-odpowiedzi.html) [PDF](/wsb-java/wroclaw/zjazd-05-pytania-odpowiedzi.pdf)
 - Zjazd 6
   - Dzień 1: [HTML](/wsb-java/wroclaw/zjazd-06-1.html) [PDF](/wsb-java/wroclaw/zjazd-06-1.pdf)
   - Dzień 2: [HTML](/wsb-java/wroclaw/zjazd-06-2.html) [PDF](/wsb-java/wroclaw/zjazd-06-2.pdf)

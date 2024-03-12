@@ -3,7 +3,7 @@
 PROXY=""
 DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-for FILE in "$DIR"/zjazd-05-*.md; do
+for FILE in "$DIR"/zjazd-05-zadania*.md; do
     FILENAME=$(echo $FILE | xargs basename | sed 's/.md//')
 
     cp "$DIR/$FILENAME.md" "$DIR/../wroclaw/$FILENAME.md"
