@@ -171,7 +171,7 @@ List<LastName> list = session.createQuery("SELECT new LastName(lastName) FROM Cu
 ---
 # Hibernate w praktyce: Query/HQL oraz AS
 
-W zapytaniach HQL możliwe jest używanie aliasów przy użyciu słowa `AS`. Jest to szczególnie przydatne w łączniach, o których będzie mowa w dalszej części.
+W zapytaniach HQL możliwe jest używanie aliasów przy użyciu słowa `AS`. Jest to szczególnie przydatne w łączeniach, o których będzie mowa w dalszej części.
 
 ```
 List list = session
