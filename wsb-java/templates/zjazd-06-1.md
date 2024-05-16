@@ -133,7 +133,7 @@ Sterownik został załadowany na początku programu:
 Class.forName("com.mysql.cj.jdbc.Driver");
 ```
 
-Taka inicjalizacja sterownika jest znana ze starszych wersji JDBC. W nowoczesnych środowiskach, zaczynając od JDBC 4.0, wszystkie sterowniki, które zostaną odnalezione w ścieżce wyszukiwań (classpath), są automatycznie ładowane.
+Taka inicjalizacja sterownika jest znana ze starszych wersji JDBC. W nowoczesnych środowiskach, zaczynając od JDBC 4.0 (od Java 6.0), wszystkie sterowniki, które zostaną odnalezione w ścieżce wyszukiwań (classpath), są automatycznie ładowane.
 
 > Sterownik nie jest potrzebny na poziomie kompilacji, ponieważ nie odwołujemy się do niego bezpośrednio. Wszystkie wywołania odnoszą się do JDBC API.
 

@@ -383,7 +383,7 @@ List<Customer> list = session.createQuery(criteriaQuery).list();
 ---
 # Hibernate w praktyce: Criteria oraz sortowanie
 
-Sortowanie odbywa się na poziomie `CriteriaQuery.orderBy` za pomocą `CriteriaBuilder.asc()` oraz `CriteriaBuilder.asc()`.
+Sortowanie odbywa się na poziomie `CriteriaQuery.orderBy()` za pomocą `CriteriaBuilder.asc()` oraz `CriteriaBuilder.dest()`.
 
 ```
 CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();

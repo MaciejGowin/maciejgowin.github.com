@@ -566,7 +566,7 @@ Problem może powstać, jeżeli dwa wątki sprawdzają te samą wartość w mapi
 
 Aby zapobiec wyścigom, musimy zapewnić, aby sekcja krytyczna została zawsze wykonana jako instrukcja atomowa.
 
-Innymi słowy - jeżeli jeden wątek wykonuje sekcję krytyczną, żaden inny nie może jej wykonać, dopóki pierwszy jej nie opuścił (nie zakończył jej przetwarzania).
+Innymi słowy, jeżeli jeden wątek wykonuje sekcję krytyczną, żaden inny nie może jej wykonać, dopóki pierwszy jej nie opuścił (nie zakończył jej przetwarzania).
 
 ---
 # Zapobieganie wyścigom
@@ -617,7 +617,7 @@ public class Counter {
 Jeżeli chcielibyśmy ograniczyć zasięg synchronizacji, do osiągnięcia podobnego efektu możemy użyć bloku synchronizacyjnego.
 
 ```
-public  void increment() {
+public void increment() {
     synchronized (this) {
         i = i + 1;
     }
