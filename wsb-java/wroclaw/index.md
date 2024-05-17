@@ -43,6 +43,7 @@ title: Wyższa Szkoła Bankowa - Programowanie aplikacji Java
 - Zjazd 8
   - Dzień 1: [HTML](/wsb-java/wroclaw/zjazd-08-1.html) [PDF](/wsb-java/wroclaw/zjazd-08-1.pdf)
   - Dzień 2: [HTML](/wsb-java/wroclaw/zjazd-08-2.html) [PDF](/wsb-java/wroclaw/zjazd-08-2.pdf)
+  - Zadania dodatkowe: [HTML](/wsb-java/wroclaw/zjazd-08-zadania-dodatkowe.html) [PDF](/wsb-java/wroclaw/zjazd-08-zadania-dodatkowe.pdf)
 - Zjazd 9
   - Dzień 1: [HTML](/wsb-java/wroclaw/zjazd-09-1.html) [PDF](/wsb-java/wroclaw/zjazd-09-1.pdf)
   - Dzień 2: [HTML](/wsb-java/wroclaw/zjazd-09-2.html) [PDF](/wsb-java/wroclaw/zjazd-09-2.pdf)
