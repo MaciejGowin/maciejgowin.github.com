@@ -162,9 +162,9 @@ private String key1Letter;
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" lang="en-IE">
 <h1 id="programowanie-przyk%C5%82ad-91"><strong>Programowanie: przykład 91</strong></h1>
-<p>Użycie <code>RestTemplate</code> do załadowanie domyślnego lotniska dla kraju użytkownika na podstawie zewnętrznego serwisu.</p>
+<p>Użycie <code>RestTemplate</code> do załadowania domyślnego lotniska dla kraju użytkownika na podstawie zewnętrznego serwisu.</p>
 <p>Do pobrania domyślnego kodu lotniska może zostać wykorzystany serwis:</p>
-<p><code>https://www.ryanair.com/api/locate/3/countries</code></p>
+<p><code>https://www.ryanair.com/api/views/locate/3/countries/en</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" lang="en-IE">
 <h1 id="spring-jpa">Spring: JPA</h1>
@@ -237,7 +237,7 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public PlatformTransactionManagert ransactionManager() {
+    public PlatformTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager(entityManagerFactory());
         transactionManager.setDataSource(dataSource());
         /* ... */

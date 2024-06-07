@@ -22,29 +22,23 @@
 
 # Wdrażanie aplikacji
 
-Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych
-komputerach.
+Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych komputerach.
 
 Załóżmy, że skończyliśmy właśnie pracę nad jej pierwszą wersją.
 
 Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników.
 
-Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces
-wdrażania aplikacji.
+Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces wdrażania aplikacji.
 
 ---
 
 # Hosting
 
-Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie
-jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją
-będzie skorzystanie z usług firm zewnętrznych.
+Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją będzie skorzystanie z usług firm zewnętrznych.
 
-Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc
-obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy **hostingiem**.
+Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy **hostingiem**.
 
-Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za
-poszczególne czynności związane z funkcjonowaniem naszej aplikacji.
+Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za poszczególne czynności związane z funkcjonowaniem naszej aplikacji.
 
 ---
 
@@ -63,8 +57,7 @@ poszczególne czynności związane z funkcjonowaniem naszej aplikacji.
 
 Serwer dedykowany jest dostępny tylko dla nas i nasza aplikacja jest jedyną uruchomioną na nim.
 
-W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza
-aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.
+W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.
 
 Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i zarządzania nim.
 
@@ -72,14 +65,12 @@ Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i 
 
 # Hosting współdzielony
 
-W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym
-serwerze uruchomione może być wiele aplikacji różnych klientów.
+W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym serwerze uruchomione może być wiele aplikacji różnych klientów.
 
 Serwery współdzielone pozwalają na lepsze wykorzystanie zasobów poprzez uruchamianie wielu aplikacji na jednej maszynie.
 Dzięki temu są znacznie tańsze od serwerów dedykowanych.
 
-Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych
-na tym samym serwerze.
+Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych na tym samym serwerze.
 
 ---
 
@@ -87,21 +78,17 @@ na tym samym serwerze.
 
 Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym.
 
-Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (
-maszynie wirtualnej).
+Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (maszynie wirtualnej).
 
-Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów
-podobnym do hostingu współdzielonego.
+Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów podobnym do hostingu współdzielonego.
 
-Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza
-to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.
+Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.
 
 ---
 
 # Hosting zarządzany
 
-W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu
-oraz oprogramowania.
+W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu oraz oprogramowania.
 
 Wsparcie techniczne może obejmować monitorowanie czy instalacje aktualizacji poprawiających bezpieczeństwo serwera.
 
@@ -123,30 +110,23 @@ Rola firmy zewnętrznej ogranicza się do utrzymania dostępu do energii, intern
 
 Hosting w chmurze charakteryzuje się możliwością uruchomienia aplikacji z użyciem połączonych zasobów wielu komputerów.
 
-Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone
-bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.
+Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.
 
-Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność
-naszej aplikacji.
-
-
+Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność naszej aplikacji.
 
 ---
 
-# Rodzaje hostingu w chmurze - 1
+# Rodzaje hostingu w chmurze
 
 - **Chmura publiczna** - zasoby chmury są współdzielone przez użytkowników
-    - **IaaS** (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego
-      konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji
-    - **PaaS** (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej
-      aplikacji
-    - **FaaS** (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (
-      serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby
+    - **IaaS** (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji
+    - **PaaS** (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej aplikacji
+    - **FaaS** (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby
     - **SaaS** (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie
 
 ---
 
-# Rodzaje hostingu w chmurze - 2
+# Rodzaje hostingu w chmurze
 
 - **Chmura prywatna** - pozwala na korzystanie z usług chmurowych na sprzęcie, który posiadamy na własność
 - **Chmura hybrydowa** - nasze zasoby składają się zarówno z chmury publicznej, jak i prywatnej
@@ -166,31 +146,25 @@ naszej aplikacji.
 
 ---
 
-# CI/CD - 1
+# CI/CD
 
-Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych
-użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej
-wersji.
+Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej wersji.
 
-Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy
-stworzyć process CI/CD.
+Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy stworzyć process CI/CD.
 
 ---
 
-# CI/CD -2
+# CI/CD
 
 **CI/CD** oznacza:
 
-- **CI** (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących
-  nad aplikacją.
-- **CD** (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed
-  dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.
-- **CD** (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są
-  automatycznie dostarczane do użytkowników aplikacji.
+- **CI** (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących nad aplikacją.
+- **CD** (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.
+- **CD** (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są automatycznie dostarczane do użytkowników aplikacji.
 
 ---
 
-# CI/CD - Continuous Integration vs Continuous Delivery vs Continuous Deployment
+# Continuous Integration vs Continuous Delivery vs Continuous Deployment
 
 ![CI/CD](https://maciejgowin.github.io/assets/img/zjazd-10-1/ci-cd.png)
 
@@ -265,32 +239,78 @@ Najczęściej używanymi strategiami dostarczania nowych wersji aplikacji do uż
 
 Do implementacji naszego procesu CI/CD możemy użyć jednego z popularnych narzędzi, np.
 
+- GitHub Actions
 - Gitlab CI/CD
 - Jenkins
+- AWS CodePipeline
 - Atlassian Bamboo
 - Circle CI
 - Buddy
-- AWS CodePipeline
+
+---
+# GitHub Actions
+
+GitHub jest platformą CI/CD pozwalającą na automatyzację procesów budowania, testowania oraz uruchamiania aplikacji.
+
+Konfiguracja oparta jest o przepływy pracy (ang. workflows) opisujące kolejne składowe procesu. Przepływy mogą zostać uruchomione na żądanie lub też na podstawie konkretnych zdarzeń (ang. events).
+
+Dodatkowo platforma ta dostarcza środowiska uruchomieniowe, które odpowiedzialne są za wykonywanie działań, takich jak budowanie aplikacji. Umożliwia też dostarczanie własnych środowisk uruchomieniowych.
+
+---
+# GitHub Actions - przepływ
+
+![GitHub Actions Overview](https://maciejgowin.github.io/assets/img/zjazd-10-1/github-actions-overview.png)
+
+Źródło: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+
+---
+# GitHub Actions - komponenty
+
+- **workflow** - przypływ pracy opisjący automatyzację procesu CI/CD
+- **event** - zdarzenie na repozytorium powodujące uruchomienie przepływu
+- **job** - jednostka pracy składająca się ze zbioru kroków (ang. steps), każdy z kroków opisuje akcja lub skrypt, działają na tym samym runnerze
+- **action** - aplikacja platformy GitHub Actions pozwalająca na definiowanie skomplikowanych kroków, które później mogą by używane w innych procesach, możliwe jest definiowanie własnych akcji
+- **runner** - serwer używany do wykonywania jednostki pracy, wbudowane serwery obsługują Ubuntu Linux, Microsoft Windows oraz macOS
+
+---
+# GitHub Actions - przykład
+
+Konfiguracja oparta jest o pliki w formacie `YAML` umieszczane w katalogu `.github/workflows/`.
+
+Konkretny plik w z góry opisanym formacie definiuje kolejny przepływ.
+
+```yaml
+name: Who triggered on push
+run-name: Run by ${{ github.actor }}
+on: [push]
+jobs:
+  show-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls -al
+```
+
+---
+# **CI/CD: przykład GitHub Actions**
+
+Przykład konfiguracji CI dla projektu Spring Boot budowanego narzędziem Maven.
 
 ---
 
 # Zadanie
 
-Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem Gitlab CI/CD. Proces ten powinien pobrać najnowszą wersję kodu
-aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.
+Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem GitHub Actions dla swojego projektu Java. Proces ten powinien pobrać najnowszą wersję kodu aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.
 
 ---
 
 # Bazy NoSQL
 
-Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do
-naszej aplikacji oraz przechowywanie bardzo dużej ilości danych.
+Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do naszej aplikacji oraz przechowywanie dużej ilości danych.
 
-Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości
-danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.
+Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.
 
-Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez
-podejmowania dodatkowych działań.
+Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez podejmowania dodatkowych działań.
 
 Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych przechowywanych w bazie danych.
 
@@ -383,7 +403,7 @@ Przykład niewydajnego zapytania:
 
 ---
 
-# Twierdzenie CAP - 1
+# Twierdzenie CAP
 
 - (C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.
 
@@ -394,13 +414,13 @@ Przykład niewydajnego zapytania:
 
 ---
 
-# Twierdzenie CAP - 2
+# Twierdzenie CAP
 
 ![CAP](https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png)
 
 ---
 
-# Zadanie
+# Zadanie: zadanie-mlab
 
 Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie https://mlab.com załadowanie do niej danych oraz napisanie kilku prostych zapytań.
 
@@ -782,7 +802,7 @@ public class CurrencyConversionParametrizedTest {
 # Zadanie
 
 1. Popraw funkcję `CurrencyConversion.convert` tak, aby zaokrąglała w dół, do 2 miejsc po przecinku w następujący sposób: 1.6 -> 1, 1.5 -> 1, 1.1 -> 1, 1.0 -> 1
-2. Dodaj więcej przypadków testowych. Pamiętaj o scenariuszach negatywnych - niepoprawne dane, błędy
+2. Dodaj więcej przypadków testowych. Pamiętaj o scenariuszach negatywnych takich jak: niepoprawne dane, błędy.
 
 --
 # Testowanie - ciekawe linki

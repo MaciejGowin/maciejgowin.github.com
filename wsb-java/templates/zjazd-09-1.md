@@ -202,10 +202,10 @@ spring.mvc.view.suffix = .jsp
 ---
 # Spring w praktyce: application.properties
 
-Spring automatycznie ładuje plik `applition.properties` ze ścieżki przeszukiwania, jeżeli inny nie został zdefiniowany.
+Spring automatycznie ładuje plik `application.properties` ze ścieżki przeszukiwania, jeżeli inny nie został zdefiniowany.
 
 W pliku tym umieszczamy szereg wartości dla zmiennych, które:
-- są wbudowane we sam framework Spring,
+- są wbudowane w sam framework Spring,
 - są wymagane przez biblioteki, z których korzystamy
 - sami definiujemy. 
 

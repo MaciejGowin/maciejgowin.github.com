@@ -39,7 +39,23 @@ Gdzie:
 - `airportFrom` to lotnisko wylotu
 - `airportTo` to lotnisko przylotu.
 
+---
+# **Programowanie: zadanie dodatkowe 21**
 
+Stwórz serwis oparty o podejście RESTful oraz API pozwalające na zarządzanie użytkownikami, oraz przypisanymi do nich rolami.
 
+Aplikacja powinna wspierac następujące operacje:
+- użytkownik: listowanie, pobieranie/usuwanie/aktualizacja po identyfikatorze
+- rola: listowanie, dodanie, usuwanie w kontekście użytkownika
 
+---
+# **Programowanie: zadanie dodatkowe 22**
+Stwórz walidator sprawdzający, czy dany ciąg znaków jest poprawnym numerem telefonu.
 
+---
+# **Programowanie: zadanie dodatkowe 23**
+Stwórz walidator sprawdzający, czy dany ciąg znaków jest poprawnym kodem lotniska. Listę poprawnych kodów lotnisk pobierz z serwisu pod adresem:
+
+```
+https://www.ryanair.com/api/views/locate/5/airports/en/active
+```

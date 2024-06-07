@@ -197,11 +197,11 @@ private String key1Letter;
 ---
 # **Programowanie: przykład 91**
 
-Użycie `RestTemplate` do załadowanie domyślnego lotniska dla kraju użytkownika na podstawie zewnętrznego serwisu.
+Użycie `RestTemplate` do załadowania domyślnego lotniska dla kraju użytkownika na podstawie zewnętrznego serwisu.
 
 Do pobrania domyślnego kodu lotniska może zostać wykorzystany serwis:
 
-`https://www.ryanair.com/api/locate/3/countries`
+`https://www.ryanair.com/api/views/locate/3/countries/en`
 
 ---
 # Spring: JPA
@@ -297,7 +297,7 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public PlatformTransactionManagert ransactionManager() {
+    public PlatformTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager(entityManagerFactory());
         transactionManager.setDataSource(dataSource());
         /* ... */

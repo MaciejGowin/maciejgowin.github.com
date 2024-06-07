@@ -377,7 +377,7 @@ mvn test
 
 Testowanie manualne opierają się na manualnym sprawdzeniu aplikacji.
 
-Testy te najczęściej dotyczą stron internetowych oraz aplikacji mobilnych - czyli interfejsów użytkownika. Podczas ich wykonywania implicite testowane są też rozwiązania backendowe, które są konsumowane przez aplikacje frontendowe.
+Testy te najczęściej dotyczą stron internetowych oraz aplikacji mobilnych, czyli interfejsów użytkownika. Podczas ich wykonywania implicite testowane są też rozwiązania backendowe, które są konsumowane przez aplikacje frontendowe.
 
 Błędy pojawiające się podczas testów manualnych mogą wynikać z błędów na poziomie FE oraz BE.
 
@@ -413,8 +413,7 @@ Uruchomienie skryptu równoznaczne jest z wykonaniem testu.
 
 Istnieje szereg systemów ułatwiających wykonywanie testów automatycznych. 
 
-Dla przykładu: do tej pory używaliśmy narzędzia Cucumber do testów jednostkowych aplikacji. Równie dobrze moglibyśmy użyć tego narzędzia do stworzenia
-scenariuszy testów automatycznych dla istniejącej aplikacji backend. Kroki odpowiadałyby wywołaniom API zdefiniowanego przez aplikację webową.
+Dla przykładu: do tej pory używaliśmy narzędzia Cucumber do testów jednostkowych aplikacji. Równie dobrze moglibyśmy użyć tego narzędzia do stworzenia scenariuszy testów automatycznych dla istniejącej aplikacji backend. Kroki odpowiadałyby wywołaniom API zdefiniowanego przez aplikację webową.
 
 ---
 # Testy automatyczne

@@ -34,7 +34,7 @@ Jest podstawa dla opisu wymiany danych, gdzie dane reprezentowane są przy pomoc
 
 Protokół ten jest bezstanowy i działa w modelu klient serwer przy użyciu par zapytań i odpowiedzi.
 
-Ujednolica format zapytań (ang. request) oraz odpowiedzi (ang. request).
+Ujednolica format zapytań (ang. request) oraz odpowiedzi (ang. response).
 
 > Typy danych nie ogranicza się do formatu HTML.
 
