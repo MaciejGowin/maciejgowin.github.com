@@ -421,7 +421,7 @@ Dobrze zaprojektowany interfejs jest w stanie zaspokoić potrzeby wszystkich kli
 
 #### 6. Kod na żądanie (ang. code on demand, opcjonalne)
 
-Serwis może wysyłać do klienta fragmenty kodu, który może zostać później uruchomiony po jego stornie.
+Serwis może wysyłać do klienta fragmenty kodu, który może zostać później uruchomiony po jego stronie.
 
 ---
 # RESTful Services: HTTP

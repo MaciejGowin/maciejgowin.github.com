@@ -16,364 +16,6 @@
 <h3 id="zjazd-10---dzie%C5%84-1">Zjazd 10 - dzień 1</h3>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" lang="en-IE">
-<h1 id="zawarto%C5%9B%C4%87">Zawartość</h1>
-<ul>
-<li>Wdrażanie i hosting aplikacji</li>
-<li>CI/CD</li>
-<li>Strategie integracji kodu</li>
-<li>Strategie wdrażania aplikacji</li>
-<li>Zadanie z CI/CD</li>
-<li>Bazy NoSQL</li>
-<li>Zadanie z NoSQL</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" lang="en-IE">
-<h1 id="wdra%C5%BCanie-aplikacji">Wdrażanie aplikacji</h1>
-<p>Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych komputerach.</p>
-<p>Załóżmy, że skończyliśmy właśnie pracę nad jej pierwszą wersją.</p>
-<p>Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników.</p>
-<p>Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces wdrażania aplikacji.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" lang="en-IE">
-<h1 id="hosting">Hosting</h1>
-<p>Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją będzie skorzystanie z usług firm zewnętrznych.</p>
-<p>Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy <strong>hostingiem</strong>.</p>
-<p>Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za poszczególne czynności związane z funkcjonowaniem naszej aplikacji.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" lang="en-IE">
-<h1 id="rodzaje-hostingu">Rodzaje hostingu</h1>
-<ul>
-<li>Serwer dedykowany</li>
-<li>Hosting współdzielony</li>
-<li>Serwer VPS (Virtual Private Server)</li>
-<li>Hosting zarządzany</li>
-<li>Kolokacja</li>
-<li>Hosting w chmurze</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" lang="en-IE">
-<h1 id="serwer-dedykowany">Serwer dedykowany</h1>
-<p>Serwer dedykowany jest dostępny tylko dla nas i nasza aplikacja jest jedyną uruchomioną na nim.</p>
-<p>W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.</p>
-<p>Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i zarządzania nim.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" lang="en-IE">
-<h1 id="hosting-wsp%C3%B3%C5%82dzielony">Hosting współdzielony</h1>
-<p>W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym serwerze uruchomione może być wiele aplikacji różnych klientów.</p>
-<p>Serwery współdzielone pozwalają na lepsze wykorzystanie zasobów poprzez uruchamianie wielu aplikacji na jednej maszynie.<br />
-Dzięki temu są znacznie tańsze od serwerów dedykowanych.</p>
-<p>Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych na tym samym serwerze.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" lang="en-IE">
-<h1 id="serwer-vps">Serwer VPS</h1>
-<p>Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym.</p>
-<p>Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (maszynie wirtualnej).</p>
-<p>Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów podobnym do hostingu współdzielonego.</p>
-<p>Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" lang="en-IE">
-<h1 id="hosting-zarz%C4%85dzany">Hosting zarządzany</h1>
-<p>W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu oraz oprogramowania.</p>
-<p>Wsparcie techniczne może obejmować monitorowanie czy instalacje aktualizacji poprawiających bezpieczeństwo serwera.</p>
-<p>W zależności od dostawcy, pakiety usług wchodzących w skład hostingu zarządzanego mogą się różnić.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" lang="en-IE">
-<h1 id="kolokacja">Kolokacja</h1>
-<p>Kolokacja polega na wynajęciu fizycznej przestrzeni na serwery.</p>
-<p>Dzięki temu możemy sami zdecydować, z jakiego rodzaju sprzętu chcemy korzystać.</p>
-<p>Rola firmy zewnętrznej ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia naszego serwera.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" lang="en-IE">
-<h1 id="hosting-w-chmurze">Hosting w chmurze</h1>
-<p>Hosting w chmurze charakteryzuje się możliwością uruchomienia aplikacji z użyciem połączonych zasobów wielu komputerów.</p>
-<p>Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.</p>
-<p>Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność naszej aplikacji.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" lang="en-IE">
-<h1 id="rodzaje-hostingu-w-chmurze">Rodzaje hostingu w chmurze</h1>
-<ul>
-<li><strong>Chmura publiczna</strong> - zasoby chmury są współdzielone przez użytkowników
-<ul>
-<li><strong>IaaS</strong> (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji</li>
-<li><strong>PaaS</strong> (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej aplikacji</li>
-<li><strong>FaaS</strong> (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby</li>
-<li><strong>SaaS</strong> (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie</li>
-</ul>
-</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" lang="en-IE">
-<h1 id="rodzaje-hostingu-w-chmurze-1">Rodzaje hostingu w chmurze</h1>
-<ul>
-<li><strong>Chmura prywatna</strong> - pozwala na korzystanie z usług chmurowych na sprzęcie, który posiadamy na własność</li>
-<li><strong>Chmura hybrydowa</strong> - nasze zasoby składają się zarówno z chmury publicznej, jak i prywatnej</li>
-<li><strong>Multicloud</strong> - nasze zasoby składają się z usług więcej niż jednego dostawcy chmury</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" lang="en-IE">
-<h1 id="podej%C5%9Bcia-do-chmury">Podejścia do chmury</h1>
-<ul>
-<li><strong>Cloud native</strong> - używamy usług specyficznych dla danej chmury
-<ul>
-<li>Trudniejsza zmiana dostawcy chmury (vendor locking)</li>
-<li>Lepsze wykorzystanie zasobów chmury poprzez wykorzystanie zoptymalizowanych dla niej serwisów</li>
-</ul>
-</li>
-<li><strong>Cloud agnostic</strong> - używamy usług, które mogą zostać wdrożone na różnych chmurach
-<ul>
-<li>Łatwiejsza zmiana dostawcy chmury</li>
-<li>Niekorzystanie z zoptymalizowanych przez dostawcę usług, powoduje zazwyczaj gorszą wydajność oraz wyższy koszt<br />
-rozwiązania</li>
-</ul>
-</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" lang="en-IE">
-<h1 id="cicd">CI/CD</h1>
-<p>Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej wersji.</p>
-<p>Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy stworzyć process CI/CD.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" lang="en-IE">
-<h1 id="cicd-1">CI/CD</h1>
-<p><strong>CI/CD</strong> oznacza:</p>
-<ul>
-<li><strong>CI</strong> (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących nad aplikacją.</li>
-<li><strong>CD</strong> (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.</li>
-<li><strong>CD</strong> (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są automatycznie dostarczane do użytkowników aplikacji.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" lang="en-IE">
-<h1 id="continuous-integration-vs-continuous-delivery-vs-continuous-deployment">Continuous Integration vs Continuous Delivery vs Continuous Deployment</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/ci-cd.png" alt="CI/CD" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" lang="en-IE">
-<h1 id="strategie-integracji-kodu">Strategie integracji kodu</h1>
-<p>Najpopularniejsze strategie integracji kodu to:</p>
-<ul>
-<li>Trunk-based development</li>
-<li>Git-flow</li>
-<li>Github-flow</li>
-<li>Gitlab-flow</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" lang="en-IE">
-<h1 id="trunk-based-development">Trunk-based development</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/trunk-based-development.png" alt="Trunk-based development" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" lang="en-IE">
-<h1 id="git-flow">Git-flow</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/git-flow.png" alt="Git-flow" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" lang="en-IE">
-<h1 id="strategie-dostarczania-kolejnych-wersji-aplikacji">Strategie dostarczania kolejnych wersji aplikacji</h1>
-<p>Najczęściej używanymi strategiami dostarczania nowych wersji aplikacji do użytkownika są:</p>
-<ul>
-<li>Basic Deployment</li>
-<li>Rolling update</li>
-<li>Blue-Green deployment</li>
-<li>Canary deployment</li>
-<li>A/B Testing</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" lang="en-IE">
-<h1 id="basic-deployment">Basic deployment</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/basic-deployment.png" alt="Basic development" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" lang="en-IE">
-<h1 id="rolling-update">Rolling update</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/rolling-update.png" alt="Rolling deployment" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" lang="en-IE">
-<h1 id="blue-green-deployment">Blue-Green deployment</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/blue-green.png" alt="Blue-Green deployment" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" lang="en-IE">
-<h1 id="canary-deployment">Canary deployment</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/canary-deployment.png" alt="Canary-Deployment" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" lang="en-IE">
-<h1 id="ab-testing">A/B Testing</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/a-b-testy.png" alt="A/B testing" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" lang="en-IE">
-<h1 id="narz%C4%99dzia">Narzędzia</h1>
-<p>Do implementacji naszego procesu CI/CD możemy użyć jednego z popularnych narzędzi, np.</p>
-<ul>
-<li>GitHub Actions</li>
-<li>Gitlab CI/CD</li>
-<li>Jenkins</li>
-<li>AWS CodePipeline</li>
-<li>Atlassian Bamboo</li>
-<li>Circle CI</li>
-<li>Buddy</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" lang="en-IE">
-<h1 id="github-actions">GitHub Actions</h1>
-<p>GitHub jest platformą CI/CD pozwalającą na automatyzację procesów budowania, testowania oraz uruchamiania aplikacji.</p>
-<p>Konfiguracja oparta jest o przepływy pracy (ang. workflows) opisujące kolejne składowe procesu. Przepływy mogą zostać uruchomione na żądanie lub też na podstawie konkretnych zdarzeń (ang. events).</p>
-<p>Dodatkowo platforma ta dostarcza środowiska uruchomieniowe, które odpowiedzialne są za wykonywanie działań, takich jak budowanie aplikacji. Umożliwia też dostarczanie własnych środowisk uruchomieniowych.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" lang="en-IE">
-<h1 id="github-actions---przep%C5%82yw">GitHub Actions - przepływ</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/github-actions-overview.png" alt="GitHub Actions Overview" /></p>
-<p>Źródło: <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions</a></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" lang="en-IE">
-<h1 id="github-actions---komponenty">GitHub Actions - komponenty</h1>
-<ul>
-<li><strong>workflow</strong> - przypływ pracy opisjący automatyzację procesu CI/CD</li>
-<li><strong>event</strong> - zdarzenie na repozytorium powodujące uruchomienie przepływu</li>
-<li><strong>job</strong> - jednostka pracy składająca się ze zbioru kroków (ang. steps), każdy z kroków opisuje akcja lub skrypt, działają na tym samym runnerze</li>
-<li><strong>action</strong> - aplikacja platformy GitHub Actions pozwalająca na definiowanie skomplikowanych kroków, które później mogą by używane w innych procesach, możliwe jest definiowanie własnych akcji</li>
-<li><strong>runner</strong> - serwer używany do wykonywania jednostki pracy, wbudowane serwery obsługują Ubuntu Linux, Microsoft Windows oraz macOS</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" lang="en-IE">
-<h1 id="github-actions---przyk%C5%82ad">GitHub Actions - przykład</h1>
-<p>Konfiguracja oparta jest o pliki w formacie <code>YAML</code> umieszczane w katalogu <code>.github/workflows/</code>.</p>
-<p>Konkretny plik w z góry opisanym formacie definiuje kolejny przepływ.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Who</span> <span class="hljs-string">triggered</span> <span class="hljs-string">on</span> <span class="hljs-string">push</span>
-<span class="hljs-attr">run-name:</span> <span class="hljs-string">Run</span> <span class="hljs-string">by</span> <span class="hljs-string">${{</span> <span class="hljs-string">github.actor</span> <span class="hljs-string">}}</span>
-<span class="hljs-attr">on:</span> [<span class="hljs-string">push</span>]
-<span class="hljs-attr">jobs:</span>
-  <span class="hljs-attr">show-files:</span>
-    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span>
-    <span class="hljs-attr">steps:</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span>
-      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">ls</span> <span class="hljs-string">-al</span>
-</code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" lang="en-IE">
-<h1 id="cicd-przyk%C5%82ad-github-actions"><strong>CI/CD: przykład GitHub Actions</strong></h1>
-<p>Przykład konfiguracji CI dla projektu Spring Boot budowanego narzędziem Maven.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" lang="en-IE">
-<h1 id="zadanie">Zadanie</h1>
-<p>Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem GitHub Actions dla swojego projektu Java. Proces ten powinien pobrać najnowszą wersję kodu aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" lang="en-IE">
-<h1 id="bazy-nosql">Bazy NoSQL</h1>
-<p>Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do naszej aplikacji oraz przechowywanie dużej ilości danych.</p>
-<p>Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.</p>
-<p>Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez podejmowania dodatkowych działań.</p>
-<p>Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych przechowywanych w bazie danych.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" lang="en-IE">
-<h1 id="typy-baz-nosql">Typy baz NoSQL</h1>
-<p>Najpopularniejsze typy baz NoSQL to:</p>
-<ul>
-<li><strong>Klucz-wartość</strong> - klucz jest znany, ale wartości nie. Sprawdzają się w przechowywaniu nieustrukturyzowanych danych.</li>
-<li><strong>Dokumentowe</strong> - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w<br />
-zapytaniach.</li>
-<li><strong>Rodziny kolumn</strong> - dane są przechowywane w postaci rodziny kolumn. Pozwala to na szybkie przeszukiwanie dużej ilości<br />
-danych, ale wymaga to dobrze przemyślanego schematu bazy.</li>
-<li><strong>Grafowe</strong> - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" lang="en-IE">
-<h1 id="bazy-klucz-warto%C5%9B%C4%87-i-dokumentowe">Bazy klucz wartość i dokumentowe</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-json"><span class="hljs-punctuation">{</span>
-  <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1&quot;</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">&quot;nazwa&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Hotel WSB&quot;</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">&quot;adres&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
-    <span class="hljs-attr">&quot;ulica&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Sportowa 12&quot;</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-attr">&quot;miasto&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Warszawa&quot;</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-attr">&quot;kraj&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Polska&quot;</span>
-  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">&quot;pokoje&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
-    <span class="hljs-punctuation">{</span>
-      <span class="hljs-attr">&quot;numer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
-      <span class="hljs-attr">&quot;liczbaPokoi&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
-    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
-    <span class="hljs-punctuation">{</span>
-      <span class="hljs-attr">&quot;numer&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
-      <span class="hljs-attr">&quot;liczbaPokoi&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span>
-    <span class="hljs-punctuation">}</span>
-  <span class="hljs-punctuation">]</span>
-<span class="hljs-punctuation">}</span>
-</code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" lang="en-IE">
-<h1 id="rodziny-kolumn---1">Rodziny kolumn - 1</h1>
-<p>Klucz składa się z wielu posortowanych kolumn</p>
-<p>Przykład:<br />
-<em>Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny</em></p>
-<table>
-<thead>
-<tr>
-<th>Klucz</th>
-<th>Lokalizacja</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MTA/M86-SBS/2020-01-01T13:01:00/NYCT_5824</td>
-<td>(40.781212,-73.961942)</td>
-</tr>
-<tr>
-<td>MTA/M86-SBS/2020-01-01T13:02:00/NYCT_5840</td>
-<td>(40.780664,-73.958357)</td>
-</tr>
-<tr>
-<td>MTA/M86-SBS/2020-01-01T13:03:00/NYCT_5867</td>
-<td>(40.780281,-73.946890)</td>
-</tr>
-</tbody>
-</table>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" lang="en-IE">
-<h1 id="rodziny-kolumn---2">Rodziny kolumn - 2</h1>
-<p>Przykład wydajnego zapytania:</p>
-<ul>
-<li>Lokalizacje konkretnego busa w danym zakresie czasu</li>
-</ul>
-<p>Przykład niewydajnego zapytania:</p>
-<ul>
-<li>Nazwy busów znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" lang="en-IE">
-<h1 id="bazy-grafowe">Bazy grafowe</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/graf.png" alt="Bazy grafowe" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" lang="en-IE">
-<h1 id="skalowanie-wertykalne-w-g%C3%B3r%C4%99-a-skalowanie-horyzontalne-wszerz">Skalowanie wertykalne (w górę), a skalowanie horyzontalne (wszerz)</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/skalowanie.png" alt="Skalowanie wertykalne, a skalowanie horyzontalne" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" lang="en-IE">
-<h1 id="acid---przypomnienie">ACID - przypomnienie</h1>
-<ul>
-<li>(A)tomicity - Niepodzielność</li>
-<li>(C)onsistency - Spójność</li>
-<li>(I)solation - Izolacja</li>
-<li>(D)urability - Trwałość</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" lang="en-IE">
-<h1 id="twierdzenie-cap">Twierdzenie CAP</h1>
-<ul>
-<li>
-<p>(C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.</p>
-</li>
-<li>
-<p>(A)vailability - system rozproszony zwróci dane nawet pomimo problemu z jego częścią, jednak nie ma gwarancji, że będą<br />
-one w najnowszej wersji.</p>
-</li>
-<li>
-<p>(P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.</p>
-</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" lang="en-IE">
-<h1 id="twierdzenie-cap-1">Twierdzenie CAP</h1>
-<p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png" alt="CAP" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" lang="en-IE">
-<h1 id="zadanie-zadanie-mlab">Zadanie: zadanie-mlab</h1>
-<p>Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie <a href="https://mlab.com">https://mlab.com</a> załadowanie do niej danych oraz napisanie kilku prostych zapytań.</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" lang="en-IE">
 <h1 id="testowanie-aplikacji">Testowanie aplikacji</h1>
 <ul>
 <li><strong>Ręczne</strong>
@@ -394,16 +36,16 @@ one w najnowszej wersji.</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" lang="en-IE">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" lang="en-IE">
 <h1 id="rodzaje-testowania">Rodzaje testowania</h1>
 <ul>
 <li><strong>Testowanie statyczne</strong><br />
-Analiza napisanego kodu poprzez <strong>code review</strong> albo użycie aplikacji do statycznej analizy kodu, np. <strong>Sonar</strong></li>
+Analiza napisanego kodu poprzez <strong>code review</strong> albo użycie aplikacji do statycznej analizy kodu, np. <strong>Sonar</strong>.</li>
 <li><strong>Testowanie dynamiczne</strong><br />
-Testy uruchamiane na działającej aplikacji. Sprawdzają, czy program działa tak jak się tego spodziewamy</li>
+Testy uruchamiane na działającej aplikacji. Sprawdzają, czy program działa tak jak się tego spodziewamy.</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" lang="en-IE">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" lang="en-IE">
 <h1 id="rodzaje-testowania-1">Rodzaje testowania</h1>
 <ul>
 <li>
@@ -416,7 +58,7 @@ Testy skupiające się na wewnętrznej pracy pojedynczego modułu.</p>
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" lang="en-IE">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" lang="en-IE">
 <h1 id="poziomy-testowania">Poziomy testowania</h1>
 <ul>
 <li>
@@ -433,15 +75,14 @@ Testy sprawdzające działanie aplikacji jako całości od początku do końca (
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" lang="en-IE">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" lang="en-IE">
 <h1 id="poziomy-testowania-1">Poziomy testowania</h1>
 <p><img src="https://maciejgowin.github.io/assets/img/zjazd-10-1/poziomy-testowania.png" alt="Poziomy testowania" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" lang="en-IE">
-<h1 id="junit-5">Junit 5</h1>
-<p><strong>Junit</strong> - framework służący do pisania testów w języku Java. Wspomaga nas w pisaniu oraz uruchamianiu testów<br />
-jednostkowych.</p>
-<p>Biblioteka dostarcza:</p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" lang="en-IE">
+<h1 id="junit-5">JUnit 5</h1>
+<p><strong>JUnit</strong> - framework (biblioteka) służący do pisania testów w języku Java. Wspomaga nas w pisaniu oraz uruchamianiu testów jednostkowych.</p>
+<p>Dostarcza:</p>
 <ul>
 <li>adnotacje wspomagające pisanie testów</li>
 <li>mechanizmy do uruchamiania testów</li>
@@ -449,8 +90,8 @@ jednostkowych.</p>
 <li>raportowanie</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" lang="en-IE">
-<h1 id="junit-5-1">Junit 5</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" lang="en-IE">
+<h1 id="junit-5-1">JUnit 5</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.junit.jupiter<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit-jupiter-engine<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
@@ -458,22 +99,12 @@ jednostkowych.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
 </code></pre>
+<blockquote>
+<p>Uwaga: Będziemy korzystać z wersji 5. Dość często używana jest też wersja 4, której idea i zasada działania jest podobna.</p>
+</blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" lang="en-IE">
-<h1 id="junit-5---adnotacje">Junit 5 - adnotacje</h1>
-<p>Podstawowe adnotacje dostarczone przez bibliotekę:</p>
-<ul>
-<li><code>@Test</code> - oznaczenie metody testującej</li>
-<li><code>@BeforeAll</code> – oznaczenie metody uruchamianej przed wszystkimi metodami testującymi.</li>
-<li><code>@AfterAll</code> – oznaczenie metody uruchamianej po wszystkich metodach testujących.</li>
-<li><code>@BeforeEach</code> – oznaczenie metody uruchamianej przed każdym testem.</li>
-<li><code>@AfterEach</code> – oznaczenie metody uruchamianej po każdym teście.</li>
-<li><code>@Disabled</code> – oznaczona metoda tą adnotacją nie zostanie wywołana.</li>
-</ul>
-<p>Wyżej wymienione adnotacje różnią się nieco między poprzednią wersją biblioteki (junit4) a obecną (junit5)</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" lang="en-IE">
-<h1 id="junit-5---przyk%C5%82ad-testu">Junit 5 - przykład testu</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" lang="en-IE">
+<h1 id="junit-5-przyk%C5%82ad-testu">JUnit 5: przykład testu</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;
 <span class="hljs-keyword">import</span> org.springframework.util.StringUtils;
 <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;
@@ -484,49 +115,38 @@ jednostkowych.</p>
     <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldCapitalizeWord</span><span class="hljs-params">()</span> {
         <span class="hljs-comment">// given</span>
         <span class="hljs-type">String</span> <span class="hljs-variable">lowercase</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;wsb&quot;</span>;
+
         <span class="hljs-comment">// when</span>
         <span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> StringUtils.capitalize(lowercase);
+
         <span class="hljs-comment">// then</span>
         assertEquals(<span class="hljs-string">&quot;Wsb&quot;</span>, result);
     }
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" lang="en-IE">
-<h1 id="junit-5---podstawowe-zasady">Junit 5 - podstawowe zasady</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" lang="en-IE">
+<h1 id="junit-5-podstawowe-zasady">JUnit 5: podstawowe zasady</h1>
 <ol>
-<li>Każda metoda testująca opatrzona jest adnotacją <code>@Test</code></li>
-<li>Metoda testująca nic nie zwraca (void)</li>
-<li>Klasa testowa powinna nazywać się tak jak klasa, dla której pisany jest test z suffixem <code>Test</code></li>
-<li>Klasa testowa może zawierać wiele testów (dotyczących jednej bądź wielu metod dostępnych w klasie głównej)</li>
+<li>Każda metoda testująca opatrzona jest adnotacją <code>@Test</code>.</li>
+<li>Metoda testująca nic nie zwraca (void).</li>
+<li>Klasa testowa powinna nazywać się tak jak klasa, dla której pisany jest test z suffixem <code>Test</code>.</li>
+<li>Klasa testowa może zawierać wiele testów (dotyczących jednej bądź wielu metod dostępnych w klasie głównej).</li>
 </ol>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" lang="en-IE">
-<h1 id="test-jednostkowy---podzia%C5%82">Test jednostkowy - podział</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" lang="en-IE">
+<h1 id="test-jednostkowy-podzia%C5%82">Test jednostkowy: podział</h1>
 <h3 id="given">given</h3>
 <p>Część ustawiająca wartości na potrzeby danego testu.<br />
 Inicjalizacja obiektów przekazywanych jako argumenty metody, która jest poddana testowi.</p>
 <h3 id="when">when</h3>
 <p>Wywołanie metody poddawanej testowi.<br />
-Najczęściej w tej części znajduje się jedna linijka kodu - wywołanie metody</p>
+Najczęściej w tej części znajduje się jedna linijka kodu, czyli wywołanie metody.</p>
 <h3 id="then">then</h3>
-<p>Asercje, sprawdzenie, czy wartości oczekiwane odpowiadają tym otrzymanym podczas wykonywania testu</p>
+<p>Asercje, sprawdzenie, czy wartości oczekiwane odpowiadają tym otrzymanym podczas wykonywania testu.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" lang="en-IE">
-<h1 id="asercje">Asercje</h1>
-<ul>
-<li>Asercje są to warunki, których spełnienie jest wymagane do zaliczenia testu.</li>
-<li>Porównują wartość otrzymaną w wyniku wykonania kawałka kodu z wartością oczekiwaną</li>
-<li>Pojedynczy test zawiera <strong>co najmniej</strong> jedną asercję.</li>
-<li>Niepowodzenie którejkolwiek z asercji powoduje przerwanie testu z wynikiem negatywnym.</li>
-</ul>
-<h3 id="przyk%C5%82ady">Przykłady:</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>assertEquals(expected, actual);         // org.junit.jupiter.api.Assertions
-assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
-</code></pre>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" lang="en-IE">
-<h1 id="testy--maven">Testy + Maven</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" lang="en-IE">
+<h1 id="maven-struktura-test%C3%B3w">Maven: struktura testów</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>src
   |- main
   |  |- java
@@ -544,11 +164,15 @@ assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
 <li>Uruchomienie testów - <code>mvn test</code></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" lang="en-IE">
-<h1 id="maven">Maven</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" lang="en-IE">
+<h1 id="maven-uruchomienie-test%C3%B3w">Maven: uruchomienie testów</h1>
 <p>Wykonanie komendy <code>mvn test</code> spowoduje uruchomienie testów programu.</p>
 <p>Przykładowy rezultat:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.106 s - in pl.wsb.tests.TestsApplicationTests
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running pl.maciejgowin.GeometricalUtilsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in pl.maciejgowin.GeometricalUtilsTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -557,13 +181,13 @@ assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.045 s
-[INFO] Finished at: 2022-05-14T09:57:35+02:00
+[INFO] Total time:  4.789 s
+[INFO] Finished at: 2024-06-18T22:32:31+01:00
 [INFO] ------------------------------------------------------------------------
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" lang="en-IE">
-<h1 id="cykl-maven-dla-test%C3%B3w">Cykl Maven dla testów</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" lang="en-IE">
+<h1 id="maven-cykl-test%C3%B3w">Maven: cykl testów</h1>
 <p><a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Lifecycle Reference</a></p>
 <p>W lifecycle Maven (default) istnieją 2 fazy, które umożliwiają uruchomienie testów.</p>
 <ul>
@@ -576,8 +200,8 @@ assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
 <li>poprzez oznaczenie poszczególnych testów poprzez adnotację <code>@Tag</code></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" lang="en-IE">
-<h1 id="cykl-maven-dla-test%C3%B3w-1">Cykl Maven dla testów</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" lang="en-IE">
+<h1 id="maven-cykl-test%C3%B3w-1">Maven: cykl testów</h1>
 <p>Wybór grupowania testów należy skonfigurować w opisie plugina w <code>pom.xml</code> np.</p>
 <p><code>@Tag(junit5)</code></p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">&lt;build&gt;
@@ -594,10 +218,47 @@ assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
 &lt;/build&gt;
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" lang="en-IE">
-<h1 id="asercje---dost%C4%99pne-opcje">Asercje - dostępne opcje</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" lang="en-IE">
+<h1 id="testowanie-przyklad-junit5-basic-test"><strong>Testowanie: przyklad-junit5-basic-test</strong></h1>
+<p>Przykładowy test JUnit5 wraz z prostą konfiguracją Maven.</p>
+<p>Uruchom testy:</p>
 <ul>
-<li>wbudowane - asercje dostępne w bibliotece JUnit</li>
+<li>poprzez komendę <code>mvn test</code> (pamiętaj o przejściu do poprawnego folderu)</li>
+<li>z poziomu Intellij (na folder <strong>java</strong> w <strong>src/test</strong>, opcja <strong>Run 'all tests'</strong>)</li>
+</ul>
+<p>Przeanalizuj wyniki.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" lang="en-IE">
+<h1 id="junit-5-adnotacje">JUnit 5: adnotacje</h1>
+<p>Podstawowe adnotacje dostarczone przez bibliotekę:</p>
+<ul>
+<li><code>@Test</code> - oznaczenie metody testującej</li>
+<li><code>@BeforeAll</code> – oznaczenie metody uruchamianej przed wszystkimi metodami testującymi.</li>
+<li><code>@AfterAll</code> – oznaczenie metody uruchamianej po wszystkich metodach testujących.</li>
+<li><code>@BeforeEach</code> – oznaczenie metody uruchamianej przed każdym testem.</li>
+<li><code>@AfterEach</code> – oznaczenie metody uruchamianej po każdym teście.</li>
+<li><code>@Disabled</code> – oznaczona metoda tą adnotacją nie zostanie wywołana.</li>
+</ul>
+<blockquote>
+<p>Wyżej wymienione adnotacje różnią się nieco między poprzednią wersją biblioteki (JUnit4) a obecną (JUnit5)</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" lang="en-IE">
+<h1 id="asercje">Asercje</h1>
+<ul>
+<li>Asercje są to warunki, których spełnienie jest wymagane do zaliczenia testu.</li>
+<li>Porównują wartość otrzymaną w wyniku wykonania kawałka kodu z wartością oczekiwaną</li>
+<li>Pojedynczy test zawiera <strong>co najmniej</strong> jedną asercję.</li>
+<li>Niepowodzenie którejkolwiek z asercji powoduje przerwanie testu z wynikiem negatywnym.</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>assertEquals(expected, actual);         // org.junit.jupiter.api.Assertions
+assertThat(actual).isEqualTo(expected); // org.assertj.core.api.Assertions
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" lang="en-IE">
+<h1 id="asercje-dost%C4%99pne-biblioteki">Asercje: dostępne biblioteki</h1>
+<ul>
+<li>wbudowane: dostępne w bibliotece JUnit</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>assertEquals(expected, actual);
 assertArrayEquals(expected, actual);
@@ -611,8 +272,8 @@ assertThat(&quot;text&quot;, isOneOf(array));
 assertThat(5, greaterThanOrEqualTo(5));
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" lang="en-IE">
-<h1 id="asercje---dost%C4%99pne-opcje-1">Asercje - dostępne opcje</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" lang="en-IE">
+<h1 id="asercje-dost%C4%99pne-biblioteki-1">Asercje: dostępne biblioteki</h1>
 <ul>
 <li>Truth</li>
 </ul>
@@ -627,7 +288,7 @@ assertThat(array).hasSize(9).contains(a1, a2).doesNotContain(a3);
 assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMessage(&quot;boom!&quot;);
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" lang="en-IE">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" lang="en-IE">
 <h1 id="assertj">AssertJ</h1>
 <p>Bogata biblioteka dostarczająca zbiór asercji.</p>
 <p>Świetnie współpracuje z JUnit.</p>
@@ -635,8 +296,8 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.assertj.core.api.Assertions.*;
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" lang="en-IE">
-<h1 id="assertj---zale%C5%BCno%C5%9B%C4%87-maven">AssertJ - zależność Maven</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" lang="en-IE">
+<h1 id="assertj-zale%C5%BCno%C5%9B%C4%87-maven">AssertJ: zależność Maven</h1>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">&lt;dependency&gt;
     &lt;groupId&gt;org.assertj&lt;/groupId&gt;
     &lt;artifactId&gt;assertj-core&lt;/artifactId&gt;
@@ -645,8 +306,8 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 &lt;/dependency&gt;
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" lang="en-IE">
-<h1 id="assertj---podstawowe-asercje">AssertJ - podstawowe asercje</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" lang="en-IE">
+<h1 id="assertj-podstawowe-asercje">AssertJ: podstawowe asercje</h1>
 <p>Podstawowa forma:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>assertThat(referenceOrValue).&lt;ASERCJA&gt;
 </code></pre>
@@ -654,19 +315,18 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>assertThatThrownBy(() -&gt; {} }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" lang="en-IE">
-<h1 id="assertj---assertthat">AssertJ - assertThat</h1>
-<p><code>assertThat()</code></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" lang="en-IE">
+<h1 id="assertj-assertthat">AssertJ: assertThat()</h1>
 <ul>
 <li>obiekty
 <ul>
-<li><code>isEqualTo() / isNotEqualTo()</code> - porównanie dwóch obiektów</li>
-<li><code>isEqualToComparingFieldByFieldRecursively()</code> - porównanie pól dwóch obiektów tego samego typu</li>
+<li><code>isEqualTo() / isNotEqualTo()</code> - porównuje obiekty</li>
+<li><code>isEqualToComparingFieldByFieldRecursively()</code> - porównuje pola dwóch obiektów tego samego typu</li>
 </ul>
 </li>
-<li>typ Boolean
+<li>typ boolean
 <ul>
-<li><code>isTrue() / isFalse()</code> - sprawdza, czy wartość typu boolean jest równa true albo false</li>
+<li><code>isTrue() / isFalse()</code> - sprawdza, czy wartość jest równa true albo false</li>
 </ul>
 </li>
 <li>kolekcje
@@ -678,30 +338,66 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" lang="en-IE">
-<h1 id="assertj---assertthat-1">AssertJ - assertThat</h1>
-<p>Powyższe przykłady to jedynie ułamek możliwości tej biblioteki.<br />
-Dla krótszego zapisu w sytuacji, w której chcemy sprawdzić kilka rzeczy, dla sprawdzanego obiektu można połączyć kilka metod, używając <em>method chaining</em>, np.:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">assertThat(myList)
-          .isNotNull()
-          .isNotEmpty()
-          .hasSize(2)
-          .containsExactly(1,2);
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" lang="en-IE">
+<h1 id="assertj-assertthat-1">AssertJ: assertThat()</h1>
+<p>Powyższe przykłady to jedynie ułamek możliwości tej biblioteki.</p>
+<p>W sytuacji, w której chcemy sprawdzić kilka warunków, możemy połączyć wywołania metod, używając tzw. <strong>method chaining</strong>.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-shell">assertThat(list)
+        .isNotNull()
+        .isNotEmpty()
+        .hasSize(2)
+        .containsExactly(1, 2);
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" lang="en-IE">
-<h1 id="junit-5---testy-parametryzowane">Junit 5 - testy parametryzowane</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" lang="en-IE">
+<h1 id="testowanie-zadanie"><strong>Testowanie: zadanie</strong></h1>
+<p>Na podstawie kodu z przykładu <code>przyklad-junit5-simple</code> wykonaj zadania przy użyciu JUnit5 oraz biblioteki AssertJ.</p>
+<ul>
+<li>
+<p>Klasa <code>CustomStringUtils</code></p>
+<ul>
+<li>Napisz testy jednostkowe. Spróbuj przeanalizować wszystkie możliwe przypadki użycia danej metody i do każdego z nich napisać odpowiedni test.</li>
+</ul>
+</li>
+<li>
+<p>Klasa <code>Calculator</code></p>
+<ul>
+<li>Zaimplementuj metodę klasy tak, aby test opisany w <code>CalculatorTest</code> zaczął działać.</li>
+<li>Rozszerz klasę o kolejne funkcjonalności: odejmowanie, mnożenia i dzielenia.</li>
+<li>Zaimplementuj testy jednostkowe. Pamiętaj o wszystkich możliwościach użycia metod.</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" lang="en-IE">
+<h1 id="testowanie-zadanie-1"><strong>Testowanie: zadanie</strong></h1>
+<p>Na podstawie kodu z przykładu <code>przyklad-junit5-simple</code> wykonaj zadania przy użyciu JUnit5 oraz biblioteki AssertJ.</p>
+<ul>
+<li>Klasa <code>InternalCache</code>
+<ul>
+<li>Napisz testy jednostkowe dla method klasy.</li>
+<li>Sprawdzaj, czy ilość elementów w <code>cache</code> zgadza się z Twoimi założeniami. Pamiętaj o inicjalizacji i czyszczeniu cache przed i po każdym teście.</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" lang="en-IE">
+<h1 id="junit-5-testy-sparametryzowane">JUnit 5: testy sparametryzowane</h1>
+<p>Załóżmy przykładową logikę aplikacji.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">NumberUtils</span> {
 
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isOdd</span><span class="hljs-params">(<span class="hljs-type">int</span> number)</span> {
-    <span class="hljs-keyword">return</span> number % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>;
-  }
-
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isOdd</span><span class="hljs-params">(<span class="hljs-type">int</span> number)</span> {
+        <span class="hljs-keyword">return</span> number % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>;
+    }
 }
 </code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" lang="en-IE">
+<h1 id="junit-5-testy-sparametryzowane-1">JUnit 5: testy sparametryzowane</h1>
+<p>Powtarzalne testy możemy sparametryzować, przekazując prostą wartość. Pozwoli to nam na wykonanie tego samego testu dla zadanego zbioru wartości.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">import</span> org.junit.jupiter.params.ParameterizedTest;
 <span class="hljs-keyword">import</span> org.junit.jupiter.params.provider.ValueSource;
-<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertFalse;
+
 <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertTrue;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">NumberUtilsParametrizedTest</span> {
@@ -714,31 +410,35 @@ Dla krótszego zapisu w sytuacji, w której chcemy sprawdzić kilka rzeczy, dla 
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" lang="en-IE">
-<h1 id="junit-5---testy-parametryzowane-1">Junit 5 - testy parametryzowane</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" lang="en-IE">
+<h1 id="junit-5-testy-sparametryzowane-2">JUnit 5: testy sparametryzowane</h1>
+<p>Załóżmy przykładową logikę aplikacji.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">import</span> java.math.BigDecimal;
 <span class="hljs-keyword">import</span> java.util.Map;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CurrencyConversion</span> {
 
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Map&lt;String, BigDecimal&gt; CURRENCY_TO_PLN_RATIO = Map.of(
-          <span class="hljs-string">&quot;USD&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.5123</span>),
-          <span class="hljs-string">&quot;EUR&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.1989</span>)
-  );
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Map&lt;String, BigDecimal&gt; CURRENCY_TO_PLN_RATIO = Map.of(
+            <span class="hljs-string">&quot;USD&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.5123</span>),
+            <span class="hljs-string">&quot;EUR&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.1989</span>)
+    );
 
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> BigDecimal <span class="hljs-title function_">convert</span><span class="hljs-params">(BigDecimal priceInPLN, String currencyCode)</span> {
-    <span class="hljs-keyword">return</span> priceInPLN.multiply(CURRENCY_TO_PLN_RATIO.get(currencyCode));
-  }
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> BigDecimal <span class="hljs-title function_">convert</span><span class="hljs-params">(BigDecimal priceInPln, String currencyCode)</span> {
+        <span class="hljs-keyword">return</span> priceInPln.multiply(CURRENCY_TO_PLN_RATIO.get(currencyCode));
+    }
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" lang="en-IE">
-<h1 id="junit-5---testy-parametryzowane-2">Junit 5 - testy parametryzowane</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" lang="en-IE">
+<h1 id="junit-5-testy-sparametryzowane-3">JUnit 5: testy sparametryzowane</h1>
+<p>Powtarzalne testy możemy sparametryzować, przekazując złożone wartości. Pozwoli to nam na wykonanie tego samego testu dla zadanego zbioru wartości.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-keyword">import</span> org.junit.jupiter.params.ParameterizedTest;
 <span class="hljs-keyword">import</span> org.junit.jupiter.params.provider.Arguments;
 <span class="hljs-keyword">import</span> org.junit.jupiter.params.provider.MethodSource;
+
 <span class="hljs-keyword">import</span> java.math.BigDecimal;
 <span class="hljs-keyword">import</span> java.util.stream.Stream;
+
 <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.assertj.core.api.Assertions.assertThat;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CurrencyConversionParametrizedTest</span> {
@@ -751,23 +451,161 @@ Dla krótszego zapisu w sytuacji, w której chcemy sprawdzić kilka rzeczy, dla 
 
     <span class="hljs-meta">@ParameterizedTest</span>
     <span class="hljs-meta">@MethodSource</span>
-    <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldCalculatePriceInGivenCurrency</span><span class="hljs-params">(
-          BigDecimal priceInPLN, String currencyCode, BigDecimal expected)</span> {
-
-        <span class="hljs-type">BigDecimal</span> <span class="hljs-variable">actual</span> <span class="hljs-operator">=</span> CurrencyConversion.convert(priceInPLN, currencyCode);
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldCalculatePriceInGivenCurrency</span><span class="hljs-params">(BigDecimal priceInPln, String currencyCode, BigDecimal expected)</span> {
+        <span class="hljs-type">BigDecimal</span> <span class="hljs-variable">actual</span> <span class="hljs-operator">=</span> CurrencyConversion.convert(priceInPln, currencyCode);
         assertThat(actual.doubleValue()).isEqualTo(expected.doubleValue());
     }
 }
 </code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" lang="en-IE">
-<h1 id="zadanie-1">Zadanie</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" lang="en-IE">
+<h1 id="testowanie-przyklad-junit5-parameterized"><strong>Testowanie: przyklad-junit5-parameterized</strong></h1>
+<p>Uruchom przykładowe testy sparametryzowane. Sprawdź biblioteki wymagane do uruchomienia testów.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" lang="en-IE">
+<h1 id="testowanie-zadanie-2"><strong>Testowanie: zadanie</strong></h1>
+<p>Na podstawie kodu z przykładu <code>przyklad-junit5-parameterized</code> dokonaj następujących zmian.</p>
 <ol>
-<li>Popraw funkcję <code>CurrencyConversion.convert</code> tak, aby zaokrąglała w dół, do 2 miejsc po przecinku w następujący sposób: 1.6 -&gt; 1, 1.5 -&gt; 1, 1.1 -&gt; 1, 1.0 -&gt; 1</li>
-<li>Dodaj więcej przypadków testowych. Pamiętaj o scenariuszach negatywnych takich jak: niepoprawne dane, błędy.</li>
+<li>Popraw funkcję <code>CurrencyConversion.convert</code> tak, aby zaokrąglała rezultat konwersji w górę, do 2 miejsc po przecinku (np. 1.687 -&gt; 1.69, 2.344 -&gt; 2.35).</li>
+<li>Popraw testy oraz dodaj więcej przypadków testowych dla <code>CurrencyConversion.convert</code>. Pamiętaj o scenariuszach negatywnych takich jak: niepoprawne dane, błędy.</li>
+<li>Dodaj testy funkcji <code>NumberUtils.isOdd</code> dla liczb parzystych.</li>
 </ol>
-<p>--</p>
-<h1 id="testowanie---ciekawe-linki">Testowanie - ciekawe linki</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" lang="en-IE">
+<h1 id="mockowanie">Mockowanie</h1>
+<p>Uruchomienie aplikacji wiąże się z dostarczeniem wszystkich wymaganych zależności do klasy poddawanej testowi.</p>
+<p>Zamiast używać rzeczywistych implementacji obiektów (np. repozytorium), można zastąpić je obiektami imitującymi ich działanie.</p>
+<p>Taki sposób ułatwia pisanie testów oraz umożliwia skupienie się na testowaniu funkcjonalności danej klasy.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" lang="en-IE">
+<h1 id="mockowanie-1">Mockowanie</h1>
+<p>Rodzaje mockowania:</p>
+<ul>
+<li><strong>Dummy</strong> to obiekt w teście, który jest nam potrzebny jako wypełnienie. Najczęściej w formie pustej klasy.</li>
+<li><strong>Stub</strong> to obiekt mający minimalną implementację interfejsu, bez skomplikowanej logiki.</li>
+<li><strong>Mock</strong> to obiekt, któremu wskazujemy dokładne zachowania dla określonych metod. Najlepiej skorzystać już z dostępnych wchodzących w skład bibliotek (Mockito)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" lang="en-IE">
+<h1 id="mockito">Mockito</h1>
+<p>Mockito to biblioteka dostarczająca mechanizmy służące do mockowania obiektów i definiowania ich zachowania.</p>
+<p>Świetnie współgrająca z JUnit. Zależności są już dostarczone wraz ze Spring Boot Starters.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.mockito&lt;/groupId&gt;
+    &lt;artifactId&gt;mockito-core&lt;/artifactId&gt;
+    &lt;version&gt;4.5.1&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+    &lt;groupId&gt;org.mockito&lt;/groupId&gt;
+    &lt;artifactId&gt;mockito-junit-jupiter&lt;/artifactId&gt;
+    &lt;version&gt;4.5.1&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" lang="en-IE">
+<h1 id="mockito-przyklad-u%C5%BCycia">Mockito: przyklad użycia</h1>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-meta">@ExtendWith(MockitoExtension.class)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BookServiceTest</span> {
+    <span class="hljs-meta">@InjectMocks</span>
+    <span class="hljs-keyword">private</span> BookService bookService;
+    <span class="hljs-meta">@Mock</span>
+    <span class="hljs-keyword">private</span> BookRepository bookRepository;
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldGetTitle</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// given</span>
+        when(bookRepository.find(anyInt())).thenReturn(
+                Book.builder().title(<span class="hljs-string">&quot;Dummy Title&quot;</span>).build());
+
+        <span class="hljs-comment">// when</span>
+        <span class="hljs-type">String</span> <span class="hljs-variable">title</span> <span class="hljs-operator">=</span> bookService.getTitle(<span class="hljs-number">0</span>);
+
+        <span class="hljs-comment">// then</span>
+        assertThat(title).isEqualTo(<span class="hljs-string">&quot;Dummy Title&quot;</span>);
+    }
+}
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" lang="en-IE">
+<h1 id="mockito-zalety-mockowania">Mockito: zalety mockowania</h1>
+<p>Zalety użycia Mockito:</p>
+<ul>
+<li>chcemy napisać testy sprawdzający działanie pojedynczej metody, nie zależy nam na stawianiu całego kontekstu Springa</li>
+<li>testy wykonują się bardzo szybko</li>
+<li>jesteśmy w stanie sprawdzić wykonanie kodu linijka po linijce, śledząc stan obiektów na każdym kroku</li>
+<li>można zamockować wszystko lub jedynie pojedyncze beany (np. repozytoria, co eliminuje potrzebę stawiania bazy danych)</li>
+</ul>
+<blockquote>
+<p>Wspominamy tutaj o mock'owaniu w kontekście Spring'a, aczkolwiek biblioteka ta działa też na zwykłych obiektach i ich zależnościach.</p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" lang="en-IE">
+<h1 id="mockito-wady-mockowania">Mockito: wady mockowania</h1>
+<p>Wady użycia Mockito:</p>
+<ul>
+<li>test będzie tak dobry, jak dobre będą mock'i (jeśli będziemy zwracać nierealne dane to taki test nie będzie pomocny)</li>
+<li>poprawne testy z użyciem Mockito nie gwarantują, że kontekst Springa zostanie poprawnie uruchomiony (nie sprawdzają poprawności konfiguracji)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" lang="en-IE">
+<h1 id="mockito-format-mockowania">Mockito: format mockowania</h1>
+<p>Mockowanie polega na ustaleniu odpowiedzi metody danej klasy w formie:</p>
+<p><strong>JEŚLI</strong> zostanie wykonana metoda <strong>X</strong>, <strong>WTEDY</strong> zwróć <strong>Y</strong></p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>when(object.method()).thenReturn(objectOrValue);
+</code></pre>
+<p>Podobna składnia jest w przypadku chęci zwrócenia wyjątku:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>when(object.method()).thenThrow(ex);
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" lang="en-IE">
+<h1 id="mockito-format-mockowania-1">Mockito: format mockowania</h1>
+<p>Mockowanie może zostać rozszerzone o <code>ArgumentMatchers</code>, które pozwalają na doprecyzowanie, dla jakich parametrów dany wynik powinien zostać zwrócony.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>when(object.method(anyInt())).thenReturn(objectOrValue);
+when(object.method(eq(5))).thenReturn(objectOrValue);
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" lang="en-IE">
+<h1 id="mockito-weryfikacja-wywo%C5%82ania-metody">Mockito: weryfikacja wywołania metody</h1>
+<p>Oprócz mockowania rezultatu wywołania metody istnieje też możliwość weryfikacji czy dana metoda faktycznie została wywołana (oraz ile razy).</p>
+<p>Aby sprawdzić, czy metoda <code>bookRepository.save()</code> została wywołana 1 raz:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>verify(bookRepository, times(1)).save(any(Book.class));
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" lang="en-IE">
+<h1 id="mockito-weryfikacja-wywo%C5%82ania-metody-1">Mockito: weryfikacja wywołania metody</h1>
+<p>Możemy również przechwycić dowolny obiekt przekazywany jako parametr metody oraz sprawdzić, czy jego stan jest poprawny.<br />
+Mechanizm ten pozwala na szczegółowe sprawdzenie implementacji danej sekcji.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>    @Test
+    public void shouldAddTitle() {
+        // given
+        when(bookRepository.save(any(Book.class))).thenReturn(5);
+
+        // when
+        int id = bookService.addTitle(&quot;Dummy Title&quot;);
+
+        // then
+        assertThat(id).isEqualTo(5);
+
+        ArgumentCaptor&lt;Book&gt; argumentCaptor = ArgumentCaptor.forClass(Book.class);
+        verify(bookRepository, times(1)).save(argumentCaptor.capture());
+        Book book = argumentCaptor.getValue();
+        assertThat(book).isNotNull();
+    }
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" lang="en-IE">
+<h1 id="testowanie-przyklad-mockito"><strong>Testowanie: przyklad-mockito</strong></h1>
+<p>Przeanalizuj przykład oraz sposoby mock'owania wywołań metod.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" lang="en-IE">
+<h1 id="testowanie-zadanie-3"><strong>Testowanie: zadanie</strong></h1>
+<p>Dodaj brakujące testy do metod klasy <code>BookService</code> z przykładu <code>przyklad-mockito</code>.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" lang="en-IE">
+<h1 id="testowanie-ciekawe-linki">Testowanie: ciekawe linki</h1>
 <ul>
 <li><a href="https://www.baeldung.com/junit-5">A Guide to JUnit 5</a></li>
 <li><a href="https://www.jetbrains.com/help/idea/performing-tests.html">Intellij IDEA - uruchamianie testów</a></li>

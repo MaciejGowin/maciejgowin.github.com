@@ -5,158 +5,33 @@
 ## Maciej Gowin
 
 ### Zjazd 10 - dzień 2
- 
----
-# Mockowanie
-
-Uruchomienie aplikacji wiąże się z dostarczeniem wszystkich wymaganych zależności do klasy poddawanej testowi.
-  
-Zamiast używać rzeczywistych implementacji obiektów (np. repozytorium), można zastąpić je obiektami imitującymi ich działanie.  
-
-Taki sposób ułatwia pisanie testów oraz umożliwia skupienie się na testowaniu funkcjonalności danej klasy.
-
----
-# Mockowanie
-
-Rodzaje mockowania:
-- **Dummy** to obiekt w teście, który jest nam potrzebny jako wypełnienie. Najczęściej w formie pustej klasy.
-- **Stub** to obiekt mający minimalną implementację interfejsu, bez skomplikowanej logiki.
-- **Mock** to obiekt, któremu wskazujemy dokładne zachowania dla określonych metod. Najlepiej skorzystać już z dostępnych wchodzących w skład bibliotek (Mockito)
-
----
-# Mockito
-
-Mockito - biblioteka dostarczająca mechanizmy służące do mockowania obiektów i definiowania ich zachowania. 
-
-Świetnie współgrająca z JUnit.
-
-```
-<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-core</artifactId>
-    <version>4.5.1</version>
-    <scope>test</scope>
-</dependency>
-
-<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-junit-jupiter</artifactId>
-    <version>4.5.1</version>
-    <scope>test</scope>
-</dependency>
-```
-
-Zależności są już dostarczone wraz z paczkami Spring Boot
-
----
-# Mockowanie zależności z Mockito
-
-```java
-@ExtendWith(MockitoExtension.class)
-class ExampleServiceTest {
-    @InjectMocks
-    private ExampleService exampleService;
-    @Mock
-    private DummyRepository dummyRepository;
-    @Test
-    void shouldCallSaveBook() {
-        // given
-        when(dummyRepository.save(any(Book.class))).thenReturn(4);
-        // when
-        int result = exampleService.saveRandomBook();
-        // then
-        assertThat(result).isEqualTo(4);
-        verify(dummyRepository, times(1)).save(any(Book.class));
-    }
-}
-```
-
----
-# Mockowanie zależności z Mockito
-
-Zalety użycia Mockito:
-- Chcemy napisać testy sprawdzający działanie pojedynczej metody, nie zależy nam na stawianiu całego kontekstu Springa
-- Testy wykonują się bardzo szybko
-- Jesteśmy w stanie sprawdzić wykonanie kodu linijka po linijce, śledząc stan obiektów na każdym kroku
-- Można zamockować wszystko lub jedynie pojedyncze beany (np. repozytoria, co eliminuje potrzebę stawiania bazy danych)
-
----
-# Mockowanie zależności z Mockito
-
-Wady użycia Mockito:
-- Test będzie tak dobry, jak dobre będą mocki (jeśli będziemy zwracać nierealne dane to taki test nie będzie pomocny)
-- Zielone testy z użyciem Mockito nie gwarantują, że kontekst Springa wstanie (nie sprawdzają poprawności konfiguracji)
-
----
-# Mockowanie zależności z Mockito
-Mockowanie polega na ustaleniu odpowiedzi metody danej klasy w formie:
-
-**JEŚLI** zostanie wykonana metoda **X**, **WTEDY** zwróć **Y**
-
-```
-when(object.method()).thenReturn(objectOrValue);
-```
-
-Podobna składnia jest w przypadku chęci zwrócenia wyjątku:
-
-```
-when(object.method()).thenThrow(ex);
-```
-
----
-# Weryfikacja działania metody z Mockito
-
-Oprócz mockowania odpowiedzi method istnieje możliwość weryfikacji czy dana metoda faktycznie została wykonana oraz ile razy.  
-
-Przykład (sprawdzenie, czy metoda `dummyRepository.save()` została wykonana 1 raz):
-
-```
-verify(dummyRepository, times(1)).save(any(Book.class));
-```
-
----
-# Weryfikacja działania metody z Mockito
-
-Możemy również "złapać" dowolny obiekt przekazywany jako parametr do metody i sprawdzić, czy jest poprawnie ustawiony.
-Ten mechanizm umożliwia dotarcie do konkretnej linijki metody, gdzie "coś się psuje".  
-
-Przykład:
-```
-@Test
-void shouldCallSaveBook() {
-    // given
-    when(dummyRepository.save(any(Book.class))).thenReturn(4);
-    // when
-    int result = exampleService.saveRandomBook();
-    // then
-    ArgumentCaptor<Book> argumentCaptor = ArgumentCaptor.forClass(Book.class);
-    verify(dummyRepository, times(1)).save(argumentCaptor.capture());
-    Book book = argumentCaptor.getValue();
-    assertThat(book).isNotNull();
-}
-```
 
 ---
 # Testy integracyjne
 
-Testy integracyjne służą sprawdzeniu połączeń i interakcji między poszczególnymi modułami lub innymi systemami.
+Testy integracyjne służą weryfikacji połączeń oraz interakcji pomiędzy poszczególnymi modułami lub innymi systemami.
 
-W przypadku testów jednostkowych możemy sprawdzić, że:
+W przypadku testów jednostkowych możemy sprawdzić, czy:
 - zapis do bazy działa poprawnie
 - metoda serwisu poprawnie przepisuje obiekty i wykonuje skomplikowaną logikę
 
-Czego nie wiemy?
-- Czy aplikacja w ogóle się włączy?
-- Czy request HTTP zakończy się poprawnym zapisem danych do bazy danych?
+Czego nie sprawdzamy:
+- czy aplikacja w ogóle się włączy?
+- cz request HTTP zakończy się poprawnym zapisem danych do bazy danych?
 
-Na tego typu pytania odpowiadają testy integracyjne. Taki test polega na **uruchomieniu** aplikacji oraz wykonaniu na niej testu (np. wykonanie zapytania HTTP).
+Na tego typu pytania odpowiadają testy integracyjne. 
 
 ---
-# Testy Spring
+# Testy integracyjne
 
-W przypadku użycia Springa jest możliwość uruchomienia całej aplikacji podczas wykonywanie testu, włącznie z podłączeniem jej do bazy danych.  
+Test integracyjny polega na faktycznym **uruchomieniu** aplikacji (lub jej części) oraz wykonaniu na niej testu (np. wykonanie zapytania HTTP).
 
-W zależności co chcemy przetestować, możemy uruchomić całość bądź skupić się jedynie na części aplikacji (np. tylko test repozytorium).
+---
+# Spring: testy
+
+W przypadku użycia Springa jest możliwość uruchomienia całej aplikacji podczas wykonywania testu, włącznie z podłączeniem jej do bazy danych.  
+
+W zależności co chcemy przetestować, możemy uruchomić całość bądź skupić się jedynie na części aplikacji (np. test repozytorium).
 
 - `@SpringBootTest`
    - uruchamia cały kontekst Spring
@@ -166,7 +41,7 @@ W zależności co chcemy przetestować, możemy uruchomić całość bądź skup
    - nie przeskanuje beanów takich jak `@Service`, `@Repository` (należy pamiętać, aby dostarczyć odpowiednie zależności)
 
 ---
-# Testy Spring
+# Spring: testy
 
 - `@DataJpaTest`
    - używany do testowania warstwy persistence (repozytoria, dao)
@@ -175,69 +50,67 @@ W zależności co chcemy przetestować, możemy uruchomić całość bądź skup
    - przestawi aplikację w tryb logowania SQL na konsoli
 
 ---
-# Testy Spring
+# Spring: testy
+
 Jednym z przykładów testu integracyjnego jest wykonanie zapytania HTTP do jednego z endpointów naszej aplikacji oraz sprawdzenie, czy wynik jest zgodny z oczekiwanym.  
 
-Istnieje mechanizm umożliwiający w prosty sposób wykonanie zapytania HTTP w teście - `MockMvc`. Aby skonfigurować `MockMvc` można użyć adnotacji `@AutoConfigureMockMvc`, która utworzy beana typu `MockMvc`.
+- Do wykonywania zapytań HTTP z poziomu testów będziemy używali klasy `MockMvc`.
+- Do skonfigurowania `MockMvc` możemy użyć adnotacji `@AutoConfigureMockMvc`, która utworzy ziarno typu `MockMvc`.
+- Wywołania na tej klasie zwracają obiekty pozwalające na wywołanie sprawdzeń na rezultatach.
 
 ---
-# Testy Spring
+# Spring: testy
 
-Przykład testu:
+Przykład testu inicjalizującego kontekst Springa.
 
 ```java
 @SpringBootTest
 @AutoConfigureMockMvc
-class ExampleControllerTest {
+public class ApplicationControllerTest {
     @Autowired
     private MockMvc mockMvc;
+
     @Test
-    void shouldReturnString() {  // wykonanie HTTP GET /example
-        // when & then
-        MvcResult result = mockMvc.perform(get("/example"))
+    void shouldReturnExample() throws Exception {
+        // given & when & then
+        MvcResult result = mockMvc.perform(get("/example")) // actual HTTP GET invocation
                 .andExpect(status().isOk())
-                .andExpect(content().string("example String"))
+                .andExpect(content().string("example-value"))
                 .andDo(print()).andReturn();
     }
 }
 ```
+
 ---
-# Testy Spring
+# Spring: testy
 Testy integracyjne mogą korzystać z:
 - rzeczywistych implementacji 
 - mocków
 
-Aby zamockować bean należy użyć adnotacji `@MockBean`, dla przykładu:
+Aby zamockować bean należy użyć adnotacji `@MockBean`:
 
 ```java
 @SpringBootTest
 @AutoConfigureMockMvc
-class ExampleControllerTest {
+public class ApplicationControllerMockTest {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
-    private ExampleService exampleService;  // serwis jest zamockowany
-    @Test
-    void shouldReturnString() {  // wykonanie HTTP GET /example
-        // given
-        when(exampleService.returnHello()).thenReturn("Siema");  // definicja zachowania metody
-        // when & then
-        MvcResult result = mockMvc.perform(get("/example"))
-                .andExpect(status().isOk())
-                .andExpect(content().string("example String"))
-                .andDo(print()).andReturn();
-    }
-}
+    private ExampleService exampleService;
 ```
 
 ---
-# Testy Spring - zależności Maven
+# **Testowanie: przyklad-spring-integration-test**
+
+Przeanalizuj przykład oraz pełną inicjalizację kontekstu Springa.
+
+---
+# Spring: zależności Maven
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-test</artifactId>
     <scope>test</scope>
-    <version>2.5.0</version>
 </dependency>
 <dependency>
     <groupId>com.h2database</groupId>
@@ -246,7 +119,12 @@ class ExampleControllerTest {
 </dependency>
 ```
 
-Warto zwrócić uwagę na _scope_ zależności
+Warto zwrócić uwagę na _scope_ zależności.
+
+---
+# **Testowanie: zadanie**
+
+Wykonaj zadania opisane na podstawie przykładu `przyklad-junit5-spring-boot`. Szczegóły opisane w przykładzie.
 
 ---
 # Test Driven Development
@@ -285,7 +163,7 @@ Definiuje ono jedynie model pracy i tworzenia oprogramowania.
 
 BDD (behavior-driven development) jest rozszerzeniem podejścia TDD. Podobnie jak w przypadku TDD rozwój oprogramowania opiera się na początkowym tworzeniu testów. Główną różnicą jest samo podejście do opisu testów.
 
-W podejściu BDD testy opisują zachowanie i oczekiwane efekty tego zachowania - w przeciwieństwie do prostych testów jednostkowych, które opisuje mały wycinek funkcjonalności, która jest przedmiotem testów.
+W podejściu BDD testy opisują zachowanie i oczekiwane efekty tego zachowania, w przeciwieństwie do prostych testów jednostkowych, które opisuje mały wycinek funkcjonalności, która jest przedmiotem testów.
 
 ---
 # Behavioral Driven Development
@@ -304,7 +182,7 @@ Gherkin pozwala na definiowanie zachowań oprogramowania w sposób zrozumiały n
 W wielu przypadkach Cucumber jest używany wraz z innymi narzędziami wspierającymi testowania oprogramowania. Dodatkowo wspiera wiele języków programowania w połączeniu, z którymi może zostać użyty.
 
 ---
-# Cucumber - Gherkin
+# Cucumber: Gherkin
 
 Testy definiujemy w plikach `.feature`, które opisują daną funkcjonalność. Format pliku oraz słowa kluczowe są definiowane przez język Gherkin.
 
@@ -323,7 +201,7 @@ Feature: bank account operations
 ```
 
 ---
-# Cucumber - Gherkin
+# Cucumber: Gherkin
 
 Do słów kluczowych zaliczamy:
 
@@ -337,14 +215,14 @@ Oraz kroki (ang. steps):
 `Then` - opisuje rezultaty testów
 
 ---
-# Cucumber - Gherkin
+# Cucumber: Gherkin
 
 Kroki budujące scenariusze mogą być rozumiane jako wywołania funkcji. Aby mechanizm Cucumber mógł wykonać dany scenariusz, należy zdefiniować sposób, w jaki krok powinien zostać przetworzony.
 
 Definicja kroków odbywa się na poziomie kodu źródłowego testów.
 
 ---
-# Cucumber - Gherkin
+# Cucumber: Gherkin
 
 ```
     @Given("account balance is set to {value}")
@@ -382,7 +260,7 @@ Testy te najczęściej dotyczą stron internetowych oraz aplikacji mobilnych, cz
 Błędy pojawiające się podczas testów manualnych mogą wynikać z błędów na poziomie FE oraz BE.
 
 ---
-# Testy manualne - problemy
+# Testy manualne: problemy
 
 Wyobraźmy sobie aplikacje do logowania użytkowników.
 
@@ -423,21 +301,21 @@ Testowanie systemu backendowego takiego jak aplikacja backend wydaje się stosun
 Istnieje też możliwość automatycznego testowania aplikacji webowych, w tym stron internetowych. Testy te imitują zachowanie użytkownika przechodzącego po kolejnych stronach oraz wykonujących działania na stronie.
 
 ---
-# Testy automatyczne - Selenium
+# Testy automatyczne: Selenium
 
-Przykładem narzędzia, które wspiera automatyczne testowanie aplikacji webowych - stron internetowych jest narządzie Selenium.
+Przykładem narzędzia, które wspiera automatyczne testowanie aplikacji webowych, takich jak strony internetowe, jest narządzie Selenium.
 
-Selenium pozwala na definiowanie testów przy pomocy wielu języków - w tym Java.
+Selenium pozwala na definiowanie testów przy pomocy wielu języków, w tym Java.
 
 ---
 # **Programowanie: przyklad-selenium**
 
-Przykładowa automatyzacja akcji na stornie internetowej.
+Przykładowa automatyzacja akcji na stronie internetowej.
 
 ---
-# Testy automatyczne - łączenie rozwiązań
+# Testy automatyczne: łączenie rozwiązań
 
-Jak widać rozwiązania i narzędzia testujące łączą się w łatwy sposób. Używając poznanych bibliotek, moglibyśmy zdefiniować scenariusze testów przy pomocy Cucumber, gdzie kroki testów wykorzystywałyby Selenium do wykonywania akcji na stornie internetowej.
+Jak widać rozwiązania i narzędzia testujące łączą się w łatwy sposób. Używając poznanych bibliotek, moglibyśmy zdefiniować scenariusze testów przy pomocy Cucumber, gdzie kroki testów wykorzystywałyby Selenium do wykonywania akcji na stronie internetowej.
 
 ---
 # Testy wydajnościowe
@@ -465,7 +343,7 @@ Ich analiza opera się na 3 głównych aspektach:
 - przepustowość: ograniczenie systemu w zakresie limitów wydajnościowych (np. ograniczenia w ilości zapytań).
 
 ---
-# Testy wydajnościowe - Gatling
+# Testy wydajnościowe: Gatling
 
 Gatling jest narzędziem pozwalającym na łatwe tworzenie testów wydajnościowych oraz ich automatyzację.
 
@@ -485,3 +363,416 @@ Rezultaty:
 ```
 /target/gatling
 ```
+
+---
+
+# Materiały dodatkowe: zawartość
+
+- Wdrażanie i hosting aplikacji
+- CI/CD
+- Strategie integracji kodu
+- Strategie wdrażania aplikacji
+- Zadanie z CI/CD
+- Bazy NoSQL
+- Zadanie z NoSQL
+
+---
+
+# Wdrażanie aplikacji
+
+Do tej pory zajmowaliśmy się implementacją kodu naszej aplikacji w Springu oraz uruchamialiśmy ją lokalnie, na naszych komputerach.
+
+Załóżmy, że skończyliśmy właśnie pracę nad jej pierwszą wersją.
+
+Naszym kolejnym zadaniem jest dostarczenie jej do użytkowników.
+
+Rozważymy teraz istniejące opcje dostarczenia naszej aplikacji do użytkowników oraz przejdziemy przez cały proces wdrażania aplikacji.
+
+---
+
+# Hosting
+
+Udostępnienie aplikacji z naszego własnego komputera wymaga dużo wysiłku związanego z administracją serwera. O ile nie jesteśmy firmą, która chce poświęcić wiele zasobów na zbudowanie i utrzymywanie własnej serwerowni, najlepszą opcją będzie skorzystanie z usług firm zewnętrznych.
+
+Na rynku jest wiele firm, które posiadają serwerownie złożone z wielu komputerów, które udostępniają swoich klientom moc obliczeniową potrzebną do funkcjonowania aplikacji. Udostępnianie zasobów serwera klientowi nazywamy **hostingiem**.
+
+Istnieje wiele rodzajów hostingu, które różnią się sposobem rozliczania płatności oraz podziałem odpowiedzialności za poszczególne czynności związane z funkcjonowaniem naszej aplikacji.
+
+---
+
+# Rodzaje hostingu
+
+- Serwer dedykowany
+- Hosting współdzielony
+- Serwer VPS (Virtual Private Server)
+- Hosting zarządzany
+- Kolokacja
+- Hosting w chmurze
+
+---
+
+# Serwer dedykowany
+
+Serwer dedykowany jest dostępny tylko dla nas i nasza aplikacja jest jedyną uruchomioną na nim.
+
+W przypadku hostingu na serwerze dedykowanym mamy największą kontrolę nad serwerem, na którym uruchomiona jest nasza aplikacja. Mamy pełen dostęp administratora do wszystkich zasobów serwera.
+
+Serwer dedykowany wymaga najwięcej wysiłku oraz wiedzy z zakresu instalacji i zarządzania nim.
+
+---
+
+# Hosting współdzielony
+
+W przypadku hostingu współdzielonego mamy bardzo ograniczone możliwości administracji serwerem, ponieważ na jednym serwerze uruchomione może być wiele aplikacji różnych klientów.
+
+Serwery współdzielone pozwalają na lepsze wykorzystanie zasobów poprzez uruchamianie wielu aplikacji na jednej maszynie.
+Dzięki temu są znacznie tańsze od serwerów dedykowanych.
+
+Oprócz ograniczonej kontroli nad serwerem, wadą tego typu hostingu jest możliwy wzajemny wpływ aplikacji uruchomionych na tym samym serwerze.
+
+---
+
+# Serwer VPS
+
+Serwer VPS jest rozwiązaniem pomiędzy serwerem dedykowanym i hostingiem współdzielonym.
+
+Na jednej maszynie uruchomione jest wiele aplikacji, ale każda z nich jest uruchomiona w odizolowanej przestrzeni (maszynie wirtualnej).
+
+Dzięki temu możliwa jest kontrola nad serwerem zbliżona do serwera dedykowanego, przy jednoczesnym wykorzystaniu zasobów podobnym do hostingu współdzielonego.
+
+Maszyna wirtualna pozwala na uruchomienie więcej niż jednego systemu operacyjnego na tym samym serwerze, jednak oznacza to również, konieczność alokacji oddzielnych zasobów dla każdego z nich.
+
+---
+
+# Hosting zarządzany
+
+W przypadku hostingu zarządzanego oprócz serwera otrzymujemy również wsparcie techniczne związane z konfiguracją sprzętu oraz oprogramowania.
+
+Wsparcie techniczne może obejmować monitorowanie czy instalacje aktualizacji poprawiających bezpieczeństwo serwera.
+
+W zależności od dostawcy, pakiety usług wchodzących w skład hostingu zarządzanego mogą się różnić.
+
+---
+
+# Kolokacja
+
+Kolokacja polega na wynajęciu fizycznej przestrzeni na serwery.
+
+Dzięki temu możemy sami zdecydować, z jakiego rodzaju sprzętu chcemy korzystać.
+
+Rola firmy zewnętrznej ogranicza się do utrzymania dostępu do energii, internetu oraz chłodzenia naszego serwera.
+
+---
+
+# Hosting w chmurze
+
+Hosting w chmurze charakteryzuje się możliwością uruchomienia aplikacji z użyciem połączonych zasobów wielu komputerów.
+
+Dostawcy chmury dostarczają narzędzia developerskie oraz usługi takie jak np. bazy danych, które mogą zostać wdrożone bez konieczności ręcznej instalacji oraz pozwalają ograniczyć czynności związane z ich utrzymaniem.
+
+Dzięki temu ułatwione jest budowanie i zarządzanie infrastrukturą naszej aplikacji. Pozwala to poprawić niezawodność naszej aplikacji.
+
+---
+
+# Rodzaje hostingu w chmurze
+
+- **Chmura publiczna** - zasoby chmury są współdzielone przez użytkowników
+  - **IaaS** (Infrastructure as a Service) - otrzymujemy serwer wirtualny, ale jesteśmy odpowiedzialni za jego konfigurację oraz zarządzanie środowiskiem dla naszej aplikacji
+  - **PaaS** (Platform as a Service) - oprócz serwera wirtualnego otrzymujemy gotowe środowisko do uruchomienia naszej aplikacji
+  - **FaaS** (Function as a Service) - pozwala uruchomić nasz kod na żądanie, bez rezerwowania żadnego serwera (serverless). Płacimy tylko za zużyte przez naszą aplikację zasoby
+  - **SaaS** (Software as a Service) - otrzymujemy gotowe do użycia oprogramowanie
+
+---
+
+# Rodzaje hostingu w chmurze
+
+- **Chmura prywatna** - pozwala na korzystanie z usług chmurowych na sprzęcie, który posiadamy na własność
+- **Chmura hybrydowa** - nasze zasoby składają się zarówno z chmury publicznej, jak i prywatnej
+- **Multicloud** - nasze zasoby składają się z usług więcej niż jednego dostawcy chmury
+
+---
+
+# Podejścia do chmury
+
+- **Cloud native** - używamy usług specyficznych dla danej chmury
+  - Trudniejsza zmiana dostawcy chmury (vendor locking)
+  - Lepsze wykorzystanie zasobów chmury poprzez wykorzystanie zoptymalizowanych dla niej serwisów
+- **Cloud agnostic** - używamy usług, które mogą zostać wdrożone na różnych chmurach
+  - Łatwiejsza zmiana dostawcy chmury
+  - Niekorzystanie z zoptymalizowanych przez dostawcę usług, powoduje zazwyczaj gorszą wydajność oraz wyższy koszt
+    rozwiązania
+
+---
+
+# CI/CD
+
+Do tej pory zaimplementowaliśmy naszą aplikację, wybraliśmy hosting i dostarczyliśmy jej pierwszą wersję do naszych użytkowników. Jako zespół pracujący nad tą aplikacją planujemy teraz dodanie nowych funkcjonalności do jej kolejnej wersji.
+
+Aby zaoszczędzić nasz czas, chcemy zautomatyzować process wdrażania kolejnych wersji aplikacji. W tym celu zamierzamy stworzyć process CI/CD.
+
+---
+
+# CI/CD
+
+**CI/CD** oznacza:
+
+- **CI** (Continuous Integration) - regularne budowanie i testowanie zmian w kodzie różnych członków zespołu pracujących nad aplikacją.
+- **CD** (Continuous Delivery) - zmiany są automatycznie wdrażane i testowane na środowisku testowym. Przed dostarczeniem nowej wersji dla użytkownika konieczne jest manualne potwierdzenie.
+- **CD** (Continuous Deployment) - w porównaniu do Continuous Delivery, po przejściu przez środowisko testowe zmiany są automatycznie dostarczane do użytkowników aplikacji.
+
+---
+
+# Continuous Integration vs Continuous Delivery vs Continuous Deployment
+
+![CI/CD](https://maciejgowin.github.io/assets/img/zjazd-10-1/ci-cd.png)
+
+---
+
+# Strategie integracji kodu
+
+Najpopularniejsze strategie integracji kodu to:
+
+- Trunk-based development
+- Git-flow
+- Github-flow
+- Gitlab-flow
+
+---
+
+# Trunk-based development
+
+![Trunk-based development](https://maciejgowin.github.io/assets/img/zjazd-10-1/trunk-based-development.png)
+
+---
+
+# Git-flow
+
+![Git-flow](https://maciejgowin.github.io/assets/img/zjazd-10-1/git-flow.png)
+
+---
+
+# Strategie dostarczania kolejnych wersji aplikacji
+
+Najczęściej używanymi strategiami dostarczania nowych wersji aplikacji do użytkownika są:
+
+- Basic Deployment
+- Rolling update
+- Blue-Green deployment
+- Canary deployment
+- A/B Testing
+
+---
+
+# Basic deployment
+
+![Basic development](https://maciejgowin.github.io/assets/img/zjazd-10-1/basic-deployment.png)
+
+---
+
+# Rolling update
+
+![Rolling deployment](https://maciejgowin.github.io/assets/img/zjazd-10-1/rolling-update.png)
+
+---
+
+# Blue-Green deployment
+
+![Blue-Green deployment](https://maciejgowin.github.io/assets/img/zjazd-10-1/blue-green.png)
+
+---
+
+# Canary deployment
+
+![Canary-Deployment](https://maciejgowin.github.io/assets/img/zjazd-10-1/canary-deployment.png)
+
+---
+
+# A/B Testing
+
+![A/B testing](https://maciejgowin.github.io/assets/img/zjazd-10-1/a-b-testy.png)
+
+---
+
+# Narzędzia
+
+Do implementacji naszego procesu CI/CD możemy użyć jednego z popularnych narzędzi, np.
+
+- GitHub Actions
+- Gitlab CI/CD
+- Jenkins
+- AWS CodePipeline
+- Atlassian Bamboo
+- Circle CI
+- Buddy
+
+---
+# GitHub Actions
+
+GitHub jest platformą CI/CD pozwalającą na automatyzację procesów budowania, testowania oraz uruchamiania aplikacji.
+
+Konfiguracja oparta jest o przepływy pracy (ang. workflows) opisujące kolejne składowe procesu. Przepływy mogą zostać uruchomione na żądanie lub też na podstawie konkretnych zdarzeń (ang. events).
+
+Dodatkowo platforma ta dostarcza środowiska uruchomieniowe, które odpowiedzialne są za wykonywanie działań, takich jak budowanie aplikacji. Umożliwia też dostarczanie własnych środowisk uruchomieniowych.
+
+---
+# GitHub Actions - przepływ
+
+![GitHub Actions Overview](https://maciejgowin.github.io/assets/img/zjazd-10-1/github-actions-overview.png)
+
+Źródło: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+
+---
+# GitHub Actions - komponenty
+
+- **workflow** - przypływ pracy opisjący automatyzację procesu CI/CD
+- **event** - zdarzenie na repozytorium powodujące uruchomienie przepływu
+- **job** - jednostka pracy składająca się ze zbioru kroków (ang. steps), każdy z kroków opisuje akcja lub skrypt, działają na tym samym runnerze
+- **action** - aplikacja platformy GitHub Actions pozwalająca na definiowanie skomplikowanych kroków, które później mogą by używane w innych procesach, możliwe jest definiowanie własnych akcji
+- **runner** - serwer używany do wykonywania jednostki pracy, wbudowane serwery obsługują Ubuntu Linux, Microsoft Windows oraz macOS
+
+---
+# GitHub Actions - przykład
+
+Konfiguracja oparta jest o pliki w formacie `YAML` umieszczane w katalogu `.github/workflows/`.
+
+Konkretny plik w z góry opisanym formacie definiuje kolejny przepływ.
+
+```yaml
+name: Who triggered on push
+run-name: Run by ${{ github.actor }}
+on: [push]
+jobs:
+  show-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls -al
+```
+
+---
+# **CI/CD: przyklad-github-actions**
+
+Przykład konfiguracji CI za pomocą GitHub Actions dla projektu Spring Boot budowanego narzędziem Maven.
+
+---
+# **CD/CD: zadanie**
+
+Zaimplementuj uproszczoną wersję procesu CI/CD z użyciem GitHub Actions dla swojego projektu Java. Proces ten powinien pobrać najnowszą wersję kodu aplikacji napisanej w Javie, zbudować ją oraz uruchomić testy.
+
+---
+
+# Bazy NoSQL
+
+Nadszedł czas rozpoczęcia kolejnego projektu. Z wymagań wynika, że musimy być przygotowani na obsługę dużego ruchu do naszej aplikacji oraz przechowywanie dużej ilości danych.
+
+Bazy danych SQL, które poznaliśmy do tej pory, oferują możliwości skalowania w celu obsługi większego ruchu i ilości danych, jednak są w tym aspekcie dosyć ograniczone i wymagają dodatkowych czynności w celu jej zapewnienia.
+
+Dla takich zastosowań powstały właśnie bazy NoSQL. Dostarczają one znacznie lepsze możliwości skalowania bez podejmowania dodatkowych działań.
+
+Ponadto w wielu przypadkach znacznie ułatwiają modelowanie danych przechowywanych w bazie danych.
+
+---
+
+# Typy baz NoSQL
+
+Najpopularniejsze typy baz NoSQL to:
+
+- **Klucz-wartość** - klucz jest znany, ale wartości nie. Sprawdzają się w przechowywaniu nieustrukturyzowanych danych.
+- **Dokumentowe** - rozszerzenie baz klucz-wartość, oferują możliwość zagnieżdżania par klucz-wartość i używania ich w zapytaniach.
+- **Rodziny kolumn** - dane są przechowywane w postaci rodziny kolumn. Pozwala to na szybkie przeszukiwanie dużej ilości danych, ale wymaga to dobrze przemyślanego schematu bazy.
+- **Grafowe** - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.
+
+---
+
+# NoSQL: bazy klucz wartość i dokumentowe
+
+```json
+{
+  "id": "1",
+  "nazwa": "Hotel WSB",
+  "adres": {
+    "ulica": "Sportowa 12",
+    "miasto": "Warszawa",
+    "kraj": "Polska"
+  },
+  "pokoje": [
+    {
+      "numer": 1,
+      "liczbaPokoi": 2
+    },
+    {
+      "numer": 2,
+      "liczbaPokoi": 3
+    }
+  ]
+}
+```
+
+---
+
+# NoSQL: rodziny kolumn
+
+Klucz składa się z wielu posortowanych kolumn
+
+Przykład:
+_Klucz = Firma/Linia Autobusowa/Czas/Numer rejestracyjny_
+
+| Klucz                                     | Lokalizacja            |
+|-------------------------------------------|------------------------|
+| MTA/M86-SBS/2020-01-01T13:01:00/NYCT_5824 | (40.781212,-73.961942) |
+| MTA/M86-SBS/2020-01-01T13:02:00/NYCT_5840 | (40.780664,-73.958357) |
+| MTA/M86-SBS/2020-01-01T13:03:00/NYCT_5867 | (40.780281,-73.946890) |
+
+---
+
+# NoSQL: rodziny kolumn
+
+Przykład wydajnego zapytania:
+
+- Lokalizacje konkretnego busa w danym zakresie czasu
+
+Przykład niewydajnego zapytania:
+
+- Nazwy busów znajdujących się w prostokącie pomiędzy P1(40, -73), P2(41, -74)
+
+---
+
+# Bazy grafowe
+
+![Bazy grafowe](https://maciejgowin.github.io/assets/img/zjazd-10-1/graf.png)
+
+---
+
+# Skalowanie wertykalne (w górę), a skalowanie horyzontalne (wszerz)
+
+![Skalowanie wertykalne, a skalowanie horyzontalne](https://maciejgowin.github.io/assets/img/zjazd-10-1/skalowanie.png)
+
+---
+
+# ACID - przypomnienie
+
+- (A)tomicity - Niepodzielność
+- (C)onsistency - Spójność
+- (I)solation - Izolacja
+- (D)urability - Trwałość
+
+---
+# Twierdzenie CAP
+
+- (C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.
+
+- (A)vailability - system rozproszony zwróci dane nawet pomimo problemu z jego częścią, jednak nie ma gwarancji, że będą
+  one w najnowszej wersji.
+
+- (P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.
+
+---
+# Twierdzenie CAP
+
+![CAP](https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png)
+
+---
+
+# Zadanie: zadanie-mlab
+
+Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie https://mlab.com załadowanie do niej danych oraz napisanie kilku prostych zapytań.
