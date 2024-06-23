@@ -615,14 +615,14 @@ Konfiguracja oparta jest o przepływy pracy (ang. workflows) opisujące kolejne 
 Dodatkowo platforma ta dostarcza środowiska uruchomieniowe, które odpowiedzialne są za wykonywanie działań, takich jak budowanie aplikacji. Umożliwia też dostarczanie własnych środowisk uruchomieniowych.
 
 ---
-# GitHub Actions - przepływ
+# GitHub Actions: przepływ
 
 ![GitHub Actions Overview](https://maciejgowin.github.io/assets/img/zjazd-10-1/github-actions-overview.png)
 
 Źródło: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 
 ---
-# GitHub Actions - komponenty
+# GitHub Actions: komponenty
 
 - **workflow** - przypływ pracy opisjący automatyzację procesu CI/CD
 - **event** - zdarzenie na repozytorium powodujące uruchomienie przepływu
@@ -631,7 +631,7 @@ Dodatkowo platforma ta dostarcza środowiska uruchomieniowe, które odpowiedzial
 - **runner** - serwer używany do wykonywania jednostki pracy, wbudowane serwery obsługują Ubuntu Linux, Microsoft Windows oraz macOS
 
 ---
-# GitHub Actions - przykład
+# GitHub Actions: przykład
 
 Konfiguracja oparta jest o pliki w formacie `YAML` umieszczane w katalogu `.github/workflows/`.
 
@@ -749,7 +749,7 @@ Przykład niewydajnego zapytania:
 
 ---
 
-# ACID - przypomnienie
+# ACID: przypomnienie
 
 - (A)tomicity - Niepodzielność
 - (C)onsistency - Spójność
@@ -757,7 +757,7 @@ Przykład niewydajnego zapytania:
 - (D)urability - Trwałość
 
 ---
-# Twierdzenie CAP
+# NoSQL: Twierdzenie CAP
 
 - (C)onsistency - każda część rozproszonego systemu zwraca dane w najnowszej wersji.
 
@@ -767,12 +767,11 @@ Przykład niewydajnego zapytania:
 - (P)artition-tolerance - system rozproszony działa poprawnie pomimo problemów z jego częścią.
 
 ---
-# Twierdzenie CAP
+# NoSQL: Twierdzenie CAP
 
 ![CAP](https://maciejgowin.github.io/assets/img/zjazd-10-1/cap.png)
 
 ---
-
-# Zadanie: zadanie-mlab
+# **Bazy danych: zadanie**
 
 Naszym zadaniem jest utworzenie bazy danych NoSQL MongoDB na platformie https://mlab.com załadowanie do niej danych oraz napisanie kilku prostych zapytań.

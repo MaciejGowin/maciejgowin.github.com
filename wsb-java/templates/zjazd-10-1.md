@@ -400,13 +400,13 @@ import java.util.Map;
 
 public class CurrencyConversion {
 
-    private static final Map<String, BigDecimal> CURRENCY_TO_PLN_RATIO = Map.of(
+    private static final Map<String, BigDecimal> CURRENCY_PLN_RATIO = Map.of(
             "USD", BigDecimal.valueOf(4.5123),
             "EUR", BigDecimal.valueOf(4.1989)
     );
 
-    public static BigDecimal convert(BigDecimal priceInPln, String currencyCode) {
-        return priceInPln.multiply(CURRENCY_TO_PLN_RATIO.get(currencyCode));
+    public static BigDecimal convertToPln(BigDecimal value, String currencyCode) {
+        return value.multiply(CURRENCY_PLN_RATIO.get(currencyCode));
     }
 }
 ```
@@ -427,17 +427,17 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CurrencyConversionParametrizedTest {
-    
+
     private static Stream<Arguments> shouldCalculatePriceInGivenCurrency() {
         return Stream.of(
-            Arguments.of(BigDecimal.valueOf(10), "USD", BigDecimal.valueOf(45.123)),
-            Arguments.of(BigDecimal.valueOf(10.34), "EUR", BigDecimal.valueOf(43.416626)));
+                Arguments.of(BigDecimal.valueOf(10), "USD", BigDecimal.valueOf(45.123)),
+                Arguments.of(BigDecimal.valueOf(10.34), "EUR", BigDecimal.valueOf(43.416626)));
     }
 
     @ParameterizedTest
     @MethodSource
-    void shouldCalculatePriceInGivenCurrency(BigDecimal priceInPln, String currencyCode, BigDecimal expected) {
-        BigDecimal actual = CurrencyConversion.convert(priceInPln, currencyCode);
+    void shouldCalculatePriceInGivenCurrency(BigDecimal value, String currencyCode, BigDecimal expected) {
+        BigDecimal actual = CurrencyConversion.convertToPln(value, currencyCode);
         assertThat(actual.doubleValue()).isEqualTo(expected.doubleValue());
     }
 }

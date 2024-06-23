@@ -418,13 +418,13 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CurrencyConversion</span> {
 
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Map&lt;String, BigDecimal&gt; CURRENCY_TO_PLN_RATIO = Map.of(
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Map&lt;String, BigDecimal&gt; CURRENCY_PLN_RATIO = Map.of(
             <span class="hljs-string">&quot;USD&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.5123</span>),
             <span class="hljs-string">&quot;EUR&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">4.1989</span>)
     );
 
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> BigDecimal <span class="hljs-title function_">convert</span><span class="hljs-params">(BigDecimal priceInPln, String currencyCode)</span> {
-        <span class="hljs-keyword">return</span> priceInPln.multiply(CURRENCY_TO_PLN_RATIO.get(currencyCode));
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> BigDecimal <span class="hljs-title function_">convertToPln</span><span class="hljs-params">(BigDecimal value, String currencyCode)</span> {
+        <span class="hljs-keyword">return</span> value.multiply(CURRENCY_PLN_RATIO.get(currencyCode));
     }
 }
 </code></pre>
@@ -442,17 +442,17 @@ assertThatThrownBy(() -&gt; { throw new Exception(&quot;boom!&quot;); }).hasMess
 <span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.assertj.core.api.Assertions.assertThat;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CurrencyConversionParametrizedTest</span> {
-    
+
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Stream&lt;Arguments&gt; <span class="hljs-title function_">shouldCalculatePriceInGivenCurrency</span><span class="hljs-params">()</span> {
         <span class="hljs-keyword">return</span> Stream.of(
-            Arguments.of(BigDecimal.valueOf(<span class="hljs-number">10</span>), <span class="hljs-string">&quot;USD&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">45.123</span>)),
-            Arguments.of(BigDecimal.valueOf(<span class="hljs-number">10.34</span>), <span class="hljs-string">&quot;EUR&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">43.416626</span>)));
+                Arguments.of(BigDecimal.valueOf(<span class="hljs-number">10</span>), <span class="hljs-string">&quot;USD&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">45.123</span>)),
+                Arguments.of(BigDecimal.valueOf(<span class="hljs-number">10.34</span>), <span class="hljs-string">&quot;EUR&quot;</span>, BigDecimal.valueOf(<span class="hljs-number">43.416626</span>)));
     }
 
     <span class="hljs-meta">@ParameterizedTest</span>
     <span class="hljs-meta">@MethodSource</span>
-    <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldCalculatePriceInGivenCurrency</span><span class="hljs-params">(BigDecimal priceInPln, String currencyCode, BigDecimal expected)</span> {
-        <span class="hljs-type">BigDecimal</span> <span class="hljs-variable">actual</span> <span class="hljs-operator">=</span> CurrencyConversion.convert(priceInPln, currencyCode);
+    <span class="hljs-keyword">void</span> <span class="hljs-title function_">shouldCalculatePriceInGivenCurrency</span><span class="hljs-params">(BigDecimal value, String currencyCode, BigDecimal expected)</span> {
+        <span class="hljs-type">BigDecimal</span> <span class="hljs-variable">actual</span> <span class="hljs-operator">=</span> CurrencyConversion.convertToPln(value, currencyCode);
         assertThat(actual.doubleValue()).isEqualTo(expected.doubleValue());
     }
 }
