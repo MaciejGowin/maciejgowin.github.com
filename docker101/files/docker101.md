@@ -343,8 +343,7 @@ Szczegóły:
 # Zadanie: docker-spring-boot-jpa
 
 - Stworzenie prostego RESTful service opartego o Spring Boot wymagającego połączenia do bazy danych.
-- Stworzenie obrazu z wbudowaną aplikacją.
-- Uruchomienie nowopowstałego kontenera oraz odwołanie się do uruchomionego kontenera z bazą danych.
+- Uruchomienie serwisu oraz odwołanie się do uruchomionego kontenera z bazą danych.
 
 ---
 # Zadanie: docker-spring-boot-jpa-compose
