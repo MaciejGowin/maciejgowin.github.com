@@ -705,6 +705,10 @@ public class Main {
 
 Każda z klas, która zlokalizowana jest w danym katalogu musi posiadać definicję `package` o nazwie równoznacznej z nazwą katalogu. Jeżeli natomiast chcemy użyć użyć klasy z innego pakietu musimy go załadować poprzez instrukcję `import` lub użyć jej pełnej ścieżki dostępowej. W poprzednich przykładach wszystkie z plików znajdowały się z tym samym katalogu (pakiet domyślny) lub też w tym samym pliku. Klasy z tego samego pakietu nie importujemy explicite.
 
+---
+
+# Język Java: pakiety
+
 Importowanie klas jest istotne z perspektywy kompilatora oraz środowiska uruchomieniowego. Dzięki temu narzędzia te otrzymują informacje, w jakim miejscu dana klasa jest zlokalizowana i pozwala na rozszerzenie przestrzeni wyszukiwań.
 
 Jeżeli chcemy zaimportować wszystkie klasy zdanego pakietu, możemy użyć konstrukcji:

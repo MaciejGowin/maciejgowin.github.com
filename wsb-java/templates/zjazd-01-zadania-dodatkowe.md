@@ -30,9 +30,7 @@ Stwórz klasę `Person` zawierającą własności `String firstName` oraz `Strin
   - dla przykładu: `Maciej Gowin`, `Gowin`
 - statyczną `Person constructPerson(String firstName, String lastName)` tworzącą nową instancję `Person`
 
-W metodzie `main` zainicjalizuj tablicę osób przy pomocy `constructPerson`. Zdefiniuj metodę statyczną: `familyMembers(String lastName, Person[] persons)` wypisującą osoby o danym nazwisku.
-
-Przetestuj działanie w metodzie `main`.
+W metodzie `main` zainicjalizuj tablicę osób przy pomocy `constructPerson`. Zdefiniuj metodę statyczną: `familyMembers(String lastName, Person[] persons)` wypisującą osoby o danym nazwisku. Przetestuj działanie w metodzie `main`.
 
 ---
 # **Programowanie: zadanie dodatkowe 02**
@@ -44,7 +42,7 @@ Przetestuj działanie w metodzie `main`.
 ---
 # **Programowanie: zadanie dodatkowe 03**
 
-Zdefiniuj statyczną metodę `int max(int[] items)` wyszukującą największą wartości w tablicy. Dla pustej tablicy zwróć wartość `0`.
+Zdefiniuj statyczną metodę `int max(int[] items)` wyszukującą największą wartości w tablicy. Dla pustej tablicy lub tablicy, do której przypisana została wartość `null` zwróć wartość `0`.
 
 Przetestuj działanie w metodzie `main`.
 
@@ -95,7 +93,7 @@ Przetestuj działanie w metodzie `main`.
 ---
 # **Programowanie: zadanie dodatkowe**
 
-Dla tablicy liczb całkowitych znajdź medianę. Dla pustej tablicy zwróć 0;
+Dla tablicy liczb całkowitych znajdź medianę. Dla pustej tablicy zwróć `0`.
 
 Przetestuj działanie w metodzie `main`.
 
@@ -121,6 +119,6 @@ Przetestuj działanie w metodzie `main`.
 ---
 # **Programowanie: zadanie dodatkowe**
 
-Napisz metodę statyczną sprawdzającą dzień tygodnia dla zadanej daty. Datę przekaż do metody za pomocą 2 liczb całkowitych reprezentujących kolejno: rok, miesiąc oraz dzień.
+Napisz metodę statyczną zwracającą dzień tygodnia dla zadanej daty. Datę przekaż do metody za pomocą 3 liczb całkowitych reprezentujących kolejno: rok, miesiąc oraz dzień.
 
 Przetestuj działanie w metodzie `main`.

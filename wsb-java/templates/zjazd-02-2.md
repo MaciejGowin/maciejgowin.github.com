@@ -257,6 +257,12 @@ Przejście K = 1
 Zaimplementuj algorytm sortowania bąbelkowego dla tablicy liczb. Przetestuj działanie dla przykładowych tablic wejściowych.
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Sortowanie przez wybieranie
 
 Załóżmy, że do posortowania mamy N elementową tablicę liczb całkowitych. Algorytm polega na N-1 przejściach tablicy, gdzie w każdym przejściu K wyszukujemy minimalnej wartości z nieposortowanych elementów oraz podmieniamy ją z pierwszym elementem z tablicy nieposortowanej.
@@ -280,6 +286,12 @@ Przejście K = 4: 2 3 5 [7 6] -> minimum: 6 -> 2 3 5 6 7
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 12px;
+}
+</style>
+
 # **Programowanie: przykład 23**
 
 Porównanie wydajności naiwnej implementacji algorytmu sortowania bąbelkowego ze wbudowaną metodą sortującą.
@@ -314,6 +326,12 @@ class RandomGenerator {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 12px;
+}
+</style>
+
 # **Programowanie: przykład 23**
 
 ```java
@@ -453,9 +471,8 @@ Wyróżniamy dwa główne typy tablic:
 - dynamiczne, ze zmienną ilością elementów.
 
 ---
-# Tablica
 
-![Tablica](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-array.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-array.png)
 
 ---
 # Lista
@@ -467,9 +484,8 @@ Wyróżniamy dwa główne typy list:
 - dwukierunkowe, w której każdy element wskazuje na element następny oraz poprzedni.
 
 ---
-# Lista
 
-![Lista](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-list.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-list.png)
 
 ---
 # Stos
@@ -481,9 +497,8 @@ W większości implementacji za dodawanie elementu odpowiedzialna jest operacja 
 Przykładem stosu mogą być produkty układane na półce sklepowej. Produkt dodany najpóźniej przez obsługę zostanie jako pierwszy ściągnięty przez klienta.
 
 ---
-# Stos
 
-![Stos](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-stack.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-stack.png)
 
 ---
 # Kolejka
@@ -493,9 +508,8 @@ Liniowa struktura uporządkowanych danych realizująca założenie `FIFO (First 
 W większości implementacji za dodawanie elementu odpowiedzialna jest operacja `enqueue`, a za pobieranie operacja `dequeue`. 
 
 ---
-# Kolejka
 
-![Kolejka](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-queue.png?reload)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-queue.png?reload)
 
 ---
 # **Programowanie: zadanie 17**
@@ -519,9 +533,8 @@ Istnieje wiele wariancji grafów, w których:
 - krawędzie mogą mieć wagę, gdzie waga może być zależna od kierunku.
 
 ---
-# Graf
 
-![Graf](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-graph.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-graph.png)
 
 ---
 # Drzewo
@@ -535,9 +548,8 @@ Spójność to cecha, w której dla każdej pary wierzchołków istnieje ścież
 Przez swój charakter drzewa dobrze odwzorowują hierarchię danych, przyspieszają wyszukiwanie oraz operacje na posortowanych danych.
 
 ---
-# Drzewo
 
-![Drzewo](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-tree.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-tree.png)
 
 ---
 # Kopiec
@@ -545,9 +557,8 @@ Przez swój charakter drzewa dobrze odwzorowują hierarchię danych, przyspiesza
 Struktura danych będąca specjalnym przypadkiem drzewa, w którym wartości wierzchołków potomków są w stałej relacji do wartości rodziców.
 
 ---
-# Kopiec
 
-![Kopiec](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-heap.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-heap.png)
 
 ---
 # Mapa
@@ -555,9 +566,8 @@ Struktura danych będąca specjalnym przypadkiem drzewa, w którym wartości wie
 Struktura danych przechowująca pary klucz-wartość, w której dany klucz jest unikatowy i występuje co najwyżej raz.
 
 ---
-# Mapa
 
-![Mapa](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-map.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-map.png)
 
 ---
 # Zbiór
@@ -569,9 +579,8 @@ Do głównych cech należą:
 - służy głównie do sprawdzenia, czy dana wartość jest jego częścią
 
 ---
-# Zbiór
 
-![Zbiór](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-set.png)
+![bg auto](https://maciejgowin.github.io/assets/img/zjazd-02-2/data-structure-set.png)
 
 ---
 # **Programowanie: zadanie 18**
@@ -583,4 +592,4 @@ Klasa powinna implementować następujące metody:
 - `boolean remove(int)` usuwającą element ze zbioru oraz zwracającą `true` w przypadku usunięcia elementu lub `false` w przeciwnym przypadku
 - `boolean contains(int)` sprawdzającą, czy dany element istnieje w zbiorze
 - `int size()` zwracającą ilość elementów w zbiorze
-- `String toString()` zwracającą tekstową wersję zbioru ze wszystkimi jego elementami
+- `String toString()` zwracającą tekstową wersję zbioru z wszystkimi jego elementami
