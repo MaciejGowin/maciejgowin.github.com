@@ -7,6 +7,7 @@ title: WSB Merito - Programowanie aplikacji Java
 ## Kontakt
 
 * mail prowadzącego: maciej@coderbrother.pl
+* dodaj opinię o prowadzącym: [Google Review](https://g.page/r/Ce5Y6dMX52E_EAI/review)
 
 ## Materiały do zjazdów
 
@@ -55,3 +56,4 @@ title: WSB Merito - Programowanie aplikacji Java
 - [Kod źródłowy przykładów oraz zadań](https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java)
 - [Źródła]({% link wsb-java/linki.md %})
 - [Książki]({% link wsb-java/ksiazki.md %})
+- [Przykładowe tematy prac]({% link wsb-java/tematy-prac.md %})

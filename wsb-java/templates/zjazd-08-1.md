@@ -263,6 +263,12 @@ Dependency Injection (DI, pol. wstrzykiwanie zależności) to mechanizm realizuj
 Łączenie obiektów i ich zależności odbywa się poprzez ich "wstrzykiwanie" na poziomie elementu zarządzającego, a nie explicite z poziomu kodu źródłowego.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring: Dependency Injection
 
 W klasycznym podejściu nasz kod mógłby wyglądać następująco:
@@ -359,6 +365,9 @@ public class RouteService {
 (...)
 ```
 
+---
+# Spring Context: konfiguracja oparta o XML oraz adnotacje
+
 Kontener automatycznie wyszuka odpowiednich ziaren oraz dokona wstrzyknięcia zależności. Funkcjonalność ta nie jest domyślnie włączona. Aby ją aktywować, należy wzbogacić konfigurację XML o znacznik:
 
 ```
@@ -376,6 +385,9 @@ Inicjalizacja Spring Context na podstawie konfiguracji plikiem XML oraz konfigur
 Do tej pory definiowaliśmy ziarna na poziomie pliku konfiguracyjnego XML. Możliwe jest też oznaczenie klasy jako klasy definiującej ziarno. Dzięki temu zostanie ono automatycznie utworzone bez konieczności jego deklaracji w pliku konfiguracyjnym.
 
 Do podstawowych adnotacji oznaczających klasę jako klasę dostarczającą ziarna są: `@Component`, `@Repository`, `@Service`.
+
+---
+# Spring Context: konfiguracja oparta o XML oraz adnotacje
 
 Aby aktywować tę funkcjonalność, musimy poinformować kontekst, aby dokonał wyszukiwania adnotacji odpowiedzialnych za tworzenie ziaren w danej lokalizacji. Naszą konfigurację XML należy wzbogacić o znacznik:
 
@@ -448,7 +460,11 @@ Wstrzykiwanie zależności może odbywać się za pomocą:
 
 Automatyczne wiązanie (ang. autowiring) zależność poprzez adnotację @Autowired wymaga poprawnego dobrania instancji ziaren, które odpowiadają danej zależności.
 
-Istnieją 4 modele automatycznego dostosowywania danych ziaren do zależności:
+Istnieją 4 modele automatycznego dostosowywania danych ziaren do zależności.
+
+---
+# Spring: modele automatycznego wiązania
+
 - **brak:** automatyczne wiązanie jest wyłączone oraz zależności muszą być ustawione explicite,
 - **po nazwie (ang. by name):** automatyczne wiązanie odbywa się po nazwie pola, kontener wyszukuje ziaren o nazwie pola, które ma zostać ustawione,
 - **po type (ang. by type):** automatyczne wiązanie odbywa się po typie pola, kontener wyszukuje ziaren o typie pola, które ma zostać ustawione, przy dopasowaniu więcej niż jednego ziarna zwrócony zostanie błąd,

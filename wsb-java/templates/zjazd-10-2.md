@@ -330,6 +330,9 @@ Ograniczenia te mogą wynikać z różnych czynników takich jak:
 - czasu przetworzenia zapytania
 - wydajności zależności.
 
+---
+# Testy wydajnościowe
+
 Testy sprawdzające zachowanie aplikacji dla określonego obciążenia to testy wydajnościowe.
 
 ---
@@ -541,13 +544,13 @@ Najpopularniejsze strategie integracji kodu to:
 
 # Trunk-based development
 
-![Trunk-based development](https://maciejgowin.github.io/assets/img/zjazd-10-1/trunk-based-development.png)
+![height:300px](https://maciejgowin.github.io/assets/img/zjazd-10-1/trunk-based-development.png)
 
 ---
 
 # Git-flow
 
-![Git-flow](https://maciejgowin.github.io/assets/img/zjazd-10-1/git-flow.png)
+![height:450px](https://maciejgowin.github.io/assets/img/zjazd-10-1/git-flow.png)
 
 ---
 
@@ -683,6 +686,11 @@ Najpopularniejsze typy baz NoSQL to:
 - **Grafowe** - bazy reprezentowane w postaci grafu. Węzły grafu reprezentują dane, a krawędzie relacje między nimi.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
 
 # NoSQL: bazy klucz wartość i dokumentowe
 

@@ -63,6 +63,12 @@ FOR (initial expression; condition; update expression)
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 12**
 
 Pętla `for` z warunkami oraz różnymi instrukcjami aktualizacyjnymi.
@@ -173,6 +179,12 @@ public class Main {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: pętla while
 
 Pętla `while` w założeniu jest podobna do pętli `for`. Pozwala na wielokrotne wykonanie bloku kodu. W tym przypadku jednak kod jest wykonywany, dopóki dany warunek jest spełniony:
@@ -242,6 +254,12 @@ WHILE (condition)
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # **Programowanie: przykład 14**
 
 Pobieranie numerów na standardowym wejściu do momentu wprowadzenia wartości oczekiwanej.
@@ -358,6 +376,14 @@ Napisz program, który sczytuje liczby wpisane przez użytkownika do momentu wpi
 
 Instrukcja `switch` przypomina swoim zachowanie instrukcję `if...elseif...else`. Pozwala jednak na lepsze uporządkowanie przypadków oraz poprawia czytelność kodu.
 
+---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+# Język Java: instrukcja warunkowa switch
+
 Możemy to uogólnić do:
 
 ```
@@ -375,6 +401,12 @@ SWITCH (value to be compared)
 Wartość porównywana jest z kolejnymi przypadkami. Kod jest wykonywany, tylko jeżeli dany warunek jest spełniony. W przeciwnym wypadku przy brakującym dopasowaniu wykonany zostanie przypadek domyślny.
 
 ---
+<style scoped>
+pre {
+   font-size: 9px;
+}
+</style>
+
 # **Programowanie: przykład 15**
 
 Porównanie instrukcji warunkowej `switch` z instrukcją `if...elseif...else`.
@@ -445,6 +477,12 @@ switch (i) {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Język Java: instrukcja warunkowa switch
 
 Wersja Java 12 wprowadza nowy zapis pozwalający na pominięcie `break` a nawet przypisanie wartości do zmiennej.
@@ -469,6 +507,12 @@ String state = switch (i) {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 12px;
+}
+</style>
+
 # **Programowanie: przykład 16**
 
 Porównanie instrukcji warunkowych `switch` z instrukcją `break`.
@@ -544,23 +588,29 @@ public static void print(Integer i) {
 # Język Java: typy prymitywne a obiekty
 
 | Typ prymitywny | Odpowiednik obiektowy |
-|:---------|:-----|
-| boolean | Boolean |
-| byte | Byte |
-| short | Short |
-| int | Integer |
+|:---------------|:----------------------|
+| boolean        | Boolean               |
+| byte           | Byte                  |
+| short          | Short                 |
+| int            | Integer               |
 
 ---
 # Język Java: typy prymitywne a obiekty
 
 | Typ prymitywny | Odpowiednik obiektowy |
-|:---------|:-----|
-| long | Long |
-| double | Double |
-| float | Float |
-| char | Char |
+|:---------------|:----------------------|
+| long           | Long                  |
+| double         | Double                |
+| float          | Float                 |
+| char           | Char                  |
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: klasa i konstruktor
 
 Podczas tworzenia obiektów wywoływany jest konstruktor, który odpowiedzialny jest za jego inicjalizację. Możemy go zdefiniować w podobny sposób do tego, który znamy z definicji metody:
@@ -608,6 +658,12 @@ public class Person {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 12px;
+}
+</style>
+
 # **Programowanie: przykład 17**
 
 Konstruktor wieloargumentowy oraz tworzenie obiektów.
@@ -662,6 +718,12 @@ Konstruktor zdefiniowany explicite nieposiadający żadnych parametrów.
 Konstruktor zdefiniowany explicite posiadający parametry.
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Język Java: klasa i konstruktor - przeciążanie
 
 Podobnie jak w przypadku metod, konstruktor może zostać przeciążony na podstawie parametrów przekazanych.
@@ -685,6 +747,12 @@ public class Person {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Język Java: słowo kluczowe this
 
 W sytuacji, w której chcemy odnieść się do referencji obiektu z jego wnętrza używamy słowa `this`. W skrócie możemy go rozumieć jako `obecny obiekt`. Poniższe przykłady są równoznaczne:
@@ -707,6 +775,12 @@ public class Person {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Język Java: słowo kluczowe this
 
 Odwołanie do obecnego obiektu jest szczególnie przydatne podczas używania tej samej nazwy zmiennej dla pól klasy oraz parametrów metody, czy też konstruktora. Związane jest to z zasięgiem zmiennej i bez użycia słowa `this` byłoby to niemożliwe.
@@ -731,6 +805,12 @@ public class Person {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: słowo kluczowe this
 
 Przy definicji kilku konstruktorów możemy również użyć odwołania do innego konstruktora. W tym przypadku również użyjemy słowa `this`. Jest to przydatne w przypadku gdy konstruktory posiadają bardziej skomplikowaną logikę.
@@ -761,6 +841,12 @@ Słowo kluczowe `this` jest używane w dwóch przypadkach:
 - wywołanie konstruktora z definicji innego konstruktora
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 18**
 
 Klasa z kilkoma konstruktorami oraz prześledź jej działanie.
@@ -807,12 +893,12 @@ Java wprowadza koncepcję zasięgu, który pozwala na sterowanie tym, kto i w ja
 
 Wyróżniamy następujące zasięgi:
 
-| Zasięg | Opis |
-|:---------|:-----|
-| public    | widoczność na każdym z poziomów |
+| Zasięg    | Opis                                                               |
+|:----------|:-------------------------------------------------------------------|
+| public    | widoczność na każdym z poziomów                                    |
 | protected | widoczność na poziomie pakietu oraz wszystkich klas dziedziczących |
-| private   | widoczność na poziomie klasy definiującej |
-| domyślny  | widoczność na poziomie pakietu |
+| private   | widoczność na poziomie klasy definiującej                          |
+| domyślny  | widoczność na poziomie pakietu                                     |
 
 ---
 # Język Java: zasięg
@@ -896,6 +982,12 @@ Będziemy mówić, że:
 > Dziedziczenie nie ogranicza się do jednego poziomu. W strukturze dziedziczenia jedna klasa może być nadklasą, jak i podklasą.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: przykład 19**
 
 Dziedziczenie wspólnego zachowania.
@@ -931,9 +1023,15 @@ public class Main {
 W sytuacji, gdy nadklasa i podklasa posiada zdefiniowaną metodę o tej samej sygnaturze mamy do czynienia z `przesłanianiem metod` (ang. `method overriding`). W takim przypadku zostanie wywołana metoda specyficzna dla danej klasy (jeżeli taka istnieje).
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 20**
 
-Nadpisywanie metod.
+Przesłanianie metod.
 
 ```java
 class Animal {
@@ -988,6 +1086,12 @@ class Dog extends Animal {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # Język Java: dziedziczenie i słowo kluczowe super
 
 Słowo kluczowe `super` ma jeszcze jedno zastosowanie. Możemy go użyć w przypadku wywołania konstruktora klasy nadrzędnej.
@@ -1059,6 +1163,12 @@ Kompozycja realizuje koncepcję `zawiera` (ang. `has a`). Możemy powiedzieć, �
 - Kot zawiera głowę, nogi, tułów i ogon.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # Język Java: dziedziczenie a kompozycja
 
 Dziedziczenie stosowane jest w sytuacjach, gdy pomiędzy klasami zachodzi relacja "uogólnienie - specjalizacja".
@@ -1092,6 +1202,12 @@ boolean isAnimal = dog instanceof Animal;
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: przykład 21**
 
 Przykład wykorzystania operatora `instanceof`.
@@ -1129,7 +1245,7 @@ W przypadku dotychczasowych definicji klas nadrzędnych zawsze dostarczaliśmy d
 Metodę abstrakcyjną definiujemy z pominięciem jej ciała. Każda z podklas jest odpowiedzialna za dostarczenie jej implementacji.
 
 ```
-abstract Animal {
+abstract class Animal {
     abstract void voice();
 }
 ```
@@ -1180,6 +1296,12 @@ class Dog implements Animal {
 > Co ważne jedna klasa może implementować więcej niż jeden interfejs. W przeciwieństwie do dziedziczenia gdzie dziedziczyć możemy tylko po jednej klasie.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: interfejsy
 
 Co więcej, interfejsy podlegają rozszerzeniom przy użyciu słowa `extends`. Interfejs może rozszerzać więcej niż jeden interfejs.

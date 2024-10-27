@@ -39,6 +39,12 @@ Ujednolica format zapytań (ang. request) oraz odpowiedzi (ang. response).
 > Typy danych nie ogranicza się do formatu HTML.
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Protokół HTTP: komunikacja
 
 #### Zapytanie
@@ -61,6 +67,12 @@ Authorization: abc-123-def-456
 - ciało wiadomości (opcjonalne).
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Protokół HTTP: komunikacja
 
 #### Odpowiedź
@@ -97,13 +109,20 @@ Główne metody zapytań HTTP:
 ---
 # Protokół HTTP: kody odpowiedzi
 
-Najczęściej spotykane kody odpowiedzi serwera HTTP:
+Kody odpowiedzi serwera HTTP:
+- **1xx:** kody informacyjne
+- **2xx:** kody powodzenia
+- **3xx:** kody przekierowania
+- **4xx:** kody błędu klienta
+- **5xx:** kody błędu serwera
 
-#### Kody informacyjne: 1xx
+---
+# Protokół HTTP: przykładowe kody 1xx
 
 - 100 Continue
 
-#### Kody powodzenia: 2xx
+---
+# Protokół HTTP: przykładowe kody 2xx
 
 - 200 OK
 - 201 Created
@@ -111,17 +130,13 @@ Najczęściej spotykane kody odpowiedzi serwera HTTP:
 - 204 No Content
 
 ---
-# Protokół HTTP: kody odpowiedzi
-
-#### Kody przekierowania: 3xx
+# Protokół HTTP: przykładowe kody 3xx
 
 - 301 Moved Permanently
 - 302 Found (poprzednio Moved temporarily)
 
 ---
-# Protokół HTTP: kody odpowiedzi
-
-#### Kody błędu klienta: 4xx
+# Protokół HTTP: przykładowe kody 4xx
 
 - 400 Bad Request
 - 401 Unauthorized
@@ -135,9 +150,7 @@ Najczęściej spotykane kody odpowiedzi serwera HTTP:
 - 429 Too Many Requests
 
 ---
-# Protokół HTTP: kody odpowiedzi
-
-#### Kody błędu serwera: 5xx
+# Protokół HTTP: przykładowe kody 5xx
 
 - 500 Internal Server Error
 - 501 Not Implemented
@@ -151,6 +164,12 @@ Najczęściej spotykane kody odpowiedzi serwera HTTP:
 Do tej pory tworzyliśmy aplikacje desktopowe. Java dostarcza biblioteki pozwalające na tworzenie aplikacji działających na zasadzie serwera oczekującego za zapytania oraz wysyłającego odpowiedzi do klienta inicjalizującego zapytania.
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 80**
 
 Przykładowa aplikacja Web przy użyciu natywnych rozwiązań.
@@ -169,13 +188,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
-        server.createContext("/", new BasicHttpHandler());
-        server.setExecutor(Executors.newFixedThreadPool(10));
-        server.start();
-        System.out.println("Server started");
-    }
+    /* (...) */
 
     static class BasicHttpHandler implements HttpHandler {
         @Override
@@ -266,6 +279,12 @@ Standard JEE definiuje szereg specyfikacji. Do najważniejszych należą:
 - Contexts and Dependency Injection (CDI): wsparcie dla wstrzykiwanie zależności (ang. dependency injection).
 - Enterprise Beans (EJB): wsparcie tworzenia komponentów działających w kontekście kontenera EJB, definiuje zależności pomiędzy ziarnami (ang. bean) a klientami oraz kontenerem.
 - Persistence (JPA): mapowanie obiektowo relacyjne pomiędzy klasami Java oraz tabelami relacyjnych baz danych.
+
+---
+# JEE: główne składowe
+
+### Specyfikacje korporacyjne (enterprise)
+
 - Transactions (JTA): wsparcie dla transakcji, definiuje wysoko oraz nisko-poziomowe interfejsy.
 - Messaging (JMS): komunikacja przy pomocy asynchronicznych wiadomości.
 - Java Mail: obsługa maili.
@@ -273,7 +292,7 @@ Standard JEE definiuje szereg specyfikacji. Do najważniejszych należą:
 ---
 # JEE: główne składowe
 
-![Komponenty JEE](https://maciejgowin.github.io/assets/img/zjazd-08-1/jee-components.gif)
+![height:450px](https://maciejgowin.github.io/assets/img/zjazd-08-1/jee-components.gif)
 
 Źródło: https://oracle.com/
 
@@ -323,6 +342,9 @@ $TOMCAT_HOME/bin/shutdown.bat
 
 Gdzie `$TOMCAT_HOME` to ścieżka instalacji aplikacji.
 
+---
+# JEE: Apache Tomcat
+
 Po uruchomieniu serwera jest on domyślnie dostępny pod adresem:
 
 ```
@@ -364,6 +386,12 @@ public class RootServlet extends HttpServlet {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # **Programowanie: przykład 81**
 
 ```
@@ -436,7 +464,7 @@ Wzorzec ten jest szeroko używany podczas projektowania aplikacji webowych.
 ---
 # Wzorce projektowe: MVC
 
-![MVC](https://maciejgowin.github.io/assets/img/zjazd-08-1/mvc.png)
+![height:400px](https://maciejgowin.github.io/assets/img/zjazd-08-1/mvc.png)
 Źródło: https://www.geeksforgeeks.org/benefit-of-using-mvc/
 
 ---
@@ -465,7 +493,7 @@ Należ podkreślić, że `DispatcherServlet` nie służy tylko do wsparcia przep
 
 Rozwiązanie `DispatcherServlet` jest formą wzorca `Front Controller`
 
-![Spring MVC](https://maciejgowin.github.io/assets/img/zjazd-08-1/spring-mvc.png)
+![height:400px](https://maciejgowin.github.io/assets/img/zjazd-08-1/spring-mvc.png)
 Źródło: https://docs.spring.io/
 
 ---
@@ -538,6 +566,12 @@ Klasa kontrolera nie musi implementować żadnego interfejsu. Użycie adnotacji 
 > Skanowanie komponentów (ang. component scan) automatycznie rozpoznaje adnotację i rejestruje klasę jako ziarno. Dzięki temu jest ona dostępna na poziomie kontenera Spring.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring Web MVC: @RequestMapping 
 
 Kontrolery są skanowane w poszukiwaniu adnotacji `@RequestMapping`, które definiują ścieżki zapytań oraz metody realizujące ich wywołanie.
@@ -579,6 +613,9 @@ Konfiguracja `@RequestMapping` wspiera definicję:
 Użycie JSP pozwala na łatwiejszą definicję i generowanie dokumentów HTML oraz pełną integrację z danymi modelu.
 
 Spring dostarcza bibliotekę znaczników pozwalającą na operacje na danych oraz definiującą podstawowe i najczęściej używane komponenty HTML.
+
+---
+# Spring Web MVC: JSP
 
 Aby poprawnie skonfigurować obsługę JSP dla widoków Spring MVC, należy dostarczyć ziarno, definiujące sposób wyszukiwania widoków po nazwie opisujące ich nazwę oraz lokalizację. Dla przykładu używając konfiguracji opartej o plik konfiguracyjny XML:
 

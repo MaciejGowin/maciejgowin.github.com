@@ -11,6 +11,11 @@
 
 Zakresy ziaren (ang. bean scopes) definiują cykl życia dla ziaren. Do tej pory było to dla nas transparentne i używaliśmy ziaren z domyślną konfiguracją.
 
+Spring definiuje 6 poziomów, z czego 4 tylko dla aplikacji webowych.
+
+---
+# Spring: zakresy ziaren
+
 Spring definiuje 6 poziomów, z czego 4 ostatnie tylko dla aplikacji webowych:
 - singleton (domyślny): kontener tworzy jedną instancję ziarna, wszystkie zapytania zwrócą ten sam obiekt.
 - prototype: kontener tworzy nową instancję ziarna, wszystkie zapytania zwrócą nowy obiekt.
@@ -29,7 +34,7 @@ Moduły mogą zostać dodane w razie potrzeb i w wielu przypadkach są niezależ
 ---
 # Spring: moduły
 
-![Moduły Spring](https://maciejgowin.github.io/assets/img/zjazd-09-1/spring-modules.png)
+![height:400px](https://maciejgowin.github.io/assets/img/zjazd-09-1/spring-modules.png)
 
 Źródło: https://spring.io
 
@@ -66,6 +71,9 @@ Korzystając z przykładu prostej aplikacji webowej opartej o framework Spring, 
 - zainicjalizowanie `DispatcherServlet`,
 - skonfigurowanie kontekstu,
 - zdefiniowanie podstawowych ziaren dostarczających obsługi JSP.
+
+---
+# Spring Boot
 
 Rozwiązaniem problemu powtarzalnych czynności jest Spring Boot. Spring Boot pozwala na tworzenie automatycznie skonfigurowanych aplikacji opartych na podejściu `convention-over-configuration`.
 
@@ -130,7 +138,10 @@ Inicjalizacja oraz uruchomienie aplikacji Spring przy użyciu Spring Boot w domy
 
 Główną ideą Spring Boot jest dostarczenie domyślnych opcji pozwalających na pozbycie się powtarzalnych kroków.
 
-Uruchomienie aplikacji odbywa się poprze wywołanie `SpringApplication.run`.
+---
+# Spring Boot w praktyce: SpringApplication.run
+
+Uruchomienie aplikacji odbywa się poprzez wywołanie `SpringApplication.run`.
 
 ```java
 import org.springframework.boot.SpringApplication;
@@ -149,6 +160,18 @@ public class Application {
 # **Programowanie: przykład 84**
 
 Prosta konfiguracji aplikacji webowej Spring Boot.
+
+Uruchom aplikację za pomocą linii komend.
+
+```
+java -jar target/przyklad-84-1.0-SNAPSHOT.jar
+```
+
+W przeglądarce otwórz stronę.
+
+```
+http://localhost:8080
+```
 
 ---
 # Spring Boot w praktyce: @SpringBootApplication
@@ -218,9 +241,43 @@ java -jar application.jar --spring.config.location=file:///Users/home/config/dev
 ---
 # Spring Boot w praktyce: spring-boot-maven-plugin
 
-Aby zbudować aplikację posiadającą wszystkie zależności dla typowej aplikacji webowej, wybraliśmy pakowanie typu `war`.
+Aby zbudować aplikację posiadającą wszystkie zależności dla typowej aplikacji webowej, wybraliśmy domyślne pakowanie typu `jar`.
 
-Oczywiście, podobnie jak w przypadku pakowania typu `jar`, plik wynikowy nie będzie posiadał wszystkich koniecznych zależności, aby uruchomić go z poziomu: `java -jar`.
+Oczywiście, podobnie jak w przypadku każdego pakowania typu `jar`, plik wynikowy nie będzie posiadał wszystkich koniecznych zależności, aby uruchomić go z poziomu: `java -jar`.
+
+---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
+# Spring Boot w praktyce: spring-boot-maven-plugin
+
+Przypomnijmy, że w przypadku natywnych aplikacji Java, używalismy _plugin_ `maven-assembly-plugin` do zbudowania tzw. _fat-jar_-a ze zdefiniowanym plikiem `MANIFEST`.
+
+```
+<!-- (...) -->
+
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-assembly-plugin</artifactId>
+
+<configuration>
+    <descriptorRefs>
+        <descriptorRef>jar-with-dependencies</descriptorRef>
+    </descriptorRefs>
+    <archive>
+        <manifest>
+            <mainClass>pl.wsb.programowaniejava.maciejgowin.przyklad52.Main</mainClass>
+        </manifest>
+    </archive>
+</configuration>
+
+<!-- (...) -->
+```
+
+---
+# Spring Boot w praktyce: spring-boot-maven-plugin
 
 Aby dodać kontekst pakowania aplikacji Spring Boot ze wszystkimi zależnościami, użyjemy _plugin_:
 
@@ -267,6 +324,9 @@ Istnieje też możliwość rozszerzenia standardowego pakowania o automatyczne w
 </plugin>
 ```
 
+---
+# Spring Boot w praktyce: spring-boot-maven-plugin
+
 Po zmianie konfiguracji plik archiwum zostanie automatycznie przeładowany podczas:
 
 ```
@@ -296,6 +356,12 @@ public String root() {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring w praktyce: @ResponseBody
 
 Co więcej, `@ResponseBody` pozwala na zdefiniowanie ciała zwracanego w postaci obiektu:
@@ -381,9 +447,9 @@ public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter()
 ---
 # RESTful Services
 
-REST jest stylem architektonicznym usprawniającym wymianę danych pomiędzy serwisami. Jego głównym celem jest ustalenie sposobu komunikacji, która za założenia powinna być uniwersalna oraz prosta w konfiguracji.
+**REST (Representational State Transfer)** jest stylem architektonicznym usprawniającym wymianę danych pomiędzy serwisami. Jego głównym celem jest ustalenie sposobu komunikacji, która za założenia powinna być uniwersalna oraz prosta w konfiguracji.
 
-Podejście to opiera się na formacie danych, który jest używany do ich reprezentacji. Dzięki temu nie jest istotne to, przy jakiego użyciu rozwiązania został on zaimplementowany.
+Podejście to nie jest ściśle związane z formatem danych, który jest używany do ich reprezentacji. Dzięki temu nie jest istotne to, przy jakiego użyciu rozwiązania został on zaimplementowany.
 
 Serwisy webowe dostarczające API. Aby serwis REST mógł zostać określony mianem RESTful, musi spełniać szereg reguł.
 
@@ -451,24 +517,26 @@ Każda z metod HTTP ma swoje znaczenie w kontekście zasobów, na których operu
 
 Zarządzenie zespołami.
 
-| Operacja | Opis |
-|:---------|:-----|
-| GET /teams | pobranie zespołów |
-| POST /teams | stworzenie zespołu |
-| PUT /teams/{teamId} | aktualizacja zespołu |
-| DELETE /teams/{teamId} | usunięcie zespołu |
+| Operacja               | Opis                 |
+|:-----------------------|:---------------------|
+| GET /teams             | pobranie zespołów    |
+| GET /teams/{id}        | pobranie zespołu     |
+| POST /teams            | stworzenie zespołu   |
+| PUT /teams/{teamId}    | aktualizacja zespołu |
+| DELETE /teams/{teamId} | usunięcie zespołu    |
 
 ---
 # RESTful Services: przykład
 
 Zarządzenie graczami w kontekście zespołu.
 
-| Operacja | Opis |
-|:---------|:-----|
-| GET /teams/{teamId}/players | pobranie graczy |
-| POST /teams/{teamId}/players | stworzenie gracza |
-| PUT /teams/{teamId}/players/{playerId} | aktualizacja gracza |
-| DELETE /teams/{teamId}/players/{playerId} | usunięcie gracza |
+| Operacja                                  | Opis                |
+|:------------------------------------------|:--------------------|
+| GET /teams/{teamId}/players               | pobranie graczy     |
+| GET /teams/{teamId}/players/{playerId}    | pobranie gracza     |
+| POST /teams/{teamId}/players              | stworzenie gracza   |
+| PUT /teams/{teamId}/players/{playerId}    | aktualizacja gracza |
+| DELETE /teams/{teamId}/players/{playerId} | usunięcie gracza    |
 
 ---
 # RESTful Services: dobre praktyki
@@ -585,6 +653,12 @@ Spring MVC definiuje szereg błędów stricte związanych z działaniem `Disptch
 W takim przypadku możemy zdefiniować `@ExceptionHandler`, dla każdego z błędów lub też wykorzystać domyślną obsługę błędów opisaną w `ResponseEntityExceptionHandler`.
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Spring w praktyce: ResponseEntityExceptionHandler
 
 W przypadku gdy nasze ziarno opisane jako `@ControllerAdvice` dziedziczy po `ResponseEntityExceptionHandler` automatycznie załadowane zostaną definicje `@ExceptionHandler` z klasy `ResponseEntityExceptionHandler`.
@@ -594,8 +668,8 @@ Co więcej, możemy nadpisywać metody z `ResponseEntityExceptionHandler` obsłu
 ```
 @Override
 protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(
-        HttpRequestMethodNotSupportedException ex, HttpHeaders headers, 
-        HttpStatus status, WebRequest request) {
+        HttpRequestMethodNotSupportedException ex, HttpHeaders headers,
+        HttpStatusCode status, WebRequest request) {
     super.handleHttpRequestMethodNotSupported(ex, headers, status, request);
     return new ResponseEntity<>(
                 ErrorDto.builder().message("Method not allowed").build(), 
@@ -614,3 +688,10 @@ Obsługa błędów.
 Obsługa błędów w Springu jest najlepszym przykładem tego, że framework ten pozwala na bardzo rozbudowaną konfigurację projektów oraz używanie wielu mechanizmów, które rozwiązują dany problem.
 
 #### Podczas tworzenia aplikacji opartych o framework Spring istnieje wiele opcji pozwalających na rozwiązanie tego samego problemu.
+
+---
+# **Programowanie: zadanie**
+
+Stwórz prosty projekt definiujący RESTful API do zarządzania strukturą zespołów i ich graczy.
+
+Serwis powinien definiować zasoby zgodne ze wcześniej przedstawionym przykładem.
