@@ -22,6 +22,12 @@ https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java
 Wszystkie zadanie dodatkowe zostały stworzone z myślą utrwalenia materiału przerobionego na zjeździe. Chociaż mogą one zostać rozwiązane na wiele sposobów, zostały skonstruowane w sposób umożliwiający ukończenie ich jedynie przy użyciu poznanych już technik.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: zadanie dodatkowe 13**
 
 Zaimplementuj klasy`Route` oraz `Airport`:
@@ -47,6 +53,12 @@ Departure: Warszawa: arrivals: [Krakow]
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: zadanie dodatkowe 14**
 
 Stwórz adnotację pozwalającą na porównywanie dwóch pól danego obiektu wraz z deklaracją pól porównywanych:
@@ -137,3 +149,10 @@ Dla listy obiektów klasy `Rectangle` posiadających metodę definiującą pole 
 # **Programowanie: zadanie dodatkowe**
 
 Zamodeluj strukturę grafu przy pomocy własnych klas oraz przedstawionych wbudowanych struktur danych.
+
+---
+# **Programowanie: zadanie dodatkowe: future-year-validator**
+
+Stwórz adnotację @FutureYear działającą na typie Integer. Utwórz walidator sprawdzający czy dany rok jest w przyszłości na podstawie pól oznaczonych zadaną adnotacją.
+
+Do sprawdzenia obecnego roku użyj `Year.now()`.
