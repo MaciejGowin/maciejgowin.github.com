@@ -372,14 +372,17 @@ while (i < 1000) {
 Napisz program, który sczytuje liczby wpisane przez użytkownika do momentu wpisania liczby 0. Zsumuj liczby parzyste i nieparzyste oraz wypisz wynik na ekran.
 
 ---
+# Język Java: instrukcja warunkowa switch
+
+Instrukcja `switch` przypomina swoim zachowanie instrukcję `if...elseif...else`. Pozwala jednak na lepsze uporządkowanie przypadków oraz poprawia czytelność kodu.
+
+---
 <style scoped>
 pre {
    font-size: 18px;
 }
 </style>
 # Język Java: instrukcja warunkowa switch
-
-Instrukcja `switch` przypomina swoim zachowanie instrukcję `if...elseif...else`. Pozwala jednak na lepsze uporządkowanie przypadków oraz poprawia czytelność kodu.
 
 Możemy to uogólnić do:
 
@@ -1028,7 +1031,7 @@ pre {
 
 # **Programowanie: przykład 20**
 
-Nadpisywanie metod.
+Przesłanianie metod.
 
 ```java
 class Animal {
@@ -1242,7 +1245,7 @@ W przypadku dotychczasowych definicji klas nadrzędnych zawsze dostarczaliśmy d
 Metodę abstrakcyjną definiujemy z pominięciem jej ciała. Każda z podklas jest odpowiedzialna za dostarczenie jej implementacji.
 
 ```
-abstract Animal {
+abstract class Animal {
     abstract void voice();
 }
 ```

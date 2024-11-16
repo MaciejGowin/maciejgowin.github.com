@@ -125,6 +125,16 @@ Ograniczenie asymptotycznego tempa wzrostu czasu wykonywania algorytmu, gdzie wy
 
 >  ilość zasobów potrzebnych do wykonania algorytmu przy założeniu "typowych" danych
 
+
+---
+# Złożoność obliczeniowa - przykład
+
+#### Algorytm liniowego przeszukiwania (szukanie elementu w liście)
+
+- W najgorszym przypadku czas wykonania to **Ο(n)** - gdy element jest na końcu listy lub go nie ma.
+- W najlepszym przypadku czas wykonania to **Ω(1)** - gdy element znajduje się na pierwszej pozycji.
+- Jeśli czas wykonania jest zawsze liniowy, można powiedzieć, że ma **Θ(n)** - bo to jednocześnie górna i dolna granica.
+
 ---
 # Rząd złożoności obliczeniowej
 
@@ -216,6 +226,26 @@ Problem, dla którego rozwiązanie można znaleźć w czasie wielomianowym (n^k)
 Problem, dla którego rozwiązanie można zweryfikować w czasie wielomianowym (n^k).
 
 ---
+# Problem komiwojażera
+
+#### Problem komiwojażera (TSP, Traveling Salesman Problem)
+
+- Zadana jest lista miast oraz odlełości pomiędzy parami miast.
+- Komiwojażer musi odwiedzić każde miasto dokładnie raz i wrócić do miasta startowego.
+- Celem jest zminimalizowanie całkowitej odległości podróży. 
+
+---
+# Problem komiwojażera
+
+#### Wersja decyzyjna
+
+Czy istnieje trasa, która pozwala odwiedzić wszystkie miasta i wrócić do punktu początkowego z łączną odległością nieprzekraczającym zadanej wartości K.
+
+####  Klasa NP
+
+Jeśli znamy rozwiązanie (np. sekwencję miast), możemy w czasie wielomianowym zweryfikować, czy całkowita odległość jest mniejsza lub równa K.
+
+---
 # Algorytmy sortowania
 
 Problem sortowania jest jednym z podstawowych problemów algorytmicznych. Polega na uporządkowaniu elementów zbioru danych pod względem danej cechy.
@@ -294,7 +324,7 @@ pre {
 
 # **Programowanie: przykład 23**
 
-Porównanie wydajności naiwnej implementacji algorytmu sortowania bąbelkowego ze wbudowaną metodą sortującą.
+Porównanie wydajności naiwnej implementacji algorytmu sortowania bąbelkowego z wbudowaną metodą sortującą.
 
 ```java
 import java.util.Arrays;
@@ -447,7 +477,7 @@ Struktury danych to sposoby przechowywania danych w pamięci, na których operuj
 
 Dany problem może zostać uproszczony do problemu algorytmicznego operującego na danej strukturze danych.
 
-Używając przykładu `problemu komiwojażera`, w podejściu algorytmicznym, może on zostać opisany poprzez operacje na grafach.
+Używając przykładu **problemu komiwojażera**, w podejściu algorytmicznym, może on zostać opisany poprzez operacje na grafach.
 
 ---
 # Struktury danych
