@@ -22,6 +22,12 @@ https://github.com/MaciejGowin/wsb-programowanie-aplikacji-java
 Wszystkie zadanie dodatkowe zostały stworzone z myślą utrwalenia materiału przerobionego na zjeździe. Chociaż mogą one zostać rozwiązane na wiele sposobów, zostały skonstruowane w sposób umożliwiający ukończenie ich jedynie przy użyciu poznanych już technik.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: zadanie dodatkowe 13**
 
 Zaimplementuj klasy`Route` oraz `Airport`:
@@ -47,6 +53,12 @@ Departure: Warszawa: arrivals: [Krakow]
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: zadanie dodatkowe 14**
 
 Stwórz adnotację pozwalającą na porównywanie dwóch pól danego obiektu wraz z deklaracją pól porównywanych:

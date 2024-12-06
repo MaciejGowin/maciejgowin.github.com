@@ -33,6 +33,12 @@ Java definiuje wbudowane adnotacje. Do najpopularniejszych należą:
 Istnieje możliwość tworzenia własnych adnotacji.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: adnotacje
 
 Deklaracja adnotacji jest podobna do deklaracji interfejsu. Wyróżnia ją jednak znak `@` poprzedzający słowo kluczowe `interface`.
@@ -50,6 +56,12 @@ Dodatkowo możemy zdefiniować metody, które opisują elementy adnotacji. Metod
 - Mogą mieć wartości domyślne.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: adnotacje
 
 Definicję adnotacji możemy wzbogacić o adnotacje, które definiują kiedy, i dla jakich elementów mogą one zostać użyte.
@@ -137,45 +149,21 @@ Class<Foo> fooClazz = Foo.class;
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 8px;
+}
+</style>
+
 # **Programowanie: przykład 35**
 
 Przykład użycia refleksji do odczytania informacji o klasie, stworzenia obiektów, ustawienia wartości oraz wywołania metod.
 
 ```java
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-
-class SampleClass {
-
-    private String privateField;
-    public String publicField;
-
-    public SampleClass() {
-        System.out.println("Invoked SampleClass()");
-    }
-
-    private void privateMethod() {
-        System.out.println("Invoked privateMethod()");
-    }
-
-    public void publicMethod() {
-        System.out.println("Invoked publicMethod()");
-    }
-
-    @Override
-    public String toString() {
-        return String.format("{privateField: %s, privateField: %s}", privateField, publicField);
-    }
-}
+/* (...) */
 
 public class Main {
-
-    public static void main(String[] args) throws Exception {
-        reflectionCreation();
-        describeClass(SampleClass.class);
-    }
+    /* (...) */
 
     public static void reflectionCreation() throws Exception {
         // Create instance via reflection
@@ -187,19 +175,7 @@ public class Main {
         Field publicField = SampleClass.class.getDeclaredField("publicField");
         publicField.set(sampleClass, "value-publicField");
 
-        Field privateField = SampleClass.class.getDeclaredField("privateField");
-        privateField.setAccessible(true);
-        privateField.set(sampleClass, "value-privateField");
-
-        System.out.printf("sampleClass: %s%n", sampleClass);
-
-        // Invoke methods via reflection
-        Method publicMethod = SampleClass.class.getDeclaredMethod("publicMethod");
-        publicMethod.invoke(sampleClass);
-
-        Method privateMethod = SampleClass.class.getDeclaredMethod("privateMethod");
-        privateMethod.setAccessible(true);
-        privateMethod.invoke(sampleClass);
+        /* (...) */
     }
 
     public static void describeClass(Class<?> clazz) {
@@ -225,6 +201,12 @@ public class Main {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 36**
 
 Połączenie mechanizmu adnotacji z refleksją na przykładzie walidacji obiektów.
@@ -344,6 +326,12 @@ interface Validator {
 Możemy dostarczać różne jego implementacje. Przyjmijmy, że na potrzeby weryfikacji zadanego ciągu znaków chcielibyśmy zweryfikować czy dany ciąg znaków nie jest pusty. Zadanie to moglibyśmy zrealizować przy pomocy klasy anonimowej.
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Język Java: interfejs funkcyjny
 
 ```java
@@ -536,6 +524,12 @@ users.replaceAll(user -> user != null ? user.toLowerCase() : null);
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 37**
 
 Przykład użycia kolekcji z lambdami.
@@ -606,6 +600,12 @@ Strumienie w dużym stopniu opierają się na wyrażeniach `lambda`, które pozw
 Strumienie używają podejścia `fluent API`. Polega ono na łączeniu obiektów za pomocą łańcucha wywołań metod. Celem takiego zapisu jest zwiększenie czytelności oraz używalności kodu.
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 38**
 
 Wywołania strumieni.
@@ -688,42 +688,22 @@ Strumienie mogą zostać zredukowane do innego typu. Najczęściej redukcja zach
 `Collectors.joining()` - redukcja łącząca zwracająca ciąg znaków.
 
 ---
+<style scoped>
+pre {
+   font-size: 8px;
+}
+</style>
+
 # **Programowanie: przykład 39**
 
+Praykładowe operacje na kolekcjach i strumieniach.
+
 ```java
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+/* (...) */
 
 public class Main {
 
-    public static void main(String[] args) {
-        List<String> names = Arrays.asList("Gary", "Jessica", "George", "Elisabeth", "George");
-
-        forEach();
-        customToListCollector(names);
-        collectorsToList(names);
-        groupingBy(names);
-        joining(names);
-    }
-
-    public static void forEach() {
-        Stream.of("Gary", "Jessica", "George", "Elisabeth", "George")
-                .forEach(name -> System.out.println("Name: " + name));
-
-        Stream.empty()
-                .forEach(name -> System.out.println("Name: " + name));
-    }
+    /* (...) */
 
     public static void customToListCollector(List<String> initNames) {
         List<String> names = initNames.stream()
@@ -763,26 +743,6 @@ public class Main {
         System.out.println("Names: " + names);
     }
 
-    public static void collectorsToList(List<String> initNames) {
-        List<String> names = initNames.stream()
-                .filter(name -> name.startsWith("G"))
-                .map(name -> name.toUpperCase())
-                .distinct()
-                .sorted()
-                .collect(Collectors.toList());
-        System.out.println("Names: " + names);
-    }
-
-    public static void groupingBy(List<String> initNames) {
-        Map<String, List<String>> names = initNames.stream()
-                .collect(Collectors.groupingBy(name -> name.substring(0, 1)));
-
-        System.out.println("Names: " + names);
-    }
-
-    public static void joining(List<String> initNames) {
-        String names = initNames.stream().collect(Collectors.joining(" and "));
-        System.out.println("Names: " + names);
-    }
+    /* (...) */
 }
 ```

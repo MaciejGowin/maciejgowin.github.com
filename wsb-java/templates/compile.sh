@@ -1,9 +1,9 @@
 #!/bin/bash
 
-PROXY=""
+PROXY="10.1.2.105:3128"
 DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-for FILE in "$DIR"/zjazd-02-*.md; do
+for FILE in "$DIR"/zjazd-03-*.md; do
     FILENAME=$(echo $FILE | xargs basename | sed 's/.md//')
 
     cp "$DIR/$FILENAME.md" "$DIR/../files/$FILENAME.md"

@@ -23,6 +23,12 @@ Dotychczas wartości (prymitywne i obiekty typu `String`) porównywaliśmy przy 
 W przypadku obiektów sprawa jest bardziej skomplikowana, gdyż w zmiennej przechowywana jest jedynie referencja do obiektu, a nie jego wartość. Użycie operatora `==` może przynieść nieoczekiwane efekty.
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # **Programowanie: przykład 25**
 
 Porównanie obiektów przy pomocy operatora `==`.
@@ -65,6 +71,12 @@ boolean compare = a1 == a2;
 Hierarchia dziedziczenia wprowadza klasę `Object`, po której dziedziczą wszystkie inne klasy. Definiuje one metodę `boolean equals(Object)`, która powinna być używana do porównywania obiektów.
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 26**
 
 Porównanie obiektów przy pomocy metody `equals`.
@@ -109,6 +121,12 @@ boolean compare = a1.equals(a2);
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 8px;
+}
+</style>
+
 # **Programowanie: przykład 27**
 
 Porównanie obiektów przy pomocy poprawnie nadpisanej metody `equals`.
@@ -175,6 +193,12 @@ Zmienne wskazywały zatem tę samą przestrzeń w pamięci. Jest to związane ze
 Do porównywania ciągów znaków podobnie jak innych obiektów będziemy używać metody `equals` gdyż nie zawsze są one inicjalizowane przy pomocy literałów.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: przykład 28**
 
 Porównanie ciągu znaków.
@@ -238,6 +262,12 @@ Z metodą `hashCode()` związane są kryteria:
 - kolizyjność: nierówne obiekty mogą zwrócić tę samą wartość dla `hashCode()`
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 29**
 
 Implementacje metody `hashCode()`.
@@ -287,6 +317,9 @@ Do tej pory tworzyliśmy struktury danych przechowujące obiekty danego typu. Dl
 - `IntegerQueue` - implementacja kolejki przechowująca elementy typu `Integer`
 
 Analogicznie dla implementacji kolejki przechowującej elementy innych typów moglibyśmy stworzyć: `StringQueue` dla typu `String`, `DoubleQueue` dla typu `Double`, `PersonQueue` dla typu `Person`, itd.
+
+---
+# Język Java: typy generyczne
 
 Każda z implementacji różniłaby się tylko typem przechowywanych elementów. Operacje wykonywane na kolejce wyglądałyby analogicznie. Takie podejście kłóciłoby się z koncepcją ponownego użycia kodu.
 
@@ -349,6 +382,12 @@ Container<String> containerOfString = new Container<>("value");
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: przykład 30**
 
 Definicja klasy generycznej.
@@ -405,6 +444,9 @@ Container container1 = new Container<>(1);
 Container container2 = new Container(1);
 ```
 
+---
+# Język Java: problemy typów generycznych
+
 Co więcej, możemy przypisać tak zdefiniowaną generyczną instancję to zmiennej sparametryzowanej. Może to prowadzić do błędów podczas uruchomienia:
 
 ```
@@ -430,6 +472,9 @@ class Container<T extends Animal> {
 ```
 
 Dzięki temu nowy obiekt może zostać zainicjalizowany jedynie z typami, które rozszerzają klasę `Animal` lub też implementują interfejs `Animal`.
+
+---
+# Język Java: rozszerzenie typu generycznego
 
 Główną zaletą takiego zapisu jest późniejsza możliwość użycia metod `Animal` z poziomu klasy generycznej.
 
@@ -462,6 +507,12 @@ WithGenericMethods.staticMethod("test");
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # **Programowanie: przykład 31**
 
 ```java
@@ -530,6 +581,12 @@ public static void consumeOfSuperAnimal(Container<? super Animal> value) {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 10px;
+}
+</style>
+
 # **Programowanie: przykład 32**
 
 Użycie `upper bounds` oraz `lower bounds`.
@@ -616,12 +673,17 @@ Zbiór dostępnych struktur danych możemy zaprezentować poprzez hierarchię in
 
 `Collection` - interfejs definiujący wspólne operacje na kolekcjach.
 
-Do głównych operacji należą:
+Do podstawowych operacji zaliczamy:
 - `add()` - dodanie elementu do kolekcji.
 - `addAll()` - dodanie wielu elementów do kolekcji.
 - `remove()` - usunięcie elementu z kolekcji.
 - `removeAll()` - usunięcie wielu elementów z kolekcji.
 - `clear()` - usunięcie wszystkich elementów z kolekcji.
+
+---
+# Język Java: Collection
+
+Do podstawowych operacji zaliczamy:
 - `size()` - pobranie rozmiaru kolekcji.
 - `iterator()` - pobranie iteratora pozwalającego na przejście po wszystkich elementach kolekcji.
 - `contains()` - sprawdzenie, czy kolekcja posiada dany element.
@@ -631,6 +693,8 @@ Do głównych operacji należą:
 # Język Java: List
 
 `List` - interfejs definiujący operacje na uszeregowanych kolekcjach, do których możemy odnosić się w sposób znany z tablic.
+
+Do podstawowych operacji zaliczamy:
 - `get()` - pobranie elementu pod danych indeksem.
 - `set()` - ustawienie elementu pod danym indeksem.
 - `remove()` - usunięcie elementu pod danym indeksem.
@@ -645,7 +709,8 @@ Do głównych operacji należą:
 ---
 # Język Java: Queue
 
-`Queue` - interfejs definiujący operacje na kolejce, w której elementy zarządzane są w porządku FIFO.
+`Queue` - interfejs definiujący operacje na kolejce, w której elementy zarządzane są w porządku FIFO. Do podstawowych operacji zaliczamy:
+
 - `offer()` - dodanie elementu do kolejki.
 - `element()` - pobranie pierwszego elementu z kolejki lub błąd w przypadku braku elementu.
 - `peek()` - pobranie pierwszego elementu z kolejki lub `null` w przypadku braku elementu.
@@ -655,39 +720,38 @@ Do głównych operacji należą:
 ---
 # Język Java: Deque
 
-`Deque` - interfejs definiujący kolejkę dwustronną będącą rozszerzeniem klasycznej kolejki (ang. double ended queue). W tym przypadku elementy mogą zostać dodane i usunięte zarówno z początku, jak i z końca kolejki.
+`Deque` - interfejs definiujący kolejkę dwustronną będącą rozszerzeniem klasycznej kolejki (ang. double ended queue). W tym przypadku elementy mogą zostać dodane i usunięte zarówno z początku, jak i z końca kolejki. Do podstawowych operacji zaliczamy:
 
-Do podstawowych operacji zaliczamy:
-`addFirst()` - dodanie elementu na początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`addLast()` - dodanie elementu na końcu kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`offerFirst()` - dodanie elementu na początku kolejki lub zwrócenie `false` w przypadku pełnej kolejki.
-`offerLast()` - dodanie elementu na końcu kolejki lub zwrócenie `false` w przypadku pełnej kolejki.
-
----
-# Język Java: Deque
-
-Do podstawowych operacji zaliczamy:
-`getFirst()` - pobranie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`getLast()` - pobranie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`peekFirst()` - pobranie elementu z początku kolejki lub zwrócenie `null` w przypadku pełnej kolejki
-`peekLast()` - pobranie elementu z końca kolejki lub zwrócenie `null` w przypadku pełnej kolejki
+- `addFirst()` - dodanie elementu na początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `addLast()` - dodanie elementu na końcu kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `offerFirst()` - dodanie elementu na początku kolejki lub zwrócenie `false` w przypadku pełnej kolejki.
+- `offerLast()` - dodanie elementu na końcu kolejki lub zwrócenie `false` w przypadku pełnej kolejki.
 
 ---
 # Język Java: Deque
 
 Do podstawowych operacji zaliczamy:
-`removeFirst()` - pobranie oraz usunięcie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`removeLast()` - pobranie oraz usunięcie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
-`pollFirst()` - pobranie oraz usunięcie elementu z początku kolejki lub zwrócenie `null` w przypadku pełnej kolejki.
-`pollLast()` - pobranie oraz usunięcie elementu z końca kolejki lub zwrócenie `null` w przypadku pełnej kolejki.
+- `getFirst()` - pobranie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `getLast()` - pobranie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `peekFirst()` - pobranie elementu z początku kolejki lub zwrócenie `null` w przypadku pełnej kolejki
+- `peekLast()` - pobranie elementu z końca kolejki lub zwrócenie `null` w przypadku pełnej kolejki
+
+---
+# Język Java: Deque
+
+Do podstawowych operacji zaliczamy:
+- `removeFirst()` - pobranie oraz usunięcie elementu z początku kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `removeLast()` - pobranie oraz usunięcie elementu z końca kolejki lub zgłoszenie wyjątku w przypadku pełnej kolejki.
+- `pollFirst()` - pobranie oraz usunięcie elementu z początku kolejki lub zwrócenie `null` w przypadku pełnej kolejki.
+- `pollLast()` - pobranie oraz usunięcie elementu z końca kolejki lub zwrócenie `null` w przypadku pełnej kolejki.
 
 ---
 # Język Java: Deque
 
 Dzięki dwukierunkowości kolejki interfejsy ten definiuje też metody znane ze stosu. Są to:
-`push()` - dodanie elementu na początku stosu/kolejki dwukierunkowej.
-`pop()` - pobranie oraz usunięcie elementu z początku stosu/kolejki dwukierunkowej.
-`peek()` - obranie elementu z początku stosu/kolejki dwukierunkowej.
+- `push()` - dodanie elementu na początku stosu/kolejki dwukierunkowej.
+- `pop()` - pobranie oraz usunięcie elementu z początku stosu/kolejki dwukierunkowej.
+- `peek()` - obranie elementu z początku stosu/kolejki dwukierunkowej.
 
 > Java definiuje również klasę `Stack` realizujący stos, ale nie będziemy się na niej koncentrować. Jest ona głównie przewidziana do środowisk wielowątkowych, gdyż jej metody są synchronizowane.
 
@@ -718,9 +782,9 @@ Do podstawowych operacji zdefiniowanych przez interfejs zaliczamy:
 # Język Java: Map
 
 Oraz operacje na wewnętrznych kolekcjach:
-`keySet()` - pobranie wszystkich kluczy w mapie.
-`values()` - pobranie wszystkich wartości w mapie.
-`entrySet()` - pobranie wszystkich par klucz-wartość w mapie.
+- `keySet()` - pobranie wszystkich kluczy w mapie.
+- `values()` - pobranie wszystkich wartości w mapie.
+- `entrySet()` - pobranie wszystkich par klucz-wartość w mapie.
 
 ---
 # Język Java: Iterator
@@ -754,6 +818,12 @@ List<String> list = new ArrayList<String>();
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 33**
 
 Wykorzystanie listy oraz iteratora.
@@ -819,6 +889,12 @@ Set<String> set = new HashSet<String>();
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 14px;
+}
+</style>
+
 # **Programowanie: przykład 34**
 
 Użycie `HashSet` wraz z ciągiem znaków oraz własną klasą.
@@ -929,6 +1005,9 @@ enum Name {
 
 > Stałe wartości typu wyliczeniowego są reprezentowane przez słowa pisane z wielkich liter.
 
+---
+# Język Java: typ wyliczeniowy
+
 Typy wyliczeniowe zostały wprowadzone, aby usprawnić definicje stałych.
 
 ```
@@ -941,6 +1020,12 @@ class Direction {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 22px;
+}
+</style>
+
 # Język Java: typ wyliczeniowy
 
 Jak każda z klas typ wyliczeniowy może posiadać: konstruktor, pola, oraz metody.
@@ -1066,8 +1151,6 @@ Car.Engine engine = new Car.Engine();
 
 Klasy anonimowe to klasy, które zdefiniowane są zaraz podczas inicjalizacji. Nie posiadają one nazwy oraz mogą byc zdefiniowane na poziomie klasy zewnętrznej lub w metodzie.
 
-Dla przykładu:
-
 ```
 public class Main {
 
@@ -1084,6 +1167,12 @@ public class Main {
 Gdzie `ParentType` to wcześniej zdefiniowany interfejs, który chcemy zaimplementować lub klasa, którą chcemy rozszerzyć. 
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Język Java: klasy anonimowe
 
 Głównym miejscem użycia klas anonimowych są przypadki, w których dana definicja klasy jest użyta tylko raz w miejscu inicjalizacji.
@@ -1160,6 +1249,12 @@ int i = (int) d;
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Język Java: rzutowanie typów
 
 Rzutowanie możemy też wykorzystać przy okazji obiektów oraz hierarchii dziedziczenia. Należy jednak uważać na potencjalne błędy związane z użyciem złych typów.
