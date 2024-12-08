@@ -7,7 +7,7 @@ title: WSB Merito - Programowanie aplikacji Java
 ## Kontakt
 
 * mail prowadzącego: maciej@coderbrother.pl
-* opinie o prowadzącym: [Google Review](https://g.page/r/Ce5Y6dMX52E_EAI/review)
+* dodaj opinię o prowadzącym: [Google Review](https://g.page/r/Ce5Y6dMX52E_EAI/review)
 
 ## Materiały do zjazdów
 
