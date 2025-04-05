@@ -594,8 +594,8 @@ Co więcej, możemy nadpisywać metody z `ResponseEntityExceptionHandler` obsłu
 ```
 @Override
 protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(
-        HttpRequestMethodNotSupportedException ex, HttpHeaders headers, 
-        HttpStatus status, WebRequest request) {
+        HttpRequestMethodNotSupportedException ex, HttpHeaders headers,
+        HttpStatusCode status, WebRequest request) {
     super.handleHttpRequestMethodNotSupported(ex, headers, status, request);
     return new ResponseEntity<>(
                 ErrorDto.builder().message("Method not allowed").build(), 
