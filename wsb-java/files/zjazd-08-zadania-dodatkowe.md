@@ -44,7 +44,7 @@ Gdzie wartość "12 PLN" będzie odpowiadała obiektowi klasy `Price`:
 ```
 public class Price {
     private Integer value;
-    pricate String currency;
+    private String currency;
 }
 ```
 

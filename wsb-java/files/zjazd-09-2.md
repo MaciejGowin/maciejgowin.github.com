@@ -14,6 +14,12 @@ Do tej pory walidacja odbywała się na poziomie kodu oraz zwracanie błędu na 
 Framework Spring wprowadza automatyzację tego procesu poprzez adnotacje, która pozwala na odseparowanie logiki biznesowej od logiki walidacji danych wejściowy.
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Spring w praktyce: @Valid
 
 Aby dodać wsparcie dla walidacji realizowanej poprzez adnotację `@Valid` zaimportować zależność:
@@ -35,6 +41,12 @@ W momencie, gdy Spring Boot odnajdzie argument metody opatrzony adnotacją `@Val
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Spring w praktyce: @Valid
 
 Adnotacja `@Valid` sprawdza zgodność przesłanego modelu na podstawie dodatkowych adnotacji opisujących przesyłane dane.
@@ -115,6 +127,12 @@ public class AdultValidator implements ConstraintValidator<Adult, LocalDate> {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring w praktyce: @Valid
 
 Istotne jest podanie walidatora podczas definicji adnotacji. W czasie działanie programu walidator sprawdza, czy dana adnotacja ma zdefiniowane pola `message`, `group` oraz `payload`.
@@ -172,9 +190,15 @@ private String myProperty;
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring w praktyce: @Value
 
-Wyważenia użyte wraz z adnotacją `@Value` wspierają SpEL (Spring Expression Language).
+Wyrażenia użyte wraz z adnotacją `@Value` wspierają SpEL (Spring Expression Language).
 
 SpEL jest językiem wyrażeń, który pozwala na przeszukiwanie oraz operacje na wartościach podczas uruchomienia.
 
@@ -283,6 +307,12 @@ Wewnętrznie użyta jest klasa `DataSource` definiująca połączenie. Do tworze
 W przypadku wyłączenia auto-konfiguracji konieczne byłoby stworzenie hierarchii zależności.
 
 ---
+<style scoped>
+pre {
+   font-size: 16px;
+}
+</style>
+
 # Spring w praktyce: DataSource
 
 ```
@@ -420,6 +450,9 @@ management.endpoint.health.show-details = ALWAYS
 
 Ścieżka `/actuator/health` zwraca status aplikacji, który jest sumą statusów zdefiniowanych komponentów dostarczających statusów elementów aplikacji.
 Moduły Spring mogą dostarczać kolejne komponenty, które rejestrowane są automatycznie.
+
+---
+# Spring Boot: Actuator oraz /health
 
 Aby zdefiniować własny komponent sprawdzający status interesującego nas elementu, należy dostarczyć ziarno implementujące interfejs `HealthIndicator`.
 

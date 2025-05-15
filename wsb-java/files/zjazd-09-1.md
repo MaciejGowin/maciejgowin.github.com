@@ -11,6 +11,11 @@
 
 Zakresy ziaren (ang. bean scopes) definiują cykl życia dla ziaren. Do tej pory było to dla nas transparentne i używaliśmy ziaren z domyślną konfiguracją.
 
+Spring definiuje 6 poziomów, z czego 4 tylko dla aplikacji webowych.
+
+---
+# Spring: zakresy ziaren
+
 Spring definiuje 6 poziomów, z czego 4 ostatnie tylko dla aplikacji webowych:
 - singleton (domyślny): kontener tworzy jedną instancję ziarna, wszystkie zapytania zwrócą ten sam obiekt.
 - prototype: kontener tworzy nową instancję ziarna, wszystkie zapytania zwrócą nowy obiekt.
@@ -29,7 +34,7 @@ Moduły mogą zostać dodane w razie potrzeb i w wielu przypadkach są niezależ
 ---
 # Spring: moduły
 
-![Moduły Spring](https://maciejgowin.github.io/assets/img/zjazd-09-1/spring-modules.png)
+![height:400px](https://maciejgowin.github.io/assets/img/zjazd-09-1/spring-modules.png)
 
 Źródło: https://spring.io
 
@@ -66,6 +71,9 @@ Korzystając z przykładu prostej aplikacji webowej opartej o framework Spring, 
 - zainicjalizowanie `DispatcherServlet`,
 - skonfigurowanie kontekstu,
 - zdefiniowanie podstawowych ziaren dostarczających obsługi JSP.
+
+---
+# Spring Boot
 
 Rozwiązaniem problemu powtarzalnych czynności jest Spring Boot. Spring Boot pozwala na tworzenie automatycznie skonfigurowanych aplikacji opartych na podejściu `convention-over-configuration`.
 
@@ -130,7 +138,10 @@ Inicjalizacja oraz uruchomienie aplikacji Spring przy użyciu Spring Boot w domy
 
 Główną ideą Spring Boot jest dostarczenie domyślnych opcji pozwalających na pozbycie się powtarzalnych kroków.
 
-Uruchomienie aplikacji odbywa się poprze wywołanie `SpringApplication.run`.
+---
+# Spring Boot w praktyce: SpringApplication.run
+
+Uruchomienie aplikacji odbywa się poprzez wywołanie `SpringApplication.run`.
 
 ```java
 import org.springframework.boot.SpringApplication;
@@ -267,6 +278,9 @@ Istnieje też możliwość rozszerzenia standardowego pakowania o automatyczne w
 </plugin>
 ```
 
+---
+# Spring Boot w praktyce: spring-boot-maven-plugin
+
 Po zmianie konfiguracji plik archiwum zostanie automatycznie przeładowany podczas:
 
 ```
@@ -296,6 +310,12 @@ public String root() {
 ```
 
 ---
+<style scoped>
+pre {
+   font-size: 20px;
+}
+</style>
+
 # Spring w praktyce: @ResponseBody
 
 Co więcej, `@ResponseBody` pozwala na zdefiniowanie ciała zwracanego w postaci obiektu:
@@ -585,6 +605,12 @@ Spring MVC definiuje szereg błędów stricte związanych z działaniem `Disptch
 W takim przypadku możemy zdefiniować `@ExceptionHandler`, dla każdego z błędów lub też wykorzystać domyślną obsługę błędów opisaną w `ResponseEntityExceptionHandler`.
 
 ---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
 # Spring w praktyce: ResponseEntityExceptionHandler
 
 W przypadku gdy nasze ziarno opisane jako `@ControllerAdvice` dziedziczy po `ResponseEntityExceptionHandler` automatycznie załadowane zostaną definicje `@ExceptionHandler` z klasy `ResponseEntityExceptionHandler`.
@@ -594,8 +620,8 @@ Co więcej, możemy nadpisywać metody z `ResponseEntityExceptionHandler` obsłu
 ```
 @Override
 protected ResponseEntity<Object> handleHttpRequestMethodNotSupported(
-        HttpRequestMethodNotSupportedException ex, HttpHeaders headers, 
-        HttpStatus status, WebRequest request) {
+        HttpRequestMethodNotSupportedException ex, HttpHeaders headers,
+        HttpStatusCode status, WebRequest request) {
     super.handleHttpRequestMethodNotSupported(ex, headers, status, request);
     return new ResponseEntity<>(
                 ErrorDto.builder().message("Method not allowed").build(), 
