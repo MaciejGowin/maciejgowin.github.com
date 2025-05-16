@@ -161,6 +161,12 @@ public class Application {
 
 Prosta konfiguracji aplikacji webowej Spring Boot.
 
+Uruchom aplikację za pomocą linii komend.
+
+```
+java -jar target/przyklad-84-1.0-SNAPSHOT.jar
+```
+
 ---
 # Spring Boot w praktyce: @SpringBootApplication
 
@@ -229,9 +235,43 @@ java -jar application.jar --spring.config.location=file:///Users/home/config/dev
 ---
 # Spring Boot w praktyce: spring-boot-maven-plugin
 
-Aby zbudować aplikację posiadającą wszystkie zależności dla typowej aplikacji webowej, wybraliśmy pakowanie typu `war`.
+Aby zbudować aplikację posiadającą wszystkie zależności dla typowej aplikacji webowej, wybraliśmy domyślne pakowanie typu `jar`.
 
-Oczywiście, podobnie jak w przypadku pakowania typu `jar`, plik wynikowy nie będzie posiadał wszystkich koniecznych zależności, aby uruchomić go z poziomu: `java -jar`.
+Oczywiście, podobnie jak w przypadku każdego pakowania typu `jar`, plik wynikowy nie będzie posiadał wszystkich koniecznych zależności, aby uruchomić go z poziomu: `java -jar`.
+
+---
+<style scoped>
+pre {
+   font-size: 18px;
+}
+</style>
+
+# Spring Boot w praktyce: spring-boot-maven-plugin
+
+Przypomnijmy, że w przypadku natywnych aplikacji Java, używalismy _plugin_ `maven-assembly-plugin` do zbudowania tzw. _fat-jar_-a ze zdefiniowanym plikiem `MANIFEST`.
+
+```
+<!-- (...) -->
+
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-assembly-plugin</artifactId>
+
+<configuration>
+    <descriptorRefs>
+        <descriptorRef>jar-with-dependencies</descriptorRef>
+    </descriptorRefs>
+    <archive>
+        <manifest>
+            <mainClass>pl.wsb.programowaniejava.maciejgowin.przyklad52.Main</mainClass>
+        </manifest>
+    </archive>
+</configuration>
+
+<!-- (...) -->
+```
+
+---
+# Spring Boot w praktyce: spring-boot-maven-plugin
 
 Aby dodać kontekst pakowania aplikacji Spring Boot ze wszystkimi zależnościami, użyjemy _plugin_:
 
@@ -401,9 +441,9 @@ public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter()
 ---
 # RESTful Services
 
-REST jest stylem architektonicznym usprawniającym wymianę danych pomiędzy serwisami. Jego głównym celem jest ustalenie sposobu komunikacji, która za założenia powinna być uniwersalna oraz prosta w konfiguracji.
+**REST (Representational State Transfer)** jest stylem architektonicznym usprawniającym wymianę danych pomiędzy serwisami. Jego głównym celem jest ustalenie sposobu komunikacji, która za założenia powinna być uniwersalna oraz prosta w konfiguracji.
 
-Podejście to opiera się na formacie danych, który jest używany do ich reprezentacji. Dzięki temu nie jest istotne to, przy jakiego użyciu rozwiązania został on zaimplementowany.
+Podejście to nie jest ściśle związane z formatem danych, który jest używany do ich reprezentacji. Dzięki temu nie jest istotne to, przy jakiego użyciu rozwiązania został on zaimplementowany.
 
 Serwisy webowe dostarczające API. Aby serwis REST mógł zostać określony mianem RESTful, musi spełniać szereg reguł.
 
@@ -640,3 +680,10 @@ Obsługa błędów.
 Obsługa błędów w Springu jest najlepszym przykładem tego, że framework ten pozwala na bardzo rozbudowaną konfigurację projektów oraz używanie wielu mechanizmów, które rozwiązują dany problem.
 
 #### Podczas tworzenia aplikacji opartych o framework Spring istnieje wiele opcji pozwalających na rozwiązanie tego samego problemu.
+
+---
+# **Programowanie: zadanie**
+
+Stwórz prosty projekt definiujący RESTful API do zarządzania strukturą zespołów i ich graczy.
+
+Serwis powinien definiować zasoby zgodne ze wcześniej przedstawionym przykładem.

@@ -102,7 +102,7 @@ Użycie wbudowanego mechanizmu walidacji dla niepustych pól łańcuchów znakó
 ---
 # Spring w praktyce: @Valid
 
-Istnieje szereg wbudowanych adnotacji opisujących sposoby walidacji dostępnych w pakiecie `javax.validation.constraints`.
+Istnieje szereg wbudowanych adnotacji opisujących sposoby walidacji dostępnych w pakiecie `jakarta.validation.constraints`.
 
 Do najczęściej używanych należą: `@NotNull`, `@NotEmpty`, `@NotBlank`, `@Size`, `@Min`, `@Max`, `@Past`, `@Future`.
 
@@ -539,7 +539,9 @@ Główną zależnością pozwalającą na aktywowanie mechanizmu bezpieczeństwa
 </dependency>
 ```
 
-Konfiguracja procesu jest w głównej mierze oparta o nadpisanie `WebSecurityConfigurerAdapter`.
+W starszych wersjach Spring-a (do 2.7.18) konfiguracja mechanizmu była w głównej mierze oparta na nadpisywaniu `WebSecurityConfigurerAdapter`.
+
+Obecnie mechanizm ten jest definiowany przy pomocy ziaren `SecurityFilterChain` działających na `HttpSecurity`.
 
 ---
 # **Programowanie: przykład 95**
