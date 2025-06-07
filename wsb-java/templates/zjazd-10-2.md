@@ -357,7 +357,9 @@ Testy opierają się na symulacjach wywołań aplikacji oraz zapisywaniu rezulta
 
 Test wydajnościowy dla RESTful API.
 
-Uruchomienie:
+Przed uruchomieniem testów uruchom aplikację `Application`.
+
+Uruchomienie testów:
 ```
 mvn gatling:test
 ```
