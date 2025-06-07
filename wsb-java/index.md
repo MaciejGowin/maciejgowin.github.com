@@ -50,6 +50,7 @@ title: WSB Merito - Programowanie aplikacji Java
 - Zjazd 10
     - Dzień 1: [HTML](/wsb-java/files/zjazd-10-1.html) [PDF](/wsb-java/files/zjazd-10-1.pdf)
     - Dzień 2: [HTML](/wsb-java/files/zjazd-10-2.html) [PDF](/wsb-java/files/zjazd-10-2.pdf)
+    - Zadania dodatkowe: [HTML](/wsb-java/files/zjazd-10-zadania-dodatkowe.html) [PDF](/wsb-java/files/zjazd-10-zadania-dodatkowe.pdf)
 
 ## Linki
 - [Program studiów](https://www.merito.pl/wroclaw/studia-i-szkolenia/studia-podyplomowe/kierunki/programowanie-aplikacji-java)
